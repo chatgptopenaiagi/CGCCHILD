@@ -148,3 +148,9 @@ Dependency audit found native payload decoding could advance independently of RO
 A fixed freestanding parser/encoder now executes1541 immutable vectors. Normalized ancillary
 facts remain a model; native socket receive/disposal and live binding are separate next gates.
 No generic client or broker action is introduced. M4 remains PARTIAL.
+
+## M18: separate native receive mechanics from caller authenticity
+
+An owned same-process socketpair validates CMSG walking, truncation refusal and received-FD
+disposal without pretending to establish a protected controller. Actual credentials are compared
+before normalized payload-model checks. Full live-instance binding remains a separate gate.

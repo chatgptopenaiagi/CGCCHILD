@@ -5,3 +5,6 @@ docs/lab/child_benchmark.py text eol=lf
 
 docs/lab/child_protocol.c text eol=lf
 docs/lab/child_protocol_validate.py text eol=lf
+
+docs/lab/child_ancillary.c text eol=lf
+docs/lab/child_ancillary_validate.py text eol=lf

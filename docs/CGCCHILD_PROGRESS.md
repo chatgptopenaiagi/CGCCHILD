@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M17: fixed native lab-protocol payload parser/encoder and deterministic corpus.
+M18: native owned-socketpair ancillary parsing and received-FD disposal.
 
 ## CURRENT HEAD
 
-HEAD (M17 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M18 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -40,6 +40,8 @@ M15 finite action/domain/channel model, per-cell omission/contradiction tests, n
 M16 offline HTML projection, bounded CLI, escaping/CSP checks and disposable browser review.
 
 M17 static native payload parser/encoder:1541 cases, byte-identical local rebuilds, no IPC authority.
+
+M18 actual recvmsg mechanics:38 packets,513 received-FD closures, unchanged bounded inventory.
 
 ## PARTIAL
 
@@ -101,6 +103,8 @@ Fresh isolated Edge render reviewed; owned browser profile/screenshot cleaned. B
 M17 native1541 cases pass (7 positive/1534 negative); static ELF/one syscall site checks pass.
 Driver lookup bug and -Werror indentation failure corrected; no assertion weakened. No Python
 runtime change, so latest full468 result remains applicable; AST/JSON/source hashes validated.
+M18 static native socketpair fixture passed; source/payload/driver/image hashes retained.
+No Python runtime/test changes; full468 remains latest regression, B11 unresolved.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -110,11 +114,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M16 dc373127dbdf2e7d3e5940cca4533bae2e2b39e4 verified local/tracking/live and clean.
-Current M17 self-reference HEAD; published hash follows next checkpoint.
+M17 a5f4cc35946d9af1c7535fbdd8d4f2df68a26200 verified local/tracking/live and clean.
+Current M18 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M18: validate native ancillary receive/credential parsing and received-FD disposal using only
-owned unprivileged socketpairs; no broker dispatch, root identity, hostile R6 peer or manager operation.
+M19: bind an owned fork-launched sender to a retained pidfd and per-message credentials in
+a gated nonroot native fixture; reject wrong/dead sender evidence without claiming protected authority.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
