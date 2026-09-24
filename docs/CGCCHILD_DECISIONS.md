@@ -367,3 +367,10 @@ The fixed x86-64 clone form exposes flags to cBPF and returns a launch pidfd.
 A preinstalled bootstrap filter narrows independently in parent and child; pidfd
 wait avoids widening PID lookup. Keep this fixture-only until two-role handle
 separation and full channel/effect composition are tested. No production acceptance.
+
+## M53: separate launch handles precede full controller/effect composition
+
+Two owned children can be gated/reaped independently under scalar launch filters;
+the later child closes the earlier child's inherited pidfd before release. Use
+explicit aligned assembly entry for growing freestanding native fixtures. The
+initial SIGSEGV and limited diagnosis remain evidence, not hidden acceptance.

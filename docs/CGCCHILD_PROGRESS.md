@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M52: scalar atomic launch with inherited monotonic filters.
+M53: separate owned C/W launch handles and gate lifecycles.
 
 ## CURRENT HEAD
 
-HEAD (M52 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M53 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -110,6 +110,8 @@ M50 seventeen negative packets and seventeen reopen attempts refuse; earlier eff
 M51 raw clone3 launch returns an owned-child pidfd; three runs/build, identical final builds.
 
 M52 scalar clone/pidfd launch passes under207/85/141-instruction bootstrap/child/parent filters.
+
+M53 two-child launch/reap passes both release orders; sibling pidfd is closed before release.
 
 ## PARTIAL
 
@@ -233,11 +235,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M51 f7dc8b49dfa40b3e0aef0ff3b4a5621313f96ea6 verified local/tracking/live and clean.
-Current M52 self-reference HEAD; published hash follows next checkpoint.
+M52 b8f2acaa795ab404e06492fe0c01f53631ce902b verified local/tracking/live and clean.
+Current M53 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M53: validate two owned atomic child launches and separate pidfd/gate lifecycles
-under scalar bootstrap restrictions before composing controller and worker effects.
+M54: compose the bound C request channel with owned inert CREATE/ATTACH effects
+and launch-time W pidfds; preserve per-message identity, FD checks and invalidation.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

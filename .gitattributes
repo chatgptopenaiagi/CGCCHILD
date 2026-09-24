@@ -75,3 +75,6 @@ docs/lab/child_atomic_launch.c text eol=lf
 docs/lab/child_atomic_launch_validate.py text eol=lf
 docs/lab/child_scalar_launch.c text eol=lf
 docs/lab/child_scalar_launch_validate.py text eol=lf
+
+docs/lab/child_dual_launch.c text eol=lf
+docs/lab/child_dual_launch_validate.py text eol=lf

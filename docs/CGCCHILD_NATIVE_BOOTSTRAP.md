@@ -304,3 +304,40 @@ DERIVATION: scalar launch can avoid the clone3 pointed-to-flags gap for this fix
 process form. UNKNOWN: two separately bound live C/W roles and composed effect
 channel. Next build a two-owned-child launch/handle-separation fixture using the
 same scalar restriction and pidfd-based waits before attempting full composition.
+
+## M53: two owned launch handles stay separate across both release orders
+
+OBSERVED_FACT: fixed C/W analogue children are launched through scalar clone under
+an inherited297-instruction bootstrap filter. Gates are3/4 and5/6; launch pidfds
+are7 and8. C never inherits its parent pidfd; later W inherits C's pidfd7 and
+explicitly closes it before checking its sole extra gate FD5. Both children
+check bounded FD3..63 inventories and CLOEXEC; C retains only3, W only5.
+Each narrows before gate use (C123/W133 instructions); B narrows to215 after the
+second launch. All three rule sets are strict bootstrap subsets. Both children
+and B test refusal to clone or reinstall bootstrap after narrowing.
+
+Two fixed compiled release orders, three runs each: release one child, observe
+only its pidfd ready while the other remains gated, reap through that exact pidfd
+and verify the returned PID/status, then release/reap the second. Parent closes
+its gates/pidfds and verifies no FD3..63 remains. No cgroup, manager or credentials
+are changed. Readiness is bounded2000ms; driver deadline6s/group cleanup applies
+only to its own fixture. No timeout occurred. Two final builds produce identical
+per-order images/evidence, with no dynamic imports or binary retained.
+
+[Source](lab/child_dual_launch.c), [driver](lab/child_dual_launch_validate.py),
+[evidence](lab/child_dual_launch_evidence.json). Exact syscall inventory: read0,
+write1, close3, poll7, clone56, exit60, fcntl72, getuid102, prctl157, waitid247,
+pipe2 293, seccomp317, close_range436. Filters do not inspect poll memory.
+
+Development failure preserved: first C-only ELF entry build exited SIGSEGV(-11).
+An explicit assembly entry now aligns rsp to16 bytes and CALLs the C entry,
+establishing the System V function-entry stack convention. The same lifecycle
+checks then passed; driver verifies the alignment/CALL in each image disassembly.
+Stack alignment is the supported correction; the exact original fault address
+was not captured. No filter or lifecycle assertion was weakened.
+
+DERIVATION: independently launched owned handles can coexist without later generic
+PID lookup. UNKNOWN: authenticated C requests actually triggering W effects. These
+are same-UID trusted fixture branches, not protected identities or closed admission.
+Next compose the bound C request channel with the inert effect sequence using
+launch-time W pidfds, retaining per-message identity and FD checks.
