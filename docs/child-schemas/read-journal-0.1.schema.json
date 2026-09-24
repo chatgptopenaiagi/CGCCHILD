@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Shape only. Runtime additionally enforces canonical bytes, sequence, hash chain, bounded nondecreasing clocks, terminal invalidation, snapshot consistency and caller expected tip/count. No source authentication or authority.",
+  "properties": {
+    "authority": {
+      "const": "NONE"
+    },
+    "clock": {
+      "const": "SOURCE_MONOTONIC_NOT_PORTABLE"
+    },
+    "completeness": {
+      "const": "EXPECTED_PREFIX_ONLY"
+    },
+    "events": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "digest": {
+            "maxLength": 64,
+            "minLength": 64,
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "LOCAL_READ_HANDLE_ISSUED",
+              "READ_DENIED",
+              "CORE_REFUSED",
+              "READ_COMPLETE",
+              "LOCAL_READ_HANDLE_REVOKED",
+              "SNAPSHOT_INVALIDATED"
+            ]
+          },
+          "observed_ns": {
+            "maxLength": 19,
+            "pattern": "^(0|[1-9][0-9]{0,18})$",
+            "type": "string"
+          },
+          "previous": {
+            "maxLength": 64,
+            "minLength": 64,
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "sequence": {
+            "maximum": 64,
+            "minimum": 1,
+            "type": "integer"
+          },
+          "snapshot_digest": {
+            "maxLength": 64,
+            "minLength": 64,
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "version": {
+            "const": "cgcchild-read-events-0.1"
+          }
+        },
+        "required": [
+          "version",
+          "sequence",
+          "kind",
+          "observed_ns",
+          "snapshot_digest",
+          "previous",
+          "digest"
+        ],
+        "type": "object"
+      },
+      "maxItems": 64,
+      "type": "array"
+    },
+    "freshness": {
+      "const": "HISTORICAL_UNVERIFIED"
+    },
+    "snapshot_digest": {
+      "maxLength": 64,
+      "minLength": 64,
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "version": {
+      "const": "cgcchild-read-journal-0.1-experimental"
+    }
+  },
+  "required": [
+    "version",
+    "snapshot_digest",
+    "events",
+    "completeness",
+    "authority",
+    "freshness",
+    "clock"
+  ],
+  "title": "CGCCHILD inert read-journal 0.1",
+  "type": "object"
+}

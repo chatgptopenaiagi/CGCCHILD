@@ -271,3 +271,9 @@ Errors refuse rather than add unbounded waiting; fixed request bytes remain dumm
 A213-instruction generated filter confines the private stream fixture to its exact FD/count/flag
 contract. Model architecture checks and actual kernel denial probes are recorded separately.
 The unfiltered prelude, pointer contents and absent credential boundary remain explicit limitations.
+
+## M38: journal consistency does not authenticate a complete history
+
+The existing local event chain now has an inert canonical envelope and caller-bound prefix
+anchor. Count/tip checks cannot establish absence of an unseen tail. Imported records contain no
+grant material and cannot recreate a live handle; clocks stay historical and nonportable.

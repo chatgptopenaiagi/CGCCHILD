@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M37: generated post-setup scalar filter on private native socketpair fixtures.
+M38: bounded canonical historical read-event journal and prefix anchor.
 
 ## CURRENT HEAD
 
-HEAD (M37 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M38 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -80,6 +80,8 @@ M35 composed native byte-model passes22 scenarios at3 fragment sizes; terminal i
 M36 actual owned socketpair bytes/short I/O/EOF:14 runs pass; no bus or credential boundary.
 
 M37 213-instruction I/O filter:14 kernel installs,18 denials each,6 invalid selector refusals.
+
+M38 inert journal codec/schema/pinned vector; seven focused families pass on Windows/Fedora.
 
 ## PARTIAL
 
@@ -169,6 +171,9 @@ M36 two native runs passed; final14 scenarios include EAGAIN and EOF; owned FD/b
 Original80 byte hashes and local/live source HEAD unchanged; owner plan untouched.
 M37 two native builds/runs passed with identical images; structural/model/kernel cases separated.
 No Python runtime change; current child94/full479 regression evidence remains unchanged.
+M38 full Linux489 passed in118.491s before final envelope clock/freshness labels and pinned test.
+Final seven journal tests passed Windows/Fedora; Windows101 child tests:91 passed,10 POSIX skips.
+Independent JSON Schema validation unavailable; JSON/shape contract checks only, no install.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -178,11 +183,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M36 1a8d5767971aaf955b1f503fb9ffc449a430a5a8 verified local/tracking/live and clean.
-Current M37 self-reference HEAD; published hash follows next checkpoint.
+M37 79f7409a2e4104ed540c1b8e996c6ad029e92566 verified local/tracking/live and clean.
+Current M38 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M38: add a strict inert codec/schema for the existing bounded read-event chain; verify canonical
-bytes, order/hash/clock bounds and caller-bound expected tip/count without importing grants or authority.
+M39: implement independent Node journal decoding/encoding against the pinned Python bytes and
+adversarial parity corpus; no grant import, source authentication or complete-history claim.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
