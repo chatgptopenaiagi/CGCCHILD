@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M18: native owned-socketpair ancillary parsing and received-FD disposal.
+M19: native fork/pidfd/per-message sender binding and dead-queue refusal.
 
 ## CURRENT HEAD
 
-HEAD (M18 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M19 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -42,6 +42,8 @@ M16 offline HTML projection, bounded CLI, escaping/CSP checks and disposable bro
 M17 static native payload parser/encoder:1541 cases, byte-identical local rebuilds, no IPC authority.
 
 M18 actual recvmsg mechanics:38 packets,513 received-FD closures, unchanged bounded inventory.
+
+M19 gated child/pidfd binding, connection-vs-message identity, dead queued message and bad-handle refusal.
 
 ## PARTIAL
 
@@ -105,6 +107,8 @@ Driver lookup bug and -Werror indentation failure corrected; no assertion weaken
 runtime change, so latest full468 result remains applicable; AST/JSON/source hashes validated.
 M18 static native socketpair fixture passed; source/payload/driver/image hashes retained.
 No Python runtime/test changes; full468 remains latest regression, B11 unresolved.
+M19 final native sender fixture passed; child reaped, descriptors/build directory cleaned.
+Poll-error handling tightened and closed-pidfd negative case added during review.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -114,11 +118,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M17 a5f4cc35946d9af1c7535fbdd8d4f2df68a26200 verified local/tracking/live and clean.
-Current M18 self-reference HEAD; published hash follows next checkpoint.
+M18 ac2fbdfa7dc53a79c2e77a37bf4fe52af3c5830d verified local/tracking/live and clean.
+Current M19 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M19: bind an owned fork-launched sender to a retained pidfd and per-message credentials in
-a gated nonroot native fixture; reject wrong/dead sender evidence without claiming protected authority.
+M20: implement a bounded native admission lifecycle model and canonical replies against inert
+records; test sequence/epoch/seal/death invalidation without privileged broker effects.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

@@ -8,3 +8,6 @@ docs/lab/child_protocol_validate.py text eol=lf
 
 docs/lab/child_ancillary.c text eol=lf
 docs/lab/child_ancillary_validate.py text eol=lf
+
+docs/lab/child_sender.c text eol=lf
+docs/lab/child_sender_validate.py text eol=lf

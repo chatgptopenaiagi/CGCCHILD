@@ -154,3 +154,9 @@ No generic client or broker action is introduced. M4 remains PARTIAL.
 An owned same-process socketpair validates CMSG walking, truncation refusal and received-FD
 disposal without pretending to establish a protected controller. Actual credentials are compared
 before normalized payload-model checks. Full live-instance binding remains a separate gate.
+
+## M19: retain launch handle and compare message credentials separately
+
+The fixed nonroot sender fixture witnesses connection identity differing from actual sender,
+accepts one gated live instance and refuses queued data after exact child death. Poll errors
+refuse explicitly. This is not atomic authorization or same-UID control-plane protection.
