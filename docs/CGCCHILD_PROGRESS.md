@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M58: native proof dependency reconciliation and next independent interface.
+M59: bounded inert capsule export/import/inspect pipe adapter.
 
 ## CURRENT HEAD
 
-HEAD (M58 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M59 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -120,6 +120,8 @@ M55 seventeen actual-channel negatives/reopen attempts refuse; positive effect d
 M56 three controller-exit boundaries and positive dialogue pass without signals or timing sleeps.
 
 M57 CREATE collision/ATTACH EBADF and positive channel dialogue pass with owned cleanup.
+
+M59 both historical capsule profiles export/import/inspect through bounded pipes on Windows/Fedora.
 
 ## PARTIAL
 
@@ -237,6 +239,8 @@ Original80 raw source hashes remain unchanged, including owner plan material.
 M51-M54 native builds/runs pass with matched final images and owned temporary cleanup.
 M54 child127: Windows108 passed/19 POSIX skips15.197s; Fedora127 passed22.326s.
 Source80 hashes and source live HEAD unchanged; static27-fixture/83-file audit passes.
+M59 five capsule pipe families pass both hosts; Windows132 child tests113 passed/19 skips.
+Full Fedora521 tests passed138.149s; no inherited assertions changed.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -246,11 +250,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M57 aadfb0c88ea0b337135f3e27fd95ab56ca380ed0 verified local/tracking/live and clean.
-Current M58 self-reference HEAD; published hash follows next checkpoint.
+M58 87997b290dcf9eab0ecbc638e05e7ff9e961ae51 verified local/tracking/live and clean.
+Current M59 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M59: implement bounded capsule export/import/inspect over stdin/stdout, delegating
-both historical profiles to existing core validation; no extraction or path authority.
+M60: implement an independent Node bounded chunk assembler with explicit digest/size
+anchors and no capsule-semantic acceptance; compose its bytes with the Python core in tests.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

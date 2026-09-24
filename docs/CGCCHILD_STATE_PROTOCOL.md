@@ -76,3 +76,39 @@ No real producer, proof source, filesystem exclusivity, mutation/recovery execut
 safe-resume acceptance exists. Broader V3 continuity projection, event streams, source instance
 authentication, portability tests in other languages, signatures, service transport and plugin
 acceptance remain separate milestones. Imported data cannot be promoted by adding a flag.
+
+## M59: bounded capsule pipe operations
+
+[Adapter](../src/cgc/experimental/capsule_stdio.py),
+[tests](../tests/test_child_capsule_stdio.py). With src on PYTHONPATH:
+
+```text
+python -B -m cgc.experimental.capsule_stdio export
+python -B -m cgc.experimental.capsule_stdio import
+python -B -m cgc.experimental.capsule_stdio inspect
+```
+
+Each reads one complete bounded binary input from stdin. export accepts canonical
+snapshot bytes and writes the existing deterministic ZIP capsule. import validates
+that entire archive through the core and writes canonical historical snapshot bytes.
+inspect validates the archive and writes a small canonical JSON summary with profile,
+covered capsule/snapshot digests, byte count, unsigned integrity and explicit historical
+UNKNOWN/no-authority labels. No raw historical records or arbitrary error text appear
+in inspect output. Both model0.1 and continuity0.2 capsules are supported unchanged.
+
+There is no filename argument, extraction, target repository, shell, network, refresh,
+execution or automatic persistence. The owner of the pipes chooses any redirection.
+Do not use a text transcoder for binary ZIP output. The adapter does not install itself
+or modify packaging/host configuration. Unknown operation/extra arguments refuse before
+reading input. The input read is bounded to core maximum+1; the caller owns the stream
+EOF/deadline and process lifecycle. This is not a daemon or network service.
+
+Exit0 means the validated output was fully written/flushed to the supplied stream.
+Invalid input returns2, empty stdout, and only CGCCHILD_CAPSULE_REFUSED on stderr.
+Stream handling returns2 on I/O failure and may leave partial output; a process-level
+broken pipe or interpreter shutdown failure can also produce a nonzero exit. Recipients must require success
+and independently validate received bytes. Digest/integrity is not authentication,
+import does not refresh evidence, and no positive P3/mutation authority is emitted.
+Tests exercise actual Windows/Fedora subprocesses with both profiles (including the
+large continuity fixture), malformed/trailing/truncated/duplicate inputs, byte bounds,
+forbidden modes/arguments, short output, no-extraction/path/execution calls and fixed errors.

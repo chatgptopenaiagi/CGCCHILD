@@ -409,3 +409,10 @@ The nonprivileged channel/effect tranche closes selected mechanical gaps, not th
 protected control-plane proof. Continue queue items4/5 with a bounded stdin/stdout
 capsule adapter calling existing core validators; no new authority, extraction,
 network, filename or implicit persistence API. RO/R6 remains separately blocked.
+
+## M59: pipe capsule operations delegate all semantics to the existing core
+
+Three fixed operations expose inert export/import/inspection without file paths or
+archive extraction. Validate the entire input before emitting output; partial transport
+failure is not success. Both historical profiles preserve original bytes and authority
+UNKNOWN/NONE semantics. No new schema, migration, host installation or network endpoint.
