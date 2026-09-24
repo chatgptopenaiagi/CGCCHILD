@@ -341,3 +341,56 @@ PID lookup. UNKNOWN: authenticated C requests actually triggering W effects. The
 are same-UID trusted fixture branches, not protected identities or closed admission.
 Next compose the bound C request channel with the inert effect sequence using
 launch-time W pidfds, retaining per-message identity and FD checks.
+
+## M54: authenticated owned channel composed with inert effects
+
+OBSERVED_FACT: one fixed B/C/W image now joins M27 per-message credential/live-pidfd
+checks, native protocol/lifecycle parsing and M49 effect-before-ack ordering.
+B's trusted prelude captures its own pidfd, a private SO_PASSCRED seqpacket pair,
+a worker gate and the owned temporary cwd descriptor. Scalar atomic launches bind
+C and later W without post-filter pidfd_open or PID relocation. The fixture checks
+FD dev/inode/type/owner/access/CLOEXEC against captured objects before channel use.
+Unexpected SCM_RIGHTS is rejected and received holes are closed, preserving the
+expected inventory. Earlier rights/hostile sender fixtures remain historical tests;
+this composition milestone runs only the positive dialogue and final closed refusal.
+
+Exact initial FD inventory:3 C socket,4 B socket,5 B pidfd,6/7 W gate,8 owned cwd.
+C launch produces parent pidfd9; C closes4/6/7/8, retains3/5. CREATE produces
+owned domain directory10 and membership regular file11. ATTACH launches W with
+parent pidfd12; W closes3..11 except6, checks its inventory, narrows, and waits.
+B writes W's returned PID decimal to file11 and reads it back before ACK. B closes
+3/5/6 after attachment, closes11 at SEAL and narrows. QUERY observes W still gated.
+After its reply B releases/reaps W via pidfd12; REMOVE is permitted only afterward,
+unlinks the owned file/domain and closes10/8. The sixth post-CLOSED request is
+refused without reply; B closes4, C sees EOF/exits, B reaps C via9. Extra FDs absent.
+
+Filters: bootstrap1043, sealed843, C739, W723 instructions; all final rules are
+strict bootstrap subsets. Default EPERM; unsupported arch/x32 KILL model checks.
+The bootstrap permits fixed scalar clone and fixed-dirfd file operations. Pointer
+contents (including literal pathnames and poll arrays) remain trusted native-code
+obligations; syscall rules are not path/DAC proof. C/W final rules contain no clone,
+exec, socket creation, openat, ptrace, namespace or filter-install authority.
+
+[Source](lab/child_channel_effect.c), [driver](lab/child_channel_effect_validate.py),
+[evidence](lab/child_channel_effect_evidence.json). Three runs/build pass, two final
+build/evidence sets match. Static ELF, one syscall veneer, no dynamic imports.
+Raw syscall map:0 gate read;1 membership/gate writes;3 close;5 fstat;7 poll;17
+membership pread;39/102/104 current credentials;46/47 fixed-channel messages;53/54
+prelude socketpair/SO_PASSCRED;56 scalar launch;60 exit;72 FD flags;157 restrictions;
+247 owned pidfd wait;257/258 owned file/domain creation;263 owned removal;302
+fixture-only FD limit64;317 filters;434 prelude self pidfd;436 initial FD closure.
+All temporary Linux-native builds/objects removed. No timeout or privileged action.
+
+Development correction: -Werror caught the omitted reply_parse call while it was
+unused in the first composition. Restored finite reply parsing alongside byte
+comparison; did not remove the warning or parser. No failing runtime claim retained.
+UNKNOWN: continuous controller liveness between request check and effect, adverse
+packet/effect/cleanup composition, protected credentials, cgroup/manager policy.
+Generations and manager continuity remain synthetic. This fixture never establishes
+closed admission, filesystem exclusivity or production P3. R6 remains NOT_EXECUTED.
+Next exercise fixed pre/post-CREATE bad controller packets against this actual
+channel/effect composition, proving no subsequent effect or admission reopening.
+
+Static audit initially refused the expanded pretty-printed filter evidence above its
+262144-byte bound. Canonical compact instruction rows reduced evidence size without
+removing any instruction or increasing the validator bound. Both audit suites rerun.

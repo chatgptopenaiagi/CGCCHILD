@@ -374,3 +374,10 @@ Two owned children can be gated/reaped independently under scalar launch filters
 the later child closes the earlier child's inherited pidfd before release. Use
 explicit aligned assembly entry for growing freestanding native fixtures. The
 initial SIGSEGV and limited diagnosis remain evidence, not hidden acceptance.
+
+## M54: live owned channel can drive inert effects, acceptance remains separate
+
+Compose launch-bound handles, per-message credentials, FD identity and candidate
+state only in the disposable image. Acknowledge after effect/readback; reap W before
+REMOVE. Same-UID fixture branches and synthetic continuity do not become protected
+production identities. Next test negative channel/effect composition, not R6.

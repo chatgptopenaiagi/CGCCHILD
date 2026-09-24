@@ -15,8 +15,8 @@ class AuditTests(unittest.TestCase):
     def test_actual_bindings_and_no_execution(self):
         with patch('subprocess.Popen',side_effect=AssertionError('execute')):
             result=audit.audit(ROOT)
-        self.assertEqual(len(result['fixtures']),26)
-        self.assertEqual(result['files_read'],80)
+        self.assertEqual(len(result['fixtures']),27)
+        self.assertEqual(result['files_read'],83)
         self.assertFalse(result['production_accepted'])
         bootstrap=next(x for x in result['fixtures'] if x['fixture']=='child_bootstrap')
         self.assertEqual(bootstrap['driver_binding'],'UNRECORDED')

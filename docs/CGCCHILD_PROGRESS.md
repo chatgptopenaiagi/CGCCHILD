@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M53: separate owned C/W launch handles and gate lifecycles.
+M54: live owned C channel composed with inert CREATE/ATTACH effects.
 
 ## CURRENT HEAD
 
-HEAD (M53 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M54 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -112,6 +112,8 @@ M51 raw clone3 launch returns an owned-child pidfd; three runs/build, identical 
 M52 scalar clone/pidfd launch passes under207/85/141-instruction bootstrap/child/parent filters.
 
 M53 two-child launch/reap passes both release orders; sibling pidfd is closed before release.
+
+M54 three-process filtered channel/effect dialogue passes; five effect-ordered acknowledgements.
 
 ## PARTIAL
 
@@ -226,6 +228,9 @@ Expanded22-fixture/68-file static auditor passes five families on Windows/Fedora
 M50 final native builds/runs byte-identical;23-fixture/71-file source audit passes.
 Windows127 child tests:108 passed,19 POSIX skips; Fedora127 passed in22.390s.
 Original80 raw source hashes remain unchanged, including owner plan material.
+M51-M54 native builds/runs pass with matched final images and owned temporary cleanup.
+M54 child127: Windows108 passed/19 POSIX skips15.197s; Fedora127 passed22.326s.
+Source80 hashes and source live HEAD unchanged; static27-fixture/83-file audit passes.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -235,11 +240,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M52 b8f2acaa795ab404e06492fe0c01f53631ce902b verified local/tracking/live and clean.
-Current M53 self-reference HEAD; published hash follows next checkpoint.
+M53 b8583867a1770bfb43f684f72a0771e895dad026 verified local/tracking/live and clean.
+Current M54 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M54: compose the bound C request channel with owned inert CREATE/ATTACH effects
-and launch-time W pidfds; preserve per-message identity, FD checks and invalidation.
+M55: challenge actual channel/effect composition with fixed bad packets before/after
+CREATE; prove no later effect or admission reopening, with attributable cleanup.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
