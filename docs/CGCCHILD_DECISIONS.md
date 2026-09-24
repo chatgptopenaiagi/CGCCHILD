@@ -559,3 +559,13 @@ script callback or executor is available. One review attempt consumes the bindin
 when refused. Detached projections/templates cannot mutate saved capture; historical
 reports drop current provenance. Scope selection is proposed intent, not authorization.
 Windows import remains safe and prepare explicitly refuses unsupported POSIX dependencies.
+
+## M74: imported report is not a stored capture
+
+Session-report export explicitly calls historical re-evaluation. Import recomputes all
+proof via the unchanged verifier with no capture argument, then checks canonical digest
+and envelope bytes. A current-capture label or changed verdict fails even when the caller
+recomputes its hash. Strict read-only analysis scope and528384byte bound apply. Windows
+semantic validation remains unavailable; no dependency is faked. Five focused report tests
+and25 related review tests pass on Fedora. No inherited runtime, collection or execution
+behavior changed; report storage remains an explicit future consumer concern.

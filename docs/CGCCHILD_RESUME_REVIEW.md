@@ -89,3 +89,29 @@ An initial expectation that a changed repair digest would produce NO was incorre
 inherited unsupported repair profile sets P2 UNKNOWN. The child now rejects inconsistent
 request/project/digest bindings before invoking the verifier. This strengthens composition
 without modifying inherited proof rules or treating UNKNOWN as permission.
+
+## Two-step read-only session and inert report (M73-M74)
+
+[Session](../src/cgc/experimental/review_session.py) prepares exactly one bounded local
+OBSERVE capture. It returns detached projection/request-template data for caller review.
+The caller explicitly supplies a separate request; only READ_ONLY_ANALYSIS/HANDOFF_ONLY
+and ACCOUNT_ONLY are allowed. The session closes before evaluation, including invalid
+requests; close is idempotent. No remote, test execution, content callback, authority
+parameter or mutation adapter exists. Preparation does not create a handoff store or
+write evidence. Windows refuses its inherited POSIX dependency explicitly.
+
+[Report codec](../src/cgc/experimental/session_report.py) exports only re-evaluated imported
+proof. from_review requires the exact Review type and calls historical_report; private
+capture state is never serialized. The envelope has exact version, scope, verification,
+verification_sha256, freshness, authority, current_repository_safety, mutation_authorized
+and execution_state fields. The digest covers canonical compact sorted ASCII proof JSON
+plus one LF. Entire canonical envelope plus LF is bounded to528384bytes. Duplicate keys,
+noncanonical bytes, altered digests and unknown fields refuse. The inherited verifier
+recomputes proof without capture before acceptance; even a resealed forged current verdict
+refuses. No serialized value can supply a capture parameter.
+
+Imported proof may report UNKNOWN or NO under its exact scope; current repository safety
+always remains UNKNOWN. HistoricalReport stores immutable bytes and returns detached data.
+Unsigned digest consistency is not source authenticity. No report can execute an action.
+This semantic validator is POSIX-only until inherited pure proof dependencies are separated;
+Windows refuses rather than trusting a JSON label. No storage/transport is added by the codec.

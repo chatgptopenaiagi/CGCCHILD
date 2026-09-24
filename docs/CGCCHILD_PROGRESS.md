@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M73: explicit single-use read-only capture/review session and V3 interface audit.
+M74: bounded inert session-report codec with imported-proof revalidation.
 
 ## CURRENT HEAD
 
-HEAD (M73 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M74 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -159,6 +159,8 @@ V4.0/V4.1 EXPERIMENTAL/PARTIAL for model and lossless historical V3 profiles; no
 
 ## TEST RESULTS
 
+M74 report5: Fedora passed0.372s; Windows1 passed/4 POSIX skips. Related review25 pass Fedora0.794s.
+
 M73 focused session5: Fedora passed0.578s; Windows1 passed/4 POSIX skips.
 Full Fedora576 passed178.082s; Windows child187:164 passed/23 POSIX skips50.161s.
 Child remains PRIVATE, upstream push disabled, original live main/status unchanged.
@@ -288,11 +290,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M72 749a7db680def0bb3ead995302b594ca2c65d0e8 verified local/tracking/live and clean.
-Current M73 self-reference HEAD; published hash follows next checkpoint.
+M73 4d381531b5fbb2221814bedba7823140df031d08 verified local/tracking/live and clean.
+Current M74 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M74: define a bounded inert session-report codec that revalidates imported proof and
-cannot serialize or restore private capture authority; keep execution unavailable.
+M75: add a bounded read-only session-report status pipe that revalidates imported proof,
+omits project paths/notes and refuses unsupported platforms without collection or execution.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
