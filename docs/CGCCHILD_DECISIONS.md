@@ -71,3 +71,12 @@ strings avoid precision loss. Exact canonical re-encoding detects duplicate keys
 value escapes decode. Python/Node compare acceptance, exact bytes, digest and human rendering.
 Review found trailing-newline dollar-anchor ambiguity; full-string matching and regression
 cases resolve it. No browser/full V3 parity is claimed; no new dependency was installed.
+
+## M8 — read-capability laboratory has no authentication claim
+
+Opaque in-process handles model scoped read authority for one immutable snapshot. Registry
+membership, expiry, principal label, method and digest are checked; serialization cannot
+recreate grants. The caller/clock are trusted and same-process hostile Python code is outside
+scope. No MCP grant endpoint, live/remote authorization or execution adapter exists. Bounded
+hash-chain events are consistency evidence only, not authenticated durable audit. Next work
+returns to the missing real V3 continuity projection rather than adding a network listener.

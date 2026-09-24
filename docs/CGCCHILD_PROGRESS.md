@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M7: independent Node codec, canonical cross-language corpus and precise UNKNOWN preservation.
+M8: bounded in-process read-capability and event laboratory; no live/remote grants.
 
 ## CURRENT HEAD
 
-HEAD (M7 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M8 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -25,6 +25,7 @@ M4 four read-only core projections, digest-bound requests,32-request stdio limit
 M5 MCP2025-11-25 subset: initialize/tools/ping; seven owned-process/bounds test families.
 M6 plugin manifest/skill static validation; no hooks, auto-launch config or marketplace.
 M7 Node model codec:692 checks, Python/Node acceptance/bytes/digest/human parity corpus.
+M8 opaque read handles, expiry/revocation/generation refusal,64-event bounded hash chain.
 
 ## PARTIAL
 
@@ -37,7 +38,8 @@ real P3; production mutation/recovery acceptance. See CGCCHILD_BLOCKERS.md.
 
 ## NOT_STARTED
 
-Production quiescence; full safe resume; remote gateway; agent fabric.
+Production quiescence; full safe resume; remote gateway and production agent fabric.
+Fabric/read-policy foundations EXPERIMENTAL/PARTIAL, in-process laboratory only.
 V4.4 Node codec EXPERIMENTAL/PARTIAL; other languages/browser/full V3 projection absent.
 V4.3 plugin foundation EXPERIMENTAL/PARTIAL; installation and Codex interoperability NOT_EXECUTED.
 MCP adapter EXPERIMENTAL/PARTIAL; independent SDK interoperability unavailable.
@@ -61,6 +63,9 @@ MCP SDK absent on both hosts.
 M6 installed plugin/skill static validators passed. No runtime changes; full suite not repeated.
 M7 Node692 checks, Windows32 child tests and Fedora32 child tests pass (no skips).
 No Python runtime change in this milestone; full inherited suite not repeated.
+M8 focused38 Windows and full427 Linux tests passed (109.466s).
+Static keypoint check initially counted a later25-item list; section-bound correction
+confirmed exactly100 keypoints. Mission/license Git content unchanged.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -70,11 +75,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M6 661c2d18016f4bb8836780f5326464bef3dc2a3a verified local/tracking/live and clean.
-Current M7 self-reference HEAD; published hash follows next checkpoint.
+M7 b13155dcf7879a3d0513b3ff3c7676c2736ba124 verified local/tracking/live and clean.
+Current M8 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M8: define and test capability-scoped in-memory routing/event boundaries for inert snapshot
-consumers; no remote transport, live grant or model-output execution.
+M9: implement a lossless historical projection of validated V3 continuity records; preserve
+latest failure/last-known-good distinctions and outer UNKNOWN without invoking filesystem actions.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
