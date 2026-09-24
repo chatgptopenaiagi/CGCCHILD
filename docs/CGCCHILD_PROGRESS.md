@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M15: action-specific filesystem writer-closure model; recurring inherited fixture failure retained.
+M16: deterministic inert offline HTML surface for both historical profiles.
 
 ## CURRENT HEAD
 
-HEAD (M15 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M16 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -36,6 +36,8 @@ M13 digest-bound read-only owned descriptor startup; large Linux subprocess and 
 M14 unchanged verifier integration, explicit request binding, imported report demotion and POSIX limit.
 
 M15 finite action/domain/channel model, per-cell omission/contradiction tests, no live proof.
+
+M16 offline HTML projection, bounded CLI, escaping/CSP checks and disposable browser review.
 
 ## PARTIAL
 
@@ -92,6 +94,8 @@ B11 retains UNKNOWN root cause. Initial Windows import error fixed by explicit p
 M15 Windows75 tests:65 passed,10 skips. Normal full464 run failed the same inherited
 pack-tree assertion in SIGTERM case. Traced12 repetitions passed; diagnostic full464 passed
 in112.241s with setup-only Git tracing and bounded assertion diagnostics. B11 remains open.
+M16 Windows79 tests:69 passed,10 skips. Normal full Linux468 passed in111.983s.
+Fresh isolated Edge render reviewed; owned browser profile/screenshot cleaned. B11 still open.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -101,11 +105,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M14 66aaf3b8b083c589b4a956ed508f2649f398b84c verified local/tracking/live and clean.
-Current M15 self-reference HEAD; published hash follows next checkpoint.
+M15 1d82b6da5bbea01331c2f5518ffe2cab920b1758 verified local/tracking/live and clean.
+Current M16 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M16: add an inert offline HTML status projection from the closed historical profiles;
-no script, network, refresh, authority or executable controls. Keep B11 unresolved.
+M17: audit the completed independent foundation queue against the master plan; retain exact
+acceptance blockers, verify source protection and prepare a clean resumable preservation checkpoint.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

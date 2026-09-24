@@ -135,3 +135,9 @@ dependency is handled with explicit Windows refusal, not a fake fcntl implementa
 A finite pure domain/channel model makes missing writer-route coverage explicit. Model YES
 cannot satisfy production filesystem or P3 proof. Imported/freshness/scope errors degrade the
 model, repair stays unsupported, and no live adapter or implicit discovery is introduced.
+
+## M16: render an inert offline status surface
+
+The reference web foundation is deterministic HTML generated from validated historical bytes.
+It has no executable controls, script, live refresh or network. The original core/profile rules
+remain authoritative; the view cannot refresh evidence or convert integrity into permission.
