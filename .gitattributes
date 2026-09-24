@@ -1,1 +1,3 @@
 docs/CGCCHILD_MASTER_PLAN_SOURCE.md -text whitespace=-blank-at-eol
+docs/lab/child_bootstrap.c text eol=lf
+docs/lab/child_bootstrap_validate.py text eol=lf

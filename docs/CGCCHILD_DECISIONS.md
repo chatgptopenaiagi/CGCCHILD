@@ -38,3 +38,11 @@ not flattened into fake status. Clocks use decimal strings to avoid language pre
 The deterministic unsigned capsule has three fixed members, no extraction and exact re-export
 validation. Historical interpretation never refreshes model clocks or creates authority. This is
 not yet a full V3 continuity exporter, source backup, accepted portable protocol or production V4.
+
+## M4 — private read-only transport is not MCP
+
+The immutable snapshot dispatcher exposes only four read-only projections. Digest matching
+binds a request to stored bytes, not current evidence or authorization. The bounded foreground
+stdio reference surface has no sockets, file paths or command arguments. Its caller owns read
+timeouts. MCP naming is withheld until lifecycle/tool framing is separately implemented and
+validated against published protocol. The model-only snapshot remains explicitly incomplete.
