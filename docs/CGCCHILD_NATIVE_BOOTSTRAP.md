@@ -421,3 +421,32 @@ Next address owned controller death at deterministic request boundaries without
 signals or privileged R6: distinguish a queued dead-sender packet from a live
 request, and invalidate before the next effect. This cannot prove continuous
 liveness between arbitrary observations; that gap must remain explicit.
+
+## M56: deterministic owned controller exit at request/effect boundaries
+
+OBSERVED_FACT: three fixed modes in the actual C/B channel fixture: C queues CREATE
+then exits before B receives; C exits after authenticated CREATE but before its
+effect; C exits after authenticated ATTACH following an acknowledged CREATE.
+The latter two use a fixed one-byte fixture-only D message to let C exit normally;
+B waits on the retained C pidfd before proceeding. No signal, sleep, external PID
+or privileged controller is involved. A queued dead sender fails the existing
+per-message live-handle check. All prospective effect paths additionally recheck
+the captured C FD identity/readiness immediately before executing their effect.
+Observed death discards prepared candidate state and invalidates active proof.
+
+No death mode launches W. The after-CREATE mode verifies the membership file is
+still empty before attributable removal; cleanup grants no REMOVE success. C is
+reaped via its launch handle. Positive six-request/five-reply operation still passes
+in the same image. [Source](lab/child_channel_death.c),
+[driver](lab/child_channel_death_validate.py), [evidence](lab/child_channel_death_evidence.json).
+Four native runs per build; two final build/evidence sets match; same filters and
+syscall inventory as M54, no timeout, all temporary objects removed. Source audit
+covers29 fixtures/89 files. R6 and privileged observations remain NOT_EXECUTED.
+
+LIMITATION: the test handshake makes the death window reproducible; it is not a
+production control operation. A final liveness observation still leaves a time gap
+before the kernel effect. No continuous-liveness claim, rollback promise, protected
+identity acceptance or filesystem/P3 promotion follows. Unexpected exit outside
+these fixed fixture modes refuses the run rather than being reported as test success.
+Next compose actual CREATE collision/ATTACH failure with channel acknowledgements
+and owned cleanup, without accepting a success response for a failed kernel effect.

@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M55: negative packets through the actual bound channel/effect composition.
+M56: deterministic controller exit invalidates before the next inert effect.
 
 ## CURRENT HEAD
 
-HEAD (M55 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M56 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -116,6 +116,8 @@ M53 two-child launch/reap passes both release orders; sibling pidfd is closed be
 M54 three-process filtered channel/effect dialogue passes; five effect-ordered acknowledgements.
 
 M55 seventeen actual-channel negatives/reopen attempts refuse; positive effect dialogue still passes.
+
+M56 three controller-exit boundaries and positive dialogue pass without signals or timing sleeps.
 
 ## PARTIAL
 
@@ -242,11 +244,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M54 6a274401615fc7f87b32611b21a4c5fd646f4e88 verified local/tracking/live and clean.
-Current M55 self-reference HEAD; published hash follows next checkpoint.
+M55 da17289235f3de76bbfc1d8966824afe7e438f2d verified local/tracking/live and clean.
+Current M56 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M56: test deterministic owned controller exit before receipt and before the next
-inert effect; preserve invalidation, earlier evidence and explicit liveness race limits.
+M57: compose actual owned CREATE collision/ATTACH failure with the channel;
+verify no success acknowledgement, preserved prior evidence and conservative cleanup.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

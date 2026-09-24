@@ -388,3 +388,10 @@ Negative packet/model evidence now composes with actual per-message credentials,
 FD binding, and file effects. INVALIDATED preserves earlier CREATE but refuses
 the queued correct request; cleanup is not an acknowledged successful operation.
 Next test deterministic owned controller exit boundaries, retaining race limits.
+
+## M56: observed controller death discards prepared state before the next effect
+
+Use launch pidfd identity/readiness at receipt and immediately before effect.
+Deterministic normal-exit handshakes test those boundaries without root or signals.
+Do not describe the remaining check-to-use window as continuous liveness proof.
+Historical CREATE remains evidence; cleanup is not successful operation promotion.
