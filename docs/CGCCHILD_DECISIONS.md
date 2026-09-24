@@ -98,3 +98,12 @@ Core/MCP/read handles consume the same dispatcher. Existing96KiB response bounds
 large valid state can archive losslessly yet return RESPONSE_LIMIT over transport. This is
 truthful refusal, not truncated success. Node/skill remain model-only, with explicit skill
 profile refusal. Large data-plane transport is a measured next integration gap.
+
+## M11 — bounded chunks do not create a new authority
+
+The fifth core/MCP operation returns fixed32KiB archive chunks for one snapshot digest.
+Receiver verification is sequential, bounded and terminal on failure. Session bounds128
+cover the maximum65 chunks without raising the96KiB response ceiling. No extraction/path,
+remote trust or grant transfer exists. Read-grant lab and skill remain narrower subsets.
+Review corrected mixed-member caller-mutation risk and mislabeled core-refusal events, with
+regression tests. Repeated archive generation remains an explicit performance question.

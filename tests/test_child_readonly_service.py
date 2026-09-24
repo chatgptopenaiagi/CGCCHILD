@@ -12,6 +12,7 @@ from test_child_state_protocol import state
 
 def request(method='state.get',**changes):
     value=dict(id='req-1',method=method,snapshot_digest=sp.digest(state()))
+    if method=='capsule.chunk':value['offset']=0
     value.update(changes)
     return (json.dumps(value,separators=(',',':'))+'\n').encode('ascii')
 
@@ -42,9 +43,9 @@ class ChildReadOnlyServiceTests(unittest.TestCase):
 
     def test_stream_limits_and_no_rebind(self):
         out=io.BytesIO()
-        source=io.BytesIO(sp.encode(state())+request()*40)
+        source=io.BytesIO(sp.encode(state())+request()*(svc.MAX_REQUESTS+8))
         self.assertEqual(svc.serve(source,out),0)
-        self.assertEqual(len(out.getvalue().splitlines()),32)
+        self.assertEqual(len(out.getvalue().splitlines()),svc.MAX_REQUESTS)
         self.assertTrue(source.read())
         out=io.BytesIO()
         self.assertEqual(svc.serve(io.BytesIO(b'bad\n'+request()),out),2)

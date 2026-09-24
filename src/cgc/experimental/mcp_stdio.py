@@ -7,13 +7,23 @@ import json
 import sys
 from . import snapshot_profiles as sp
 from .readonly_service import ReadOnlyCore
+from .capsule_chunks import CHUNK_BYTES
+from .capsule import MAX_BYTES as MAX_CAPSULE_BYTES
 
 PROTOCOL = '2025-11-25'
 MAX_FRAME = 8192
-MAX_MESSAGES = 64
+MAX_MESSAGES = 128
 MAX_RESPONSE = 96*1024
 TOOLS = {'cgcchild_capabilities':'capabilities.get','cgcchild_state':'state.get',
-         'cgcchild_status':'status.get','cgcchild_capsule':'capsule.export'}
+         'cgcchild_status':'status.get','cgcchild_capsule':'capsule.export',
+         'cgcchild_capsule_chunk':'capsule.chunk'}
+
+
+def input_schema(name,digest):
+    properties={'snapshot_digest':{'type':'string','const':digest}}
+    if name=='cgcchild_capsule_chunk':
+        properties['offset']={'type':'integer','minimum':0,'maximum':MAX_CAPSULE_BYTES-1,'multipleOf':CHUNK_BYTES}
+    return {'type':'object','properties':properties,'required':list(properties),'additionalProperties':False}
 
 
 def wire(value):
@@ -77,18 +87,19 @@ class MCPAdapter:
         elif method=='tools/list':
             if params:return error(identifier,-32602,'Invalid params')
             result={'tools':[{'name':name,'description':'Historical snapshot; no live proof or mutation authority.',
-                'inputSchema':{'type':'object','properties':{'snapshot_digest':{'type':'string','const':self.digest}},
-                               'required':['snapshot_digest'],'additionalProperties':False},
+                'inputSchema':input_schema(name,self.digest),
                 'annotations':{'readOnlyHint':True,'destructiveHint':False,'idempotentHint':True,'openWorldHint':False}}
                 for name in sorted(TOOLS)]}
         elif method=='tools/call':
             if set(params)!={'name','arguments'} or type(params['name']) is not str or params['name'] not in TOOLS:
                 return error(identifier,-32602,'Invalid params')
             arguments=params['arguments']
-            if type(arguments) is not dict or set(arguments)!={'snapshot_digest'}:
+            expected={'snapshot_digest'}
+            if params['name']=='cgcchild_capsule_chunk':expected.add('offset')
+            if type(arguments) is not dict or set(arguments)!=expected:
                 return error(identifier,-32602,'Invalid params')
-            raw_result=self.core.dispatch(wire({'id':'mcp','method':TOOLS[params['name']],
-                                               'snapshot_digest':arguments['snapshot_digest']}))
+            request={'id':'mcp','method':TOOLS[params['name']],**arguments}
+            raw_result=self.core.dispatch(wire(request))
             value=json.loads(raw_result)
             result={'content':[{'type':'text','text':raw_result.decode('ascii').rstrip('\n')}],
                     'structuredContent':value,'isError':'error' in value}

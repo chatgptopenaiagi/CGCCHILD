@@ -9,11 +9,12 @@ import re
 import sys
 from . import snapshot_profiles as sp
 from .capsule import export_capsule
+from .capsule_chunks import chunk,ChunkError
 
-METHODS = ('capabilities.get','state.get','status.get','capsule.export')
+METHODS = ('capabilities.get','state.get','status.get','capsule.export','capsule.chunk')
 MAX_REQUEST = 1024
 MAX_RESPONSE = 96*1024
-MAX_REQUESTS = 32
+MAX_REQUESTS = 128
 
 
 def _wire(value):
@@ -41,7 +42,11 @@ class ReadOnlyCore:
             if type(raw) is not bytes or not 1<=len(raw)<=MAX_REQUEST or not raw.endswith(b'\n'):
                 raise ValueError()
             request=json.loads(raw.decode('ascii'),object_pairs_hook=pairs)
-            if type(request) is not dict or set(request)!={'id','method','snapshot_digest'}:
+            if type(request) is not dict:
+                raise ValueError()
+            expected={'id','method','snapshot_digest'}
+            if request.get('method')=='capsule.chunk':expected.add('offset')
+            if set(request)!=expected:
                 raise ValueError()
             if type(request['id']) is not str or not re.fullmatch(r'[A-Za-z0-9_-]{1,32}',request['id']):
                 raise ValueError()
@@ -60,7 +65,10 @@ class ReadOnlyCore:
                     'freshness':'HISTORICAL_UNVERIFIED','max_requests':MAX_REQUESTS}
         elif method=='state.get':result=state
         elif method=='status.get':result={'text':sp.render_human(state)}
-        else:result={'encoding':'base64','capsule':base64.b64encode(export_capsule(state)).decode('ascii')}
+        elif method=='capsule.export':result={'encoding':'base64','capsule':base64.b64encode(export_capsule(state)).decode('ascii')}
+        else:
+            try:result=chunk(state,request['offset'])
+            except ChunkError:return _error('CHUNK_RANGE')
         response=_wire({'version':'cgcchild-readonly-0.1','id':request['id'],
                         'snapshot_digest':self._digest,'result':result,'mutation_authorized':False})
         if len(response)>MAX_RESPONSE:return _error('RESPONSE_LIMIT')

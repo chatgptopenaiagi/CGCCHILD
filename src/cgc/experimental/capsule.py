@@ -29,6 +29,9 @@ def _manifest(state, human, profile=profiles.MODEL):
 
 
 def export_capsule(value):
+    # Work from one detached, revalidated snapshot for every member. A caller
+    # changing its object after this boundary cannot split state/human versions.
+    value=profiles.validate(value)
     state=profiles.encode(value)
     profile=profiles.kind(value)
     human=profiles.render_human(value).encode('ascii')

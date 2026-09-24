@@ -31,7 +31,9 @@ class ChildMCPTests(unittest.TestCase):
         self.assertEqual([x['name'] for x in listed],sorted(mcp.TOOLS))
         for tool in listed:
             self.assertTrue(tool['annotations']['readOnlyHint'])
-            result=json.loads(a.handle(req('tools/call',{'name':tool['name'],'arguments':{'snapshot_digest':sp.digest(state())}})))['result']
+            arguments={'snapshot_digest':sp.digest(state())}
+            if tool['name']=='cgcchild_capsule_chunk':arguments['offset']=0
+            result=json.loads(a.handle(req('tools/call',{'name':tool['name'],'arguments':arguments})))['result']
             self.assertFalse(result['isError'])
             self.assertFalse(result['structuredContent']['mutation_authorized'])
             self.assertEqual(json.loads(result['content'][0]['text']),result['structuredContent'])
@@ -76,13 +78,13 @@ class ChildMCPTests(unittest.TestCase):
         responses=[json.loads(x) for x in run.stdout.splitlines()]
         self.assertEqual(len(responses),2)
         self.assertEqual(responses[1]['id'],2)
-        self.assertEqual(len(responses[1]['result']['tools']),4)
+        self.assertEqual(len(responses[1]['result']['tools']),len(mcp.TOOLS))
 
     def test_frame_and_session_bounds(self):
-        source=io.BytesIO(init()+req('notifications/initialized',identifier=None)+req('ping')*70)
+        source=io.BytesIO(init()+req('notifications/initialized',identifier=None)+req('ping')*(mcp.MAX_MESSAGES+8))
         out=io.BytesIO()
         self.assertEqual(mcp.serve(sp.encode(state()),source,out),0)
-        self.assertEqual(len(out.getvalue().splitlines()),63)
+        self.assertEqual(len(out.getvalue().splitlines()),mcp.MAX_MESSAGES-1)
         self.assertTrue(source.read())
         out=io.BytesIO()
         self.assertEqual(mcp.serve(sp.encode(state()),io.BytesIO(b'x'*8193),out),2)

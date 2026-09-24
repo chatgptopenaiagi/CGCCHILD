@@ -1,5 +1,8 @@
 # Experimental version-pinned MCP adapter
 
+M11 adds a fifth chunk operation and128-message/session bound; see
+[bounded data plane](CGCCHILD_CAPSULE_CHUNKS.md). Earlier checkpoint details below remain historical.
+
 M10 delegates both historical profiles through [closed integration](CGCCHILD_PROFILE_INTEGRATION.md).
 No new tool or authority is introduced; large responses still refuse.
 

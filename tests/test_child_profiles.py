@@ -29,7 +29,9 @@ class ChildProfilesTests(unittest.TestCase):
     def test_core_continuity_projection(self):
         core=readonly_service.ReadOnlyCore(profiles.encode(self.continuity))
         for method in readonly_service.METHODS:
-            wire=(json.dumps(dict(id='x',method=method,snapshot_digest=profiles.digest(self.continuity)))+'\n').encode()
+            request=dict(id='x',method=method,snapshot_digest=profiles.digest(self.continuity))
+            if method=='capsule.chunk':request['offset']=0
+            wire=(json.dumps(request)+'\n').encode()
             out=json.loads(core.dispatch(wire));self.assertFalse(out['mutation_authorized'])
             self.assertNotIn('error',out)
             if method=='state.get':self.assertEqual(out['result'],self.continuity)

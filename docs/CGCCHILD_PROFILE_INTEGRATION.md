@@ -1,5 +1,8 @@
 # Closed historical profile integration
 
+M11 adds a fifth chunk operation and128-message/session bound; see
+[bounded data plane](CGCCHILD_CAPSULE_CHUNKS.md). Earlier checkpoint details below remain historical.
+
 M10 extends the child adapters through [snapshot_profiles.py](../src/cgc/experimental/snapshot_profiles.py).
 Exactly two reviewed source versions exist: model0.1 and continuity0.1. There is no registration,
 dynamic import, caller callback, `$ref` resolution or imported schema execution. Each source

@@ -1,5 +1,8 @@
 # Experimental read-only core and foreground reference surface
 
+M11 adds a fifth chunk operation and128-message/session bound; see
+[bounded data plane](CGCCHILD_CAPSULE_CHUNKS.md). Earlier checkpoint details below remain historical.
+
 M10 supports two explicit historical profiles; see [closed integration](CGCCHILD_PROFILE_INTEGRATION.md).
 The four methods and96KiB response refusal boundary remain unchanged.
 

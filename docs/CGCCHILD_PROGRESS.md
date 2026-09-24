@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M10: closed historical profile dispatch and continuity capsule/core/MCP integration.
+M11: fixed-size capsule data plane and verified historical receiver; bounded MCP integration.
 
 ## CURRENT HEAD
 
-HEAD (M10 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M11 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -28,6 +28,7 @@ M7 Node model codec:692 checks, Python/Node acceptance/bytes/digest/human parity
 M8 opaque read handles, expiry/revocation/generation refusal,64-event bounded hash chain.
 M9 full original V3 continuity envelope; separate historical summary; no path rebinding.
 M10 both historical profiles integrated through strict version dispatch; original model bytes stable.
+M11 fixed32KiB capsule chunks,128-message bound, verified receiver and >96KiB MCP round trip.
 
 ## PARTIAL
 
@@ -72,6 +73,8 @@ M9 Windows focused5 and child43 passed after fixture/effect-free error normaliza
 Initial5 setup errors and then2 error-type failures are documented and resolved.
 Full Linux regression432 passed in109.676s.
 M10 Windows49 child and Node692 checks passed; full Linux438 passed in109.679s.
+M11 Windows55 child tests and full Linux444 tests passed (112.138s).
+Review fixes: detached capsule generation and CORE_REFUSED audit event; regressions added.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -81,11 +84,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M9 7ee8bb612bfc61a0b1a0c398d6a44db639e028ab verified local/tracking/live and clean.
-Current M10 self-reference HEAD; published hash follows next checkpoint.
+M10 ebb4e20a4b218707143c0556e18e76047f0ef05f verified local/tracking/live and clean.
+Current M11 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M11: address the observed large-snapshot RESPONSE_LIMIT with bounded digest-bound capsule
-chunking and receiver verification, preserving per-message bounds and inert import semantics.
+M12: measure bounded model/continuity validation and capsule transfer costs; optimize repeated
+archive generation only if measurements justify it, preserving exact bytes and refusal semantics.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

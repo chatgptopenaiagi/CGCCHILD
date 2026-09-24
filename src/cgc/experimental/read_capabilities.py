@@ -15,6 +15,7 @@ from . import snapshot_profiles as sp
 MAX_GRANTS=16
 MAX_EVENTS=64
 MAX_TTL_NS=60_000_000_000
+READ_METHODS=tuple(x for x in METHODS if x!='capsule.chunk')
 
 
 class ReadDenied(RuntimeError):
@@ -67,8 +68,8 @@ class ReadCapabilityLab:
     def issue(self,principal,methods,*,now_ns,expires_ns):
         """Explicit local owner operation; not exposed by service, MCP or plugin."""
         self._at(now_ns);_clock(expires_ns);_principal(principal)
-        if (type(methods) is not tuple or not methods or len(methods)>len(METHODS)
-                or any(type(x) is not str or x not in METHODS for x in methods)
+        if (type(methods) is not tuple or not methods or len(methods)>len(READ_METHODS)
+                or any(type(x) is not str or x not in READ_METHODS for x in methods)
                 or len(set(methods))!=len(methods) or len(self._grants)>=MAX_GRANTS
                 or not now_ns<expires_ns<=now_ns+MAX_TTL_NS):raise ReadDenied()
         handle=GrantHandle()
@@ -86,7 +87,7 @@ class ReadCapabilityLab:
         # No caller-controlled id/path/params/callback or external destination.
         request=dict(id='capability',method=method,snapshot_digest=self._digest)
         response=self._core.dispatch((json.dumps(request,separators=(',',':'))+'\n').encode('ascii'))
-        self._event('READ_COMPLETE',now_ns)
+        self._event('CORE_REFUSED' if 'error' in json.loads(response) else 'READ_COMPLETE',now_ns)
         return response
 
     def revoke(self,handle,*,now_ns):

@@ -13,8 +13,8 @@ mutation is authorized by these blocker records. Acceptance remains blocked even
 
 B06 PARTIALLY_RESOLVED: Lossless V3 continuity projection now exists separately. Existing
 capsule/core/MCP now integrate it explicitly; Node/skill remain model-only by design.
-B10: Valid large continuity records exceed96KiB response bound; explicit RESPONSE_LIMIT.
-Bounded chunked data-plane design is independent work; no truncation may be called success.
+B10 PARTIALLY_RESOLVED: Fixed32KiB chunks reconstruct large capsules within96KiB responses.
+Large startup hex still faces host argv limits; stream-based owner capture design remains.
 B07: Published protocol compatibility requires independent client interoperability acceptance;
 unit/owned-subprocess transport tests cannot establish ecosystem compatibility.
 
