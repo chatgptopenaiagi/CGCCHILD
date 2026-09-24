@@ -1,0 +1,131 @@
+{
+  "cases": {
+    "medium": {
+      "arch": "x64",
+      "heap_measurement": "CURRENT_SAMPLES_NOT_PEAK",
+      "input_bytes": 111897,
+      "input_sha256": "b3ecc97256096e574307569bb4b30be530b4af421a1d2fc93a44a49a1a32433b",
+      "node": "v22.23.1",
+      "platform": "linux",
+      "production_accepted": false,
+      "roundtrip": {
+        "heap_after_bytes": 8295352,
+        "heap_before_bytes": 5083152,
+        "max_ms": 112.83679999999998,
+        "median_ms": 84.82979999999998,
+        "min_ms": 84.34180000000003,
+        "output_sha256": "b3ecc97256096e574307569bb4b30be530b4af421a1d2fc93a44a49a1a32433b",
+        "samples_ms": [
+          112.83679999999998,
+          84.82979999999998,
+          84.34180000000003
+        ]
+      },
+      "scope": "SYNTHETIC_ENGINEERING_MEASUREMENT",
+      "status": {
+        "heap_after_bytes": 23260344,
+        "heap_before_bytes": 8296408,
+        "max_ms": 82.21820000000002,
+        "median_ms": 68.469,
+        "min_ms": 65.69269999999995,
+        "output_sha256": "57942553a55303169af7580b2c0a9878942c9ccaa8a0d462313cbd8801f19020",
+        "samples_ms": [
+          68.469,
+          82.21820000000002,
+          65.69269999999995
+        ]
+      }
+    },
+    "small": {
+      "arch": "x64",
+      "heap_measurement": "CURRENT_SAMPLES_NOT_PEAK",
+      "input_bytes": 3184,
+      "input_sha256": "2756aa5ca7022175fcc12da4eeac3015a76fc655732c4aae6bd40703c02e7cea",
+      "node": "v22.23.1",
+      "platform": "linux",
+      "production_accepted": false,
+      "roundtrip": {
+        "heap_after_bytes": 5910320,
+        "heap_before_bytes": 5132632,
+        "max_ms": 80.017,
+        "median_ms": 12.70580000000001,
+        "min_ms": 11.491899999999987,
+        "output_sha256": "2756aa5ca7022175fcc12da4eeac3015a76fc655732c4aae6bd40703c02e7cea",
+        "samples_ms": [
+          80.017,
+          12.70580000000001,
+          11.491899999999987
+        ]
+      },
+      "scope": "SYNTHETIC_ENGINEERING_MEASUREMENT",
+      "status": {
+        "heap_after_bytes": 5271560,
+        "heap_before_bytes": 5911376,
+        "max_ms": 7.56370000000004,
+        "median_ms": 7.505499999999984,
+        "min_ms": 7.206400000000031,
+        "output_sha256": "aafe8bf844fa74e591a689af887a33d999781bafde43a840edabb85282e08cbf",
+        "samples_ms": [
+          7.56370000000004,
+          7.505499999999984,
+          7.206400000000031
+        ]
+      }
+    },
+    "two_large_slots": {
+      "arch": "x64",
+      "heap_measurement": "CURRENT_SAMPLES_NOT_PEAK",
+      "input_bytes": 440306,
+      "input_sha256": "8565a9d7ddd0524b0dc533603c53d1cc5ff5344987c615088d1f0d2759e0c6a0",
+      "node": "v22.23.1",
+      "platform": "linux",
+      "production_accepted": false,
+      "roundtrip": {
+        "heap_after_bytes": 27708616,
+        "heap_before_bytes": 5120960,
+        "max_ms": 378.13730000000004,
+        "median_ms": 312.4185,
+        "min_ms": 307.97879999999986,
+        "output_sha256": "8565a9d7ddd0524b0dc533603c53d1cc5ff5344987c615088d1f0d2759e0c6a0",
+        "samples_ms": [
+          378.13730000000004,
+          312.4185,
+          307.97879999999986
+        ]
+      },
+      "scope": "SYNTHETIC_ENGINEERING_MEASUREMENT",
+      "status": {
+        "heap_after_bytes": 28899480,
+        "heap_before_bytes": 27712768,
+        "max_ms": 276.1341,
+        "median_ms": 263.145,
+        "min_ms": 257.25260000000003,
+        "output_sha256": "e3075cc1a02dd17c675e06e02634865f758faacfacff1c1eb7cc72d8d4c97227",
+        "samples_ms": [
+          276.1341,
+          257.25260000000003,
+          263.145
+        ]
+      }
+    }
+  },
+  "production_accepted": false,
+  "source_digest_basis": "UTF8_LF_NORMALIZED",
+  "source_sha256": {
+    "docs/lab/child_node_benchmark.mjs": "53121eb47625ae7295c18cbcc688567f0d3eed371d16cddb278b7a0ae2539620",
+    "docs/lab/child_node_benchmark.py": "34228ed91acd1802159f85edc53eec3803f5e185e40563d4111a44ea653e077c",
+    "sdk/javascript/continuity.mjs": "789082cb85595766ccb2cf8726b3ecc06650be84e3ed13510160392f3dd696d8",
+    "sdk/javascript/continuity_capsule.mjs": "3822827151ccc8aab20eef40b091136114196b8a13815fd6b17e988e24034208",
+    "sdk/javascript/continuity_status.mjs": "20ded91439a863bbc6aca55fd70f3635521b2efd49b6a1c12055e04a146766b7",
+    "sdk/javascript/handoff.mjs": "a7ed87106e07ec930dfecc45d585e3284d6f07c24a71905ba88f0f3a8b1abfc1",
+    "sdk/javascript/inspection.mjs": "8a41a55608b4d7da25860cda8d224ad6391bdfcfa4e6fc932e2524e985d9c7e0",
+    "sdk/javascript/integer_json.mjs": "123049a07735527810e1b793a29523e7b9d05d1c438fff7c1eae526975a9c971",
+    "sdk/javascript/preservation.mjs": "5052607901a5807d973f70f38af6c8995cd133384845fdf6d7bac79f8d267cef",
+    "src/cgc/experimental/capsule.py": "c5723f03ebe8ca383d118c2b780752405b7c84e06b5cef70301e4b1336995d4e",
+    "src/cgc/experimental/continuity.py": "ece2125a78c005c2e9dafb589c946b76264eceed421d639c8c529ab2738adc21",
+    "src/cgc/experimental/snapshot_profiles.py": "994d205b897dfb981305bc2706be30f198a702e01b55299ce7302e8e15ab1287",
+    "tests/test_child_chunks.py": "81197290c28337943c035e643a482959f9c3619123dc2fa8997c8f3cd3c69591",
+    "tests/test_child_continuity.py": "1a128669e76c8bcf2047ab62fb5a1a1279d8af0a211640d7e1c7de8a8f0bbf23",
+    "tests/test_child_javascript_handoff.py": "91e6c0fa0c31e4953ea45d6e3e16cf2b5d457af82afbc72f3a483dee92c622a4"
+  }
+}

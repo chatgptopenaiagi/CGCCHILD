@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M71: bounded independent Node continuity-capsule status consumer.
+M72: bounded synthetic Node continuity codec/status resource measurements.
 
 ## CURRENT HEAD
 
-HEAD (M71 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M72 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -159,6 +159,8 @@ V4.0/V4.1 EXPERIMENTAL/PARTIAL for model and lossless historical V3 profiles; no
 
 ## TEST RESULTS
 
+M72 three synthetic cases x two operations x three samples on both hosts; source/input/output bindings pass.
+
 M71 four status-consumer families passed Windows0.971s/Fedora2.554s.
 
 M70 four paired continuity-client families passed Windows16.997s/Fedora18.656s, including timeout cleanup.
@@ -282,11 +284,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M70 b59036cad9701ec9b9f0382b4aceb81c632e480d verified local/tracking/live and clean.
-Current M71 self-reference HEAD; published hash follows next checkpoint.
+M71 b96eef71a8dd942d235d0cb6706755e642e99cfd verified local/tracking/live and clean.
+Current M72 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M72: measure bounded independent continuity codec/status resource behavior on small and
-large synthetic records; preserve semantics and identify any justified optimization before broader surfaces.
+M73: audit the remaining V3 orchestration interface gaps against the master plan and
+existing refusal adapters; select a bounded implementation that cannot manufacture current proof.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

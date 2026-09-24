@@ -532,3 +532,20 @@ bytes for validation failures. Output I/O failure can leave partial bytes; calle
 require successful exit. No filesystem path, archive extraction, subprocess or network
 operation exists. Four owned-process families pass Windows/Fedora. This is a historical
 status surface, not a live guardian or current-state verifier.
+
+## M72: bounded resource observations, no performance acceptance
+
+Retain the fixed Python/Node harness and separate Windows/Fedora measurements in
+[Windows evidence](lab/child_node_benchmark_windows.json) and
+[Fedora evidence](lab/child_node_benchmark_fedora.json). Three deterministic synthetic
+capsules contain3184,111897,440306bytes. Each operation executes three samples including
+the initial cold call; no warmup, confidence interval or worst-case claim is implied.
+Input/archive/status digests agree across hosts. Source hashes use explicit LF normalization.
+
+For the440306byte case, median roundtrip/status were207.86/169.35ms on Windows and
+312.42/263.15ms on Fedora. Current heap samples are not peak/resident-memory bounds.
+Only wall processing inside the Node operation is timed, excluding process startup/WSL.
+No user time/token benefit or full V3 benchmark acceptance follows. The observed cost
+alone does not justify bypassing receipt validation or adding a stale mutable cache.
+No optimization was introduced. Return to unresolved V3 orchestration interfaces before
+adding more presentation layers; protected identity, RO/R6 and filesystem gates remain.
