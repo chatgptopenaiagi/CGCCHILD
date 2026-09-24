@@ -68,3 +68,38 @@ It does not connect to a manager or require RO/R6 approval.
 
 Priority: this finite correlation work precedes broader SDK/UI expansion. Independent useful
 work remains; no usage percentage or stop threshold has been inferred.
+
+## M58 dependency reconciliation after the native composition tranche
+
+Baseline M57 aadfb0c88ea0b337135f3e27fd95ab56ca380ed0. M46/M47 bind fixed
+Version query bytes to validated owner/pending model state and transport them under
+the existing private filter. M49/M50 validate effect ordering and packet refusal.
+M51-M53 establish nonroot atomic pidfd launches, scalar flag filtering and separate
+C/W handles. M54-M57 compose per-message credentials, FD binding, controller channel,
+inert file effects, negative requests, observed controller death and effect failure.
+Thirty retained owned native fixtures are source-auditable; production acceptance
+has not advanced merely from their count. The latest full regression remains M42
+505 passing; M54 child127 passed Fedora and108+19 POSIX skips Windows.
+
+| Dependency | Evidence now available | Remaining gate |
+|---|---|---|
+| Launch/bootstrap | Scalar clone flags, launch-returned pidfds, inherited narrowing, exact owned FD lifecycle | Real privileged credential transition, anti-injection, protected manifest/image, unrelated controller-UID peers |
+| Fixed CREATE/ATTACH | Actual controlled file/kernel effects behind actual same-UID channel; failure ACK withheld | Real cgroup authority/admission, installed manager policy, lifecycle semantics |
+| Native manager codec | Finite incoming/outgoing/negative corpus, model-bound query, private filtered socket | Live manager authentication/generation, authorized launch/deputy policy |
+| Continuity/death | Deterministic observed C exit refuses pending effect; owned cleanup | Continuous check-to-use authority, manager restart, broker-death acceptance |
+| Production quiescence | Conservative obligation interfaces and explicit UNKNOWN | Protected process domain AND independent filesystem writer exclusivity |
+
+RO-1..5 and R6 stay NOT_EXECUTED. No production producer or accepted mutation/recovery
+adapter exists. The next native acceptance work requires the distinct privileged
+facts/protected environment, not another convenient same-UID positive fixture.
+Unprivileged implementation can still improve usability of already stable inert
+interfaces without claiming those acceptance gates passed.
+
+Next selected independent milestone: a bounded capsule stdin/stdout adapter with
+closed export/import/inspect operations, using the existing strict core for both
+historical profiles. This follows queue items4/5 (portable inert capsule/local core
+consumer). It removes the need for users to write Python glue, adds no filename,
+network, archive extraction, automatic write or execution authority, and preserves
+core byte validation. Owned process tests must cover both profiles, hostile inputs,
+size bounds, no partial success on validation failure and read-only inspection labels.
+It does not port the entire continuity validator into Node or claim general MCP compatibility.

@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M57: actual CREATE/ATTACH failures withhold channel success.
+M58: native proof dependency reconciliation and next independent interface.
 
 ## CURRENT HEAD
 
-HEAD (M57 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M58 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -246,11 +246,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M56 5eed4dff52d9a6ee7e325063670b4bf6f152ff07 verified local/tracking/live and clean.
-Current M57 self-reference HEAD; published hash follows next checkpoint.
+M57 aadfb0c88ea0b337135f3e27fd95ab56ca380ed0 verified local/tracking/live and clean.
+Current M58 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M58: reconcile completed nonprivileged native composition with remaining proof gates
-and select the next dependency-safe independent master-plan implementation.
+M59: implement bounded capsule export/import/inspect over stdin/stdout, delegating
+both historical profiles to existing core validation; no extraction or path authority.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

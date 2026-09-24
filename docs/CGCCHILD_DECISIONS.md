@@ -402,3 +402,10 @@ Owned collision and EBADF attachment tests now compose with the real controller
 channel. Previous CREATE remains historical fact; no ATTACH/REMOVE success is
 invented. Cleanup releases/reaps only fixture-created children and removes owned
 objects. Reconcile remaining proof dependencies before expanding runtime scope.
+
+## M58: preserve native acceptance blockers and continue a stable inert interface
+
+The nonprivileged channel/effect tranche closes selected mechanical gaps, not the
+protected control-plane proof. Continue queue items4/5 with a bounded stdin/stdout
+capsule adapter calling existing core validators; no new authority, extraction,
+network, filename or implicit persistence API. RO/R6 remains separately blocked.

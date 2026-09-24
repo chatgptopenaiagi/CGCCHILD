@@ -54,3 +54,10 @@ B12 M45 update:19 native component fixtures now include real generated query byt
 private socket transport filter. Query destination/serial are still dummy constants; binding
 those to validated model state is the next unprivileged gap. This does not remove real
 credential, protected image, policy or manager-continuity obligations.
+
+B12 M58 PARTIALLY_RESOLVED: model-bound queries and actual same-UID C/B/W inert-effect
+composition now pass selected negative/death/failure fixtures. Bootstrap scalar atomic
+launch avoids post-filter arbitrary PID lookup. Protected credentials, image/manifest
+integrity, effective manager authorization, real cgroup closure and continuous use-time
+authority remain unaccepted. More same-UID fixtures cannot replace RO/R6 evidence.
+Next independent work is a thin bounded inert capsule adapter, not privileged acceptance.
