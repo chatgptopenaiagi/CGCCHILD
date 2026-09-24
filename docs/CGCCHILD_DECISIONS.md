@@ -277,3 +277,9 @@ The unfiltered prelude, pointer contents and absent credential boundary remain e
 The existing local event chain now has an inert canonical envelope and caller-bound prefix
 anchor. Count/tip checks cannot establish absence of an unseen tail. Imported records contain no
 grant material and cannot recreate a live handle; clocks stay historical and nonportable.
+
+## M39: independent journal codecs preserve the same proof ceiling
+
+Node validates and reconstructs the Python-pinned bytes without calling Python. BigInt clocks,
+fixed fields and explicit expected anchors retain UNKNOWN/historical semantics. Cross-language
+parity establishes representation compatibility, not trust in the event producer or completeness.

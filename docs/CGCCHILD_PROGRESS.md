@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M38: bounded canonical historical read-event journal and prefix anchor.
+M39: independent Node/Python inert event-journal interoperability.
 
 ## CURRENT HEAD
 
-HEAD (M38 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M39 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -82,6 +82,8 @@ M36 actual owned socketpair bytes/short I/O/EOF:14 runs pass; no bus or credenti
 M37 213-instruction I/O filter:14 kernel installs,18 denials each,6 invalid selector refusals.
 
 M38 inert journal codec/schema/pinned vector; seven focused families pass on Windows/Fedora.
+
+M39 independent Node journal bytes/acceptance parity,73 positives and3940 mutations,14 ownership checks.
 
 ## PARTIAL
 
@@ -174,6 +176,8 @@ No Python runtime change; current child94/full479 regression evidence remains un
 M38 full Linux489 passed in118.491s before final envelope clock/freshness labels and pinned test.
 Final seven journal tests passed Windows/Fedora; Windows101 child tests:91 passed,10 POSIX skips.
 Independent JSON Schema validation unavailable; JSON/shape contract checks only, no install.
+M39 Windows105 child tests:95 passed,10 POSIX skips; full Linux494 passed in120.722s.
+Node692 state/3246 capsule/14 journal checks pass; journal parity73 positives/31 refusals/3940 mutations.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -183,11 +187,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M37 79f7409a2e4104ed540c1b8e996c6ad029e92566 verified local/tracking/live and clean.
-Current M38 self-reference HEAD; published hash follows next checkpoint.
+M38 23f1ee46c5196b266f8abbb9b50112f745a4ba74 verified local/tracking/live and clean.
+Current M39 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M39: implement independent Node journal decoding/encoding against the pinned Python bytes and
-adversarial parity corpus; no grant import, source authentication or complete-history claim.
+M40: build a fixed read-only Node MCP client codec and owned-process interoperability harness
+against the Python adapter; preserve explicit snapshot bootstrap, bounded responses and no generic calls.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

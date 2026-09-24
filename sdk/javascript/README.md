@@ -72,3 +72,29 @@ The canonical digest remains27d2004d96d7c31ba7eb030ab1b70d71d51ea32ad483dffe8cb0
 capsule_conformance.mjs is a bounded stdin corpus adapter for tests only; it is not an
 MCP or product transport. capsule.mjs imports only Node crypto and the fixed state codec;
 it has no filesystem, network, subprocess or extraction API. No dependency was installed.
+
+## Inert read-event journal0.1 (M39)
+
+read_journal.mjs independently implements the [journal contract](../../docs/CGCCHILD_READ_CAPABILITIES.md#m38-inert-historical-event-journal).
+Exports: encodeJournal(events,snapshotDigest), decodeJournal(bytes,expected), JournalError,
+VERSION, MAX_BYTES and MAX_EVENTS. expected has exactly expected_snapshot_digest, expected_tip
+and expected_count. Clocks use BigInt for comparison and remain decimal strings in the wire.
+No source snapshot is read by this codec: its digest is an opaque binding, not validation or
+proof of the corresponding state. Grant import/replay and source authentication do not exist.
+
+The32KiB/64-event bounds, canonical ASCII/LF bytes, ordered hash chain, fixed event kinds,
+nondecreasing clocks and terminal invalidation match Python. Duplicate fields are rejected by
+exact canonical reconstruction. The frozen returned view exposes detached events()/bytes(),
+NONE authority, historical freshness, unsigned consistency and EXPECTED_PREFIX_ONLY completeness.
+Caller anchors do not authenticate themselves or establish that no unseen tail exists.
+
+~~~text
+node sdk/javascript/test_read_journal.mjs
+python -B -m unittest discover -s tests -p test_child_javascript_journal.py -v
+~~~
+
+Four cross-language families cover73 positive cases (all prefix lengths0..64, each kind and
+large clocks),31 semantic/wire/anchor refusals,3940 truncations/high-bit mutations and14 native
+Node ownership/pinned checks. The1970-byte vector remains byte-identical to Python. The codec
+imports only Node crypto. journal_conformance.mjs is an8MiB/2000-case offline stdin test adapter,
+not a product transport, listener, credential reader or authority endpoint. No package installed.

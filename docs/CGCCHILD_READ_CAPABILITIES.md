@@ -67,3 +67,8 @@ hash corruption, detached view and replay refusal. The1970-byte pinned example h
 `d36e5defb1bace89c867a3b2186034d276351e35e6d879cb9d78402426370a7b`.
 Schema parsing/field-enum consistency checks pass; an independent JSON Schema validator is not
 installed, and none was installed. Schema shape alone cannot enforce relational/hash rules.
+
+
+M39 adds independent [Node journal interoperability](../sdk/javascript/README.md#inert-read-event-journal01-m39).
+It preserves the same prefix-only/unsigned/historical interpretation. No journal service method,
+remote route or grant import is introduced by that SDK.
