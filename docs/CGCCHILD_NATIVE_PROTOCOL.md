@@ -110,3 +110,25 @@ vector/image hashes are retained; build directory removed. First compile/run pas
 
 Next: integrate the already tested FD identity checks into this bidirectional session and
 test descriptor drift refusal without introducing a new authority surface.
+
+## M27: descriptor-bound session composition
+
+[Source](lab/child_bound_session.c), [driver](lab/child_bound_session_validate.py) and
+[evidence](lab/child_bound_session_evidence.json) add the M25 creation-bound FD preflight to
+the M26 session. Five owned substitutions refuse before fork. Each role binds its newly
+created peer pidfd into its own slot after fork; neither inherits the other's expected pidfd.
+
+Socket/gate type, access and object checks precede release. After gate closure, only3/4 may
+remain, and their creation-bound identities are checked before send/receive and after
+ancillary processing. Duplication and CLOEXEC mutation probes refuse under final filters.
+GETFL/fstat rules are specialized: common3/4, controller gate5, open-broker gate6;
+sealed broker loses gate6 observation and filter-install authority.
+
+The same six requests/five canonical replies/terminal refusal pass, with child reaping and
+final empty FD inventory. Preprocessed-source hash records installed stat ABI declarations.
+No new rights packet or live manager operation was executed. The session is still a MODEL:
+generations, continuity, empty and effects retain M26 limitations, and stat checks do not
+solve same-UID injection or atomically bind authorization through a future privileged effect.
+
+Next native gap: finite D-Bus EXTERNAL authentication transcript generation/parsing with
+bounded fragmentation and rejection, using inert bytes only. No actual bus connection.

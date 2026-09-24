@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M26: native owned request/reply admission MODEL session.
+M27: descriptor-bound native admission MODEL session.
 
 ## CURRENT HEAD
 
-HEAD (M26 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M27 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -58,6 +58,8 @@ M24 live/drain FD-hole and control-truncation refusal;48 explicit rights closure
 M25 native socket/pipe/pidfd creation binding and5 substitution refusals; filtered packets still pass.
 
 M26 six socket requests/five canonical replies and closed-state refusal under narrowed filters.
+
+M27 FD identity checks composed into both socket directions; duplication/CLOEXEC changes denied.
 
 ## PARTIAL
 
@@ -130,6 +132,7 @@ M23 three generated filters installed in owned processes; final drain narrows li
 M24 five native packets passed; owned NOFILE64 verified; child reaped and inventories clean.
 M25 native identity and48-closure composition passed; static ELF/ABI/preprocessed hashes recorded.
 M26 static native bidirectional session passed; exact child reaped, FD inventory empty, build removed.
+M27 bound session passed with role-specialized FD reads and monotonic seal; no production change.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -139,11 +142,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M25 60d29d6cd9c86f6f35ad5d75edb3be3cb7b26ce5 verified local/tracking/live and clean.
-Current M26 self-reference HEAD; published hash follows next checkpoint.
+M26 e5ecb6362b8faaca13caba4f5054958f2f8d8495 verified local/tracking/live and clean.
+Current M27 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M27: integrate native FD identity checks into the bidirectional session and verify descriptor
-refusal; preserve synthetic continuity/empty boundaries and no protected controller/R6 claim.
+M28: implement native fixed EXTERNAL authentication transcript encoding/parsing with bounded
+fragmentation/refusal vectors; inert bytes only, no bus connection or privileged operation.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

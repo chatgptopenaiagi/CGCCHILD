@@ -204,3 +204,9 @@ identity checks do not establish open-file-description equivalence or filesystem
 The native six-request session composes per-message peer credentials/pidfds and narrowing with
 in-memory admission counters. Synthetic continuity/empty inputs remain explicit even while the
 controller is alive. Canonical reply exchange is evidence of mechanical composition only.
+
+## M27: compose FD evidence without upgrading authority
+
+Both native session directions now check creation-bound FD identity and exact occupancy.
+Role-specialized observation syscalls narrow at seal. The successful session remains synthetic
+for continuity/empty/effects; no same-UID protection or privileged at-use authorization follows.
