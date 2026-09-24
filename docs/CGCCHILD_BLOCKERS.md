@@ -63,3 +63,9 @@ launch avoids post-filter arbitrary PID lookup. Protected credentials, image/man
 integrity, effective manager authorization, real cgroup closure and continuous use-time
 authority remain unaccepted. More same-UID fixtures cannot replace RO/R6 evidence.
 Next independent work is a thin bounded inert capsule adapter, not privileged acceptance.
+
+
+B03 M77: owned Windows/NTFS sharing checks demonstrate per-file write-open refusal and
+verified hard-link refusal, but directory guards permit child writes and new-file admission.
+No recursive exclusion follows. Mapping, metadata, pending-I/O and cross-OS routes remain
+unproven; production filesystem exclusivity/P3 remain UNKNOWN.

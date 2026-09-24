@@ -1,0 +1,57 @@
+{
+  "classification": "OBSERVED_FACT",
+  "facts": [
+    {
+      "case": "preexisting_writer_blocks_guard",
+      "error": 32
+    },
+    {
+      "case": "guard_blocks_new_writer",
+      "error": 32
+    },
+    {
+      "case": "compatible_reader",
+      "same_object": true
+    },
+    {
+      "case": "writer_after_guard_close",
+      "write_verified": true
+    },
+    {
+      "case": "directory_guard_child_write",
+      "write_verified": true
+    },
+    {
+      "case": "directory_guard_child_create",
+      "write_verified": true
+    },
+    {
+      "case": "hardlink_alias",
+      "error": 32,
+      "same_object": true,
+      "status": "OBSERVED_FACT"
+    }
+  ],
+  "filesystem": "NTFS",
+  "limitations": [
+    "same-process handle operations only",
+    "no metadata-writer exclusion",
+    "no queued I/O completion proof",
+    "no mapped-writer test",
+    "no cross-OS or other-distro test",
+    "no complete alias enumeration",
+    "no controller crash test"
+  ],
+  "mutation_authorized": false,
+  "open_handles_at_cleanup": 0,
+  "platform": "Windows",
+  "production_filesystem": "UNKNOWN",
+  "production_p3": "UNKNOWN",
+  "profile": "OWNED_WINDOWS_SHARE_V1",
+  "python": "3.14.7",
+  "release": "10",
+  "source_digest_basis": "UTF8_LF_NORMALIZED",
+  "source_sha256": "9b52dd11a90c22cd5fd8b787328a8b0e5c5f721765e8139bffe056eca9bcaa86",
+  "temporary_directory_removed": true,
+  "version": "10.0.19045"
+}

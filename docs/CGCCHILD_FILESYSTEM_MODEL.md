@@ -57,3 +57,50 @@ Six tests cover every omitted/UNKNOWN pair in the90-cell publication scope, ever
 contradiction in the63-cell checkpoint scope, Linux-only coverage, all actions, binding/epoch/
 import refusal and malformed input. File/process creation is denied during the pure assessment
 test. This is model conformance, not kernel or production acceptance.
+
+
+## M77: owned Windows sharing fixture
+
+[Fixed fixture](lab/child_windows_share.py) and [captured evidence](lab/child_windows_share_evidence.json).
+This script accepts no paths or arguments. It creates only a bounded temporary directory
+under the Windows temporary root, verifies that absolute boundary, and closes owned handles
+before cleanup. It does not run against either repository or inspect unrelated processes.
+No privilege is enabled. Source hash uses UTF8/LF-normalized bytes; evidence is historical,
+not authenticated or a current filesystem receipt.
+
+OBSERVED_FACT on Windows10.0.19045/Python3.14.7/NTFS, two completed fixture runs:
+
+| Test | Exact observation |
+|---|---|
+| Existing data-write handle, SHARE_ALL | Opening READ/SHARE_READ guard fails error32 |
+| Held READ/SHARE_READ file guard | New WRITE/SHARE_ALL open fails error32 |
+| Compatible read | Opens and matches volume/file-index handle identity |
+| Guard closed | WRITE open succeeds and exact replacement bytes are read back |
+| Held READ/SHARE_READ directory handle | Existing child data write succeeds |
+| Same directory guard | New child creation/write succeeds |
+| Verified same-object hard-link alias | Write open through alias fails error32 |
+| Cleanup | Zero owned active handles; temporary directory removed |
+
+All handle operations occurred in the one owned fixture process. The directory was opened
+with FILE_FLAG_BACKUP_SEMANTICS, without adjusting process privileges. No assertion of
+cross-process, cross-OS, system-wide or production coverage follows from these observations.
+
+DERIVATION: this tested directory-handle mechanism cannot establish recursive closed writer
+admission. A per-file sharing guard is only a candidate ingredient. It neither enumerates
+new names nor closes the complete repository mutation domain. The hard-link case covers one
+constructed alias, not every alternate route. PID absence and Linux containment remain
+independent of this filesystem proof obligation.
+
+The official [CreateFileW contract](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilew)
+describes incompatible access/sharing failures and handle-lifetime sharing restrictions.
+It separately excludes attribute/extended-attribute access from those sharing flags. This
+supports the narrow intended mechanism, not a claim of recursive exclusion or full quiescence.
+
+UNKNOWN / NOT_EXECUTED: writable mappings, pending writes, metadata writers, alternate streams,
+other processes, WSL/distro/container paths, hostile aliases/reparse changes, manager/deputy
+routes, controller death and complete domain enumeration. No observed result changes real
+filesystem exclusivity or P3 from UNKNOWN. No production exclusion adapter is implemented.
+
+Next bounded work: challenge the same owned-file guard with a preexisting writable mapping
+and a metadata-only write. This can refine two concrete gaps without touching a repository,
+calling privileged interfaces or assuming a directory-wide exclusion exists.

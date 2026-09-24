@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M76: bounded local read routing preserves opaque grants and source budgets.
+M77: owned Windows file-share feasibility and recursive-directory negative witness.
 
 ## CURRENT HEAD
 
-HEAD (M76 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M77 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -141,6 +141,8 @@ M71 compact status pipe omits paths/notes and validates before emitting bounded 
 M73-M75 explicit read-only review, revalidated historical report and bounded status pipe.
 M76 local multi-snapshot router with no generic authority surface.
 
+M77 seven Windows/NTFS observations; no recursive-directory exclusion.
+
 ## PARTIAL
 
 Inherited V3/M1-M5; native role bootstrap; containment; complete master-plan implementation.
@@ -161,6 +163,9 @@ V4.2 read-only private transport and V4.5 text/offline HTML surfaces EXPERIMENTA
 V4.0/V4.1 EXPERIMENTAL/PARTIAL for model and lossless historical V3 profiles; no full mission acceptance.
 
 ## TEST RESULTS
+
+M77 fixed Windows fixture twice passed: seven observations, zero owned handles/temp objects remain.
+No production runtime change; full Fedora592/Windows child203 results from M76 retained.
 
 M76 focused6 Windows pass1.119s; full Windows child203:173 pass/30 skips51.072s.
 Full Fedora592 pass181.141s; no assertion weakened.
@@ -298,12 +303,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M75 1487728dbd528bb5f5798d21296771eef178935f verified local/tracking/live and clean.
-Current M76 self-reference HEAD; published hash follows next checkpoint.
+M76 e624043653cc5df6a05ea999cc0f16c5bfd32772 verified local/tracking/live and clean.
+Current M77 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M77: bounded Windows-native owned-file sharing-exclusion feasibility. Test incompatible
-opens before/during/after a held handle and directory-versus-child scope. Record exact
-negative witnesses and unknown aliases/preopened/queued/cross-OS routes. No real repository
-writer inspection or exclusion, no privileged change, and no positive production P3.
+M78: owned Windows temporary-file writable-mapping and metadata-write challenges to the
+same sharing guard. Keep queued/cross-OS/recursive-domain coverage UNKNOWN. No production
+adapter, repository writer scan or privilege. Trusted usage remaining UNKNOWN.

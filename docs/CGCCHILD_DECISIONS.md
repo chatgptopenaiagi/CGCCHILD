@@ -591,3 +591,12 @@ Next investigate file-sharing exclusion only in owned Windows temporary fixtures
 one filesystem-model assumption with precise positive/negative observations. No real project
 writer scan, lock, cross-OS closure claim, privileged action or production proof is authorized
 by that fixture. Directory handles must not be assumed to protect descendants recursively.
+
+
+## M77: a file guard is not a repository writer boundary
+
+Retain the negative directory-child witness, including successful new-file admission.
+Do not build a production lease adapter from per-file sharing success. The owned hard-link
+witness narrows one alias question only. Keep metadata/mapping/queued/cross-OS routes explicit.
+The next fixture can inspect two missing local mechanisms without privilege or real-project
+mutation: a preexisting writable mapping and a metadata-only change during the file guard.
