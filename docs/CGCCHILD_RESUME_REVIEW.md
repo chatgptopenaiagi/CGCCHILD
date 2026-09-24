@@ -115,3 +115,20 @@ always remains UNKNOWN. HistoricalReport stores immutable bytes and returns deta
 Unsigned digest consistency is not source authenticity. No report can execute an action.
 This semantic validator is POSIX-only until inherited pure proof dependencies are separated;
 Windows refuses rather than trusting a JSON label. No storage/transport is added by the codec.
+
+## Imported report status pipe (M75)
+
+`python -B -m cgc.experimental.session_report_stdio json` (or text) reads one bounded
+report from stdin and revalidates it through the imported-proof codec. It accepts no
+filename/project/store argument and performs no collection. Output is at most8192bytes,
+containing report/proof digests, imported verdict,12 obligation statuses and blocker IDs.
+Project paths, saved notes, annotations and free-text instructions are omitted. Current
+repository safety remains UNKNOWN, authority NONE, mutation false and no executor.
+
+Exit0 means successful validated presentation only. Malformed input/arguments/I/O return2;
+unsupported inherited POSIX verifier returns3 with a distinct fixed diagnostic. Diagnostic
+bytes use LF consistently on Windows/Linux. Invalid input emits no success output; an
+output I/O failure may leave partial bytes, so consumers must require exit0. Five focused
+families pass Fedora; Windows passes refusal checks with three explicit POSIX skips.
+The initial Windows test detected CRLF translation in text stderr; binary diagnostics fix
+that defect without changing expected bytes or loosening the test.

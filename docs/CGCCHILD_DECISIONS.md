@@ -569,3 +569,13 @@ recomputes its hash. Strict read-only analysis scope and528384byte bound apply. 
 semantic validation remains unavailable; no dependency is faked. Five focused report tests
 and25 related review tests pass on Fedora. No inherited runtime, collection or execution
 behavior changed; report storage remains an explicit future consumer concern.
+
+## M75: imported-proof presentation is not current verification
+
+The explicit stdin status consumer revalidates reports before compact JSON/text output;
+no filenames, capture invocation or executor. It retains obligation states and digest
+bindings while omitting project paths and free-text evidence. Distinct exit3 reports the
+unsupported platform, exit2 refuses malformed/I/O failures. Initial Windows stderr CRLF
+mismatch fixed by writing exact binary diagnostics; all refusal expectations retained.
+The next independent master-plan foundation is bounded local read routing over existing
+opaque grants, not a remote gateway or agent execution authority.

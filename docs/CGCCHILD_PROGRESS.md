@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M74: bounded inert session-report codec with imported-proof revalidation.
+M75: bounded imported-report status pipe with explicit platform refusal.
 
 ## CURRENT HEAD
 
-HEAD (M74 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M75 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -159,6 +159,8 @@ V4.0/V4.1 EXPERIMENTAL/PARTIAL for model and lossless historical V3 profiles; no
 
 ## TEST RESULTS
 
+M75 report pipe5: Fedora passed1.026s; Windows2 passed/3 POSIX skips0.086s. CRLF diagnostic defect corrected.
+
 M74 report5: Fedora passed0.372s; Windows1 passed/4 POSIX skips. Related review25 pass Fedora0.794s.
 
 M73 focused session5: Fedora passed0.578s; Windows1 passed/4 POSIX skips.
@@ -290,11 +292,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M73 4d381531b5fbb2221814bedba7823140df031d08 verified local/tracking/live and clean.
-Current M74 self-reference HEAD; published hash follows next checkpoint.
+M74 19109ca109e27bd649b3da703ef1686507485444 verified local/tracking/live and clean.
+Current M75 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M75: add a bounded read-only session-report status pipe that revalidates imported proof,
-omits project paths/notes and refuses unsupported platforms without collection or execution.
+M76: specify and validate a bounded in-process read-only consumer router over existing
+opaque scoped grants; no network, serialized authority, generic callback or mutation route.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
