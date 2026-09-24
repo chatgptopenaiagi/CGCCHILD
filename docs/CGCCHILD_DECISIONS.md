@@ -735,3 +735,15 @@ identity/effective policy and filesystem closure remain separate debt. They do n
 authorized software work or become accepted merely because product tests pass. No privileged
 proof collection, host security change, live quota read or original-repository modification
 is authorized or performed by this Windows product mission.
+
+## M86 final Windows package acceptance — 2026-09-24
+
+Implementation checkpoint 0587f01df1812cdfa26b5ce85c9da5a1a725ed48 is pushed and
+local/tracking/live verified. Final live61/product14 passed; child173 passed with
+30 POSIX skips. Final wheel/frozen/live GUI/capsule/recovery package smoke passed.
+Installer same-script QA AppId variants passed real0.3-to0.4 upgrade, reinstall,
+uninstall and export/journal/capsule retention. Existing owner installation is
+unchanged; shipping-AppId lifecycle and pristine VM remain unexecuted. See final
+WINDOWS_TEST_RESULTS.json. No production authority/security proof is promoted.
+NEXT_EXACT_ACTION: bind archives and digests to clean release source, publish
+private experimental release and verify uploaded bytes before final receipt.

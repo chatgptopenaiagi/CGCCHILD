@@ -1,15 +1,56 @@
 {
-  "01_repository": "chatgptopenaiagi/CGCCHILD (PRIVATE)",
-  "02_starting_commit": "a04c90d5e11432e505a1b42daa488d682714714d",
-  "03_final_commit": "HEAD (publication receipt checkpoint; resolve after commit)",
-  "04_commits_created": [
-    "ee94c975ee2c0b0be20f2702974c982b7d8a97ac",
-    "9ab0435f60e1bdf6dd9f5c051d4dd7b5f57cc16b",
-    "HEAD (publication receipt checkpoint)"
+  "01_repository": {
+    "name": "chatgptopenaiagi/CGCCHILD",
+    "private": true,
+    "workspace": "C:\\Codex-Projects\\CGCCHILD"
+  },
+  "02_starting_HEAD": "63dd46037b9c62574058c0546cdac5c9caa3215f",
+  "03_final_HEAD": "HEAD (this receipt commit; resolved hash supplied after normal publication)",
+  "04_release_source_commit": "HEAD (release-source checkpoint; resolve after commit)",
+  "05_release_tag": "v0.4.0-experimental",
+  "06_commits_created": [
+    "0587f01df1812cdfa26b5ce85c9da5a1a725ed48",
+    "HEAD (this receipt checkpoint)"
   ],
-  "05_files_created": [
-    "THIRD_PARTY_NOTICES.md",
-    "docs/AGENT_FABRIC_FOUNDATION.md",
+  "07_files_created": [
+    "docs/LIVE_CODEX_INTEGRATION.md",
+    "docs/LIVE_CONTINUITY_ARCHITECTURE.md",
+    "docs/LIVE_EVENT_PROTOCOL.md",
+    "docs/LIVE_OBSERVERS.md",
+    "docs/child-schemas/live-event-0.1.schema.json",
+    "docs/sessions/WINDOWS_0_3_SESSION_REPORT.json",
+    "docs/sessions/WINDOWS_0_3_TEST_RESULTS.json",
+    "packaging/live_preview.py",
+    "plugins/cgcchild-live/.codex-plugin/plugin.json",
+    "plugins/cgcchild-live/.mcp.json",
+    "plugins/cgcchild-live/LICENSE",
+    "plugins/cgcchild-live/README.md",
+    "plugins/cgcchild-live/capabilities.json",
+    "plugins/cgcchild-live/skills/record-live-continuity/SKILL.md",
+    "sdk/javascript/live.mjs",
+    "sdk/javascript/test_live.mjs",
+    "src/cgcchild/live/__init__.py",
+    "src/cgcchild/live/adapter.py",
+    "src/cgcchild/live/capsule.py",
+    "src/cgcchild/live/journal.py",
+    "src/cgcchild/live/observers.py",
+    "src/cgcchild/live/protocol.py",
+    "src/cgcchild/live/redaction.py",
+    "src/cgcchild/live/session.py",
+    "tests/test_live_adapter.py",
+    "tests/test_live_core.py",
+    "tests/test_live_gui.py",
+    "tests/test_live_interfaces.py",
+    "tests/test_live_observers.py"
+  ],
+  "08_files_modified": [
+    "AGENTS.md",
+    "README.md",
+    "docs/CGCCHILD_BLOCKERS.md",
+    "docs/CGCCHILD_DECISIONS.md",
+    "docs/CGCCHILD_PLAN_RECONCILIATION.md",
+    "docs/CGCCHILD_PROGRESS.md",
+    "docs/CGCCHILD_SESSION_REPORT.json",
     "docs/EXECUTOR_MODEL.md",
     "docs/INSTALLER.md",
     "docs/PRODUCT_ARCHITECTURE.md",
@@ -18,61 +59,192 @@
     "docs/RELEASE_NOTES.md",
     "docs/RELEASE_PROCESS.md",
     "docs/SECURITY_ACCEPTANCE_DEBT.md",
-    "docs/WINDOWS_BUILD.md",
     "docs/WINDOWS_PREVIEW.png",
     "docs/WINDOWS_RELEASE_ACCEPTANCE.md",
-    "docs/WINDOWS_RELEASE_ASSETS.json",
     "docs/WINDOWS_TEST_RESULTS.json",
-    "docs/acceptance/PRODUCTION_ACCEPTANCE_MATRIX.md",
-    "docs/acceptance/R6_PLAN.md",
-    "docs/acceptance/RO_PACKAGE.md",
-    "docs/acceptance/SECURITY_ACCEPTANCE_DEBT.md",
-    "docs/sessions/M81_REPORT.json",
-    "packaging/CGC.spec",
-    "packaging/build.ps1",
-    "packaging/cli_entry.py",
-    "packaging/desktop_entry.py",
     "packaging/installer.iss",
     "packaging/release.py",
-    "packaging/requirements-build.txt",
     "packaging/smoke.py",
     "packaging/stage.py",
     "packaging/version-info.txt",
-    "plugins/cgcchild-readonly/LICENSE",
-    "plugins/cgcchild-readonly/capabilities.json",
     "pyproject.toml",
-    "sdk/javascript/LICENSE",
-    "sdk/javascript/example.json",
+    "sdk/javascript/README.md",
     "sdk/javascript/index.mjs",
     "sdk/javascript/package.json",
     "sdk/javascript/test_sdk.mjs",
     "src/cgcchild/__init__.py",
-    "src/cgcchild/__main__.py",
     "src/cgcchild/cli.py",
-    "src/cgcchild/core.py",
-    "src/cgcchild/evidence.py",
-    "src/cgcchild/execution.py",
     "src/cgcchild/gui.py",
-    "src/cgcchild/resources/example.json",
     "src/cgcchild/resources/security-debt.json",
     "src/cgcchild/sdk.py",
-    "tests/test_product.py",
     "tests/test_product_gui.py"
   ],
-  "06_files_modified": [
-    ".gitattributes",
-    "AGENTS.md",
-    "README.md",
-    "docs/CGCCHILD_BLOCKERS.md",
-    "docs/CGCCHILD_DECISIONS.md",
-    "docs/CGCCHILD_PLAN_RECONCILIATION.md",
-    "docs/CGCCHILD_PROGRESS.md",
-    "docs/CGCCHILD_SESSION_REPORT.json",
-    "plugins/cgcchild-readonly/.codex-plugin/plugin.json",
-    "plugins/cgcchild-readonly/README.md",
-    "sdk/javascript/README.md"
+  "09_live_continuity_architecture": {
+    "module": "src/cgcchild/live",
+    "components": [
+      "Session controller",
+      "Versioned event protocol",
+      "Central redaction",
+      "Segmented durable journal",
+      "Windows metadata observer",
+      "Read-only Git/object/ref observer",
+      "Explicit bounded test wrapper",
+      "Evidence reconciler",
+      "Error/decision/unfinished-work journals",
+      "Checkpoint engine",
+      "Recovery assessment/new generation",
+      "Live historical capsules",
+      "MCP/CLI/SDK/GUI consumers"
+    ],
+    "document": "docs/LIVE_CONTINUITY_ARCHITECTURE.md"
+  },
+  "10_session_controller_state": {
+    "implementation": "IMPLEMENTED_WINDOWS_VERIFIED",
+    "states": [
+      "IDLE",
+      "PREPARING",
+      "RUNNING",
+      "CHECKPOINTING",
+      "ENDING",
+      "PRESERVED",
+      "INTERRUPTED",
+      "RECOVERING",
+      "RECOVERABLE",
+      "CLOSED_WITH_UNKNOWN"
+    ],
+    "real_engineering_session": "CGC-de884796441c443e9cd52e20e772a1af",
+    "current_state": "RUNNING",
+    "storage": "C:\\Users\\Administrator\\AppData\\Local\\CGCCHILD\\sessions\\CGC-de884796441c443e9cd52e20e772a1af",
+    "generation": 1,
+    "events": 442,
+    "capsule": "C:\\Users\\Administrator\\AppData\\Local\\CGCCHILD\\sessions\\CGC-de884796441c443e9cd52e20e772a1af\\capsules\\final.cgcpack"
+  },
+  "11_event_protocol_version": "cgc-live-event-0.1",
+  "12_event_types_implemented": {
+    "supported_protocol_vocabulary": [
+      "CHECKPOINT_PRESERVED",
+      "CHECKPOINT_STARTED",
+      "COMMAND_FINISHED",
+      "COMMAND_REPORTED",
+      "COMMAND_STARTED",
+      "COMMIT_OBSERVED",
+      "COMMIT_REPORTED",
+      "COMMIT_VERIFIED",
+      "CONTRADICTION_DETECTED",
+      "DECISION_DECLARED",
+      "ERROR_OBSERVED",
+      "ERROR_REOPENED",
+      "ERROR_RESOLVED",
+      "EVIDENCE_INVALIDATED",
+      "EVIDENCE_RECONCILED",
+      "FILESYSTEM_BASELINE_OBSERVED",
+      "FILESYSTEM_CHANGE_OBSERVED",
+      "FILESYSTEM_CHANGE_VERIFIED",
+      "FILE_EDIT_REPORTED",
+      "GIT_STATE_OBSERVED",
+      "NEXT_ACTION_DECLARED",
+      "OBSERVER_COVERAGE",
+      "PUSH_CONTRADICTION",
+      "PUSH_OBSERVED",
+      "PUSH_REPORTED",
+      "PUSH_VERIFIED",
+      "RECONCILIATION_COMPLETED",
+      "RECOVERY_ASSESSED",
+      "SESSION_CLOSED_WITH_UNKNOWN",
+      "SESSION_ENDING",
+      "SESSION_INTERRUPTED",
+      "SESSION_PREPARING",
+      "SESSION_PRESERVED",
+      "SESSION_RECOVERABLE",
+      "SESSION_RECOVERING",
+      "SESSION_RESUMED",
+      "SESSION_STARTED",
+      "TEST_FINISHED",
+      "TEST_RESULT_VERIFIED",
+      "TEST_STARTED",
+      "UNFINISHED_WORK_DECLARED",
+      "WORKER_LAUNCHED"
+    ],
+    "scope": "Reserved optional file-content verification/invalidation types are schema-supported; metadata polling does not emit content verification. Actual producers and emitted evidence remain separately labeled."
+  },
+  "13_Windows_filesystem_observer_state": "IMPLEMENTED_WINDOWS_VERIFIED: bounded root-only metadata polling; create/modify/remove/identity-supported rename; reparse and secret boundaries; transient changes may be missed; filesystem exclusivity UNKNOWN",
+  "14_Git_observer_state": "IMPLEMENTED_WINDOWS_VERIFIED: HEAD commit object, branch, index/worktree, changed paths, remote names, tracking main; explicit independent ls-remote/owner-authenticated fixed GitHub API; VERIFIED requires local/tracking/live equality; unsupported configurations/offline remain UNKNOWN",
+  "15_Codex_adapter_state": "IMPLEMENTED_PAIRED_MCP_VERIFIED: fixed structured report tools; REPORTED only; no hidden reasoning/session scrape; actual installed Codex lifecycle acceptance NOT_EXECUTED",
+  "16_managed_Codex_launcher_state": "IMPLEMENTED_CONTRACT_TESTED: native explicit .exe, selected cwd, ephemeral session metadata; native Codex executable discovered, actual Codex process/model session not launched",
+  "17_observer_only_fallback_state": "IMPLEMENTED_WINDOWS_VERIFIED; works without Codex, Git on PATH or remote access",
+  "18_test_observer_state": "IMPLEMENTED_WINDOWS_VERIFIED: real unittest/npm processes; pytest summary parser fixtures; finite duration/output, stream hashes/redacted excerpts, counts UNKNOWN when unparsed; CLI exits distinguish verified pass/failure/unknown; not a sandbox or proof of test adequacy",
+  "19_error_journal_state": "IMPLEMENTED: observed/reported errors, reported resolution/reopening, prior history retained",
+  "20_decision_journal_state": "IMPLEMENTED: bounded agent declarations retained as REPORTED, never private cognition",
+  "21_reconciliation_state": "IMPLEMENTED_WINDOWS_VERIFIED: report-to-observation links, separate supporting/contradicting events, immutable contradictions, unknown evidence stays UNKNOWN",
+  "22_truth_level_implementation": {
+    "evidence_grade": [
+      "REPORTED",
+      "OBSERVED",
+      "VERIFIED"
+    ],
+    "reconciliation_state": [
+      "SUPPORTED",
+      "CONTRADICTED",
+      "UNKNOWN",
+      "STALE",
+      "INVALIDATED"
+    ],
+    "reported_direct_promotion": false,
+    "historical_current_authority": "UNKNOWN"
+  },
+  "23_checkpoint_engine_state": "IMPLEMENTED_WINDOWS_VERIFIED: evidence-only atomic/fsynced external checkpoints; GUI periodic and finite foreground CLI; no source backup, staging, commit or push",
+  "24_crash_recovery_state": "IMPLEMENTED_WINDOWS_VERIFIED: actual killed owned observer/lock release, fresh process replay, torn suffix preservation, incomplete checkpoints, changed Git, corrupt/missing capsule, new generation; real power-loss/reboot and arbitrary worker containment not guaranteed",
+  "25_capsule_schema": {
+    "version": "cgc-live-capsule-0.1",
+    "members": [
+      "manifest.json",
+      "session.json",
+      "timeline.json",
+      "project-state-start.json",
+      "project-state-end.json",
+      "git-state.json",
+      "tests.json",
+      "errors.json",
+      "decisions.json",
+      "unfinished-work.json",
+      "next-action.json",
+      "evidence-index.json",
+      "human-status.txt"
+    ],
+    "authority": "HISTORICAL_ONLY",
+    "integrity": "member hashes + event chain + projection replay; not authenticity",
+    "excluded": [
+      "source contents",
+      "Git objects",
+      "credentials",
+      "complete transcripts",
+      "hidden reasoning"
+    ]
+  },
+  "26_GUI_changes": "18 pages: retained 13 plus Live Session, Timeline, Git, Tests, Errors; explicit project/store, threaded I/O, start/checkpoint/end/recover/launch/remote-verify, exact storage, truth levels and uncertainty; native screenshots reviewed",
+  "27_CLI_changes": [
+    "live start",
+    "live list",
+    "live status",
+    "live observe --verify-remote",
+    "live report",
+    "live test --timeout",
+    "live watch",
+    "live checkpoint",
+    "live preserve/end",
+    "live interrupt",
+    "live recover",
+    "live resume",
+    "live open",
+    "live serve",
+    "live launch"
   ],
-  "07_tests_run": {
+  "28_MCP_plugin_changes": "Separate cgcchild-live package with fixed report/status tools; bounded foreground stdio, no network listener/service; AF_PIPE optional transport DEFERRED; historical plugin retained; no host/plugin installation",
+  "29_Python_SDK_changes": "live_start, live_open, live_capsule_open, live_sessions and shared Session methods; historical facade preserved",
+  "30_Node_SDK_changes": "Bounded explicit Windows subprocess live client and report builder; historical independent codecs retained; offline tarball verified",
+  "31_tests_executed": {
+    "version": "0.4.0",
+    "release_phase": "FINAL_WINDOWS_PACKAGE_PASSED_GITHUB_PENDING",
     "tier_a_product": {
       "run": 14,
       "passed": 14,
@@ -84,128 +256,408 @@
       "skipped_posix": 30,
       "failed": 0
     },
-    "node_sdk_contract_checks": 5,
-    "plugin_offline_validation": "PASSED",
-    "tier_c_windows_package": "PASSED",
-    "tier_d_fresh_install": "PASSED_ON_CURRENT_HOST",
-    "tier_e_release_smoke": "PASSED_ARCHIVES_RESOURCES_CHECKSUMS_AND_10_GITHUB_ASSET_DIGESTS",
+    "q1_q6_live": {
+      "run": 61,
+      "passed": 61,
+      "failed": 0,
+      "skipped": 0,
+      "duration_seconds": 61.947335,
+      "verification_state": "VERIFIED_PASS",
+      "stderr_sha256": "1b6539176f0d17cac812fde0c1187a17ce42351b30df115d1654b5740e058c4c"
+    },
+    "unique_python_totals": {
+      "run": 278,
+      "passed": 248,
+      "skipped": 30,
+      "failed": 0
+    },
+    "gui_tests": 8,
+    "node_live_contract_checks": 61,
+    "node_historical_contract_checks": 5,
+    "node_tarball_offline_install": "PASSED",
+    "plugins": {
+      "cgcchild-readonly": "MANIFEST_AND_SKILL_VALIDATED",
+      "cgcchild-live": "MANIFEST_AND_SKILL_VALIDATED",
+      "actual_host_lifecycle": "NOT_EXECUTED"
+    },
+    "q7": {
+      "state": "PASSED",
+      "version": "0.4.0",
+      "run_id": "20260924T131924Z-bb3496bf",
+      "started_at": "2026-09-24T13:19:24.381409+00:00",
+      "retained_evidence": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf",
+      "clean_vm": "NOT_EXECUTED",
+      "security_acceptance": "UNCHANGED",
+      "input_sha256": {
+        "dist\\cgcchild-0.4.0-py3-none-any.whl": "dd3302cdd53b63defc0ed18da45b80bb1ac544f9efbe0dc88f566219ebb7eea6",
+        "dist\\CGCCHILD-Setup-0.4.0.exe": "aff88e4cc477326253b44323bf29daf44ae89a38d4c59aeda4a251dab0e46477",
+        "dist\\CGC\\CGC.exe": "d0bddf7e395eeca8d724bd469fe5b69a7e3791a01ffad7e93c5654d3e8f20811",
+        "dist\\CGC\\CGC-console.exe": "e29585e48b83c94e042f41f7c707fc234bd2785d8258115d69a650f628673e08",
+        "packaging\\installer.iss": "8b71921378ec66eb57b8544a07fd4e445982d36d3b0e39404bf5f08fdc55a4be"
+      },
+      "fresh_wheel_live": {
+        "state": "PASSED",
+        "session": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\wheel\\localappdata\\CGCCHILD\\sessions\\CGC-3453ccbb43384657a66d2395454024d9",
+        "capsule": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\wheel\\localappdata\\CGCCHILD\\sessions\\CGC-3453ccbb43384657a66d2395454024d9\\capsules\\final.cgcpack",
+        "capsule_sha256": "eb5d1c2ed1224d495c41c21fc7e3c73709a212ba77a1a0fe5a1c76af34799ed7",
+        "event_count": 37,
+        "generation": 2,
+        "git_state": "DIRTY",
+        "authority": "HISTORICAL_ONLY"
+      },
+      "fresh_wheel": "INSTALL_IMPORT_HISTORICAL_LIVE_RECOVER_PRESERVE_REOPEN_UNINSTALL_PASSED",
+      "relocated_live": {
+        "state": "PASSED",
+        "session": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\portable\\localappdata\\CGCCHILD\\sessions\\CGC-438b6aaa7412485c9a8b9239447f5f39",
+        "capsule": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\portable\\localappdata\\CGCCHILD\\sessions\\CGC-438b6aaa7412485c9a8b9239447f5f39\\capsules\\final.cgcpack",
+        "capsule_sha256": "6eb0b0958dccd327ecde520b946b56c2a3792a024b8c812b1c72fff03d31ce9f",
+        "event_count": 31,
+        "generation": 2,
+        "git_state": "UNKNOWN",
+        "authority": "HISTORICAL_ONLY"
+      },
+      "relocated_frozen": "NO_PYTHON_OR_GIT_ON_PATH_HISTORICAL_LIVE_RECOVER_CAPSULE_GUI_PASSED",
+      "screenshot": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\frozen-gui.png",
+      "installer_profile": "REGISTRATION_ISOLATED_SAME_SCRIPT_AND_PRODUCT_PAYLOAD",
+      "qa_installer_app_id": "{{3A3C7D2D-589C-5641-962F-05FBCD089CFF}",
+      "shipping_installer_lifecycle": "NOT_EXECUTED_EXISTING_OWNER_INSTALLATION",
+      "shipping_installer_sha256": "aff88e4cc477326253b44323bf29daf44ae89a38d4c59aeda4a251dab0e46477",
+      "installer_previous_version": "0.3.0_INSTALLED",
+      "installer_live": {
+        "state": "PASSED",
+        "session": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\installer\\localappdata\\CGCCHILD\\sessions\\CGC-859db0bc120c4fc59d80343f9f1fe76c",
+        "capsule": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\installer\\localappdata\\CGCCHILD\\sessions\\CGC-859db0bc120c4fc59d80343f9f1fe76c\\capsules\\final.cgcpack",
+        "capsule_sha256": "3be49525c71754fc0b0b633f1308cc512eca838e3826d20101f12739930c8dc3",
+        "event_count": 31,
+        "generation": 2,
+        "git_state": "UNKNOWN",
+        "authority": "HISTORICAL_ONLY"
+      },
+      "installer": "PER_USER_INSTALL_UPGRADE_REINSTALL_UNINSTALL_HISTORICAL_AND_LIVE_RETENTION_PASSED",
+      "retained_after_uninstall": {
+        "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\installer\\retained-export.json": "0be03cd60aae6c89d4e587487e0936cf6c4370207887a2d60942ea916840b38b",
+        "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\installer\\localappdata\\CGCCHILD\\sessions\\CGC-859db0bc120c4fc59d80343f9f1fe76c\\capsules\\final.cgcpack": "3be49525c71754fc0b0b633f1308cc512eca838e3826d20101f12739930c8dc3",
+        "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\installer\\localappdata\\CGCCHILD\\sessions\\CGC-859db0bc120c4fc59d80343f9f1fe76c\\manifest.json": "c059dcaab660e9c65c0c3f7b145c4d95b9dd6c7faf36808838d0e9a72f5caf0a",
+        "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\installer\\localappdata\\CGCCHILD\\sessions\\CGC-859db0bc120c4fc59d80343f9f1fe76c\\events-0001.jsonl": "32d863ac7595de11438cc04fc500f9eb0923fcbf4f5479f4f9c33b0b73b098eb"
+      },
+      "owner_installation_registration": "UNCHANGED",
+      "qa_installation_registration": "REMOVED_BY_UNINSTALLER",
+      "finished_at": "2026-09-24T13:20:54.002221+00:00"
+    },
+    "q8": "PENDING_FINAL_ARCHIVES_AND_GITHUB_ASSET_VERIFICATION",
     "clean_windows_vm": "NOT_EXECUTED",
+    "signing": "NOT_EXECUTED",
+    "shipping_appid_lifecycle": "NOT_EXECUTED_EXISTING_OWNER_INSTALLATION",
+    "installer_scope": "Same script and versioned payloads with isolated QA AppId; original owner registration unchanged",
     "live_quota_reads": 0,
     "privileged_acceptance_reads": 0,
-    "linux_execution": false,
-    "fresh_wheel": "INSTALL_IMPORT_CLI_READ_UNINSTALL_PASSED",
-    "relocated_frozen": "REDUCED_PATH_CLI_CAPSULE_REPORT_RESOURCES_GUI_PASSED",
-    "installer": "PER_USER_INSTALL_UPGRADE_START_UNINSTALL_EXPORT_RETENTION_PASSED",
-    "node_tarball_offline_install": "PASSED",
-    "plugin_skill_validation": "PASSED",
-    "gui_visual_review": "FROZEN_SCREENSHOT_REVIEWED",
-    "frozen_code_filenames": "RELATIVE_PRODUCT_MODULE_PATHS"
+    "linux_invocations": 0,
+    "production_mutation": false,
+    "earlier_failures_resolved": [
+      "Malformed report identities could poison replay; validation now refuses before append",
+      "Malformed capsule projections/enums/ZIP compression now refused",
+      "Windows directory-entry inode zero corrected for sampled rename identity",
+      "GUI owned thread teardown corrected",
+      "Project/current-directory executable lookup excluded",
+      "Live test CLI exit status and finite timeout made explicit"
+    ],
+    "retained_unknown_test_attempt": {
+      "reason": "Initial 60-second limit reached before expanded live suite finished",
+      "verification_state": "UNKNOWN",
+      "followup": "Final 180-second bounded run VERIFIED_PASS; original event retained"
+    },
+    "package_guard": {
+      "reason": "Existing user CGCCHILD0.3 installer registration found",
+      "action": "Preserved owner installation; QA AppId variants used"
+    }
   },
-  "08_tests_passed": {
-    "python_product": 14,
-    "windows_child": 173,
-    "windows_child_posix_skips": 30,
-    "node_facade_checks": 5,
-    "package_smoke_groups": 3
+  "32_tests_passed": {
+    "python": 248,
+    "live": 61,
+    "product": 14,
+    "child": 173,
+    "node_contract_checks": 66,
+    "package_smoke": "See exact final Q7 receipt"
   },
-  "09_failures_remaining": [
-    "No failures in executed Windows tiers; inherited B11 remains unresolved",
-    "Clean independent Windows VM not available",
-    "Plugin host acceptance not executed"
+  "33_failures": {
+    "remaining_executed_tier_failures": 0,
+    "resolved": [
+      "Malformed report identities could poison replay; validation now refuses before append",
+      "Malformed capsule projections/enums/ZIP compression now refused",
+      "Windows directory-entry inode zero corrected for sampled rename identity",
+      "GUI owned thread teardown corrected",
+      "Project/current-directory executable lookup excluded",
+      "Live test CLI exit status and finite timeout made explicit"
+    ],
+    "retained_timeout": "Earlier 60-second suite attempt UNKNOWN; later bounded run VERIFIED_PASS; original evidence retained",
+    "installer_guard": "Existing owner installation preserved; same-script QA AppId used"
+  },
+  "34_skips": {
+    "POSIX_tests": 30,
+    "reason": "Windows-only mission; Linux not executed"
+  },
+  "35_unresolved_blockers": [
+    "Separate clean Windows 10 VM",
+    "Trusted signing",
+    "Actual installed Codex plugin/lifecycle acceptance",
+    "Exact shipping-AppId lifecycle deferred to preserve owner installation",
+    "Optional AF_PIPE transport deferred",
+    "Hostile same-user isolation, complete filesystem writer closure, protected identity/policy, current P3/authority",
+    "Inherited B11; RO-1..RO-5/R6 not executed"
   ],
-  "10_wheel_artifact": "dist/cgcchild-0.3.0-py3-none-any.whl",
-  "11_exe_artifact": "dist/CGC/CGC.exe (with CGC-console.exe and _internal)",
-  "12_installer_artifact": "dist/CGCCHILD-Setup-0.3.0.exe",
-  "13_portable_zip": "dist/CGCCHILD-Windows-Portable-0.3.0.zip",
-  "14_source_zip": "dist/CGCCHILD-0.3.0-source.zip",
-  "15_checksums": "dist/SHA256SUMS.txt",
-  "16_release_manifest": "dist/release-manifest.json; source commit 9ab0435f60e1bdf6dd9f5c051d4dd7b5f57cc16b",
-  "17_github_release_tag": {
-    "tag": "v0.3.0-experimental",
-    "url": "https://github.com/chatgptopenaiagi/CGCCHILD/releases/tag/v0.3.0-experimental",
-    "published": true,
+  "36_security_acceptance_debt": [
+    {
+      "debt_id": "FILESYSTEM_EXCLUSIVITY",
+      "claim": "Complete writer exclusion",
+      "current_status": "UNKNOWN",
+      "missing_evidence": "Windows writer inventory, aliases, mappings, metadata, queued IO and cross-runtime closure",
+      "affected_features": [
+        "Production mutation"
+      ],
+      "runtime_consequence": "PRODUCTION_MUTATION_DISABLED",
+      "safe_fallback": "Read-only analysis / dry-run",
+      "future_acceptance_test": "Adversarial alias/mapping/metadata writer acceptance",
+      "blocking_or_nonblocking": {
+        "product_build": "NONBLOCKING",
+        "production_acceptance": "BLOCKING"
+      }
+    },
+    {
+      "debt_id": "PROTECTED_IDENTITIES",
+      "claim": "Protected controller and worker identity",
+      "current_status": "UNRESOLVED",
+      "missing_evidence": "Accepted Windows identity/bootstrap contract",
+      "affected_features": [
+        "Privileged executor"
+      ],
+      "runtime_consequence": "PRODUCTION_MUTATION_DISABLED",
+      "safe_fallback": "NullExecutor",
+      "future_acceptance_test": "Independent identity and bootstrap audit",
+      "blocking_or_nonblocking": {
+        "product_build": "NONBLOCKING",
+        "production_acceptance": "BLOCKING"
+      }
+    },
+    {
+      "debt_id": "EFFECTIVE_POLICY",
+      "claim": "Effective host policy supports protected operation",
+      "current_status": "UNRESOLVED",
+      "missing_evidence": "Scoped policy evidence; RO-1..RO-5 not executed",
+      "affected_features": [
+        "Protected execution"
+      ],
+      "runtime_consequence": "PRODUCTION_MUTATION_DISABLED",
+      "safe_fallback": "No host policy actions",
+      "future_acceptance_test": "Approved platform-specific policy review",
+      "blocking_or_nonblocking": {
+        "product_build": "NONBLOCKING",
+        "production_acceptance": "BLOCKING"
+      }
+    },
+    {
+      "debt_id": "R6",
+      "claim": "Adversarial production acceptance",
+      "current_status": "NOT_EXECUTED",
+      "missing_evidence": "Accepted protected prerequisites and R6 campaign",
+      "affected_features": [
+        "Production executor"
+      ],
+      "runtime_consequence": "PRODUCTION_MUTATION_DISABLED",
+      "safe_fallback": "SimulationExecutor",
+      "future_acceptance_test": "R6 falsification campaign after prerequisite acceptance",
+      "blocking_or_nonblocking": {
+        "product_build": "NONBLOCKING",
+        "production_acceptance": "BLOCKING"
+      }
+    },
+    {
+      "debt_id": "CURRENT_P3",
+      "claim": "Current scoped quiescence",
+      "current_status": "UNKNOWN",
+      "missing_evidence": "Accepted live producer and current action evidence",
+      "affected_features": [
+        "Autonomous checkpoint/publication"
+      ],
+      "runtime_consequence": "PRODUCTION_MUTATION_DISABLED",
+      "safe_fallback": "Plan-only gates",
+      "future_acceptance_test": "Current project proof at use time",
+      "blocking_or_nonblocking": {
+        "product_build": "NONBLOCKING",
+        "production_acceptance": "BLOCKING"
+      }
+    },
+    {
+      "debt_id": "CURRENT_AUTHORITY",
+      "claim": "Current scoped action authority",
+      "current_status": "UNKNOWN",
+      "missing_evidence": "Independent authority and use-time revalidation",
+      "affected_features": [
+        "Mutation/recovery"
+      ],
+      "runtime_consequence": "PRODUCTION_MUTATION_DISABLED",
+      "safe_fallback": "Refuse with reason",
+      "future_acceptance_test": "Authority revocation and replay acceptance",
+      "blocking_or_nonblocking": {
+        "product_build": "NONBLOCKING",
+        "production_acceptance": "BLOCKING"
+      }
+    },
+    {
+      "debt_id": "HOST_INTEROPERABILITY",
+      "claim": "Installed plugin compatibility",
+      "current_status": "NOT_EXECUTED",
+      "missing_evidence": "Actual Codex host integration acceptance",
+      "affected_features": [
+        "Plugin integration"
+      ],
+      "runtime_consequence": "ACCEPTANCE_NOT_CLAIMED",
+      "safe_fallback": "Offline package validation",
+      "future_acceptance_test": "Explicit installation and bounded interoperability test",
+      "blocking_or_nonblocking": {
+        "product_build": "NONBLOCKING",
+        "production_acceptance": "BLOCKING"
+      }
+    },
+    {
+      "debt_id": "CLEAN_WINDOWS",
+      "claim": "Clean-machine release acceptance",
+      "current_status": "PARTIAL",
+      "missing_evidence": "Separate pristine Windows VM validation and trusted signing",
+      "affected_features": [
+        "Release deployment acceptance"
+      ],
+      "runtime_consequence": "ACCEPTANCE_NOT_CLAIMED",
+      "safe_fallback": "Unsigned experimental portable build",
+      "future_acceptance_test": "Install/start/export/uninstall on clean Windows 10",
+      "blocking_or_nonblocking": {
+        "product_build": "NONBLOCKING",
+        "production_acceptance": "BLOCKING"
+      }
+    },
+    {
+      "debt_id": "B11",
+      "claim": "Inherited pack interruption fixture stability",
+      "current_status": "UNRESOLVED",
+      "missing_evidence": "Cause of historical intermittent POSIX tree-equality failures",
+      "affected_features": [
+        "Inherited POSIX mutation acceptance"
+      ],
+      "runtime_consequence": "ACCEPTANCE_NOT_CLAIMED",
+      "safe_fallback": "Windows product does not invoke POSIX executors",
+      "future_acceptance_test": "Separate authorized platform investigation",
+      "blocking_or_nonblocking": {
+        "product_build": "NONBLOCKING",
+        "production_acceptance": "BLOCKING"
+      }
+    },
+    {
+      "debt_id": "LIVE_OBSERVER_COVERAGE",
+      "claim": "Complete engineering event capture",
+      "current_status": "PARTIAL",
+      "missing_evidence": "Polling misses transient changes; reparse and credential boundaries are excluded; unsupported Git layouts remain unknown",
+      "affected_features": [
+        "Live Continuity completeness"
+      ],
+      "runtime_consequence": "ACCEPTANCE_NOT_CLAIMED",
+      "safe_fallback": "Bounded metadata observations with explicit coverage and independent reports",
+      "future_acceptance_test": "Independent Windows and supported Codex host acceptance for the specific claim",
+      "blocking_or_nonblocking": {
+        "product_build": "NONBLOCKING",
+        "production_acceptance": "BLOCKING"
+      }
+    },
+    {
+      "debt_id": "LIVE_CRASH_DURABILITY",
+      "claim": "All-crash and power-loss durability",
+      "current_status": "PARTIAL",
+      "missing_evidence": "Fsync and tested process death/torn-tail recovery do not prove power-loss durability, host restart behavior or descendant containment",
+      "affected_features": [
+        "Live Continuity completeness"
+      ],
+      "runtime_consequence": "ACCEPTANCE_NOT_CLAIMED",
+      "safe_fallback": "Retain intact journal prefix; refuse corruption; explicit recovery as new generation",
+      "future_acceptance_test": "Independent Windows and supported Codex host acceptance for the specific claim",
+      "blocking_or_nonblocking": {
+        "product_build": "NONBLOCKING",
+        "production_acceptance": "BLOCKING"
+      }
+    },
+    {
+      "debt_id": "LIVE_HOST_LIFECYCLE",
+      "claim": "Automatic complete Codex lifecycle coverage",
+      "current_status": "PARTIAL",
+      "missing_evidence": "Actual installed Codex host lifecycle acceptance not executed; no automatic hooks installed",
+      "affected_features": [
+        "Live Continuity completeness"
+      ],
+      "runtime_consequence": "ACCEPTANCE_NOT_CLAIMED",
+      "safe_fallback": "Structured MCP reports plus independent filesystem/Git/test observations",
+      "future_acceptance_test": "Independent Windows and supported Codex host acceptance for the specific claim",
+      "blocking_or_nonblocking": {
+        "product_build": "NONBLOCKING",
+        "production_acceptance": "BLOCKING"
+      }
+    }
+  ],
+  "37_wheel_artifact": "dist/cgcchild-0.4.0-py3-none-any.whl",
+  "38_CGC_exe_artifact": "dist/CGC/CGC.exe (requires adjacent _internal; included in portable/installer)",
+  "39_CGC_console_exe_artifact": "dist/CGC/CGC-console.exe (requires adjacent _internal; included in portable/installer)",
+  "40_portable_ZIP": "dist/CGCCHILD-Windows-Portable-0.4.0.zip",
+  "41_installer": {
+    "artifact": "dist/CGCCHILD-Setup-0.4.0.exe",
+    "signing": "UNSIGNED_EXPERIMENTAL",
+    "acceptance": "Same-script QA AppId variants; real previous-version upgrade; owner shipping registration unchanged; exact shipping-AppId lifecycle NOT_EXECUTED"
+  },
+  "42_source_ZIP": "dist/CGCCHILD-0.4.0-source.zip",
+  "43_plugin_ZIP": [
+    "dist/cgcchild-live-0.4.0.zip",
+    "dist/cgcchild-readonly-0.4.0.zip"
+  ],
+  "44_Node_tarball": "dist/cgcchild-sdk-0.4.0.tgz",
+  "45_screenshot": "dist/CGCCHILD-Windows-Preview.png; docs/WINDOWS_PREVIEW.png",
+  "46_release_manifest": "dist/release-manifest.json",
+  "47_SHA256_file": "dist/SHA256SUMS.txt",
+  "48_GitHub_release": {
+    "url": "https://github.com/chatgptopenaiagi/CGCCHILD/releases/tag/v0.4.0-experimental",
+    "private_repository": true,
     "prerelease": true,
-    "assets_verified": 10,
-    "tag_source_commit": "9ab0435f60e1bdf6dd9f5c051d4dd7b5f57cc16b"
+    "published": false
   },
-  "18_plugin_state": "COMPLETE distributable source; EXPERIMENTAL host integration NOT_EXECUTED; not installed",
-  "19_python_sdk_state": "COMPLETE versioned facade; EXPERIMENTAL wire semantics; byte parity verified",
-  "20_node_sdk_state": "COMPLETE tarball; offline install and facade checks pass; EXPERIMENTAL wire semantics",
-  "21_gui_state": "COMPLETE historical workbench: 13 pages, real frozen GUI smoke and screenshot review",
-  "22_v3_state": "EXPERIMENTAL offline plan/review structures; PARTIAL current Windows capture; BLOCKED production mutation",
-  "23_v4_state": "EXPERIMENTAL protocol/capsule/MCP/SDK; COMPLETE Windows historical surface; remote gateway NOT_STARTED",
-  "24_agent_fabric_state": "EXPERIMENTAL local scoped router/grant/expiry/revocation/audit foundation; distributed NOT_STARTED",
-  "25_security_acceptance_debt": [
-    "FILESYSTEM_EXCLUSIVITY",
-    "PROTECTED_IDENTITIES",
-    "EFFECTIVE_POLICY",
-    "R6",
-    "CURRENT_P3",
-    "CURRENT_AUTHORITY",
-    "HOST_INTEROPERABILITY",
-    "CLEAN_WINDOWS",
-    "B11"
-  ],
-  "26_production_disabled_features": [
-    "autonomous repository mutation",
-    "checkpoint/publication/repair execution",
-    "privileged host operations",
-    "remote execution",
-    "live quota polling"
-  ],
-  "27_blockers": [
-    "No blocker for experimental release",
-    "Independent clean Windows VM",
-    "Signing identity unavailable",
-    "Protected identity/policy/RO/R6/P3/filesystem acceptance",
-    "Installed Codex host interoperability",
-    "Inherited B11"
-  ],
-  "28_environment_changes": [
-    "Repository-local .venv",
-    "Owned temporary Windows fixture installs/uninstalls",
-    "Child-local Git author identity restored from existing commit identity",
-    "Ignored build/dist and npm smoke sandbox; no host security change"
-  ],
-  "29_dependencies_installed": [
-    "altgraph==0.17.5",
-    "build==1.6.1",
-    "colorama==0.4.6",
-    "packaging==26.3",
-    "pefile==2024.8.26",
-    "pyinstaller==6.22.3",
-    "pyinstaller-hooks-contrib==2026.7",
-    "pyproject_hooks==1.3.3",
-    "PySide6==6.11.2",
-    "PySide6_Addons==6.11.2",
-    "PySide6_Essentials==6.11.2",
-    "pywin32-ctypes==0.2.3",
-    "setuptools==84.0.0",
-    "shiboken6==6.11.2",
-    "wheel==0.48.0"
-  ],
-  "30_original_cgc_verification": {
+  "49_uploaded_asset_verification": "PENDING_UPLOAD_AND_INDEPENDENT_DIGEST_COMPARISON",
+  "50_original_CGC_source_verification": {
     "head": "d7cb43de3ac001bf28470d6d2f561ed70f106e6a",
-    "tracked_clean": true,
-    "owner_untracked_plan_retained": true,
-    "live_main_equal": true,
-    "source_pushes": 0,
+    "tracked_source_unchanged": true,
+    "owner_untracked_plan_preserved": true,
+    "original_pushes": 0,
+    "upstream_push": "disabled://CGCCHILD-NO-UPSTREAM-PUSH",
     "master_plan_sha256": "2947cdfb22229161873d59efbf30a97b1ebdb9202445f2de996078516efd0f32"
   },
-  "31_local_origin_live_ref_verification": "Release source 9ab0435f60e1bdf6dd9f5c051d4dd7b5f57cc16b local/tracking/live and live tag verified equal. Final documentation HEAD must be verified after push.",
-  "32_working_tree_state": "Publication receipt only; final clean tree verified outside this self-referencing report after commit",
-  "33_NEXT_EXACT_ACTION": "Separate clean Windows 10 x64 validation of published portable/installer when available; preserve production-disabled defaults. Experimental release built and published.",
-  "34_exact_resume_command": "Set-Location -LiteralPath 'C:\\Codex-Projects\\CGCCHILD'; Get-Content docs/CGCCHILD_SESSION_REPORT.json; .\\dist\\CGC\\CGC-console.exe self-test",
-  "proof_law": "EXPERIMENTAL_IMPLEMENTATION != ACCEPTED_PRODUCTION_PROOF",
-  "live_quota_reads_this_mission": 0,
-  "privileged_acceptance_reads_this_mission": 0,
-  "linux_invocations_this_mission": 0,
-  "failures_resolved": [
-    "Git commit initially lacked author identity; child-local existing identity configured",
-    "Large combined documentation command rejected; completed using bounded file patches",
-    "Qt offscreen test font/platform warnings; real Windows frozen rendering passed"
+  "51_local_origin_live_equality": "Release-source equality independently verified before tag; receipt HEAD is verified after its normal push and resolved in the final response",
+  "52_working_tree_status": "Final receipt commit uses HEAD self-reference; clean state checked after commit/push",
+  "53_environment_changes": [
+    "Child-only source/build/dist artifacts",
+    "External LOCALAPPDATA CGC evidence session store",
+    "Disposable fresh wheel venv installs/uninstalls",
+    "Ignored offline Node QA install",
+    "Isolated QA installer registration created then removed; original owner installation unchanged",
+    "No host security/authentication/service change"
   ],
-  "historical_report": "docs/sessions/M81_REPORT.json",
-  "stop_reason": "A_REQUESTED_EXPERIMENTAL_WINDOWS_RELEASE_BUILT_PUBLISHED_AND_CHECKPOINTED",
-  "release_asset_receipt": "docs/WINDOWS_RELEASE_ASSETS.json"
+  "54_dependencies_installed": [
+    "Existing repository .venv/build dependencies reused",
+    "Own cgcchild wheel installed/uninstalled in disposable fresh environments",
+    "Own Node tarball installed offline in ignored QA directory",
+    "No new host dependency installed"
+  ],
+  "55_production_disabled_capabilities": [
+    "Autonomous project source/index/ref mutation",
+    "Git commit/push/repair executor",
+    "Privileged host operations",
+    "Remote execution/gateway",
+    "Live quota polling",
+    "Automatic plugin installation",
+    "Next-action execution"
+  ],
+  "56_NEXT_EXACT_ACTION": "Validate the published 0.4.0 portable/installer on a separate clean Windows 10 x64 environment, then explicitly validate supported installed Codex MCP interoperability. Keep production mutation disabled; neither historical capsules nor next actions authorize it.",
+  "57_exact_PowerShell_resume_command": "Set-Location -LiteralPath 'C:\\Codex-Projects\\CGCCHILD'\nGet-Content -LiteralPath docs/CGCCHILD_SESSION_REPORT.json\n.\\dist\\CGC\\CGC-console.exe self-test",
+  "proof_law": "AI_REPORT != OBSERVED_REALITY != VERIFIED_CLAIM; HISTORICAL_CONTINUITY != CURRENT_AUTHORITY"
 }

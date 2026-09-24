@@ -1,7 +1,7 @@
 # Windows 0.4.0 Live Continuity release acceptance
 
-Current status: **IMPLEMENTED / WINDOWS FIXTURE-TESTED; FINAL PACKAGE AND RELEASE
-VERIFICATION PENDING**. The target is private prerelease `v0.4.0-experimental`.
+Current status: **WINDOWS SOFTWARE AND FINAL PACKAGE TESTS PASSED; PRIVATE RELEASE
+PUBLICATION PENDING**. The target is private prerelease `v0.4.0-experimental`.
 Release-source commit, published tag and uploaded asset receipts are pending; this document
 does not assert publication. The earlier 0.3.0 acceptance record is preserved below.
 
@@ -18,14 +18,14 @@ does not assert publication. The earlier 0.3.0 acceptance record is preserved be
 | Q4 live Windows session | VERIFIED IN TEMPORARY PROJECTS | Start, real file/Git changes, parsed tests, reports, checkpoints, capsule preserve/reopen and remote fixture verification |
 | Q5 interruption/recovery | VERIFIED WITH BOUNDED FIXTURES | Process interruption, replay, torn-tail retention, recovery assessment and generation linkage; power-loss guarantees and automatic source repair excluded |
 | Q6 desktop GUI | VERIFIED ON WINDOWS | 18 pages; live controls, timeline/Git/tests/errors, background I/O, interruption on close, historical capsule reopen and source preview |
-| Fresh-process live capsule GUI | VERIFIED FROM SOURCE | Explicit smoke capsule selection and historical rendering; final frozen reduced-PATH render pending package receipt |
+| Fresh-process live capsule GUI | VERIFIED FROM SOURCE | Explicit smoke capsule selection and historical rendering; final frozen reduced-PATH render PASSED |
 | Historical workbench | VERIFIED REGRESSION | Existing snapshots, capsules, modes, reports and safety/refusal boundaries retained |
-| Python SDK | VERIFIED FROM SOURCE | Live controller facade and historical APIs; final fresh-wheel receipt pending |
+| Python SDK | VERIFIED FROM SOURCE | Live controller facade and historical APIs; final fresh-wheel install/live/recovery/reopen/uninstall PASSED |
 | Node SDK | VERIFIED / PACKAGED OFFLINE | 61 live and five historical contract checks pass after offline package installation |
 | Historical/live plugin packages | VALIDATED OFFLINE | Both manifest/skill packages pass; no host installation or automatic lifecycle acceptance inferred |
-| Q7 wheel | FINAL ACCEPTANCE PENDING | Final source rebuild and fresh-venv install/import/live use/uninstall receipt required |
-| Q7 CGC.exe / CGC-console.exe / portable ZIP | FINAL ACCEPTANCE PENDING | Final relocated bundle, Python removed from PATH and frozen live GUI/capsule smoke receipt required |
-| Q7 installer | FINAL ACCEPTANCE PENDING | QA-only AppId variants use the same installer script and old/new payloads for real 0.3-to-0.4 upgrade; shipping-AppId lifecycle NOT_EXECUTED because an existing owner installation is preserved |
+| Q7 wheel | VERIFIED_CURRENT_HOST | Final wheel fresh-venv install/import/live tests/recovery/preserve/reopen/uninstall passed |
+| Q7 CGC.exe / CGC-console.exe / portable ZIP | VERIFIED_CURRENT_HOST | Final relocated payload, no Python/Git on PATH, UNKNOWN Git fallback, live recovery/capsule and native GUI passed; archive integrity checked at release |
+| Q7 installer | VERIFIED_QA_APPID / SHIPPING_ID_PARTIAL | QA-only AppId variants use the same installer script and old/new payloads for real 0.3-to-0.4 upgrade; shipping-AppId lifecycle NOT_EXECUTED because an existing owner installation is preserved |
 | Q8 source/plugin/Node/preview/manifest/checksums | FINAL ACCEPTANCE PENDING | Inventory, archive validation and hashes must bind the final reviewed release source |
 | Q8 private GitHub prerelease | NOT YET VERIFIED | Publish only child origin; compare every uploaded asset size/digest against local bytes |
 | Clean independent Windows 10 x64 VM | NOT_EXECUTED | Current-host relocation/reduced PATH is not pristine-machine acceptance |
@@ -33,10 +33,11 @@ does not assert publication. The earlier 0.3.0 acceptance record is preserved be
 | Production mutation / filesystem closure | DISABLED / UNKNOWN | No production repository executor or acceptance promotion; inherited proof debt remains |
 
 Current regression evidence: 14 product tests passed; 203 child tests ran, 173 passed and
-30 POSIX-only tests skipped without executing Linux. The live-suite count is intentionally
-not frozen in this staging record; [Windows test results](WINDOWS_TEST_RESULTS.json) and
-the final release manifest will hold the final source/package runs. Earlier 0.3.0 package
-results in that file are historical until replaced by final 0.4.0 receipts.
+30 POSIX-only tests skipped without executing Linux. The final Live Continuity suite passed 61/61 tests. Total Python results are 248 passed
+and 30 explicit POSIX skips. [Windows test results](WINDOWS_TEST_RESULTS.json) contain
+the final package input digests and retained evidence. Node offline checks total 66.
+The final package run finished 2026-09-24T13:20:54Z; original owner registration was
+unchanged and the isolated QA registration was removed by its uninstaller.
 
 The reviewed running-session preview uses a real temporary Windows Git project, two actual
 passing unittest tests, an evidence checkpoint and a subsequently preserved/reopened capsule.

@@ -289,3 +289,15 @@ actual previous-version upgrade, frozen live capsule rendering and published ass
 verification remain staged acceptance work. Retain 0.3.0 receipts as history; do not reuse
 them as proof for 0.4.0 assets. Complete the current owner-authorized release workflow, then
 record source/tag/final HEAD separately without rewriting history or master-plan bytes.
+
+## M86 final Windows package acceptance — 2026-09-24
+
+Implementation checkpoint 0587f01df1812cdfa26b5ce85c9da5a1a725ed48 is pushed and
+local/tracking/live verified. Final live61/product14 passed; child173 passed with
+30 POSIX skips. Final wheel/frozen/live GUI/capsule/recovery package smoke passed.
+Installer same-script QA AppId variants passed real0.3-to0.4 upgrade, reinstall,
+uninstall and export/journal/capsule retention. Existing owner installation is
+unchanged; shipping-AppId lifecycle and pristine VM remain unexecuted. See final
+WINDOWS_TEST_RESULTS.json. No production authority/security proof is promoted.
+NEXT_EXACT_ACTION: bind archives and digests to clean release source, publish
+private experimental release and verify uploaded bytes before final receipt.
