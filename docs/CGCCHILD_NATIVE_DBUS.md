@@ -89,3 +89,29 @@ remains. No assertion or wire contract changed.
 
 Next composition target: combine the owned live sender/ancillary parser with exact per-role
 seccomp restrictions, preserving inherited-filter monotonicity and no protected-UID claim.
+
+## M28: finite EXTERNAL transcript mechanics
+
+[Source](lab/child_dbus_auth.c), [driver](lab/child_dbus_auth_validate.py) and
+[evidence](lab/child_dbus_auth_evidence.json) implement inert authentication bytes only.
+States deliberately say NEW -> AUTH_ENCODED -> GUID_PARSED -> BEGIN_ENCODED, with terminal
+INVALID. Encoding does not mean a socket exists or a write succeeded.
+
+Four synthetic UID values cover0,1,62001 and4294967294. Decimal ASCII has no leading zero;
+its lowercase hexadecimal encoding follows one NUL and AUTH EXTERNAL, ending CRLF.
+The invalid unsigned UID sentinel refuses. Insufficient output capacity invalidates without
+changing the output region. No caller can select an authentication mechanism.
+
+Only OK plus32 ASCII hex digits and CRLF is accepted. Lower/uppercase GUID spelling is
+retained exactly as metadata. Input is bounded to64 bytes per feed and37 total accepted bytes;
+zero-size feeds, extra lines, challenge, rejected-mechanism and FD negotiation responses refuse.
+Incomplete input cannot encode BEGIN. The fixture explicitly invalidates incomplete EOF.
+There is no reconnect, fallback or live timeout implementation; transport remains absent.
+
+85 exact transcripts(2 positive/83 negative) pass2489 two-chunk split runs and a bytewise
+positive run. Four UID outputs pass106 capacity cases. Early BEGIN, repeated AUTH and input
+after BEGIN are terminal refusals. Full transcript bytes, build hashes and static ELF checks
+are retained. First compile/run passed; Linux-native temporary directory removed.
+
+Next: finite incoming-frame accumulation under arbitrary bounded fragmentation, then exact
+composition with the existing decoder. No bus connection or manager call is required.

@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M27: descriptor-bound native admission MODEL session.
+M28: finite native EXTERNAL authentication transcript mechanics.
 
 ## CURRENT HEAD
 
-HEAD (M27 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M28 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -60,6 +60,8 @@ M25 native socket/pipe/pidfd creation binding and5 substitution refusals; filter
 M26 six socket requests/five canonical replies and closed-state refusal under narrowed filters.
 
 M27 FD identity checks composed into both socket directions; duplication/CLOEXEC changes denied.
+
+M28 inert authentication transcript:85 vectors,2489 split runs,106 UID capacity cases.
 
 ## PARTIAL
 
@@ -133,6 +135,7 @@ M24 five native packets passed; owned NOFILE64 verified; child reaped and invent
 M25 native identity and48-closure composition passed; static ELF/ABI/preprocessed hashes recorded.
 M26 static native bidirectional session passed; exact child reaped, FD inventory empty, build removed.
 M27 bound session passed with role-specialized FD reads and monotonic seal; no production change.
+M28 static native auth codec passed; no connection, authentication or manager operation occurred.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -142,11 +145,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M26 e5ecb6362b8faaca13caba4f5054958f2f8d8495 verified local/tracking/live and clean.
-Current M27 self-reference HEAD; published hash follows next checkpoint.
+M27 2958e710b58d98ad7ac37bc7fc03d31c910a16c6 verified local/tracking/live and clean.
+Current M28 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M28: implement native fixed EXTERNAL authentication transcript encoding/parsing with bounded
-fragmentation/refusal vectors; inert bytes only, no bus connection or privileged operation.
+M29: compose finite native incoming-frame accumulation with decoder under bounded fragmented
+and coalesced inert streams; no bus connection, manager operation or privileged read.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

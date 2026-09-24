@@ -210,3 +210,9 @@ controller is alive. Canonical reply exchange is evidence of mechanical composit
 Both native session directions now check creation-bound FD identity and exact occupancy.
 Role-specialized observation syscalls narrow at seal. The successful session remains synthetic
 for continuity/empty/effects; no same-UID protection or privileged at-use authorization follows.
+
+## M28: encoded authentication bytes are not an authenticated connection
+
+The finite EXTERNAL transcript codec has explicit ENCODED states and terminal rejection.
+GUID parsing retains metadata only. Fragmentation tests do not prove bus identity, installed
+policy, successful writes or transport timeout/continuity behavior.
