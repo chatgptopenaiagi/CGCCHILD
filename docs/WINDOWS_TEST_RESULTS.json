@@ -14,7 +14,7 @@
   "plugin_offline_validation": "PASSED",
   "tier_c_windows_package": "PASSED",
   "tier_d_fresh_install": "PASSED_ON_CURRENT_HOST",
-  "tier_e_release_smoke": "PENDING_ARCHIVE_PUBLICATION",
+  "tier_e_release_smoke": "PASSED_ARCHIVES_RESOURCES_CHECKSUMS_AND_10_GITHUB_ASSET_DIGESTS",
   "clean_windows_vm": "NOT_EXECUTED",
   "live_quota_reads": 0,
   "privileged_acceptance_reads": 0,
@@ -24,5 +24,6 @@
   "installer": "PER_USER_INSTALL_UPGRADE_START_UNINSTALL_EXPORT_RETENTION_PASSED",
   "node_tarball_offline_install": "PASSED",
   "plugin_skill_validation": "PASSED",
-  "gui_visual_review": "FROZEN_SCREENSHOT_REVIEWED"
+  "gui_visual_review": "FROZEN_SCREENSHOT_REVIEWED",
+  "frozen_code_filenames": "RELATIVE_PRODUCT_MODULE_PATHS"
 }

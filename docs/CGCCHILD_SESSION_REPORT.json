@@ -1,10 +1,11 @@
 {
   "01_repository": "chatgptopenaiagi/CGCCHILD (PRIVATE)",
   "02_starting_commit": "a04c90d5e11432e505a1b42daa488d682714714d",
-  "03_final_commit": "HEAD (resolve containing checkpoint; publication receipt follows)",
+  "03_final_commit": "HEAD (publication receipt checkpoint; resolve after commit)",
   "04_commits_created": [
     "ee94c975ee2c0b0be20f2702974c982b7d8a97ac",
-    "HEAD (Windows package validation checkpoint)"
+    "9ab0435f60e1bdf6dd9f5c051d4dd7b5f57cc16b",
+    "HEAD (publication receipt checkpoint)"
   ],
   "05_files_created": [
     "THIRD_PARTY_NOTICES.md",
@@ -19,6 +20,8 @@
     "docs/SECURITY_ACCEPTANCE_DEBT.md",
     "docs/WINDOWS_BUILD.md",
     "docs/WINDOWS_PREVIEW.png",
+    "docs/WINDOWS_RELEASE_ACCEPTANCE.md",
+    "docs/WINDOWS_RELEASE_ASSETS.json",
     "docs/WINDOWS_TEST_RESULTS.json",
     "docs/acceptance/PRODUCTION_ACCEPTANCE_MATRIX.md",
     "docs/acceptance/R6_PLAN.md",
@@ -85,7 +88,7 @@
     "plugin_offline_validation": "PASSED",
     "tier_c_windows_package": "PASSED",
     "tier_d_fresh_install": "PASSED_ON_CURRENT_HOST",
-    "tier_e_release_smoke": "PENDING_ARCHIVE_PUBLICATION",
+    "tier_e_release_smoke": "PASSED_ARCHIVES_RESOURCES_CHECKSUMS_AND_10_GITHUB_ASSET_DIGESTS",
     "clean_windows_vm": "NOT_EXECUTED",
     "live_quota_reads": 0,
     "privileged_acceptance_reads": 0,
@@ -95,7 +98,8 @@
     "installer": "PER_USER_INSTALL_UPGRADE_START_UNINSTALL_EXPORT_RETENTION_PASSED",
     "node_tarball_offline_install": "PASSED",
     "plugin_skill_validation": "PASSED",
-    "gui_visual_review": "FROZEN_SCREENSHOT_REVIEWED"
+    "gui_visual_review": "FROZEN_SCREENSHOT_REVIEWED",
+    "frozen_code_filenames": "RELATIVE_PRODUCT_MODULE_PATHS"
   },
   "08_tests_passed": {
     "python_product": 14,
@@ -112,11 +116,18 @@
   "10_wheel_artifact": "dist/cgcchild-0.3.0-py3-none-any.whl",
   "11_exe_artifact": "dist/CGC/CGC.exe (with CGC-console.exe and _internal)",
   "12_installer_artifact": "dist/CGCCHILD-Setup-0.3.0.exe",
-  "13_portable_zip": "dist/CGCCHILD-Windows-Portable-0.3.0.zip (release finalization)",
-  "14_source_zip": "dist/CGCCHILD-0.3.0-source.zip (release finalization)",
-  "15_checksums": "dist/SHA256SUMS.txt (release finalization)",
-  "16_release_manifest": "dist/release-manifest.json (source HEAD bound at finalization)",
-  "17_github_release_tag": "v0.3.0-experimental (prepare/create after clean source checkpoint)",
+  "13_portable_zip": "dist/CGCCHILD-Windows-Portable-0.3.0.zip",
+  "14_source_zip": "dist/CGCCHILD-0.3.0-source.zip",
+  "15_checksums": "dist/SHA256SUMS.txt",
+  "16_release_manifest": "dist/release-manifest.json; source commit 9ab0435f60e1bdf6dd9f5c051d4dd7b5f57cc16b",
+  "17_github_release_tag": {
+    "tag": "v0.3.0-experimental",
+    "url": "https://github.com/chatgptopenaiagi/CGCCHILD/releases/tag/v0.3.0-experimental",
+    "published": true,
+    "prerelease": true,
+    "assets_verified": 10,
+    "tag_source_commit": "9ab0435f60e1bdf6dd9f5c051d4dd7b5f57cc16b"
+  },
   "18_plugin_state": "COMPLETE distributable source; EXPERIMENTAL host integration NOT_EXECUTED; not installed",
   "19_python_sdk_state": "COMPLETE versioned facade; EXPERIMENTAL wire semantics; byte parity verified",
   "20_node_sdk_state": "COMPLETE tarball; offline install and facade checks pass; EXPERIMENTAL wire semantics",
@@ -181,10 +192,10 @@
     "source_pushes": 0,
     "master_plan_sha256": "2947cdfb22229161873d59efbf30a97b1ebdb9202445f2de996078516efd0f32"
   },
-  "31_local_origin_live_ref_verification": "M82 ee94c975ee2c0b0be20f2702974c982b7d8a97ac verified equal; verify containing checkpoint after push",
-  "32_working_tree_state": "Commit this report and verify clean after publication",
-  "33_NEXT_EXACT_ACTION": "Finalize release archives/checksums/manifest at clean HEAD; publish private experimental prerelease; verify asset hashes and final refs",
-  "34_exact_resume_command": "Set-Location -LiteralPath 'C:\\Codex-Projects\\CGCCHILD'; Get-Content docs/CGCCHILD_SESSION_REPORT.json; git status --short --branch",
+  "31_local_origin_live_ref_verification": "Release source 9ab0435f60e1bdf6dd9f5c051d4dd7b5f57cc16b local/tracking/live and live tag verified equal. Final documentation HEAD must be verified after push.",
+  "32_working_tree_state": "Publication receipt only; final clean tree verified outside this self-referencing report after commit",
+  "33_NEXT_EXACT_ACTION": "Separate clean Windows 10 x64 validation of published portable/installer when available; preserve production-disabled defaults. Experimental release built and published.",
+  "34_exact_resume_command": "Set-Location -LiteralPath 'C:\\Codex-Projects\\CGCCHILD'; Get-Content docs/CGCCHILD_SESSION_REPORT.json; .\\dist\\CGC\\CGC-console.exe self-test",
   "proof_law": "EXPERIMENTAL_IMPLEMENTATION != ACCEPTED_PRODUCTION_PROOF",
   "live_quota_reads_this_mission": 0,
   "privileged_acceptance_reads_this_mission": 0,
@@ -194,5 +205,7 @@
     "Large combined documentation command rejected; completed using bounded file patches",
     "Qt offscreen test font/platform warnings; real Windows frozen rendering passed"
   ],
-  "historical_report": "docs/sessions/M81_REPORT.json"
+  "historical_report": "docs/sessions/M81_REPORT.json",
+  "stop_reason": "A_REQUESTED_EXPERIMENTAL_WINDOWS_RELEASE_BUILT_PUBLISHED_AND_CHECKPOINTED",
+  "release_asset_receipt": "docs/WINDOWS_RELEASE_ASSETS.json"
 }

@@ -235,3 +235,18 @@ No live quota, Linux or privileged proof collection; master-plan bytes unchanged
 
 NEXT_EXACT_ACTION: finalize archives/checksums/manifest at clean source HEAD and
 publish the child-only experimental release; verify Git refs and asset digests.
+
+## M84 published Windows experimental release — 2026-09-24
+
+v0.3.0-experimental published privately with 10 assets; all GitHub sizes/SHA256
+digests matched local bytes before publication. Tag/source is
+9ab0435f60e1bdf6dd9f5c051d4dd7b5f57cc16b; this checkpoint is publication documentation.
+Manifest binds assets to release source, not to this later receipt commit.
+Wheel, EXE, installer, portable/source ZIPs, checksums, manifest, plugin and Node
+tarball exist. GUI and read-only historical operations passed Windows tests.
+See WINDOWS_RELEASE_ACCEPTANCE.md for granular COMPLETE/EXPERIMENTAL/PARTIAL/BLOCKED
+classifications. Security debt is not promoted: production mutation stays disabled.
+
+NEXT_EXACT_ACTION: separate clean Windows 10 x64 acceptance of the published portable
+and installer when available; no privileged proof or source-repository action.
+Stop policy A satisfied: experimental Windows release built, published, checkpointed.
