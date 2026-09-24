@@ -115,3 +115,10 @@ cache cannot cross instances or rebind generations, and scalar invalid offsets r
 A test asserts one export across a transfer and exact receiver output. Observed medians are
 local sample evidence, not a full V3 benchmark gate. Large startup data still needs an owner-
 supplied bounded channel; the next experiment uses an explicitly inherited read-only FD on POSIX.
+
+## M13: adopt a reviewed POSIX snapshot descriptor
+
+Large historical snapshots need not appear in argv. The opt-in adapter consumes an inherited
+read-only owned regular-file descriptor and verifies metadata, bytes and reviewed digest before
+serving. It opens no path, makes no ownership/mode changes and grants no current authority.
+Windows refuses the unsupported descriptor path. Parent-side launch and timeout remain explicit.

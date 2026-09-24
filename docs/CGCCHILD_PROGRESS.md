@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M12: bounded benchmark evidence and one-archive-per-core cache optimization.
+M13: bounded POSIX inherited snapshot-FD startup and explicit unsupported-platform refusal.
 
 ## CURRENT HEAD
 
-HEAD (M12 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M13 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -30,6 +30,8 @@ M9 full original V3 continuity envelope; separate historical summary; no path re
 M10 both historical profiles integrated through strict version dispatch; original model bytes stable.
 M11 fixed32KiB capsule chunks,128-message bound, verified receiver and >96KiB MCP round trip.
 M12 measured model/continuity costs; cached immutable archive; unchanged wire and refusal behavior.
+
+M13 digest-bound read-only owned descriptor startup; large Linux subprocess and refusal checks.
 
 ## PARTIAL
 
@@ -78,6 +80,8 @@ M11 Windows55 child tests and full Linux444 tests passed (112.138s).
 Review fixes: detached capsule generation and CORE_REFUSED audit event; regressions added.
 M12 Windows56 child tests passed. Continuity transfer median542.600->330.752ms in5 samples;
 not a production performance claim. Full Linux445 passed in112.718s.
+M13 Windows62 tests:57 passed,5 explicit POSIX skips. Linux focused6 and full451 pass
+(110.233s). Static AST/JSON/fences/local paths/plan bytes/mission/license checks pass.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -87,11 +91,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M11 37dbfea9ef25eea27b872fed9cfc63120b1d49b5 verified local/tracking/live and clean.
-Current M12 self-reference HEAD; published hash follows next checkpoint.
+M12 3dd5cdfc2185f1881204b07c847d359cea603569 verified local/tracking/live and clean.
+Current M13 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M13: add an explicit POSIX inherited read-only snapshot-FD startup path with digest binding
-and bounded metadata/content checks; preserve Windows small-hex launch and report unsupported paths.
+M14: integrate the unchanged scoped verifier with an explicit no-execution assessment/report
+boundary; test captured analysis, imported replay and mutation refusal in disposable fixtures.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

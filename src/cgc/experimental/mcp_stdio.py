@@ -121,11 +121,18 @@ def serve(snapshot_bytes,source,destination):
 
 
 def main():
-    # Hex carries only an already-reviewed inert model snapshot. No file opening,
-    # environment lookup, command execution or arbitrary startup selector.
-    if len(sys.argv)!=3 or sys.argv[1]!='--snapshot-hex' or len(sys.argv[2])>sp.MAX_BYTES*2:return 2
+    # Startup accepts reviewed inert bytes, never a path or executable selector.
     try:
-        data=bytes.fromhex(sys.argv[2])
+        if len(sys.argv)==3 and sys.argv[1]=='--snapshot-hex':
+            if len(sys.argv[2])>sp.MAX_BYTES*2:return 2
+            data=bytes.fromhex(sys.argv[2])
+        elif len(sys.argv)==5 and sys.argv[1]=='--snapshot-fd' and sys.argv[3]=='--snapshot-digest':
+            from .startup_snapshot import read_owned_fd
+            if not sys.argv[2].isascii() or not sys.argv[2].isdecimal() or len(sys.argv[2])>2:return 2
+            fd=int(sys.argv[2])
+            if str(fd)!=sys.argv[2]:return 2
+            data=read_owned_fd(fd,sys.argv[4])
+        else:return 2
         return serve(data,sys.stdin.buffer,sys.stdout.buffer)
     except (ValueError,OSError):return 2
 
