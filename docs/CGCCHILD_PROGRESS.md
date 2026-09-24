@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M36: private nonblocking socketpair transport for the composed native model.
+M37: generated post-setup scalar filter on private native socketpair fixtures.
 
 ## CURRENT HEAD
 
-HEAD (M36 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M37 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -78,6 +78,8 @@ M34 bounded capsule import renders the same offline HTML; hostile archive reject
 M35 composed native byte-model passes22 scenarios at3 fragment sizes; terminal invalidation across layers.
 
 M36 actual owned socketpair bytes/short I/O/EOF:14 runs pass; no bus or credential boundary.
+
+M37 213-instruction I/O filter:14 kernel installs,18 denials each,6 invalid selector refusals.
 
 ## PARTIAL
 
@@ -165,6 +167,8 @@ M35 two static native builds/runs pass66 scenarios/471 scripted steps; byte-iden
 No Python runtime changes; M34 focused94 and M33 full479 remain the latest regression evidence.
 M36 two native runs passed; final14 scenarios include EAGAIN and EOF; owned FD/build cleanup passed.
 Original80 byte hashes and local/live source HEAD unchanged; owner plan untouched.
+M37 two native builds/runs passed with identical images; structural/model/kernel cases separated.
+No Python runtime change; current child94/full479 regression evidence remains unchanged.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -174,11 +178,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M35 ebd52d828671f61d1b05c0763b710648ee5b81a0 verified local/tracking/live and clean.
-Current M36 self-reference HEAD; published hash follows next checkpoint.
+M36 1a8d5767971aaf955b1f503fb9ffc449a430a5a8 verified local/tracking/live and clean.
+Current M37 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M37: generate and validate a fixture-only post-setup scalar I/O filter for the private socketpair;
-exercise exact FD/flag predicates and denial probes without claiming a protected controller.
+M38: add a strict inert codec/schema for the existing bounded read-event chain; verify canonical
+bytes, order/hash/clock bounds and caller-bound expected tip/count without importing grants or authority.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

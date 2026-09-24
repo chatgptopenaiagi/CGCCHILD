@@ -228,3 +228,39 @@ The first run passed; a second added the explicit empty-read EAGAIN assertion an
 All80 protected original source byte hashes remain unchanged, including the owner's untracked
 plan. Original local/live main remains d7cb43d. Next: specialize and install a fixture-only
 post-setup I/O filter; its acceptance must remain separate from protected controller proof.
+
+## M37: post-setup private I/O filter
+
+[Source](lab/child_dbus_filtered_socket.c), [driver](lab/child_dbus_filtered_socket_validate.py)
+and [evidence](lab/child_dbus_filtered_socket_evidence.json) specialize the M36 private fixture.
+Its only argv value is the closed canonical selector0..13; six invalid forms refuse before setup.
+Each fresh process creates its own socketpair, then sets no_new_privs and installs the213-instruction
+filter. No fork or later filter change is permitted. The trusted prelude is still unfiltered.
+
+| Allowed syscall | Exact scalar predicates after installation |
+|---|---|
+| read | FD3 or4; count1..17 |
+| sendto | FD3 or4; count1..17; MSG_NOSIGNAL only; destination pointer/length both0 |
+| close | FD3 or4 |
+| fcntl F_GETFD | FD3..63; unused argument0, for bounded occupancy checks |
+| fcntl F_GETFL | FD3 or4; unused argument0 |
+| exit | status0..255 |
+
+All constrained argument high words must be zero. Buffer pointers/content remain trusted native
+code obligations, not cBPF validation. Default is EPERM; wrong architecture/x32 kills in the model.
+No stdout/stderr writes, exec, socket creation, fork, ptrace, namespace, prctl, close_range or
+seccomp operation is allowed after setup. The exact immutable rules, canonical instruction list,
+serialized bytes, digest and generator source digest are retained. Jump bounds, terminal actions,
+reverse-input determinism, each allow clause and high-word/refusal predicates pass offline checks.
+
+14 owned processes install the filter and pass the socket scenarios;18 denial probes run per
+installation. Six malformed selectors refuse. Native ELF remains static with one syscall site;
+source inventory separately records setup, permitted I/O and intentional denial-probe paths.
+Two builds/runs pass with identical image bytes; the second adds structural and inventory evidence.
+Descriptors and Linux-native temporary builds are cleaned. No production runtime change occurred.
+
+MODEL_PASS != KERNEL_ACCEPTANCE: wrong-ABI paths were modeled, not executed. Named I/O/denial
+paths did run under kernel filters. KERNEL_FIXTURE_PASS != PRODUCTION_ACCEPTANCE: no protected
+controller, credential separation, full broker, live manager or filesystem closure is established.
+Next independent work returns to the stable read-event interface: a strict inert journal codec
+can preserve audit bytes without serializing grants or importing authority.

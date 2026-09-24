@@ -50,3 +50,6 @@ docs/lab/child_dbus_connection_validate.py text eol=lf
 
 docs/lab/child_dbus_socket.c text eol=lf
 docs/lab/child_dbus_socket_validate.py text eol=lf
+
+docs/lab/child_dbus_filtered_socket.c text eol=lf
+docs/lab/child_dbus_filtered_socket_validate.py text eol=lf

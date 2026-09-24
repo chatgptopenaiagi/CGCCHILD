@@ -265,3 +265,9 @@ synthetic generation and ENCODED states remain visibly distinct from a live auth
 A same-process nonblocking socketpair exercises actual short I/O and EOF with the composed
 model. It introduces no live system bus, independent principal or installed authorization claim.
 Errors refuse rather than add unbounded waiting; fixed request bytes remain dummy laboratory data.
+
+## M37: post-setup I/O authority is scalar and fixture-local
+
+A213-instruction generated filter confines the private stream fixture to its exact FD/count/flag
+contract. Model architecture checks and actual kernel denial probes are recorded separately.
+The unfiltered prelude, pointer contents and absent credential boundary remain explicit limitations.
