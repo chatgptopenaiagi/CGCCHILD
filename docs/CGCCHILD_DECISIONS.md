@@ -309,3 +309,9 @@ Recovery and proof requests share explicit project/digest expectations and a fix
 A separately valid analysis YES is outside checkpoint/publication/repair scope and is refused.
 Preservation level remains explicit. Imported export re-evaluates without current capture;
 all execution remains unavailable regardless of supplied or derived verdict.
+
+## M44: native encoding is composed without adding a generic message interface
+
+The socket fixture now transmits bytes emitted by the native encoder under its existing
+scalar filter. Exactly three dummy queries are callable; expected canonical frames remain
+independent fixtures. No new syscall, bus connection or runtime target authority is introduced.

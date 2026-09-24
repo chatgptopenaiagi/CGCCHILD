@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M43: action-bound recovery/verifier composition and historical export.
+M44: native fixed encoding composed with filtered private socket transport.
 
 ## CURRENT HEAD
 
-HEAD (M43 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M44 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -92,6 +92,8 @@ M41 seven fixed faulty responders refuse with observed owned-process closure on 
 M42 pure recovery assessment: seven fixed issue categories; imported evidence cannot authorize repair.
 
 M43 nine action/level pairs and cross-action substitution refusal; no executor or proof promotion.
+
+M44 native query generation under existing filter;14 scenarios and489 capacity refusals per run.
 
 ## PARTIAL
 
@@ -196,6 +198,8 @@ Static105 AST/29 JSON/plan/mission/license/keypoint checks passed. B11 remains u
 M43 Windows122 child tests:103 passed,19 POSIX skips; Fedora122 child tests passed in21.338s.
 Six new binding tests pass; inherited unsupported-repair UNKNOWN behavior preserved and documented.
 Latest full505 regression is M42; focused complete child integration covers this small composition change.
+M44 two static native builds/runs passed with identical image hashes and observed temporary cleanup.
+No Python runtime/schema change; M43 child122 and M42 full505 remain latest regression evidence.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -205,11 +209,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M42 1aead97fa38ae161eb4d049368912042aefc95fa verified local/tracking/live and clean.
-Current M43 self-reference HEAD; published hash follows next checkpoint.
+M43 c7b85f2cb8eb97a54ca74c5e0bc8561df52b5b8d verified local/tracking/live and clean.
+Current M44 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M44: compose the fixed native outgoing encoder with the owned filtered socket transport;
-replace precompiled outbound fixtures with generated canonical bytes without connecting to a bus.
+M45: audit child implementation against the master-plan dependency queue and current proof gates;
+identify the next useful bounded milestone without promoting component fixtures to live acceptance.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
