@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M16: deterministic inert offline HTML surface for both historical profiles.
+M17: fixed native lab-protocol payload parser/encoder and deterministic corpus.
 
 ## CURRENT HEAD
 
-HEAD (M16 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M17 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -38,6 +38,8 @@ M14 unchanged verifier integration, explicit request binding, imported report de
 M15 finite action/domain/channel model, per-cell omission/contradiction tests, no live proof.
 
 M16 offline HTML projection, bounded CLI, escaping/CSP checks and disposable browser review.
+
+M17 static native payload parser/encoder:1541 cases, byte-identical local rebuilds, no IPC authority.
 
 ## PARTIAL
 
@@ -96,6 +98,9 @@ pack-tree assertion in SIGTERM case. Traced12 repetitions passed; diagnostic ful
 in112.241s with setup-only Git tracing and bounded assertion diagnostics. B11 remains open.
 M16 Windows79 tests:69 passed,10 skips. Normal full Linux468 passed in111.983s.
 Fresh isolated Edge render reviewed; owned browser profile/screenshot cleaned. B11 still open.
+M17 native1541 cases pass (7 positive/1534 negative); static ELF/one syscall site checks pass.
+Driver lookup bug and -Werror indentation failure corrected; no assertion weakened. No Python
+runtime change, so latest full468 result remains applicable; AST/JSON/source hashes validated.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -105,11 +110,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M15 1d82b6da5bbea01331c2f5518ffe2cab920b1758 verified local/tracking/live and clean.
-Current M16 self-reference HEAD; published hash follows next checkpoint.
+M16 dc373127dbdf2e7d3e5940cca4533bae2e2b39e4 verified local/tracking/live and clean.
+Current M17 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M17: audit the completed independent foundation queue against the master plan; retain exact
-acceptance blockers, verify source protection and prepare a clean resumable preservation checkpoint.
+M18: validate native ancillary receive/credential parsing and received-FD disposal using only
+owned unprivileged socketpairs; no broker dispatch, root identity, hostile R6 peer or manager operation.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

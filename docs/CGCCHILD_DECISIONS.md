@@ -141,3 +141,10 @@ model, repair stays unsupported, and no live adapter or implicit discovery is in
 The reference web foundation is deterministic HTML generated from validated historical bytes.
 It has no executable controls, script, live refresh or network. The original core/profile rules
 remain authoritative; the view cannot refresh evidence or convert integrity into permission.
+
+## M17: continue the unprivileged native protocol gap
+
+Dependency audit found native payload decoding could advance independently of RO approval.
+A fixed freestanding parser/encoder now executes1541 immutable vectors. Normalized ancillary
+facts remain a model; native socket receive/disposal and live binding are separate next gates.
+No generic client or broker action is introduced. M4 remains PARTIAL.
