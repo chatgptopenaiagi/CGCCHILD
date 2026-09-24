@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M75: bounded imported-report status pipe with explicit platform refusal.
+M76: bounded local read routing preserves opaque grants and source budgets.
 
 ## CURRENT HEAD
 
-HEAD (M75 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M76 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -138,6 +138,9 @@ M69 scoped transfer, semantic import and journal verification compose without au
 M70 fixed paired continuity MCP client passes owned sessions and bounded fault cleanup.
 M71 compact status pipe omits paths/notes and validates before emitting bounded output.
 
+M73-M75 explicit read-only review, revalidated historical report and bounded status pipe.
+M76 local multi-snapshot router with no generic authority surface.
+
 ## PARTIAL
 
 Inherited V3/M1-M5; native role bootstrap; containment; complete master-plan implementation.
@@ -158,6 +161,9 @@ V4.2 read-only private transport and V4.5 text/offline HTML surfaces EXPERIMENTA
 V4.0/V4.1 EXPERIMENTAL/PARTIAL for model and lossless historical V3 profiles; no full mission acceptance.
 
 ## TEST RESULTS
+
+M76 focused6 Windows pass1.119s; full Windows child203:173 pass/30 skips51.072s.
+Full Fedora592 pass181.141s; no assertion weakened.
 
 M75 report pipe5: Fedora passed1.026s; Windows2 passed/3 POSIX skips0.086s. CRLF diagnostic defect corrected.
 
@@ -292,11 +298,12 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M74 19109ca109e27bd649b3da703ef1686507485444 verified local/tracking/live and clean.
-Current M75 self-reference HEAD; published hash follows next checkpoint.
+M75 1487728dbd528bb5f5798d21296771eef178935f verified local/tracking/live and clean.
+Current M76 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M76: specify and validate a bounded in-process read-only consumer router over existing
-opaque scoped grants; no network, serialized authority, generic callback or mutation route.
-Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
+M77: bounded Windows-native owned-file sharing-exclusion feasibility. Test incompatible
+opens before/during/after a held handle and directory-versus-child scope. Record exact
+negative witnesses and unknown aliases/preopened/queued/cross-OS routes. No real repository
+writer inspection or exclusion, no privileged change, and no positive production P3.

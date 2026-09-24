@@ -103,3 +103,33 @@ grants were unsupported. This assertion was updated for the explicit new feature
 existing state-only scope still denies chunks, and a new chunk grant still denies
 the generic read without an offset. The CORE_REFUSED assertion remains unchanged.
 No inherited canonical-CGC test or safety condition was removed.
+
+
+## M76: bounded local multi-snapshot router
+
+[Router](../src/cgc/experimental/read_router.py) and [tests](../tests/test_child_read_router.py)
+compose existing immutable cores and opaque grants inside one trusted Python process.
+Registration accepts snapshot bytes, never a repository path. Eight unique route labels,
+128 active routed handles,256 registration/issue/dispatch/revoke attempts and1024-byte
+canonical requests bound the interface. Per-source16-grant/64-event/expiry limits remain
+unchanged. A label is not authority; handles are identity-bound to their router and source.
+No overwrite/reset route, imported grant, listener, callback, executor or network client.
+
+Wire version cgcchild-read-route-0.1-experimental requires exactly version, route, method,
+snapshot_digest, plus offset only for capsule.chunk. Sorted compact ASCII JSON and one LF
+are mandatory. Duplicate fields, arbitrary paths/actions and noncanonical bytes refuse.
+Dispatch reuses the existing principal/scope/digest/time checks and fixed five read methods.
+Core refusal is retained; routing does not turn a core error into successful evidence.
+Backwards time closes the router. Revocation removes its handle before the underlying
+operation, so exhausted source audit capacity cannot preserve access through that handle.
+
+The host caller, principal labels and supplied clock remain trusted. This is not transport
+or caller authentication, hostile-interpreter isolation, or an accepted agent fabric.
+Owner-only events are detached per-source records. Malformed/cross-route requests can be
+refused before source dispatch; these journals do NOT claim a complete router audit trail.
+Closing clears all routes/handles without promising a terminal event in an exhausted journal.
+
+Six tests cover both profiles, no collection I/O, cross-router/source/principal misuse,
+forged handles, scope expansion, expiry/revocation/clock rollback, exact wire grammar,
+source-budget exhaustion and route/call bounds. Windows child203:173 pass/30 POSIX skips;
+full Fedora592 pass181.141s. Production authority and filesystem/P3 remain unchanged.

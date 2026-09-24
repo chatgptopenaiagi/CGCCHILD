@@ -579,3 +579,15 @@ unsupported platform, exit2 refuses malformed/I/O failures. Initial Windows stde
 mismatch fixed by writing exact binary diagnostics; all refusal expectations retained.
 The next independent master-plan foundation is bounded local read routing over existing
 opaque grants, not a remote gateway or agent execution authority.
+
+
+## M76: routing preserves source-local authority and refusal
+
+Use identity-bound opaque handles over fixed immutable cores, with separate source budgets
+and a bounded global call count. Route labels and serialized requests cannot issue grants.
+No complete router-audit claim follows from per-source journals. The trusted local caller
+remains the authorization boundary; no remote agent gateway is implemented.
+Next investigate file-sharing exclusion only in owned Windows temporary fixtures, to replace
+one filesystem-model assumption with precise positive/negative observations. No real project
+writer scan, lock, cross-OS closure claim, privileged action or production proof is authorized
+by that fixture. Directory handles must not be assumed to protect descendants recursively.
