@@ -469,3 +469,14 @@ executing; the executed corpus omits credential-shaped test strings. The impleme
 retains the source metadata screen, including Python whitespace semantics; that screen
 is reviewed but not exhaustively exercised by this milestone. Full Node handoff support
 remains pending. No inherited runtime, schema or test was changed.
+
+## M66: independent handoff envelope validation
+
+Compose pure preservation and inspection validators with exact slot digest computation,
+generation order, project binding and publication-time relationships. Node accepts only
+canonical compact ASCII JSON plus LF, bounded to the inherited2MiB envelope limit.
+Historical views expose defensive copies and current UNKNOWN/NONE. No store, path or
+current proof is opened. Four parity families pass on both hosts. Initial test-harness
+errors came from catching ValueError instead of the inherited HandoffError; corrected
+without changing source validation or weakening expected rejection. Continuity profile
+integration is the next independent step; protected Linux proof remains blocked.
