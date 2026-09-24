@@ -104,3 +104,43 @@ filesystem exclusivity or P3 from UNKNOWN. No production exclusion adapter is im
 Next bounded work: challenge the same owned-file guard with a preexisting writable mapping
 and a metadata-only write. This can refine two concrete gaps without touching a repository,
 calling privileged interfaces or assuming a directory-wide exclusion exists.
+
+
+## M78: retained views and metadata writers
+
+[Fixed fixture](lab/child_windows_mapping.py), [evidence](lab/child_windows_mapping_evidence.json).
+Two owned Windows10.0.19045/Python3.14.7 runs completed, with no privilege/configuration change.
+All paths are fixed children of a freshly allocated, boundary-checked temporary directory.
+All mappings/handles are tracked and closed before owned-directory cleanup; no user paths.
+
+OBSERVED_FACT:
+
+1. Create a PAGE_READWRITE mapping and FILE_MAP_WRITE view of a4096-byte owned file.
+2. Close the ordinary file handle and mapping handle; retain only the mapped view.
+3. READ/SHARE_READ guard acquisition still fails ERROR_SHARING_VIOLATION32.
+4. The retained view writes eight fixed bytes; after flush/unmap, ordinary read verifies them.
+5. After unmapping, the same guard acquisition succeeds.
+6. While that guard is held, FILE_WRITE_ATTRIBUTES/SHARE_ALL open succeeds. SetFileTime changes
+   the last-write timestamp; GetFileTime on the still-held guard observes the exact new value.
+7. Zero owned views/handles remain and the temporary directory is removed.
+
+DERIVATION: ordinary file-handle closure is not disappearance of every writable capability.
+The tested mapping blocked guard acquisition, rather than silently becoming quiescent. A
+successful data-read sharing guard does not exclude metadata writes, demonstrated directly.
+Flushing this view and reading back bytes is not a power-loss durability or global pending-I/O
+proof. These results refine the mechanism; they do not provide a production filesystem gate.
+
+The official [mapping contract](https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-createfilemappingw)
+describes retained view references and the need to unmap views as well as close mapping handles.
+[SetFileTime](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-setfiletime)
+requires the appropriate attribute-write access. Neither API authenticates a CGC proof claim.
+
+UNKNOWN: other-process mappings, alternate streams/reparse paths, pending asynchronous I/O,
+WSL access, other distros, external deputies, and full namespace admission. Historical M77
+limitations remain historically accurate; this section supplies only the tested refinement.
+Production filesystem exclusivity and P3 remain UNKNOWN; producer NOT_STARTED.
+
+Next: owned Windows-temp/Fedora interoperability witnesses, with bounded subprocess pipes
+and explicit cleanup. Challenge a Windows-held guard using one Fedora write-open; separately
+challenge a Fedora-held advisory flock with one Windows write-open. Do not generalize either
+outcome to other mounts/distros or claim full cross-OS closure.

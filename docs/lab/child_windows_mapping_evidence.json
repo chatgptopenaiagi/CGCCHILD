@@ -1,0 +1,43 @@
+{
+  "classification": "OBSERVED_FACT",
+  "facts": [
+    {
+      "case": "guard_with_retained_writable_view",
+      "error": 32,
+      "opened": false
+    },
+    {
+      "bytes_verified_after_unmap": true,
+      "case": "retained_view_write_after_file_and_mapping_handle_close"
+    },
+    {
+      "case": "guard_after_unmap",
+      "opened": true
+    },
+    {
+      "case": "metadata_write_during_guard",
+      "last_write_time_changed": true,
+      "write_attributes_opened": true
+    }
+  ],
+  "limitations": [
+    "single owned process",
+    "one local file",
+    "flush success is not power-loss durability",
+    "no complete pending-I/O proof",
+    "no cross-OS or deputy coverage",
+    "no repository exclusion"
+  ],
+  "mutation_authorized": false,
+  "owned_handles_remaining": 0,
+  "owned_views_remaining": 0,
+  "platform": "Windows",
+  "production_filesystem": "UNKNOWN",
+  "production_p3": "UNKNOWN",
+  "profile": "OWNED_WINDOWS_MAPPING_METADATA_V1",
+  "python": "3.14.7",
+  "source_digest_basis": "UTF8_LF_NORMALIZED",
+  "source_sha256": "b3915d7a7110e532db2615ef8e206ca36d93310681aa4c09aa054f384d5f9be8",
+  "temporary_directory_removed": true,
+  "version": "10.0.19045"
+}

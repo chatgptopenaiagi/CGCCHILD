@@ -600,3 +600,11 @@ Do not build a production lease adapter from per-file sharing success. The owned
 witness narrows one alias question only. Keep metadata/mapping/queued/cross-OS routes explicit.
 The next fixture can inspect two missing local mechanisms without privilege or real-project
 mutation: a preexisting writable mapping and a metadata-only change during the file guard.
+
+
+## M78: metadata and mapping capabilities remain explicit
+
+Retained writable view blocked the tested guard despite ordinary handles being closed.
+A metadata-only writer succeeded during that guard. Preserve both witnesses and refuse to
+label data-sharing denial as complete filesystem quiescence. Next scope is two owned cross-OS
+file-open witnesses, not process containment/R6 or real-project writer discovery.

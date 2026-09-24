@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M77: owned Windows file-share feasibility and recursive-directory negative witness.
+M78: retained writable-view and metadata-writer feasibility witnesses.
 
 ## CURRENT HEAD
 
-HEAD (M77 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M78 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -143,6 +143,8 @@ M76 local multi-snapshot router with no generic authority surface.
 
 M77 seven Windows/NTFS observations; no recursive-directory exclusion.
 
+M78 retained view prevents guard; metadata writer succeeds during guard.
+
 ## PARTIAL
 
 Inherited V3/M1-M5; native role bootstrap; containment; complete master-plan implementation.
@@ -163,6 +165,9 @@ V4.2 read-only private transport and V4.5 text/offline HTML surfaces EXPERIMENTA
 V4.0/V4.1 EXPERIMENTAL/PARTIAL for model and lossless historical V3 profiles; no full mission acceptance.
 
 ## TEST RESULTS
+
+M78 fixed mapping/metadata fixture twice passed, exact bytes/timestamp verified; handles/views/temp cleaned.
+No runtime or regression test change.
 
 M77 fixed Windows fixture twice passed: seven observations, zero owned handles/temp objects remain.
 No production runtime change; full Fedora592/Windows child203 results from M76 retained.
@@ -303,11 +308,12 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M76 e624043653cc5df6a05ea999cc0f16c5bfd32772 verified local/tracking/live and clean.
-Current M77 self-reference HEAD; published hash follows next checkpoint.
+M77 59ca53172b4f33f141fa73662e77262cf0180b06 verified local/tracking/live and clean.
+Current M78 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M78: owned Windows temporary-file writable-mapping and metadata-write challenges to the
-same sharing guard. Keep queued/cross-OS/recursive-domain coverage UNKNOWN. No production
-adapter, repository writer scan or privilege. Trusted usage remaining UNKNOWN.
+M79: two bounded owned Windows-temp/Fedora file-open interoperability witnesses: Windows
+sharing guard versus Fedora writer; Fedora advisory flock versus Windows writer. Fixed
+paths/messages, bounded subprocess timeout and cleanup; no repository/R6/privileged action.
+Trusted usage remaining UNKNOWN; filesystem/P3 UNKNOWN regardless of these local outcomes.
