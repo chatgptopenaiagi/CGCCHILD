@@ -107,3 +107,11 @@ cover the maximum65 chunks without raising the96KiB response ceiling. No extract
 remote trust or grant transfer exists. Read-grant lab and skill remain narrower subsets.
 Review corrected mixed-member caller-mutation risk and mislabeled core-refusal events, with
 regression tests. Repeated archive generation remains an explicit performance question.
+
+## M12 — optimize measured duplicate work only
+
+Retained small synthetic measurements justify caching a capsule per immutable core. The
+cache cannot cross instances or rebind generations, and scalar invalid offsets refuse early.
+A test asserts one export across a transfer and exact receiver output. Observed medians are
+local sample evidence, not a full V3 benchmark gate. Large startup data still needs an owner-
+supplied bounded channel; the next experiment uses an explicitly inherited read-only FD on POSIX.

@@ -9,7 +9,8 @@ import re
 import sys
 from . import snapshot_profiles as sp
 from .capsule import export_capsule
-from .capsule_chunks import chunk,ChunkError
+from .capsule_chunks import _slice,ChunkError,CHUNK_BYTES
+from .capsule import MAX_BYTES as MAX_CAPSULE_BYTES
 
 METHODS = ('capabilities.get','state.get','status.get','capsule.export','capsule.chunk')
 MAX_REQUEST = 1024
@@ -30,6 +31,12 @@ class ReadOnlyCore:
         state=sp.decode(snapshot_bytes)
         self._bytes=sp.encode(state)
         self._digest=sp.digest(state)
+        self._profile=sp.kind(state)
+        self._capsule=None
+
+    def _archive(self):
+        if self._capsule is None:self._capsule=export_capsule(sp.decode(self._bytes))
+        return self._capsule
 
     def dispatch(self, raw):
         def pairs(items):
@@ -59,15 +66,16 @@ class ReadOnlyCore:
         if request['snapshot_digest']!=self._digest:
             return _error('STALE_SNAPSHOT')
         method=request['method']
-        state=sp.decode(self._bytes)
         if method=='capabilities.get':
-            result={'methods':list(METHODS),'profile':sp.kind(state),'network':False,
+            result={'methods':list(METHODS),'profile':self._profile,'network':False,
                     'freshness':'HISTORICAL_UNVERIFIED','max_requests':MAX_REQUESTS}
-        elif method=='state.get':result=state
-        elif method=='status.get':result={'text':sp.render_human(state)}
-        elif method=='capsule.export':result={'encoding':'base64','capsule':base64.b64encode(export_capsule(state)).decode('ascii')}
+        elif method=='state.get':result=sp.decode(self._bytes)
+        elif method=='status.get':result={'text':sp.render_human(sp.decode(self._bytes))}
+        elif method=='capsule.export':result={'encoding':'base64','capsule':base64.b64encode(self._archive()).decode('ascii')}
         else:
-            try:result=chunk(state,request['offset'])
+            offset=request['offset']
+            if type(offset) is not int or not 0<=offset<MAX_CAPSULE_BYTES or offset%CHUNK_BYTES:return _error('CHUNK_RANGE')
+            try:result=_slice(self._archive(),offset)
             except ChunkError:return _error('CHUNK_RANGE')
         response=_wire({'version':'cgcchild-readonly-0.1','id':request['id'],
                         'snapshot_digest':self._digest,'result':result,'mutation_authorized':False})

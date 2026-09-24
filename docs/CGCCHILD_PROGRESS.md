@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M11: fixed-size capsule data plane and verified historical receiver; bounded MCP integration.
+M12: bounded benchmark evidence and one-archive-per-core cache optimization.
 
 ## CURRENT HEAD
 
-HEAD (M11 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M12 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -29,6 +29,7 @@ M8 opaque read handles, expiry/revocation/generation refusal,64-event bounded ha
 M9 full original V3 continuity envelope; separate historical summary; no path rebinding.
 M10 both historical profiles integrated through strict version dispatch; original model bytes stable.
 M11 fixed32KiB capsule chunks,128-message bound, verified receiver and >96KiB MCP round trip.
+M12 measured model/continuity costs; cached immutable archive; unchanged wire and refusal behavior.
 
 ## PARTIAL
 
@@ -75,6 +76,8 @@ Full Linux regression432 passed in109.676s.
 M10 Windows49 child and Node692 checks passed; full Linux438 passed in109.679s.
 M11 Windows55 child tests and full Linux444 tests passed (112.138s).
 Review fixes: detached capsule generation and CORE_REFUSED audit event; regressions added.
+M12 Windows56 child tests passed. Continuity transfer median542.600->330.752ms in5 samples;
+not a production performance claim. Full Linux445 passed in112.718s.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -84,11 +87,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M10 ebb4e20a4b218707143c0556e18e76047f0ef05f verified local/tracking/live and clean.
-Current M11 self-reference HEAD; published hash follows next checkpoint.
+M11 37dbfea9ef25eea27b872fed9cfc63120b1d49b5 verified local/tracking/live and clean.
+Current M12 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M12: measure bounded model/continuity validation and capsule transfer costs; optimize repeated
-archive generation only if measurements justify it, preserving exact bytes and refusal semantics.
+M13: add an explicit POSIX inherited read-only snapshot-FD startup path with digest binding
+and bounded metadata/content checks; preserve Windows small-hex launch and report unsupported paths.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

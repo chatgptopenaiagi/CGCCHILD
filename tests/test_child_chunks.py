@@ -83,5 +83,18 @@ class ChildChunkTests(unittest.TestCase):
         self.assertEqual(lab.events()[-1]['kind'],'CORE_REFUSED')
         with self.assertRaises(grants.ReadDenied):lab.issue('p',('capsule.chunk',),now_ns=12,expires_ns=20)
 
+    def test_one_archive_generation_per_immutable_core(self):
+        value=large_state();core=svc.ReadOnlyCore(profiles.encode(value));digest=profiles.digest(value)
+        receiver=chunks.Receiver(digest);offset=0
+        with patch('cgc.experimental.readonly_service.export_capsule',wraps=capsule.export_capsule) as export:
+            while True:
+                request=dict(id='once',method='capsule.chunk',snapshot_digest=digest,offset=offset)
+                piece=json.loads(core.dispatch((json.dumps(request)+'\n').encode()))['result']
+                receiver.accept(piece)
+                if piece['done']:break
+                offset+=chunks.CHUNK_BYTES
+            self.assertEqual(export.call_count,1)
+        self.assertEqual(receiver.finish().snapshot(),value)
+
 
 if __name__=='__main__':unittest.main()

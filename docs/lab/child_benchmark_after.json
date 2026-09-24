@@ -1,0 +1,117 @@
+{
+  "cases": {
+    "continuity_108k": {
+      "capsule_bytes": 111897,
+      "capsule_roundtrip": {
+        "iterations": 5,
+        "max_ns": 145149500,
+        "median_ns": 140597700,
+        "min_ns": 140376300,
+        "samples_ns": [
+          145149500,
+          140376300,
+          140556000,
+          140597700,
+          142029600
+        ]
+      },
+      "core_chunk_transfer": {
+        "iterations": 5,
+        "max_ns": 340266100,
+        "median_ns": 330752100,
+        "min_ns": 323800800,
+        "samples_ns": [
+          330752100,
+          335676400,
+          340266100,
+          329082200,
+          323800800
+        ]
+      },
+      "decode": {
+        "iterations": 10,
+        "max_ns": 21231700,
+        "median_ns": 20658100,
+        "min_ns": 20506200,
+        "samples_ns": [
+          20528400,
+          20573700,
+          20615700,
+          20700500,
+          20614600,
+          20832200,
+          20851100,
+          20506200,
+          21231700,
+          21039300
+        ]
+      },
+      "snapshot_digest": "3e5119a7217114734740d2b72ebe63cdd060d1ee0f3018fe9ef097f26d698ddb",
+      "state_bytes": 110813
+    },
+    "model": {
+      "capsule_bytes": 1613,
+      "capsule_roundtrip": {
+        "iterations": 5,
+        "max_ns": 2221600,
+        "median_ns": 930700,
+        "min_ns": 917500,
+        "samples_ns": [
+          2221600,
+          970100,
+          930700,
+          921200,
+          917500
+        ]
+      },
+      "core_chunk_transfer": {
+        "iterations": 5,
+        "max_ns": 2234400,
+        "median_ns": 2028600,
+        "min_ns": 2000700,
+        "samples_ns": [
+          2234400,
+          2075200,
+          2024400,
+          2028600,
+          2000700
+        ]
+      },
+      "decode": {
+        "iterations": 10,
+        "max_ns": 165200,
+        "median_ns": 123450,
+        "min_ns": 119100,
+        "samples_ns": [
+          165200,
+          134800,
+          149900,
+          126100,
+          123300,
+          120600,
+          120700,
+          119100,
+          120800,
+          123600
+        ]
+      },
+      "snapshot_digest": "1515b2ab5440121f86fc7eaf06e20cdf25fe17756aaf27934be9cb1596316bb2",
+      "state_bytes": 663
+    }
+  },
+  "harness_sha256": "2d8dd2dfd60f633b10926105fbcd400732b3bf3261e3385923d6302c4d673b27",
+  "machine": "AMD64",
+  "platform": "Windows",
+  "production_accepted": false,
+  "python": "3.14.7",
+  "runtime_basis": "M12 working-tree source identities",
+  "runtime_git_blobs": {
+    "src/cgc/experimental/capsule.py": "7bceca3da26e4b9094ac19ac796536138a683d9a",
+    "src/cgc/experimental/capsule_chunks.py": "69b867ee564acde7282c1658e5cb8eed5a7960ef",
+    "src/cgc/experimental/continuity.py": "3fc126caa8000e0c946939d4024f7ba608604c2f",
+    "src/cgc/experimental/readonly_service.py": "49e3ae8aa2a131a86436d9862676899ea11f43b6",
+    "src/cgc/experimental/snapshot_profiles.py": "0ca76d1b5567c5b87cb07c70f3f0779d98d003e3",
+    "src/cgc/experimental/state_protocol.py": "e580b07df8b563e07ecae1c07c805d4912769a3a"
+  },
+  "scope": "SYNTHETIC_MODEL_AND_CONTINUITY_ONLY"
+}

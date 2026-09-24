@@ -13,7 +13,13 @@ class ChunkError(ValueError):
 
 
 def chunk(value,offset):
-    raw=capsule.export_capsule(value)
+    if type(offset) is not int or not 0<=offset<capsule.MAX_BYTES or offset%CHUNK_BYTES:raise ChunkError()
+    return _slice(capsule.export_capsule(value),offset)
+
+
+def _slice(raw,offset):
+    """Internal only: bytes from this core's immutable accepted capsule export."""
+    if type(raw) is not bytes or not 1<=len(raw)<=capsule.MAX_BYTES:raise ChunkError()
     if type(offset) is not int or not 0<=offset<len(raw) or offset%CHUNK_BYTES:raise ChunkError()
     piece=raw[offset:offset+CHUNK_BYTES]
     return dict(offset=offset,total_bytes=len(raw),capsule_sha256=hashlib.sha256(raw).hexdigest(),
