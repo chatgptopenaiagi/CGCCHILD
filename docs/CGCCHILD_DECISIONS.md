@@ -520,3 +520,15 @@ No generic method, path, unit, PID or shell interface is exposed. The owned harn
 bounded process cleanup, enlarged only for the documented continuity input/response count
 and15-second deadline. Model client behavior is unchanged. This is executable conformance
 with the repository adapter, not proof of ecosystem or authenticated transport acceptance.
+
+## M71: compact independent status pipe
+
+Node consumer accepts only continuity-capsule bytes on stdin and an explicit json/text
+selector. It validates the complete archive and nested receipts before output. The compact
+projection excludes project paths and curated notes, retaining only opaque portable ID,
+historical summary, integrity digests and explicit current UNKNOWN/NONE. Output is capped
+at4096bytes; input at2117632bytes. Errors emit a fixed diagnostic and exit2, with no success
+bytes for validation failures. Output I/O failure can leave partial bytes; callers must
+require successful exit. No filesystem path, archive extraction, subprocess or network
+operation exists. Four owned-process families pass Windows/Fedora. This is a historical
+status surface, not a live guardian or current-state verifier.

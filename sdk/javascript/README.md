@@ -218,3 +218,14 @@ supplies Python, the module/arguments are fixed, shell=false, and failures close
 Input is bounded to2101248bytes, replies96KiB, total68 reply-budgets, deadline15seconds.
 Small/large sessions and seven fixed fault modes are tested; general MCP interoperability
 and live authorization remain unaccepted. No package or service was installed.
+
+## Compact continuity capsule status pipe (M71)
+
+Run `node sdk/javascript/continuity_status_stdio.mjs json` or replace json with text.
+Supply capsule bytes on standard input using a binary-safe pipe. No filename argument
+is accepted. Output appears only after full archive/receipt validation and is limited
+to4096bytes. JSON includes historical summary and byte digests; text explicitly labels
+saved state, current UNKNOWN, no mutation authority and unobserved current filesystem.
+Project paths and curated notes are omitted. Invalid arguments/data exit2 with a fixed
+stderr diagnostic and no success output. Require exit0; an output I/O error may leave a
+partial stream. The consumer creates no files and launches no processes or services.

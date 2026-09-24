@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M70: fixed paired continuity MCP transcript and portable-consumer reconciliation.
+M71: bounded independent Node continuity-capsule status consumer.
 
 ## CURRENT HEAD
 
-HEAD (M70 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M71 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -133,6 +133,11 @@ M63 Node preservation-record contract passes four Python parity families includi
 
 M64 integer JSON parity preserves large identity values; four Python families/20 Node cases pass.
 
+M65-M68 independent Node inspection/handoff/continuity/capsule receipts preserve exact bytes and UNKNOWN.
+M69 scoped transfer, semantic import and journal verification compose without authority promotion.
+M70 fixed paired continuity MCP client passes owned sessions and bounded fault cleanup.
+M71 compact status pipe omits paths/notes and validates before emitting bounded output.
+
 ## PARTIAL
 
 Inherited V3/M1-M5; native role bootstrap; containment; complete master-plan implementation.
@@ -146,13 +151,15 @@ real P3; production mutation/recovery acceptance. See CGCCHILD_BLOCKERS.md.
 
 Production quiescence; full safe resume; remote gateway and production agent fabric.
 Fabric/read-policy foundations EXPERIMENTAL/PARTIAL, in-process laboratory only.
-V4.4 Node state/capsule codec EXPERIMENTAL/PARTIAL; other languages/browser/full V3 projection absent.
+V4.4 Node state/capsule codec EXPERIMENTAL/PARTIAL; model/full historical continuity implemented; other languages/browser absent.
 V4.3 plugin foundation EXPERIMENTAL/PARTIAL; installation and Codex interoperability NOT_EXECUTED.
 MCP adapter EXPERIMENTAL/PARTIAL; independent SDK interoperability unavailable.
 V4.2 read-only private transport and V4.5 text/offline HTML surfaces EXPERIMENTAL/PARTIAL.
 V4.0/V4.1 EXPERIMENTAL/PARTIAL for model and lossless historical V3 profiles; no full mission acceptance.
 
 ## TEST RESULTS
+
+M71 four status-consumer families passed Windows0.971s/Fedora2.554s.
 
 M70 four paired continuity-client families passed Windows16.997s/Fedora18.656s, including timeout cleanup.
 
@@ -275,11 +282,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M69 f3d526dae7fbe787dc4cb54fb0bc510439c237c0 verified local/tracking/live and clean.
-Current M70 self-reference HEAD; published hash follows next checkpoint.
+M70 b59036cad9701ec9b9f0382b4aceb81c632e480d verified local/tracking/live and clean.
+Current M71 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M71: add a bounded independent Node continuity-capsule status pipe consumer using the
-validated compact summary; historical labels, no path/notes disclosure, no extraction or writes.
+M72: measure bounded independent continuity codec/status resource behavior on small and
+large synthetic records; preserve semantics and identify any justified optimization before broader surfaces.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
