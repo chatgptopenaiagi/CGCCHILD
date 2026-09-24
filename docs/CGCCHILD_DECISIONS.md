@@ -253,3 +253,9 @@ and private launcher framing remain explicit; platform tests do not establish SD
 The offline surface uses the canonical importer before producing any HTML. It never extracts
 members or treats archive text as markup. Explicit capsule input avoids format guessing and
 keeps paths, persistence and browser launch outside the renderer. Proof limits remain unchanged.
+
+## M35: invalidate the composed model across byte-protocol boundaries
+
+Authentication completion enables only explicit request issuance; coalesced frames cannot invent
+requests. Framing or owner failure invalidates every composed state. The compiled fixture's
+synthetic generation and ENCODED states remain visibly distinct from a live authenticated bus.

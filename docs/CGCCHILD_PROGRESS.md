@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M34: inert capsule-to-offline-status composition for both historical profiles.
+M35: native inert authentication/framing/request-owner composition.
 
 ## CURRENT HEAD
 
-HEAD (M34 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M35 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -74,6 +74,8 @@ M32 Node inert capsule codec:exact Python archive bytes,3246 Node checks and5 pa
 M33 bounded snapshot line bootstrap and unchanged MCP phase; actual Windows large-snapshot round trip.
 
 M34 bounded capsule import renders the same offline HTML; hostile archive rejection before output.
+
+M35 composed native byte-model passes22 scenarios at3 fragment sizes; terminal invalidation across layers.
 
 ## PARTIAL
 
@@ -157,6 +159,8 @@ M33 Windows90 child tests:80 passed,10 POSIX skips; full Linux479 passed in114.2
 Static AST/JSON/links/fences/plan/mission/license/100-keypoint checks passed.
 M34 Windows94 child tests:84 passed,10 POSIX skips; Fedora94 child tests passed in11.575s.
 Initial test import duplicated six inherited cases; module import corrected before final counts.
+M35 two static native builds/runs pass66 scenarios/471 scripted steps; byte-identical images.
+No Python runtime changes; M34 focused94 and M33 full479 remain the latest regression evidence.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -166,11 +170,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M33 b77ec2b2bc2c7676134eebc5ab56fc5a1e04e93e verified local/tracking/live and clean.
-Current M34 self-reference HEAD; published hash follows next checkpoint.
+M34 9c699729739b80abdb57c3ca6ad647c8ebb511b5 verified local/tracking/live and clean.
+Current M35 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M35: compose native inert authentication, framing and owner/request correlation with fragmented
-input and terminal failure tests; no live bus, privileged launch or production acceptance.
+M36: exercise the composed native byte boundaries over a private owned socketpair with a fixed
+dummy responder; bounded I/O/EOF cleanup, no live bus or authenticated manager claim.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

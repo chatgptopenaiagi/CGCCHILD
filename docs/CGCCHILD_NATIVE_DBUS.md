@@ -170,3 +170,33 @@ unresolved for live acceptance. M4 is not accepted merely because these models p
 
 Next: consolidate child mechanical evidence against the current M1-M5/production blockers and
 reconcile the next independent master-plan milestone. Do not turn missing live proof into YES.
+
+## M35: composed inert authentication, framing and correlation
+
+[Source](lab/child_dbus_connection.c), [driver](lab/child_dbus_connection_validate.py) and
+[evidence](lab/child_dbus_connection_evidence.json) combine the exact M28 authentication and
+M30 owner-model prefixes with the M29 bounded frame-assembly rules. Prefix hashes are recorded.
+No outgoing bytes are sent. AUTH/BEGIN remain ENCODED states, and generation7 remains synthetic.
+
+Only an explicit completed BEGIN encoding enables request issuance or binary input. One request
+may be pending; partial input prevents issuing a new request. A completed frame goes directly
+to the owner's pending-context decoder, then its buffer is overwritten before reuse. Coalesced
+unsolicited replies cannot invent the next request. Relevant owner changes invalidate the entire
+composition, including authentication and request state, without fallback/reconnect/rebinding.
+The65536-byte frame/per-feed,1048576-byte lifetime,16-frame and8-request bounds remain explicit.
+Finish needs no partial bytes or pending request, an owner binding and at least3 accepted frames.
+This finish is a fixture boundary, not live quiescence or manager continuity.
+
+22 scenarios run with1-byte,17-byte and whole-frame chunks:66 scenario runs/471 scripted steps.
+Two positive scenarios cover ordered replies and a coalesced unchanged-owner signal. Negative
+cases cover early binary/request input, AUTH/binary smuggling, unsolicited/duplicate replies,
+wrong sender/serial/generation, changed owner, incomplete EOF, issue during partial input,
+zero feed, injected disconnect/reexec, unknown selector and malformed lengths/endian.
+Every terminal state refuses another request. Static x86-64 ELF has no interpreter/dependencies/
+undefined imports and one syscall veneer: getuid(102), diagnostic write(1), exit(60).
+
+Two owned nonroot builds/runs passed; the second added explicit ELF architecture and syscall
+contract evidence. Both produced the same image SHA256. Temporary build directories were removed.
+No production module, filter policy, bus socket, installed authorization or R6 test was exercised.
+M1-M5 remain PARTIAL. Next: exercise these byte boundaries on a private owned socketpair with a
+fixed dummy responder, preserving the distinction between transport and authenticated authority.

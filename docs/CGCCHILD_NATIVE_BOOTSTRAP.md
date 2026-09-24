@@ -123,3 +123,10 @@ in README/AGENTS; original runtime/tests/missions/license remain unchanged. Orig
 main is still d7cb43de3ac001bf28470d6d2f561ed70f106e6a, and its sole untracked owner plan remains.
 Child repository remains private. No original push, privileged read or host configuration
 change occurred. Full Linux468 tests remain the latest runtime regression; B11 remains UNKNOWN.
+
+## M35 composition update
+
+The sixteenth retained child fixture composes inert AUTH/frame/request-owner state and passes
+66 scenario runs. See [native D-Bus evidence](CGCCHILD_NATIVE_DBUS.md#m35-composed-inert-authentication-framing-and-correlation).
+The protected-image, real-credential, runtime-manifest and live-policy boundaries above remain.
+Composition here does not supply a live transport, authenticated manager or production producer.
