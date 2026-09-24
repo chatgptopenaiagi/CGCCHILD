@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M25: native FD identity preflight and owned substitution refusal.
+M26: native owned request/reply admission MODEL session.
 
 ## CURRENT HEAD
 
-HEAD (M25 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M26 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -56,6 +56,8 @@ M23 filtered live/dead sender scenario passed; actual FD-hole disposal remains n
 M24 live/drain FD-hole and control-truncation refusal;48 explicit rights closures, no leak.
 
 M25 native socket/pipe/pidfd creation binding and5 substitution refusals; filtered packets still pass.
+
+M26 six socket requests/five canonical replies and closed-state refusal under narrowed filters.
 
 ## PARTIAL
 
@@ -127,6 +129,7 @@ M22 native encoder passed3876 cases; no transport or runtime manifest adapter.
 M23 three generated filters installed in owned processes; final drain narrows live; cleanup passed.
 M24 five native packets passed; owned NOFILE64 verified; child reaped and inventories clean.
 M25 native identity and48-closure composition passed; static ELF/ABI/preprocessed hashes recorded.
+M26 static native bidirectional session passed; exact child reaped, FD inventory empty, build removed.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -136,11 +139,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M24 681464cf39e67902910b9010679ffc75e32d9fb7 verified local/tracking/live and clean.
-Current M25 self-reference HEAD; published hash follows next checkpoint.
+M25 60d29d6cd9c86f6f35ad5d75edb3be3cb7b26ce5 verified local/tracking/live and clean.
+Current M26 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M26: compose native admission dispatch and canonical replies over an owned socket pair;
-keep effects/model continuity/empty inputs inert, with no protected controller or R6 claim.
+M27: integrate native FD identity checks into the bidirectional session and verify descriptor
+refusal; preserve synthetic continuity/empty boundaries and no protected controller/R6 claim.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

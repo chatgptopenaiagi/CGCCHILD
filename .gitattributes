@@ -29,3 +29,6 @@ docs/lab/child_rights_sender_validate.py text eol=lf
 
 docs/lab/child_fd_identity.c text eol=lf
 docs/lab/child_fd_identity_validate.py text eol=lf
+
+docs/lab/child_session.c text eol=lf
+docs/lab/child_session_validate.py text eol=lf

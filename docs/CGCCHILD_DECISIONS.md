@@ -198,3 +198,9 @@ validate48 explicit closures and no occupancy leak. Object identity remains a se
 Creation-bound socket/pipe observations detect type, inode, access and CLOEXEC substitutions.
 The pidfd remains bound by creation and retained handle, not by its stat tuple alone. Native
 identity checks do not establish open-file-description equivalence or filesystem exclusivity.
+
+## M26: real IPC does not convert model effects into real authority
+
+The native six-request session composes per-message peer credentials/pidfds and narrowing with
+in-memory admission counters. Synthetic continuity/empty inputs remain explicit even while the
+controller is alive. Canonical reply exchange is evidence of mechanical composition only.

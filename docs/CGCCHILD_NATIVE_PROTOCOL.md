@@ -75,3 +75,38 @@ The static nonroot fixture passed15 scenarios/49 transitions and636 reply cases
 Source/driver/payload/generated-header/image identities are retained. No interpreter/import,
 one syscall site, temporary directory removed. Full native D-Bus codec and composed filtered
 B/C/W effects remain gaps; M4 stays PARTIAL, RO/R6 NOT_EXECUTED and real P3 UNKNOWN.
+
+## M26: owned native request/reply session
+
+[Source](lab/child_session.c), [driver](lab/child_session_validate.py) and
+[evidence](lab/child_session_evidence.json) compose the payload and lifecycle prefixes with
+actual nonroot socketpair messages. The parent is a broker MODEL and its fork child a fixed
+controller fixture. Neither is a protected or privileged production identity.
+
+The trusted prelude creates one SEQPACKET pair, enables per-message credentials on both ends,
+creates a release gate, sets no_new_privs and lowers only the fixture FD limit to64.
+Each role retains a pidfd for its peer. The receiver validates one credential record,
+exact expected PID/UID/GID, flags and pidfd non-readiness; connection-time identity alone
+is not accepted. This remains a point-in-time check, not atomic protected authorization.
+
+Six fixed requests are CREATE, ATTACH, SEAL, QUERY, REMOVE and a late CREATE. The first five
+receive exact canonical OK replies, parsed independently by the child. SEAL installs the
+broker_sealed syscall filter before its reply. The sixth request is refused in terminal
+CLOSED with no reply; closing the socket lets the child observe EOF and exit. Parent reaps
+the exact child, observes readable pidfd and confirms descriptors3..63 empty.
+
+Generated broker_sealed rules are a strict subset of broker_open; the final controller and
+sealed broker deny filter installation, exec, socket creation, fork and ptrace.
+Both peer directions have fixed send/receive FDs and flags. Scalar poll rules cannot inspect
+pointed-to FD memory; fixed trusted code supplies it. The new receiver closes kernel rights
+outside protected3/4 before refusing, but this session sends no rights packet; M24 provides
+separate rights-test evidence. M25 full stat/type/access preflight is not yet composed here.
+
+All effects remain the M20 counters. Continuity=1 and empty=1 are explicitly synthetic inputs,
+even while the controller is alive. They make no claim that a real domain is empty or safe.
+Generations/nonces remain fixed fixture values. No cgroup, filesystem mutation, manager
+request, production producer or R6 operation occurs. Static ELF and source/prefix/filter/
+vector/image hashes are retained; build directory removed. First compile/run passed.
+
+Next: integrate the already tested FD identity checks into this bidirectional session and
+test descriptor drift refusal without introducing a new authority surface.
