@@ -1,4 +1,4 @@
-"""POSIX-only adopted read-only descriptor for an inert historical snapshot."""
+"""Bounded inert snapshot startup; descriptor mode remains POSIX-only."""
 import hashlib
 import os
 import re
@@ -43,3 +43,20 @@ def read_owned_fd(fd,expected_digest):
     finally:
         try:os.close(fd)
         except OSError:pass
+
+def read_snapshot_line(source,expected_digest):
+    """Read exactly one bounded canonical snapshot line, leaving protocol input.
+
+    This explicit private bootstrap is not an MCP message or sender authentication.
+    The caller owns blocking-stream timeout and pipe lifecycle. No path is opened.
+    """
+    try:
+        if type(expected_digest) is not str or not re.fullmatch(r'[0-9a-f]{64}',expected_digest):
+            raise StartupError()
+        raw=source.readline(profiles.MAX_BYTES+1)
+        if type(raw) is not bytes or not 1<=len(raw)<=profiles.MAX_BYTES or not raw.endswith(b'\n'):
+            raise StartupError()
+        if hashlib.sha256(raw).hexdigest()!=expected_digest:raise StartupError()
+        profiles.decode(raw)
+        return raw
+    except (OSError,ValueError):raise StartupError() from None

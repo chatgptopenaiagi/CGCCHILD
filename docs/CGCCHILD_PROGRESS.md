@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M32: independent Node model-capsule0.1 import/export parity.
+M33: explicit digest-bound stdin startup for large Windows/Linux MCP snapshots.
 
 ## CURRENT HEAD
 
-HEAD (M32 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M33 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -70,6 +70,8 @@ M30 owner/request model:21 scenarios/107 steps, terminal stale/owner-change/disc
 M31 native component/proof matrix reconciled;15 source evidence hashes match; private/source isolation verified.
 
 M32 Node inert capsule codec:exact Python archive bytes,3246 Node checks and5 parity families.
+
+M33 bounded snapshot line bootstrap and unchanged MCP phase; actual Windows large-snapshot round trip.
 
 ## PARTIAL
 
@@ -149,6 +151,8 @@ M30 initial compiler memset import refused; explicit field initialization fixed 
 M31 static92 AST/24 JSON/15 native-source hashes/88 child relative links pass; inherited canonical scope preserved.
 M32 Windows84 child tests:74 passed,10 POSIX skips; Node692 state/3246 capsule checks pass.
 Full Linux473 tests passed in112.022s. B11 remains unresolved; no assertion weakened.
+M33 Windows90 child tests:80 passed,10 POSIX skips; full Linux479 passed in114.289s.
+Static AST/JSON/links/fences/plan/mission/license/100-keypoint checks passed.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -158,11 +162,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M31 0f9f2dd6ce87de682deb609e38af01938fe1d4a6 verified local/tracking/live and clean.
-Current M32 self-reference HEAD; published hash follows next checkpoint.
+M32 3ef967089c99e1ae285bb87e23a5b1b705223e7c verified local/tracking/live and clean.
+Current M33 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M33: add explicit digest-bound stdin snapshot bootstrap to the experimental MCP entrypoint;
-validate large historical snapshots on Windows without argv limits or filesystem path access.
+M34: connect bounded inert capsule import to the existing offline status surface; validate both
+historical profiles and hostile archive refusal without extraction, path access or authority gain.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

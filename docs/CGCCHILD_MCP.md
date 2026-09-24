@@ -43,7 +43,7 @@ is opened, environment credential is consumed, shell is invoked or config is mod
 place secrets in snapshot identifiers: startup arguments may be visible to local observers.
 The CLI has no live-capture mode. Invalid startup state exits2 without echoing input.
 
-stdin/stdout carry only newline-delimited JSON-RPC2.0 frames, UTF-8 input and ASCII-compatible
+During the MCP phase, stdin/stdout carry only newline-delimited JSON-RPC2.0 frames, UTF-8 input and ASCII-compatible
 UTF-8 output. At most128 messages, each <=8192 bytes; oversize/unterminated frame returns an
 error and ends the session. Duplicate fields, malformed UTF-8 and excessive parser nesting
 refuse. Notifications receive no replies. Unknown notifications grant nothing. Repeated or
@@ -77,7 +77,7 @@ the exact reviewed SHA256, and runs the strict canonical profile decoder. It con
 closes its descriptor on success or refusal. The shared open-file-description offset advances;
 the parent must account for that and retain responsibility for its own descriptor and timeout.
 
-Windows refuses this option before touching a descriptor; small hex startup remains available.
+Windows refuses this descriptor option before touching it; hex and explicit stdin startup remain available.
 A digest authenticates neither the sender nor current authority. Metadata checks do not prove
 filesystem exclusivity, freeze other writers, or establish confidentiality against the same UID.
 The adapter serves detached historical bytes only. No arbitrary-file-read tool is exposed.
@@ -86,3 +86,27 @@ Six focused Linux tests pass, including actual owned-subprocess startup with a11
 continuity envelope, writable/mode/offset/digest/hardlink/pipe/content-change refusals and
 descriptor consumption. Five POSIX tests are explicitly skipped on Windows; its unsupported
 platform test passes. Temporary Linux files are owned under /tmp and removed by the tests.
+
+## Explicit digest-bound stdin startup (M33)
+
+An owner-controlled launcher can avoid host argument-length limits on either Windows or Linux:
+
+```text
+python -B -m cgc.experimental.mcp_stdio --snapshot-stdin --snapshot-digest SHA256
+```
+
+The first input line must be the exact canonical supported-profile snapshot, including its LF.
+The digest covers that entire line. Reading is bounded to the profile maximum plus one byte;
+malformed, oversized, noncanonical or mismatched input exits2 without emitting snapshot content.
+Subsequent bytes enter the unchanged MCP phase. A later snapshot cannot replace the bound core.
+The input stream remains caller-owned; its launcher must enforce timeout and close the pipe.
+No pathname is opened and no filesystem ownership or sender-authentication claim is made.
+
+This explicit startup preamble is private launcher framing, not an MCP protocol extension that
+ordinary clients are assumed to understand. It requires a launcher that supplies the snapshot
+before initialize. No SDK, plugin registration or automatic host integration was added.
+
+Six new tests cover bounds, malformed/digest/read refusals, retained following bytes, no path
+lookup, quiet subprocess refusal and rebind rejection. A110813-byte historical envelope starts
+in an actual owned Windows subprocess and round-trips through capsule chunks with authority NONE.
+Linux regression and Windows suite results are recorded in child progress.

@@ -241,3 +241,9 @@ The Node model-only SDK now implements the fixed capsule0.1 bytes independently.
 bounds/CRC plus whole-archive canonical reconstruction reject ambiguity without a general ZIP
 parser. Imported views remain unsigned historical data with authority NONE. Full continuity0.2
 refuses explicitly; no new live compatibility or source authenticity is claimed.
+
+## M33: startup bytes avoid pathname and argument-size authority
+
+An explicit digest-bound canonical stdin line supplies either historical snapshot profile before
+MCP initialization. It does not add an MCP tool or permit rebinding. Caller-owned stream lifetime
+and private launcher framing remain explicit; platform tests do not establish SDK interoperability.

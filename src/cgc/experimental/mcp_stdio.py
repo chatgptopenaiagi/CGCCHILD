@@ -126,6 +126,9 @@ def main():
         if len(sys.argv)==3 and sys.argv[1]=='--snapshot-hex':
             if len(sys.argv[2])>sp.MAX_BYTES*2:return 2
             data=bytes.fromhex(sys.argv[2])
+        elif len(sys.argv)==4 and sys.argv[1]=='--snapshot-stdin' and sys.argv[2]=='--snapshot-digest':
+            from .startup_snapshot import read_snapshot_line
+            data=read_snapshot_line(sys.stdin.buffer,sys.argv[3])
         elif len(sys.argv)==5 and sys.argv[1]=='--snapshot-fd' and sys.argv[3]=='--snapshot-digest':
             from .startup_snapshot import read_owned_fd
             if not sys.argv[2].isascii() or not sys.argv[2].isdecimal() or len(sys.argv[2])>2:return 2
