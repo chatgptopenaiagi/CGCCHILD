@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M13: bounded POSIX inherited snapshot-FD startup and explicit unsupported-platform refusal.
+M14: scoped captured/imported resume review with unconditional execution refusal.
 
 ## CURRENT HEAD
 
-HEAD (M13 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M14 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -32,6 +32,8 @@ M11 fixed32KiB capsule chunks,128-message bound, verified receiver and >96KiB MC
 M12 measured model/continuity costs; cached immutable archive; unchanged wire and refusal behavior.
 
 M13 digest-bound read-only owned descriptor startup; large Linux subprocess and refusal checks.
+
+M14 unchanged verifier integration, explicit request binding, imported report demotion and POSIX limit.
 
 ## PARTIAL
 
@@ -82,6 +84,9 @@ M12 Windows56 child tests passed. Continuity transfer median542.600->330.752ms i
 not a production performance claim. Full Linux445 passed in112.718s.
 M13 Windows62 tests:57 passed,5 explicit POSIX skips. Linux focused6 and full451 pass
 (110.233s). Static AST/JSON/fences/local paths/plan bytes/mission/license checks pass.
+M14 Windows69 tests:59 passed,10 platform skips. First full458 run:one inherited pack-tree
+failure; isolated1 and repeated10 passed unchanged. Second full458 passed in109.659s.
+B11 retains UNKNOWN root cause. Initial Windows import error fixed by explicit platform refusal.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -91,11 +96,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M12 3dd5cdfc2185f1881204b07c847d359cea603569 verified local/tracking/live and clean.
-Current M13 self-reference HEAD; published hash follows next checkpoint.
+M13 28020ea053444b25124008ee4a40a17260552312 verified local/tracking/live and clean.
+Current M14 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M14: integrate the unchanged scoped verifier with an explicit no-execution assessment/report
-boundary; test captured analysis, imported replay and mutation refusal in disposable fixtures.
+M15: make action-specific filesystem writer-closure obligations executable as a bounded pure
+model; retain real filesystem/P3 UNKNOWN and test omissions, contradictions and epoch mismatch.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

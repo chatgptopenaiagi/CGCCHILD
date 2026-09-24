@@ -122,3 +122,10 @@ Large historical snapshots need not appear in argv. The opt-in adapter consumes 
 read-only owned regular-file descriptor and verifies metadata, bytes and reviewed digest before
 serving. It opens no path, makes no ownership/mode changes and grants no current authority.
 Windows refuses the unsupported descriptor path. Parent-side launch and timeout remain explicit.
+
+## M14: preserve scoped proof and refuse execution
+
+The child delegates assessment to the unchanged verifier with explicit caller request and
+capture. Portable reports are recomputed without capture, preserving historical evidence while
+withholding current proof. The execution entrypoint always refuses. The inherited POSIX import
+dependency is handled with explicit Windows refusal, not a fake fcntl implementation.

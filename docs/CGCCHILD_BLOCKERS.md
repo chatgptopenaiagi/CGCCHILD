@@ -24,3 +24,9 @@ can establish local framing only; external client acceptance remains NOT_EXECUTE
 
 B09: Codex plugin installation/registration and live integration NOT_EXECUTED. Package is
 child-local only; no host configuration change is authorized merely by creating it.
+
+B11: One M14 full-regression run failed inherited test_real_index_pack_released_control
+at its source-tree equality assertion during paused transfer. Isolated rerun and ten bounded
+repetitions passed unchanged. Root cause UNKNOWN; no assertion or inherited code weakened.
+The original failed fixture was automatically cleaned by its existing test cleanup. A future
+recurrence needs bounded changed-path/metadata evidence before selecting a correction.
