@@ -216,3 +216,9 @@ for continuity/empty/effects; no same-UID protection or privileged at-use author
 The finite EXTERNAL transcript codec has explicit ENCODED states and terminal rejection.
 GUID parsing retains metadata only. Fragmentation tests do not prove bus identity, installed
 policy, successful writes or transport timeout/continuity behavior.
+
+## M29: framing is bounded and terminal, not a live connection model
+
+The native decoder now consumes fragmented/coalesced inert frames with exact byte/frame limits.
+Context ordering remains compiled fixture input. Stale request and manager-owner binding must
+be modeled separately; framing success cannot create a trusted current manager generation.

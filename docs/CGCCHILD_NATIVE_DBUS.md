@@ -115,3 +115,28 @@ are retained. First compile/run passed; Linux-native temporary directory removed
 
 Next: finite incoming-frame accumulation under arbitrary bounded fragmentation, then exact
 composition with the existing decoder. No bus connection or manager call is required.
+
+## M29: bounded incoming stream accumulation
+
+[Source](lab/child_dbus_stream.c), [driver](lab/child_dbus_stream_validate.py) and
+[evidence](lab/child_dbus_stream_evidence.json) compose the existing native decoder prefix
+with a fixed65536-byte frame buffer. No pointer into that buffer escapes; typed results are
+compared immediately before reuse. Test comparison mismatches do not turn an accepted frame
+into a protocol refusal, so negative tests cannot hide an unexpected decoder acceptance.
+
+A16-byte header is accumulated first; lengths/architecture-independent wire flags are checked
+before further accumulation. Body plus aligned header must fit65536. Per-feed input is bounded
+to65536 and lifetime bytes to1048576; at most16 fixed expected contexts are allowed.
+The executed stream uses12 contexts. Context selection is compiled fixture state, not a live
+request/manager-generation binding. An unexpected extra frame, zero feed, incomplete EOF or
+input after finish invalidates; no resynchronization or rebind exists.
+
+The1025-byte concatenated stream passes all1026 split positions plus bytewise/17-byte chunks.
+All1025 incomplete prefixes refuse at finish, as do247 retained negative frame cases.
+Typed positive values remain exact. First static compile/run passed; no bus/transport call,
+filter installation or system mutation occurred. Prefix/generated corpus/image hashes and
+cleanup are recorded. Parsing/framing success remains distinct from authenticated policy.
+
+Next: a finite request-correlation/manager-owner binding MODEL over these decoded values,
+with disconnect/owner-change/stale-reply terminal invalidation. No live manager generation
+or systemd reexec acceptance can be inferred from that model.

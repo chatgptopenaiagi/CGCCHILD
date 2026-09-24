@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M28: finite native EXTERNAL authentication transcript mechanics.
+M29: bounded native incoming D-Bus stream/decoder composition.
 
 ## CURRENT HEAD
 
-HEAD (M28 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M29 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -62,6 +62,8 @@ M26 six socket requests/five canonical replies and closed-state refusal under na
 M27 FD identity checks composed into both socket directions; duplication/CLOEXEC changes denied.
 
 M28 inert authentication transcript:85 vectors,2489 split runs,106 UID capacity cases.
+
+M29 native framing:1026 split runs,1025 incomplete prefixes and247 negative frames pass.
 
 ## PARTIAL
 
@@ -136,6 +138,7 @@ M25 native identity and48-closure composition passed; static ELF/ABI/preprocesse
 M26 static native bidirectional session passed; exact child reaped, FD inventory empty, build removed.
 M27 bound session passed with role-specialized FD reads and monotonic seal; no production change.
 M28 static native auth codec passed; no connection, authentication or manager operation occurred.
+M29 bounded fragmented/coalesced stream passed; typed results exact, terminal invalidation checked.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -145,11 +148,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M27 2958e710b58d98ad7ac37bc7fc03d31c910a16c6 verified local/tracking/live and clean.
-Current M28 self-reference HEAD; published hash follows next checkpoint.
+M28 6b3ea163dc119274a7940a397c73ae9c72420e8d verified local/tracking/live and clean.
+Current M29 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M29: compose finite native incoming-frame accumulation with decoder under bounded fragmented
-and coalesced inert streams; no bus connection, manager operation or privileged read.
+M30: implement finite request-correlation/manager-owner binding MODEL with stale reply,
+disconnect and owner-change refusal; inert decoded bytes only, no live manager generation claim.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
