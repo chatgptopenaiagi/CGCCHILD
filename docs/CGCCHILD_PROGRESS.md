@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M46: finite native owner/serial query binding.
+M47: model-bound query generation composed with filtered private transport.
 
 ## CURRENT HEAD
 
-HEAD (M46 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M47 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -98,6 +98,8 @@ M44 native query generation under existing filter;14 scenarios and489 capacity r
 M45 current implementation/proof matrix reconciled; original inherited modifications remain only child banners.
 
 M46 native model-derived queries:24 positives,6048 capacity refusals,18 invalid-state cases.
+
+M47 model-bound private transport:56 filtered scenarios,30968 capacity refusals and endpoint cleanup.
 
 ## PARTIAL
 
@@ -205,6 +207,7 @@ Latest full505 regression is M42; focused complete child integration covers this
 M44 two static native builds/runs passed with identical image hashes and observed temporary cleanup.
 No Python runtime/schema change; M43 child122 and M42 full505 remain latest regression evidence.
 M46 final native builds/runs byte-identical; only getuid/exit, no live bus. All owned builds removed.
+M47 two native builds/runs passed with identical image hashes; unchanged filter and syscall surface.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -214,11 +217,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M45 9751ec254d49810d06f3cef7f1486d9cd94a32b9 verified local/tracking/live and clean.
-Current M46 self-reference HEAD; published hash follows next checkpoint.
+M46 6eca93f7c42568217f69caf6852eceef9f76547c verified local/tracking/live and clean.
+Current M47 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M47: compose model-bound query generation with the filtered private-socket transport;
-exercise varied synthetic owners and existing refusal cases without connecting to a manager.
+M48: add a reproducible read-only audit of retained native source/driver evidence bindings;
+refuse missing or changed artifacts without rerunning fixtures or implying current acceptance.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

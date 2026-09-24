@@ -327,3 +327,9 @@ owner/serial state; broader UI/SDK expansion is lower priority than this finite 
 The native Version writer receives destination/serial from validated owner/pending model state.
 Output-capacity refusal preserves that pending request; invalid state closes the model. This
 is deterministic correlation evidence, not live process-generation or caller authentication.
+
+## M47: model correlation and transport are tested together within fixed scope
+
+The filtered private transport now encodes Version from its decoded synthetic owner and
+issued pending serial. Variable owner length does not widen syscall authority or method scope.
+The fixture still cannot authenticate a live system manager or establish controller isolation.

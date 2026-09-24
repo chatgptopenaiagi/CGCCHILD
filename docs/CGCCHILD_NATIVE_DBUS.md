@@ -323,3 +323,29 @@ e26e48670c6abefa4c8349c29cdbfb86fc18508924e2bf1029d7e1a252c1379c.
 Only getuid/exit reach the single syscall veneer. No socket, filter, root launch or manager
 operation is used here. ELF has no interpreter/dynamic imports; temporary artifacts are removed.
 Composition with the filtered transport remains a distinct next test, not an inferred result.
+
+## M47 model-bound queries over filtered private transport
+
+[Fixture](lab/child_dbus_bound_socket.c), [driver](lab/child_dbus_bound_socket_validate.py),
+[evidence](lab/child_dbus_bound_socket_evidence.json).
+The twenty-first child native fixture composes the M46 checked pending-request binding with
+M44's generated encoding and M37's unchanged213-instruction I/O filter. A request is issued
+before encoding; Version destination and serial come from the model whose owner was decoded
+from the actual private-socket reply. Independent canonical fixtures verify the bytes emitted.
+No method/property/path/unit/PID input is exposed. Owner names remain synthetic fixture data.
+
+Four owners, seven response scenarios and fragment sizes1/17 produce56 fresh processes/filter
+installations. They cover valid replies, wrong owner, changed owner, duplicate replies, partial
+EOF, complete-reply EOF and wrong serial. Across the runs30968 insufficient capacities leave
+output untouched; three invalid encoder selectors and18 syscall-denial probes run per process.
+Each native process owns only its socketpair, forks nobody, closes endpoints and verifies the
+bounded post-run FD inventory. Six malformed fixture selectors refuse before socket setup.
+
+Two builds/runs yield identical static image SHA256:
+4b6c068be8618c5b9e34583f4d009fbdeae4988515b7042ebd389d273bc2db94.
+There is one raw syscall veneer, no ELF interpreter/dynamic imports and no additional syscall
+allowance. Source/prefix/query/filter/driver/generated hashes and cleanup are retained. Both
+Linux-native temporary build directories were removed. No system bus, root service, credential
+change, cgroup mutation, RO/R6 or production proof was involved. Serial3 is transported here;
+M46's separate inert corpus covers repeated serials3..8. These evidence scopes are not merged
+into a claim that every repeated live transport request has been tested.
