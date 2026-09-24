@@ -13,8 +13,8 @@ mutation is authorized by these blocker records. Acceptance remains blocked even
 
 B06 PARTIALLY_RESOLVED: Lossless V3 continuity projection now exists separately. Existing
 capsule/core/MCP now integrate it explicitly. M67 adds independent Node continuity receipt
-validation and M68 adds independent capsule0.2 bytes/semantics. Scoped transfer composition
-and launcher/skill support remain pending; no current-proof acceptance is implied.
+validation and M68 adds independent capsule0.2 bytes/semantics. M69 verifies scoped transfer
+composition. Launcher/skill support remains pending; no current-proof acceptance is implied.
 B10 PARTIALLY_RESOLVED: Fixed32KiB chunks reconstruct large capsules within96KiB responses.
 M13 adds bounded digest-bound POSIX inherited-FD startup. M33 adds explicit digest-bound stdin
 startup on Windows/Linux, avoiding payload argv limits. POSIX descriptor mode remains unavailable

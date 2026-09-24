@@ -502,3 +502,12 @@ byte-for-byte. Full continuity receipt validation precedes return; CRC or manife
 alone is insufficient. Model capsules remain explicitly outside this module's profile.
 Four families pass Windows/Fedora; all39 Node interoperability families pass Windows.
 No package, external service, privileged operation or production proof was introduced.
+
+## M69: independent transfer layers remain distinct
+
+Actual in-process scoped grants emit the continuity capsule chunks. Independent Node
+assembly then semantic capsule validation and journal-prefix verification compose in
+four integration families on Windows/Fedora. Partial/corrupt transport refuses even with
+a consistent journal; correctly hashed arbitrary bytes still fail capsule validation;
+valid capsule semantics do not override an incorrect journal anchor. Every successful
+layer remains historical/NONE and unsigned. No product runtime changed in this milestone.
