@@ -302,3 +302,10 @@ A validated reconciliation projection can select fixed review steps for a reques
 It cannot establish current filesystem safety, confer authority, replay historical commands,
 or dispatch an executor. Caller-supplied project/digest binding is explicitly distinguished
 from a live identity proof. No-issue evidence retains the same refusal ceiling.
+
+## M43: intentions and verifier scopes must agree before composition
+
+Recovery and proof requests share explicit project/digest expectations and a fixed action map.
+A separately valid analysis YES is outside checkpoint/publication/repair scope and is refused.
+Preservation level remains explicit. Imported export re-evaluates without current capture;
+all execution remains unavailable regardless of supplied or derived verdict.

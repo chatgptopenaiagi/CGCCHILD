@@ -68,3 +68,24 @@ three intentions, all seven categories through explicitly synthetic reclassifica
 assessment, detached output, forged classification, malformed binding and empty-issue refusal.
 The initial test helper incorrectly read project at the result root; correcting it to the
 validated evidence field resolved five test errors. No product check was weakened.
+
+## Action-bound composition (M43)
+
+review_action composes recovery assessment with a newly evaluated verifier request. It accepts
+no serialized verdict. The closed mappings are CHECKPOINT -> CREATE_CHECKPOINT, PUBLISH ->
+PUBLISH_CHECKPOINT, REPAIR -> REPAIR_KNOWN_FAILURE. Project and entire-projection digest must
+match both the caller's expectation and the request before any proof evaluation. Preservation
+level and test policy remain explicit caller inputs validated by the unchanged verifier.
+An analysis-only request cannot enter any of these three paths, even when its separate captured
+analysis proof is YES. No request is silently rewritten to a stronger or weaker action.
+
+ActionReview exposes the scoped verdict separately from authority. Its historical_report
+recomputes without capture and returns copied imported evidence; it never exports a current
+capture handle. execute still refuses all values. There is no collection, path access or repair.
+Six tests cover all nine action/level pairs, all cross-action substitutions, live-analysis YES
+substitution, project/digest mismatches, malformed requests, immutable results and no-I/O checks.
+
+An initial expectation that a changed repair digest would produce NO was incorrect: the
+inherited unsupported repair profile sets P2 UNKNOWN. The child now rejects inconsistent
+request/project/digest bindings before invoking the verifier. This strengthens composition
+without modifying inherited proof rules or treating UNKNOWN as permission.

@@ -75,3 +75,45 @@ def assess(projection,action,*,expected_project,expected_projection_digest):
 
 def execute(_review):
     raise RuntimeError('NO_ACCEPTED_EXECUTION_ADAPTER')
+
+
+PROOF_ACTIONS={
+    Action.CHECKPOINT:'CREATE_CHECKPOINT',
+    Action.PUBLISH:'PUBLISH_CHECKPOINT',
+    Action.REPAIR:'REPAIR_KNOWN_FAILURE',
+}
+
+
+@dataclass(frozen=True)
+class ActionReview:
+    _recovery: RecoveryReview
+    _proof: object
+
+    @property
+    def verification(self):
+        """Exact requested scope, never a repair authorization."""
+        return self._proof.verification
+
+    def historical_report(self):
+        # Recompute without a live capture rather than serializing current provenance.
+        return dict(version='cgcchild-action-review-0.1-experimental',
+                    recovery=self._recovery.as_dict(),
+                    proof=self._proof.historical_report(),
+                    execution_state='NO_ACCEPTED_EXECUTION_ADAPTER',
+                    mutation_authorized=False,current_repository_safety='UNKNOWN')
+
+
+def review_action(projection,action,request,*,expected_project,expected_projection_digest,capture=None):
+    """Bind explicit action to freshly evaluated proof; never accept a supplied verdict."""
+    _engine()
+    if type(action) is not Action or type(request) is not dict:
+        raise RecoveryError()
+    if request.get('action')!=PROOF_ACTIONS[action]:raise RecoveryError()
+    if request.get('project')!=expected_project or request.get('evidence_digest')!=expected_projection_digest:
+        raise RecoveryError()
+    recovery=assess(projection,action,expected_project=expected_project,
+                    expected_projection_digest=expected_projection_digest)
+    if recovery.as_dict()['state']!='REVIEW_REQUIRED_NO_EXECUTOR':raise RecoveryError()
+    from .resume_review import review
+    proof=review(projection,request,capture=capture)
+    return ActionReview(recovery,proof)
