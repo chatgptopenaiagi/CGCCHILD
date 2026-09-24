@@ -360,3 +360,10 @@ Nonroot clone3/CLONE_PIDFD worked in the owned disposable fixture. Keep existing
 final filters unchanged: cBPF does not validate pointed-to clone_args. Compare the
 scalar clone form before proposing a narrowed bootstrap launch policy. Kernel
 capability evidence is neither a protected identity boundary nor R6 acceptance.
+
+## M52: prefer scalar atomic launch for the next bounded composition probe
+
+The fixed x86-64 clone form exposes flags to cBPF and returns a launch pidfd.
+A preinstalled bootstrap filter narrows independently in parent and child; pidfd
+wait avoids widening PID lookup. Keep this fixture-only until two-role handle
+separation and full channel/effect composition are tested. No production acceptance.

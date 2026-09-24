@@ -70,3 +70,8 @@ docs/lab/child_effect_session_validate.py text eol=lf
 
 docs/lab/child_effect_rejection.c text eol=lf
 docs/lab/child_effect_rejection_validate.py text eol=lf
+
+docs/lab/child_atomic_launch.c text eol=lf
+docs/lab/child_atomic_launch_validate.py text eol=lf
+docs/lab/child_scalar_launch.c text eol=lf
+docs/lab/child_scalar_launch_validate.py text eol=lf

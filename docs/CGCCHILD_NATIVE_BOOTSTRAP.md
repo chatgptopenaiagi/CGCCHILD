@@ -268,3 +268,39 @@ prove its pointed-to flags immutable. Do not widen final C/W filters on this evi
 Next compare scalar raw clone(CLONE_PIDFD|SIGCHLD), which exposes flags directly,
 against the same bounded owned-child lifecycle before selecting a bootstrap policy.
 Production acceptance=false; R6=NOT_EXECUTED; filesystem exclusivity/P3=UNKNOWN.
+
+## M52: scalar atomic launch under inherited narrowing filters
+
+OBSERVED_FACT: raw x86-64 clone56(flags=0x1011, stack=0, parent_tid=&pidfd,
+child_tid=0, tls=0) launches one owned child and returns its pidfd under a
+207-instruction bootstrap filter. The scalar flags combine CLONE_PIDFD and SIGCHLD.
+Both branches inherit that filter and stack another: child85 instructions,
+parent141. Their immutable rule sets are strict subsets of the bootstrap set;
+architecture mismatch/x32 kill is model-checked, default syscall denial is EPERM.
+Kernel fixture checks reject clone3, wrong flags, shared-VM flags and nonzero
+stack before launch; after narrowing both branches reject clone and broader
+filter installation. Parent also checks exec/socket/pidfd_open denial.
+
+The parent observes the same pipe3/4/pidfd5 lifecycle as M51, then uses
+waitid(P_PIDFD=3, id=5, WEXITED=4) with null rusage, checking SIGCHLD,
+CLD_EXITED, matching returned child PID and zero status. No arbitrary PID lookup
+or broad wait4 rule is introduced. FD numbers are justified by the owned launch
+sequence; they are not universally authentic identities. GETFD queries allow3..63
+for the final no-extra-FD check, not FD mutation. poll pointer contents remain
+trusted native code, not cBPF-enforced. The pidfd output pointer writes caller
+memory only; no CLONE_VM is allowed. Trusted bootstrap still has repeat-launch
+capability until it narrows: this is not an untrusted broker/worker acceptance.
+
+[Source](lab/child_scalar_launch.c), [driver](lab/child_scalar_launch_validate.py),
+[evidence](lab/child_scalar_launch_evidence.json). Three runs per final build pass;
+two final builds/evidence are identical. One static raw syscall veneer, no dynamic
+imports. M51 syscall map changes: clone56 replaces clone3 launch; waitid247 replaces
+wait4; seccomp317 installs filters; exec59/socket41/pidfd_open434/clone3 435 are
+negative probes. NNP/nondumpable and pipe creation precede filter installation.
+No privileged change, cgroup, bus, R6 or production code. Temporary builds removed.
+LF attributes now explicitly preserve M51/M52 source/driver digest bytes on Windows.
+
+DERIVATION: scalar launch can avoid the clone3 pointed-to-flags gap for this fixed
+process form. UNKNOWN: two separately bound live C/W roles and composed effect
+channel. Next build a two-owned-child launch/handle-separation fixture using the
+same scalar restriction and pidfd-based waits before attempting full composition.
