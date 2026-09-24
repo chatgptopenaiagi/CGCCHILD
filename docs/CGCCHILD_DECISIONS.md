@@ -608,3 +608,12 @@ Retained writable view blocked the tested guard despite ordinary handles being c
 A metadata-only writer succeeded during that guard. Preserve both witnesses and refuse to
 label data-sharing denial as complete filesystem quiescence. Next scope is two owned cross-OS
 file-open witnesses, not process containment/R6 or real-project writer discovery.
+
+
+## M79: preserve asymmetric cross-OS observations
+
+Windows sharing guard denied the owned Fedora writer; release restored it. Fedora flock did
+not deny the Windows write. No global writer closure follows. Preserve mapping/metadata/new-name
+witnesses alongside these results; do not select a production adapter from one positive route.
+Next reconcile the uninstalled thin plugin's stale model-only description with implemented
+historical continuity/chunk/status interfaces; live host integration remains a separate gate.

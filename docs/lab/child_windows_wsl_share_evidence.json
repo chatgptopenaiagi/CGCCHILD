@@ -1,0 +1,52 @@
+{
+  "classification": "OBSERVED_FACT",
+  "distro": "FedoraLinux-44",
+  "facts": [
+    {
+      "case": "windows_guard_linux_writer",
+      "errno": 13,
+      "kernel": "6.18.33.2-microsoft-standard-WSL2",
+      "mode": "writer",
+      "opened": false,
+      "uid": 1000
+    },
+    {
+      "case": "linux_writer_after_windows_guard_close",
+      "kernel": "6.18.33.2-microsoft-standard-WSL2",
+      "mode": "writer",
+      "opened": true,
+      "uid": 1000,
+      "written": 8
+    },
+    {
+      "case": "linux_flock",
+      "kernel": "6.18.33.2-microsoft-standard-WSL2",
+      "locked": true,
+      "mode": "flock",
+      "uid": 1000
+    },
+    {
+      "case": "windows_writer_during_linux_flock",
+      "opened": true,
+      "written": 8
+    }
+  ],
+  "limitations": [
+    "two fixed mechanisms and one positive control",
+    "not Linux-native containment",
+    "not every DrvFS mount or distro",
+    "no alias/deputy/queued-I/O closure",
+    "no real repository writer proof"
+  ],
+  "mutation_authorized": false,
+  "owned_handles_remaining": 0,
+  "owned_processes_exited": true,
+  "path_class": "WINDOWS_TEMP_VIA_MNT_C",
+  "production_filesystem": "UNKNOWN",
+  "production_p3": "UNKNOWN",
+  "profile": "OWNED_WINDOWS_FEDORA_SHARE_V1",
+  "source_digest_basis": "UTF8_LF_NORMALIZED",
+  "source_sha256": "2c0580980e0d3776f8528f4d29a2511f7b73b7bc475bb850733dee9c7abfc460",
+  "temporary_directory_removed": true,
+  "windows_version": "10.0.19045"
+}

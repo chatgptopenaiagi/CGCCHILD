@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M78: retained writable-view and metadata-writer feasibility witnesses.
+M79: bounded Windows/Fedora sharing and advisory-lock interoperability.
 
 ## CURRENT HEAD
 
-HEAD (M78 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M79 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -145,6 +145,8 @@ M77 seven Windows/NTFS observations; no recursive-directory exclusion.
 
 M78 retained view prevents guard; metadata writer succeeds during guard.
 
+M79 host guard/Fedora writer denial and Linux flock/Windows writer admission observed.
+
 ## PARTIAL
 
 Inherited V3/M1-M5; native role bootstrap; containment; complete master-plan implementation.
@@ -165,6 +167,9 @@ V4.2 read-only private transport and V4.5 text/offline HTML surfaces EXPERIMENTA
 V4.0/V4.1 EXPERIMENTAL/PARTIAL for model and lossless historical V3 profiles; no full mission acceptance.
 
 ## TEST RESULTS
+
+M79 final fixture twice passed; same-writer positive control and release acknowledgment verified.
+Initial path-translation failure corrected before tests; owned processes/handles/temp cleaned.
 
 M78 fixed mapping/metadata fixture twice passed, exact bytes/timestamp verified; handles/views/temp cleaned.
 No runtime or regression test change.
@@ -308,12 +313,12 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M77 59ca53172b4f33f141fa73662e77262cf0180b06 verified local/tracking/live and clean.
-Current M78 self-reference HEAD; published hash follows next checkpoint.
+M78 b89b4ee2538cc220cdf9cbb9166c613b72c69af0 verified local/tracking/live and clean.
+Current M79 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M79: two bounded owned Windows-temp/Fedora file-open interoperability witnesses: Windows
-sharing guard versus Fedora writer; Fedora advisory flock versus Windows writer. Fixed
-paths/messages, bounded subprocess timeout and cleanup; no repository/R6/privileged action.
-Trusted usage remaining UNKNOWN; filesystem/P3 UNKNOWN regardless of these local outcomes.
+M80: reconcile the repository-local uninstalled plugin skill with historical continuity,
+large snapshots and bounded status/chunk behavior. Validate its fixed read-only instructions;
+no plugin installation, connection setup, host configuration or current-proof promotion.
+Trusted usage remaining UNKNOWN. RO/R6 still NOT_EXECUTED; production producer NOT_STARTED.

@@ -144,3 +144,42 @@ Next: owned Windows-temp/Fedora interoperability witnesses, with bounded subproc
 and explicit cleanup. Challenge a Windows-held guard using one Fedora write-open; separately
 challenge a Fedora-held advisory flock with one Windows write-open. Do not generalize either
 outcome to other mounts/distros or claim full cross-OS closure.
+
+
+## M79: bounded Windows/Fedora interoperability
+
+[Fixed fixture](lab/child_windows_wsl_share.py) and [evidence](lab/child_windows_wsl_share_evidence.json)
+use a Windows-created temporary file via /mnt/c. This is explicitly a host-filesystem test,
+not a Linux-native process-containment fixture or R6. No repository file is a test target.
+
+OBSERVED_FACT on Windows10.0.19045 and FedoraLinux-44/kernel6.18.33.2-microsoft-standard-WSL2,
+Linux UID1000 (the fixture refuses UID0):
+
+| Held mechanism | Challenge | Observed result |
+|---|---|---|
+| Windows READ/SHARE_READ file handle | Fedora O_WRONLY open | Fails errno13; original bytes unchanged |
+| Same Windows handle closed | Same Fedora write-open | Opens, writes8 bytes, Windows readback matches |
+| Fedora LOCK_EX/LOCK_NB flock | Windows WRITE/SHARE_ALL open/write | Opens and writes8 bytes; exact readback after release |
+
+The flock subprocess acknowledges lock acquisition, waits for the parent's one-byte release,
+and acknowledges release receipt before closing its own FD. A successful run requires that
+acknowledgment and zero child exit; timeout cannot be mistaken for a held-lock witness.
+The Linux script has a12-second alarm and8-second release wait; Windows calls have bounded
+15-second waits. Fixed owned processes exit before temporary-directory cleanup. No daemon,
+service, process-tree scan, privileged action or unrelated process signaling occurs.
+
+DERIVATION: the tested host sharing restriction reached this Fedora write-open, whereas the
+tested flock did not prevent the Windows write. One successful guard challenge does not cover
+all mounts, aliases, other distros, deputies or pending writes. A Linux lock cannot be used as
+a blanket proof of Windows writer exclusion. The [flock manual](https://man7.org/linux/man-pages/man2/flock.2.html)
+distinguishes advisory behavior and filesystem-specific remote-locking semantics; this fixture
+records the observed mount behavior rather than inferring it from the API name.
+
+The first fixture stopped before either challenge because wslpath rejected the backslash-form
+Windows argument. Supplying its equivalent forward-slash form fixed translation. One interim
+run passed both mechanisms; the final fixture adds the same-writer positive control and passed
+twice. All owned objects were cleaned. No assertion or exclusion requirement was weakened.
+
+Filesystem exclusivity/P3 remain UNKNOWN. The next independent work is reconciling the thin
+uninstalled plugin skill with the now-supported historical continuity profile and bounded
+chunk/status surfaces. This does not require host installation or invent an MCP connection.
