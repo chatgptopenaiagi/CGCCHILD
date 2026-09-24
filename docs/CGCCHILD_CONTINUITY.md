@@ -59,3 +59,11 @@ Full Node continuity remains PARTIAL: inspection receipts and handoff bindings s
 independent validation. In particular repository identity integers can exceed JavaScript's
 safe Number range; a lossless bounded integer JSON codec is the next prerequisite.
 Do not accept rounded device/inode values or opaque unvalidated nested records.
+
+## M64: large-integer identity bytes are preserved independently
+
+The [bounded Node integer codec](../sdk/javascript/README.md#lossless-bounded-integer-json-prerequisite-m64)
+preserves device/inode values beyond2^53 using BigInt. Canonical byte parity and
+refusal cases pass, but structural parsing grants no inspection receipt acceptance.
+Next port the pure inspection envelope/receipt validator, keeping source authenticity
+and current observations absent. No filesystem observation belongs in that codec.

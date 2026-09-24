@@ -146,3 +146,30 @@ inspection receipts or full handoff envelopes. No new package or host change.
 ```text
 python -B -m unittest discover -s tests -p test_child_javascript_preservation.py -v
 ```
+
+## Lossless bounded integer JSON prerequisite (M64)
+
+integer_json.mjs supplies encodeIntegerJson(value, compact=true) and
+ decodeIntegerJson(bytes, compact=true) for inert integer-only JSON. It is not a
+schema validator. Unsafe exact integers decode to BigInt; safe values decode to
+Number. Encoding refuses unsafe Number values rather than serializing a rounded
+inode. Canonical compact/default-spaced formats use Python-compatible ASCII escapes,
+Unicode code-point key ordering and exactly one LF. No floats/exponents, duplicate
+keys, negative zero, alternate whitespace, trailing bytes or noncanonical escapes.
+
+Bounds:2101248 bytes including LF, depth32 (root depth0),262144 value nodes and
+4300 decimal integer digits. These are explicit codec-profile bounds, not a claim
+that arbitrary JSON/Python settings must accept the same universe. Cycles, sparse
+arrays, accessors, symbol keys and custom object prototypes refuse; no getter is
+invoked. Parsed objects have null prototypes, including __proto__ keys. Hostile
+in-process proxies remain outside this data boundary. No I/O or current authority.
+
+Four Python parity families and20 Node cases cover large signed/unsigned integers,
+UTF-16/code-point distinctions, canonical wire mutations, structural bounds and
+ownership. This is a prerequisite for inspection/handoff validation, not acceptance
+of arbitrary parsed receipts or an implementation of the full continuity profile.
+
+```text
+node sdk/javascript/test_integer_json.mjs
+python -B -m unittest discover -s tests -p test_child_javascript_integer_json.py -v
+```

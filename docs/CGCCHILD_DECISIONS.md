@@ -444,3 +444,10 @@ Port the pure record contract with Python parity, not a permissive envelope pars
 Preserve historical YES/NO/PARTIAL fields as data while current view authority stays NONE.
 Next establish lossless bounded integer JSON mechanics for inspection device/inode values;
 ordinary JSON.parse Number rounding must not silently change content identity.
+
+## M64: content identity cannot tolerate silent Number rounding
+
+Use a bounded integer-only canonical parser for future inspection/handoff codecs.
+Retain large values as BigInt, preserve exact ASCII digest bytes and reject unsafe
+Number inputs. Parsing remains separate from schema/receipt validation and authority.
+All original protected file hashes and live source main remain unchanged at this gate.

@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M63: independent preservation-record validation and historical wrapper parity.
+M64: lossless bounded canonical integer JSON for future receipt validation.
 
 ## CURRENT HEAD
 
-HEAD (M63 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M64 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -130,6 +130,8 @@ M61 explicit chunk scope, per-call revocation/expiry/snapshot checks and64-event
 M62 four granted-transfer/journal composition families pass both hosts; incomplete or mismatched layers refuse.
 
 M63 Node preservation-record contract passes four Python parity families including79 lifecycle/receipt combinations.
+
+M64 integer JSON parity preserves large identity values; four Python families/20 Node cases pass.
 
 ## PARTIAL
 
@@ -260,11 +262,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M62 385c466d90a50b149ce6b3772ad35d22fdabb029 verified local/tracking/live and clean.
-Current M63 self-reference HEAD; published hash follows next checkpoint.
+M63 eccb4bfb369fe137626783e9fe619c407df02c0d verified local/tracking/live and clean.
+Current M64 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M64: implement bounded canonical integer JSON mechanics with lossless large integers
-for Node inspection/handoff validation; preserve duplicate, depth, size and wire refusals.
+M65: port the pure inspection envelope/receipt validator into Node using lossless
+integer serialization and Python parity; no filesystem observation or current-proof promotion.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
