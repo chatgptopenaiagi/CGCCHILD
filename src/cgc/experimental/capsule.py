@@ -6,9 +6,11 @@ import json
 import stat
 import zipfile
 from . import state_protocol as sp
+from . import snapshot_profiles as profiles
 
 VERSION = 'cgcchild-capsule-0.1-experimental'
-MAX_BYTES = 65536
+CONTINUITY_VERSION = 'cgcchild-capsule-0.2-experimental'
+MAX_BYTES = profiles.MAX_BYTES+16384
 NAMES = ('manifest.json', 'state.json', 'HUMAN-STATUS.txt')
 
 
@@ -16,17 +18,21 @@ class CapsuleError(ValueError):
     def __init__(self):super().__init__('INVALID_CAPSULE')
 
 
-def _manifest(state, human):
-    return (json.dumps({'version':VERSION,'signature':'UNSIGNED',
+def _manifest(state, human, profile=profiles.MODEL):
+    if profile not in (profiles.MODEL,profiles.CONTINUITY):raise CapsuleError()
+    value={'version':VERSION if profile==profiles.MODEL else CONTINUITY_VERSION,'signature':'UNSIGNED',
         'members':{'state.json':hashlib.sha256(state).hexdigest(),
-                   'HUMAN-STATUS.txt':hashlib.sha256(human).hexdigest()}},
+                   'HUMAN-STATUS.txt':hashlib.sha256(human).hexdigest()}}
+    if profile==profiles.CONTINUITY:value['profile']=profile
+    return (json.dumps(value,
         sort_keys=True,separators=(',',':'))+'\n').encode('ascii')
 
 
 def export_capsule(value):
-    state=sp.encode(value)
-    human=sp.render_human(value).encode('ascii')
-    values=(_manifest(state,human),state,human)
+    state=profiles.encode(value)
+    profile=profiles.kind(value)
+    human=profiles.render_human(value).encode('ascii')
+    values=(_manifest(state,human,profile),state,human)
     stream=io.BytesIO()
     with zipfile.ZipFile(stream,'w',compression=zipfile.ZIP_STORED,allowZip64=False) as archive:
         for name,data in zip(NAMES,values):
@@ -35,7 +41,7 @@ def export_capsule(value):
             info.external_attr=(stat.S_IFREG|0o600)<<16
             archive.writestr(info,data)
     raw=stream.getvalue()
-    if len(raw)>MAX_BYTES:raise CapsuleError()
+    if len(raw)>(65536 if profile==profiles.MODEL else MAX_BYTES):raise CapsuleError()
     return raw
 
 
@@ -47,7 +53,7 @@ class HistoricalView:
     authority: str = 'NONE'
 
     def snapshot(self):
-        return sp.decode(self.state_bytes)
+        return profiles.decode(self.state_bytes)
 
 
 def import_capsule(raw):
@@ -60,12 +66,14 @@ def import_capsule(raw):
                 if (info.compress_type!=zipfile.ZIP_STORED or info.flag_bits!=0 or info.extra or info.comment
                         or info.create_system!=3 or info.external_attr!=(stat.S_IFREG|0o600)<<16
                         or info.date_time!=(1980,1,1,0,0,0) or info.file_size!=info.compress_size
-                        or not 0<info.file_size<=sp.MAX_BYTES):
+                        or not 0<info.file_size<=profiles.MAX_BYTES):
                     raise CapsuleError()
             members={info.filename:archive.read(info) for info in infos}
-        state=sp.decode(members['state.json'])
-        human=sp.render_human(state).encode('ascii')
-        if members['HUMAN-STATUS.txt']!=human or members['manifest.json']!=_manifest(members['state.json'],human):
+        state=profiles.decode(members['state.json'])
+        profile=profiles.kind(state)
+        if profile==profiles.MODEL and (len(raw)>65536 or any(x.file_size>sp.MAX_BYTES for x in infos)):raise CapsuleError()
+        human=profiles.render_human(state).encode('ascii')
+        if members['HUMAN-STATUS.txt']!=human or members['manifest.json']!=_manifest(members['state.json'],human,profile):
             raise CapsuleError()
         # Reject noncanonical local headers, prefixes, trailing bytes, duplicated
         # records and other ambiguities even if the ZIP parser tolerates them.

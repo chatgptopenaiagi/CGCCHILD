@@ -1,5 +1,8 @@
 # Experimental read-only core and foreground reference surface
 
+M10 supports two explicit historical profiles; see [closed integration](CGCCHILD_PROFILE_INTEGRATION.md).
+The four methods and96KiB response refusal boundary remain unchanged.
+
 [Implementation](../src/cgc/experimental/readonly_service.py) and
 [tests](../tests/test_child_readonly_service.py). V4.2 PARTIAL: private stdio framing,
 not MCP or JSON-RPC. No installed service, listener, background daemon or authentication claim.

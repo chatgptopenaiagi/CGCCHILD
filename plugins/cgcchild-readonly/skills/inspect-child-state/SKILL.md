@@ -14,7 +14,9 @@ QUIESCENCE_MODEL_ONLY. Full V3 receipts, source backup and live proof are absent
    register, launch or discover services from this skill.
 2. If connected, inspect the core's advertised capabilities and exact snapshot
    digest. Use cgcchild_capabilities, cgcchild_state and cgcchild_status with that
-   exact digest. Refuse ambiguity between multiple snapshot generations.
+   exact digest. Refuse ambiguity between multiple snapshot generations. If the
+   advertised profile is not QUIESCENCE_MODEL_ONLY, report UNSUPPORTED_PROFILE;
+   this skill has not yet accepted broader continuity projection semantics.
 3. Preserve the core result verbatim in meaning: historical, model-only, P3 UNKNOWN,
    safe-to-resume UNKNOWN, mutation_authorized=false. Report declared omissions.
    Do not infer a current project path from an opaque project label.

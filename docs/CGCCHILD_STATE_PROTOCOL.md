@@ -1,5 +1,8 @@
 # Experimental state protocol and inert capsule
 
+M10 adds a separate V3 continuity profile through [closed integration](CGCCHILD_PROFILE_INTEGRATION.md).
+The model-only0.1 format and exact bytes specified below remain unchanged.
+
 Child V4.0/V4.1 implementation is experimental and profile-limited. It does not mean V3
 acceptance or implement the complete V4 mission. The original mission files remain unchanged.
 No live service, MCP, plugin, SDK, remote gateway or agent fabric is included in this checkpoint.

@@ -1,5 +1,8 @@
 # Experimental version-pinned MCP adapter
 
+M10 delegates both historical profiles through [closed integration](CGCCHILD_PROFILE_INTEGRATION.md).
+No new tool or authority is introduced; large responses still refuse.
+
 [Adapter](../src/cgc/experimental/mcp_stdio.py), [core](../src/cgc/experimental/readonly_service.py)
 and [owned-process tests](../tests/test_child_mcp.py). V4.2 remains EXPERIMENTAL/PARTIAL.
 Independent SDK/client interoperability is NOT_EXECUTED: neither Windows nor Fedora has the

@@ -7,7 +7,7 @@ import base64
 import json
 import re
 import sys
-from . import state_protocol as sp
+from . import snapshot_profiles as sp
 from .capsule import export_capsule
 
 METHODS = ('capabilities.get','state.get','status.get','capsule.export')
@@ -56,7 +56,7 @@ class ReadOnlyCore:
         method=request['method']
         state=sp.decode(self._bytes)
         if method=='capabilities.get':
-            result={'methods':list(METHODS),'profile':state['profile'],'network':False,
+            result={'methods':list(METHODS),'profile':sp.kind(state),'network':False,
                     'freshness':'HISTORICAL_UNVERIFIED','max_requests':MAX_REQUESTS}
         elif method=='state.get':result=state
         elif method=='status.get':result={'text':sp.render_human(state)}
@@ -75,7 +75,7 @@ def serve(source, destination):
     """
     raw=source.readline(sp.MAX_BYTES+1)
     try:core=ReadOnlyCore(raw)
-    except sp.ProtocolError:
+    except sp.ProfileError:
         destination.write(_error('INVALID_SNAPSHOT'));destination.flush();return 2
     for _ in range(MAX_REQUESTS):
         line=source.readline(MAX_REQUEST+1)

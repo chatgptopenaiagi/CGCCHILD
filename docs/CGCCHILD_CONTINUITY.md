@@ -3,7 +3,8 @@
 [Implementation](../src/cgc/experimental/continuity.py) and
 [tests](../tests/test_child_continuity.py). EXPERIMENTAL/PARTIAL V4.0 extension. It is a
 separate versioned profile, not an implicit upgrade of the existing model-only capsule,
-Node codec, service or MCP tools. Those adapters still accept only model snapshots.
+Node codec, service or MCP tools. M10 now integrates both profiles through a closed dispatcher; the Node SDK and thin skill
+remain model-only. See [profile integration](CGCCHILD_PROFILE_INTEGRATION.md).
 
 `cgcchild-continuity-0.1-experimental` wraps a complete original V3 handoff state after
 calling the existing pure `cgc.handoff.validate_state`. No HandoffStore, path resolution,

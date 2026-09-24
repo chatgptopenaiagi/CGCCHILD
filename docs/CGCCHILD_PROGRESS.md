@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M9: lossless historical V3 handoff projection using unchanged original validation.
+M10: closed historical profile dispatch and continuity capsule/core/MCP integration.
 
 ## CURRENT HEAD
 
-HEAD (M9 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M10 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -27,6 +27,7 @@ M6 plugin manifest/skill static validation; no hooks, auto-launch config or mark
 M7 Node model codec:692 checks, Python/Node acceptance/bytes/digest/human parity corpus.
 M8 opaque read handles, expiry/revocation/generation refusal,64-event bounded hash chain.
 M9 full original V3 continuity envelope; separate historical summary; no path rebinding.
+M10 both historical profiles integrated through strict version dispatch; original model bytes stable.
 
 ## PARTIAL
 
@@ -70,6 +71,7 @@ confirmed exactly100 keypoints. Mission/license Git content unchanged.
 M9 Windows focused5 and child43 passed after fixture/effect-free error normalization fixes.
 Initial5 setup errors and then2 error-type failures are documented and resolved.
 Full Linux regression432 passed in109.676s.
+M10 Windows49 child and Node692 checks passed; full Linux438 passed in109.679s.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -79,11 +81,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M8 2edcd5eb5434c46e36138bc1bc796db350a99bd8 verified local/tracking/live and clean.
-Current M9 self-reference HEAD; published hash follows next checkpoint.
+M9 7ee8bb612bfc61a0b1a0c398d6a44db639e028ab verified local/tracking/live and clean.
+Current M10 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M10: design/test explicit closed profile dispatch for historical model and V3 continuity
-views before extending capsules/transports. Never accept an arbitrary imported schema or callback.
+M11: address the observed large-snapshot RESPONSE_LIMIT with bounded digest-bound capsule
+chunking and receiver verification, preserving per-message bounds and inert import semantics.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

@@ -89,3 +89,12 @@ Latest failure, last-known-good and previous-known-good stay distinct. The origi
 path is historical data, never a target selector. Model-only transports are not silently
 widened; future profile dispatch must be a closed reviewed set. Initial invalid test fixture
 and error normalization defects were fixed without changing original source validators.
+
+## M10 — closed dispatch, explicit response refusal
+
+Exactly two trusted historical codecs are selected by source version. Unknown schemas cannot
+be loaded. Model0.1 bytes stay unchanged; continuity capsules use a distinct0.2 manifest.
+Core/MCP/read handles consume the same dispatcher. Existing96KiB response bounds remain;
+large valid state can archive losslessly yet return RESPONSE_LIMIT over transport. This is
+truthful refusal, not truncated success. Node/skill remain model-only, with explicit skill
+profile refusal. Large data-plane transport is a measured next integration gap.

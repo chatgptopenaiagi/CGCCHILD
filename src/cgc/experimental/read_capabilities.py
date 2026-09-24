@@ -10,7 +10,7 @@ import hashlib
 import json
 import re
 from .readonly_service import ReadOnlyCore,METHODS
-from . import state_protocol as sp
+from . import snapshot_profiles as sp
 
 MAX_GRANTS=16
 MAX_EVENTS=64

@@ -5,7 +5,7 @@ explicit startup byte string, never a path, live collector or reusable grant.
 """
 import json
 import sys
-from . import state_protocol as sp
+from . import snapshot_profiles as sp
 from .readonly_service import ReadOnlyCore
 
 PROTOCOL = '2025-11-25'
@@ -76,7 +76,7 @@ class MCPAdapter:
         elif self.phase!='READY':return error(identifier,-32600,'Not initialized')
         elif method=='tools/list':
             if params:return error(identifier,-32602,'Invalid params')
-            result={'tools':[{'name':name,'description':'Historical model-only snapshot; no live proof or mutation authority.',
+            result={'tools':[{'name':name,'description':'Historical snapshot; no live proof or mutation authority.',
                 'inputSchema':{'type':'object','properties':{'snapshot_digest':{'type':'string','const':self.digest}},
                                'required':['snapshot_digest'],'additionalProperties':False},
                 'annotations':{'readOnlyHint':True,'destructiveHint':False,'idempotentHint':True,'openWorldHint':False}}
