@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M59: bounded inert capsule export/import/inspect pipe adapter.
+M60: independent Node bounded chunk consistency with separate core acceptance.
 
 ## CURRENT HEAD
 
-HEAD (M59 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M60 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -122,6 +122,8 @@ M56 three controller-exit boundaries and positive dialogue pass without signals 
 M57 CREATE collision/ATTACH EBADF and positive channel dialogue pass with owned cleanup.
 
 M59 both historical capsule profiles export/import/inspect through bounded pipes on Windows/Fedora.
+
+M60 independent Node chunk assembly passes both profiles, five parity families and17 native cases.
 
 ## PARTIAL
 
@@ -250,11 +252,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M58 87997b290dcf9eab0ecbc638e05e7ff9e961ae51 verified local/tracking/live and clean.
-Current M59 self-reference HEAD; published hash follows next checkpoint.
+M59 76b95081e500a88dc26d69aaec92fa778449d5dc verified local/tracking/live and clean.
+Current M60 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M60: implement an independent Node bounded chunk assembler with explicit digest/size
-anchors and no capsule-semantic acceptance; compose its bytes with the Python core in tests.
+M61: add explicit offset-bounded chunk reads to local opaque read grants; recheck
+expiry/revocation/snapshot on every chunk and retain the finite event budget/refusal semantics.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

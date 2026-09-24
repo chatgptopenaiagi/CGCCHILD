@@ -105,3 +105,15 @@ mcp_conformance_client.mjs checks a finite read-only transcript against the chil
 It has no transport or generic tool/method interface. See the exact [paired boundary](../../docs/CGCCHILD_MCP.md#m40-independent-paired-adapter-node-conformance-client).
 This is interoperability evidence for those two implementations, not a general-purpose MCP SDK.
 mcp_owned_process.mjs and mcp_client_vectors.mjs are bounded owner-controlled test harnesses.
+
+## Bounded capsule byte assembly (M60)
+
+capsule_chunks.mjs implements the [chunk consistency contract](../../docs/CGCCHILD_CAPSULE_CHUNKS.md#m60-independent-node-byte-assembler-separate-from-capsule-acceptance).
+It supports bytes up to the core maximum but does NOT validate a capsule or authenticate
+its source. Its immutable result says capsule_validation=NOT_PERFORMED and authority=NONE.
+Use the core capsule validator separately before treating the bytes as historical state.
+
+```text
+node sdk/javascript/test_capsule_chunks.mjs
+python -B -m unittest discover -s tests -p test_child_javascript_chunks.py -v
+```

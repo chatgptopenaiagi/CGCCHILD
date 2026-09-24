@@ -51,3 +51,32 @@ The paragraph above describes M11's original state. M12 caches one immutable arc
 only the standalone stateless chunk helper regenerates it. M33 provides bounded digest-bound
 stdin startup for large snapshots on Windows/Linux. Neither update removes the96KiB response
 limit, changes chunk grammar, authenticates a caller, or accepts a general MCP SDK.
+
+## M60: independent Node byte assembler, separate from capsule acceptance
+
+[Node module](../sdk/javascript/capsule_chunks.mjs) exports createAssembler(expected)
+with exactly total_bytes and capsule_sha256 caller anchors. These bind bytes; they do
+not authenticate themselves. accept takes canonical ASCII JSON/LF chunk bytes only,
+not arbitrary method/path strings. It checks the seven exact fields, duplicates by
+byte reconstruction, sequential offsets, fixed32768-byte pieces, canonical base64,
+piece/full digest, stable total/digest, final marker and hard2117632-byte/65-piece bounds.
+Every malformed frame invalidates permanently; early finish, replay, reorder and extra
+chunks refuse. Returned bytes are detached and the finished object is frozen.
+
+Unlike the Python Receiver, this Node component performs NO capsule or snapshot-semantic
+validation. Its result explicitly says EXPECTED_BYTES_MATCH, capsule_validation=
+NOT_PERFORMED, source_authenticated=false, authority=NONE, safe_to_resume=UNKNOWN and
+mutation_authorized=false. It imports only Node crypto, not filesystem/network/process
+APIs; it offers no extraction or persistence. Expected anchor objects are supplied by
+trusted local JavaScript callers; hostile in-process code is outside this boundary.
+The paired Python test explicitly imports the reassembled bytes through core validation.
+A non-archive whose bytes match supplied anchors passes assembly but fails core import:
+this distinction is required, not an assembler acceptance bug.
+
+[Cross-language tests](../tests/test_child_javascript_chunks.py) exercise both profiles,
+semantic/wire/anchor refusal, deterministic corruption/truncation and unchanged core
+import. Seventeen independent Node cases cover sizes1/32767/32768/32769/MAX, ownership,
+replay/order/terminal state and anchor refusal. The offline conformance adapter is a
+bounded12MiB/128-case stdin test helper, not a product listener or generic transport.
+No dependency installed. Full continuity validation still belongs to the Python core;
+this does not resolve B06's independent full-continuity SDK validator gap.

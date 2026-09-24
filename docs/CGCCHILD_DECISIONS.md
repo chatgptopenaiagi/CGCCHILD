@@ -416,3 +416,10 @@ Three fixed operations expose inert export/import/inspection without file paths 
 archive extraction. Validate the entire input before emitting output; partial transport
 failure is not success. Both historical profiles preserve original bytes and authority
 UNKNOWN/NONE semantics. No new schema, migration, host installation or network endpoint.
+
+## M60: independent data-plane byte consistency does not imply semantic import
+
+Node can assemble bounded chunks for either profile without pretending to implement
+the complete V3 continuity validator. The output explicitly requires separate capsule
+validation, which cross-language tests perform through the Python core. Keep authority
+NONE even for exact caller-pinned bytes. No generic transport or new dependency.
