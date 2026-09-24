@@ -133,3 +133,30 @@ Next useful work is a bounded consumer-level status presentation over independen
 continuity capsules, retaining explicit historical labels and excluding project paths/notes
 from the compact summary. This advances the existing V4 surface foundation without requiring
 privilege, service installation, model inference or a mutation executor.
+
+## M73 V3 orchestration audit and selected two-step session
+
+The existing child plan_attempt/execute interfaces deliberately refuse mutation; recovery
+assessment maps inherited issues to review steps; resume_review wraps the unchanged verifier.
+None automatically collects or creates authority. The remaining executable composition gap
+is explicit orchestration of bounded local capture followed by caller-reviewed analysis scope.
+
+review_session.prepare(project,store_dir,now) uses exactly one unchanged capture invocation
+with requested_operation OBSERVE. No remote, tests, content-review callback, authority text
+or mutation selector is accepted. The PREPARED session exposes detached evidence and a
+request template; the template is not reviewed intent. The caller separately supplies the
+request to review. Only READ_ONLY_ANALYSIS/HANDOFF_ONLY/ACCOUNT_ONLY is allowed. Every review
+attempt consumes the session, including rejection; close is idempotent. No automatic retry.
+Captured-analysis YES retains its inherited narrow meaning; portable reports re-evaluate
+as imported UNKNOWN. Current repository safety and mutation remain unproven.
+
+This trusted in-process Python wrapper is not isolation from hostile same-user code. It
+inherits POSIX-only collector dependencies and bounded repeated, non-atomic observations.
+Windows explicitly refuses; no hidden Fedora invocation or environment setup is performed.
+Owned Fedora fixture tests verify content/mode/size/mtime preservation across preparation,
+pure verification, request mismatch and scope refusal. No live project was captured here.
+
+Remaining gaps are full repository-touching proof, protected quiescence/authority at use,
+production mutation/recovery adapter and platform acceptance. The next independent step is
+a bounded inert session-report codec that cannot serialize the private capture binding,
+so consumers can retain review outcomes without importing current authority.

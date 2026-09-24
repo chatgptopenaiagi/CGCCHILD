@@ -549,3 +549,13 @@ No user time/token benefit or full V3 benchmark acceptance follows. The observed
 alone does not justify bypassing receipt validation or adding a stale mutable cache.
 No optimization was introduced. Return to unresolved V3 orchestration interfaces before
 adding more presentation layers; protected identity, RO/R6 and filesystem gates remain.
+
+## M73: explicit local capture and separate reviewed request
+
+Add a two-step trusted-Python session around the unchanged capture/verifier. Preparation
+is explicit bounded local I/O; request evaluation is separate and pure. The fixed profile
+is captured READ_ONLY_ANALYSIS/HANDOFF_ONLY with ACCOUNT_ONLY tests. No mutation, remote,
+script callback or executor is available. One review attempt consumes the binding even
+when refused. Detached projections/templates cannot mutate saved capture; historical
+reports drop current provenance. Scope selection is proposed intent, not authorization.
+Windows import remains safe and prepare explicitly refuses unsupported POSIX dependencies.

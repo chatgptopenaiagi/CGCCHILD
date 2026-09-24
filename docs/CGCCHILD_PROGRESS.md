@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M72: bounded synthetic Node continuity codec/status resource measurements.
+M73: explicit single-use read-only capture/review session and V3 interface audit.
 
 ## CURRENT HEAD
 
-HEAD (M72 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M73 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -159,6 +159,10 @@ V4.0/V4.1 EXPERIMENTAL/PARTIAL for model and lossless historical V3 profiles; no
 
 ## TEST RESULTS
 
+M73 focused session5: Fedora passed0.578s; Windows1 passed/4 POSIX skips.
+Full Fedora576 passed178.082s; Windows child187:164 passed/23 POSIX skips50.161s.
+Child remains PRIVATE, upstream push disabled, original live main/status unchanged.
+
 M72 three synthetic cases x two operations x three samples on both hosts; source/input/output bindings pass.
 
 M71 four status-consumer families passed Windows0.971s/Fedora2.554s.
@@ -284,11 +288,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M71 b96eef71a8dd942d235d0cb6706755e642e99cfd verified local/tracking/live and clean.
-Current M72 self-reference HEAD; published hash follows next checkpoint.
+M72 749a7db680def0bb3ead995302b594ca2c65d0e8 verified local/tracking/live and clean.
+Current M73 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M73: audit the remaining V3 orchestration interface gaps against the master plan and
-existing refusal adapters; select a bounded implementation that cannot manufacture current proof.
+M74: define a bounded inert session-report codec that revalidates imported proof and
+cannot serialize or restore private capture authority; keep execution unavailable.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
