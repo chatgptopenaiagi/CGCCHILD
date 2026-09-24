@@ -17,3 +17,15 @@ must not follow from synthetic/model evidence. Host privilege remains separately
 owned child creation. This is a child design revision, not retroactive source acceptance.
 The prelude is explicitly trusted and unfiltered; real privileged bootstrap acceptance stays
 blocked. No later filter gains authority. Inert membership writes cannot support real P3.
+
+## M2 — synthetic composition isolated from production proof
+
+The new `cgc.experimental` package has no live observer, filesystem/Git action, or execution
+callback. Six obligations compose only a model result. Production P3 is always UNKNOWN;
+mutation authorization is always false. Imported claims cannot be current proof. Strict
+frozen records, exact obligation order, bounded clocks and explicit scope/generation checks
+reject malformed profiles. A recovery planner preserves uncertain attempts and requests review;
+execute refuses even forged plans. This is an implemented refusal/interface foundation, not a
+mutation or recovery engine. Existing CGC APIs are unchanged. V4 can consume this inert boundary
+without claiming V3 acceptance. A future live producer needs separately reviewed provenance,
+writer exclusivity, continuity and at-use authority contracts; it cannot enable a boolean flag.

@@ -6,21 +6,22 @@ Experimental child initialized; inherited V3 PARTIAL. V1/V2 accepted source beha
 
 ## CURRENT MILESTONE
 
-M1: staged native inert bootstrap and runtime PID-specialized filters validated.
+M2: experimental quiescence assessment and refusal-first preservation/recovery interfaces.
 
 ## CURRENT HEAD
 
-HEAD (M1 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M2 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
 Full source-history clone; source/tracking/live verification; private target creation and query;
 origin/upstream isolation; byte-exact plan snapshot and SHA256; dependency work queue.
 M1 nonroot native CREATE/ATTACH analogue, gated child, exact PID predicates and narrowing.
+M2 strict immutable model, freshness/scope/epoch checks, all 729 truth combinations, refusal planner.
 
 ## PARTIAL
 
-Inherited V3/M1â€“M5; native role bootstrap; containment; complete master-plan implementation.
+Inherited V3/M1-M5; native role bootstrap; containment; complete master-plan implementation.
 
 ## BLOCKED
 
@@ -35,7 +36,9 @@ Production quiescence; full safe resume; V4 runtime; agent fabric.
 
 Genesis AST/JSON/plan-byte checks passed. Native inert fixture compiled/executed twice,
 second run adding FD inventory and scalar specialization model checks. Both exited zero.
-No inherited runtime regression rerun: production Python is unchanged.
+Six child unit tests passed, including 729 compositions and 12 prior-attempt/action pairs.
+Full inherited+child Linux regression: 395 tests passed in109.829s; zero failures.
+Windows focused child suite:6 passed. Tests use Linux-native /tmp for owned fixtures.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -45,11 +48,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-Genesis 81dc2c0950f3e022e724244b8093d5e96bee0075 verified local/tracking/live and clean.
-Current M1 self-reference HEAD; published hash follows next checkpoint.
+M1 c614e736103586483121a9b190600964b00192c1 verified local/tracking/live and clean.
+Current M2 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M2: implement a strict experimental evidence envelope and refusal-first orchestration boundary;
-keep serialized/synthetic evidence incapable of authorizing production mutation. Then protocol/capsule.
+M3: implement V4.0 experimental bounded language-neutral state protocol, then an inert
+archive capsule. V3 real proof and execution remain blocked; transport must not promote authority.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
