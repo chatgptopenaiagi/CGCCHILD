@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M50: malformed/stale packet refusal before the next inert effect.
+M51: nonroot atomic owned-child pidfd launch capability.
 
 ## CURRENT HEAD
 
-HEAD (M50 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M51 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -106,6 +106,8 @@ M48 fixed21-fixture/65-file source audit; omitted bindings refuse and unrebuilt 
 M49 effect-before-model-ack ordering, gated child/readback, collision/attachment failure and owned cleanup.
 
 M50 seventeen negative packets and seventeen reopen attempts refuse; earlier effect cases still pass.
+
+M51 raw clone3 launch returns an owned-child pidfd; three runs/build, identical final builds.
 
 ## PARTIAL
 
@@ -229,11 +231,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M49 c6282ba2d1f4fb42606942eb9114590cf09a239e verified local/tracking/live and clean.
-Current M50 self-reference HEAD; published hash follows next checkpoint.
+M50 a80efede664b46996082b2a0a32cfae1cde4d2ac verified local/tracking/live and clean.
+Current M51 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M51: evaluate bounded unprivileged clone3/CLONE_PIDFD owned-child launch feasibility;
-seek atomic launch handles without widening existing final-role PID or namespace authority.
+M52: validate scalar raw clone(CLONE_PIDFD|SIGCHLD) in an owned disposable fixture;
+compare exact-flag bootstrap filtering without widening final C/W authority.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

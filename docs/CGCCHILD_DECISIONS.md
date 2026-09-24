@@ -353,3 +353,10 @@ Fixed malformed/stale inputs are tested on both sides of CREATE. Prior success c
 retained, the active model invalidates, and later valid packets cannot reset that decision.
 Next, investigate an owned-child atomic pidfd launch before expanding already-filtered broker
 PID lookup. Final worker/controller filters and privilege boundaries remain unchanged.
+
+## M51: atomic launch handles are available, pointed-to policy is not scalar proof
+
+Nonroot clone3/CLONE_PIDFD worked in the owned disposable fixture. Keep existing
+final filters unchanged: cBPF does not validate pointed-to clone_args. Compare the
+scalar clone form before proposing a narrowed bootstrap launch policy. Kernel
+capability evidence is neither a protected identity boundary nor R6 acceptance.

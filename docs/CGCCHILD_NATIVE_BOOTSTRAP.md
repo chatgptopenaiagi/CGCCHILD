@@ -232,3 +232,39 @@ complicates an already-filtered B setup. Before broadening PID lookup, evaluate 
 installed kernel's unprivileged clone3/CLONE_PIDFD can return an owned-child handle atomically
 in a bounded disposable fixture. Existing final-role clone3 denial must remain unchanged.
 An unavailable capability must refuse; this is not permission for privileged launch or R6.
+
+## M51: atomic owned-child launch capability
+
+OBSERVED_FACT: the nonroot x86-64 fixture uses raw clone3(435), an88-byte
+clone_args with flags=CLONE_PIDFD(4096), exit_signal=SIGCHLD(17), a parent
+pidfd output pointer, and all remaining fields zero. Three runs per build
+passed; two final builds/runs produced identical evidence and static ELF bytes.
+The installed header defines the same88-byte layout. The child retains a copied
+address space/stack; no thread, namespace, selected PID or cgroup is requested.
+The [Linux clone manual](https://man7.org/linux/man-pages/man2/clone.2.html)
+specifies the launch-returned pidfd, automatic CLOEXEC and separate copied stack
+when CLONE_VM is absent. These semantics support the narrow observed result.
+
+Parent inventory: pipe3/4, returned pidfd5. Child inherits pipe3/4 but not the
+new parent pidfd; it closes4, waits at most2000ms for byte G on3, then exits.
+Parent checks pidfd CLOEXEC and not-ready while gated, releases the child,
+observes readiness, reaps the exact returned child PID/status, checks readiness
+again and closes every extra FD. Invalid FD63 produces an observation error.
+The driver bounds each process to6s, owns its process group for timeout cleanup,
+and removes Linux-native temporary build files. No timeout occurred.
+
+[Source](lab/child_atomic_launch.c), [driver](lab/child_atomic_launch_validate.py),
+[evidence](lab/child_atomic_launch_evidence.json). No dynamic interpreter/imports;
+one raw syscall veneer. Source operations map to getuid102, close_range436,
+prctl157(NNP/nondumpable), pipe2 293, clone3 435, poll7, fcntl72(GETFD), read0,
+write1, close3, wait4 61 and exit60. No generic argv, exec or PID lookup surface.
+ENOSYS/EPERM are explicit unavailable outcomes; other launch errors remain unresolved.
+
+DERIVATION: a later trusted launcher could obtain two separate launch-bound handles
+without pidfd_open on arbitrary integer PIDs. UNKNOWN: full broker/channel/effect
+composition and filtered launch acceptance. This fixture installs no seccomp filter.
+cBPF cannot dereference clone_args, so permitting clone3 by pointer/size does NOT
+prove its pointed-to flags immutable. Do not widen final C/W filters on this evidence.
+Next compare scalar raw clone(CLONE_PIDFD|SIGCHLD), which exposes flags directly,
+against the same bounded owned-child lifecycle before selecting a bootstrap policy.
+Production acceptance=false; R6=NOT_EXECUTED; filesystem exclusivity/P3=UNKNOWN.

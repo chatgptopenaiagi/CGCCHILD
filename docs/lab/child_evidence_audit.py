@@ -5,9 +5,10 @@ from pathlib import Path
 NAMES=tuple(sorted(('bootstrap','protocol','ancillary','sender','lifecycle','dbus','dbus_encode',
  'filtered_sender','rights_sender','fd_identity','session','bound_session','dbus_auth','dbus_stream',
  'dbus_owner','dbus_connection','dbus_socket','dbus_filtered_socket','dbus_encoded_socket',
- 'dbus_query_binding','dbus_bound_socket','effect_session','effect_rejection')))
+ 'dbus_query_binding','dbus_bound_socket','effect_session','effect_rejection','atomic_launch')))
 MAX_BYTES=262144
 EXPECTED_BINDINGS={
+    'atomic_launch':('driver_sha256', 'source_sha256'),
     'ancillary':('driver_sha256', 'payload_prefix_sha256', 'source_sha256'),
     'bootstrap':('source_sha256',),
     'bound_session':('driver_sha256', 'lifecycle_prefix_sha256', 'payload_prefix_sha256', 'socket_types_sha256', 'source_sha256'),
