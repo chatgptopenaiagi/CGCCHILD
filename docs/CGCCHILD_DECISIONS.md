@@ -186,3 +186,9 @@ Owned sender composition passes live/dead classification under narrowed filters.
 that the earlier disposer assumes descriptor slots absent in this layout. No rights-transfer
 acceptance is claimed; the next fixture must close actual kernel-returned rights without touching
 protected live descriptors. Fixed poll memory is a trusted-code obligation, not scalar proof.
+
+## M24: disposal follows current inventory, not historical FD slots
+
+A lowered fixture-only FD limit bounds received descriptors. Live/drain protected sets differ;
+received kernel rights are closed before refusal, including control truncation. Five packets
+validate48 explicit closures and no occupancy leak. Object identity remains a separate gate.

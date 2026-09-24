@@ -72,3 +72,30 @@ the inherited ancillary disposer assumes received descriptors7..63, whereas this
 free lower slots. It must not be claimed correct for hostile descriptor transfer yet.
 M24 must bind disposal to the actual live/drain inventory and bound the owned FD limit.
 This is not a production defect: these are separate disposable lab fixtures only.
+
+## M24: received rights across actual inventory holes
+
+[Source](lab/child_rights_sender.c), [driver](lab/child_rights_sender_validate.py) and
+[evidence](lab/child_rights_sender_evidence.json) close the M23 descriptor-disposal gap for
+the tested fixed layout. The M18/M19/M23 historical fixtures remain unchanged.
+
+Before fork, the owned fixture reads its own NOFILE limits, refuses if either is below64,
+then lowers both to64 and verifies them. This changes no host configuration or other process.
+The single-threaded receiver reserves3(pidfd),4(socket), and6(gate write end) while live.
+After gate closure/reaping, only3/4 remain protected. Kernel-produced ancillary descriptors
+must be in3..63 and outside those protected sets. Every received right is CLOEXEC-checked
+and closed before payload acceptance, including truncated messages. No raw user-supplied
+ancillary buffer or concurrent descriptor allocator is part of this accepted fixture.
+
+Five packets exercise: normal live acceptance;16 rights while live;17 sent rights with
+control truncation(16 received);16 queued rights after death/drain; plain queued dead message.
+All rights packets refuse. Explicit closures total48. Live allocation uses5 and7..21;
+drain allocation uses5..20. The kernel-truncated surplus is not counted as an explicit close.
+After each receive, GETFD checks exactly the expected live/drain occupancy; final3..63 empty.
+The child is reaped and the temporary build removed. The fixed syscall filters narrow as
+before, with receiver close permission covering3..63 for disposal in either state.
+
+This validates occupancy and disposal, not full FD object identity. The next native preflight
+must additionally bind type/access/object identity and refuse descriptor replacement.
+Kernel-created pidfds and creation handles are stronger evidence than FD numbers alone.
+No R6 peer, cgroup, protected UID or production claim was introduced.
