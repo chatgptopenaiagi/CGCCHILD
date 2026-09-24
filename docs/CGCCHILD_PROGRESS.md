@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M24: state-aware received-FD disposal under composed role filters.
+M25: native FD identity preflight and owned substitution refusal.
 
 ## CURRENT HEAD
 
-HEAD (M24 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M25 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -54,6 +54,8 @@ M22 fixed outgoing encoder:11 canonical frames,3862 capacity refusals and3 unkno
 M23 filtered live/dead sender scenario passed; actual FD-hole disposal remains next gap.
 
 M24 live/drain FD-hole and control-truncation refusal;48 explicit rights closures, no leak.
+
+M25 native socket/pipe/pidfd creation binding and5 substitution refusals; filtered packets still pass.
 
 ## PARTIAL
 
@@ -124,6 +126,7 @@ M21 static native decoder passed259 cases;215 deterministic mutations. No Python
 M22 native encoder passed3876 cases; no transport or runtime manifest adapter.
 M23 three generated filters installed in owned processes; final drain narrows live; cleanup passed.
 M24 five native packets passed; owned NOFILE64 verified; child reaped and inventories clean.
+M25 native identity and48-closure composition passed; static ELF/ABI/preprocessed hashes recorded.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -133,11 +136,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M23 bea9a30a75843f48a7b44c5e7fabb865592592d1 verified local/tracking/live and clean.
-Current M24 self-reference HEAD; published hash follows next checkpoint.
+M24 681464cf39e67902910b9010679ffc75e32d9fb7 verified local/tracking/live and clean.
+Current M25 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M25: add native FD type/access/object-identity preflight and substitution refusal to the owned
-sender fixture; no privileged operation, filesystem writer proof or R6.
+M26: compose native admission dispatch and canonical replies over an owned socket pair;
+keep effects/model continuity/empty inputs inert, with no protected controller or R6 claim.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

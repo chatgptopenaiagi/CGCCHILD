@@ -99,3 +99,32 @@ This validates occupancy and disposal, not full FD object identity. The next nat
 must additionally bind type/access/object identity and refuse descriptor replacement.
 Kernel-created pidfds and creation handles are stronger evidence than FD numbers alone.
 No R6 peer, cgroup, protected UID or production claim was introduced.
+
+## M25: native FD identity preflight
+
+[Source](lab/child_fd_identity.c), [driver](lab/child_fd_identity_validate.py) and
+[evidence](lab/child_fd_identity_evidence.json) extend the owned fixture with fstat/GETFL/GETFD.
+Expected socket/pipe identities are captured immediately after their creation. Socket type
+SOCK_SEQPACKET and AF_UNIX domain are checked, as are socket/FIFO mode and access direction.
+The parent replaces its closed socket slot with its own newly created child pidfd and binds
+that handle separately. A stat tuple is not used to invent a pidfd or process identity.
+
+Five pre-release negative cases pass: an extra descriptor; pipe in a socket slot; another
+socket endpoint with a different inode; write-end in the read-end slot of the same pipe;
+and missing CLOEXEC. Exact original handles are retained temporarily and restored before
+fork. Every role checks device/inode/mode/UID/GID/rdev/access flags/CLOEXEC against the
+creation-bound expectations; after fork the child validates its socket/gate under its filter.
+Parent live/drain inventory checks now revalidate identities after each packet.
+
+The five-packet/48-closure filtered test still passes. Identity reads are explicitly added
+to generated role filters; the drain remains a strict subset of live. Installed x86-64
+sys/stat.h supplies only structure declarations; sizeof144 is statically asserted.
+Preprocessed source SHA256 records that compile-time ABI input. The ELF remains static,
+with no runtime libc imports or dependency. Own NOFILE64 and cleanup semantics are unchanged.
+
+This does not prove open-file-description equivalence, permanent inode uniqueness, filesystem
+writer exclusivity or protection from an equally privileged external injector. Captured
+creation handles, single-threaded code and no new allocator after filtering are explicit
+profile assumptions. No cgroup or namespace FD was fabricated as an accepted object.
+Next: compose the finite admission state machine with actual owned socket messages and
+canonical replies, retaining in-memory effects and model-only empty/continuity inputs.

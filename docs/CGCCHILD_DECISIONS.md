@@ -192,3 +192,9 @@ protected live descriptors. Fixed poll memory is a trusted-code obligation, not 
 A lowered fixture-only FD limit bounds received descriptors. Live/drain protected sets differ;
 received kernel rights are closed before refusal, including control truncation. Five packets
 validate48 explicit closures and no occupancy leak. Object identity remains a separate gate.
+
+## M25: validate FD objects without equating stat with authority
+
+Creation-bound socket/pipe observations detect type, inode, access and CLOEXEC substitutions.
+The pidfd remains bound by creation and retained handle, not by its stat tuple alone. Native
+identity checks do not establish open-file-description equivalence or filesystem exclusivity.
