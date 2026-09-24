@@ -130,3 +130,31 @@ The sixteenth retained child fixture composes inert AUTH/frame/request-owner sta
 66 scenario runs. See [native D-Bus evidence](CGCCHILD_NATIVE_DBUS.md#m35-composed-inert-authentication-framing-and-correlation).
 The protected-image, real-credential, runtime-manifest and live-policy boundaries above remain.
 Composition here does not supply a live transport, authenticated manager or production producer.
+
+## M48 repeatable retained-source audit
+
+Run from CGCCHILD:
+
+~~~text
+python -B docs/lab/child_evidence_audit.py
+~~~
+
+The [read-only auditor](lab/child_evidence_audit.py) checks a fixed21-fixture inventory and65
+bounded regular source/evidence files, importing no fixture and running no compiler/process.
+It verifies current raw source/driver bytes against the retained digests, including selected
+source prefixes, query sources and recorded filter-generator source. Fixed binding/header sets
+prevent removal of a covered field from silently reducing audit coverage. Duplicate JSON keys,
+missing/oversized files, wrong hashes, nonregular artifacts and unknown prefix headers refuse.
+There is no caller-selected path, fixture selector or execution option on the CLI.
+
+Five [test families](../tests/test_child_evidence_audit.py) pass on Windows and Fedora, including
+changed source/driver, missing source, omitted binding, malformed header sets and duplicate JSON.
+One test deliberately replaces both source and its expected hash: consistency still passes,
+while production acceptance remains false and live proof UNKNOWN. This explicitly demonstrates
+that the auditor is not source authentication. Reads are bounded point observations of a trusted
+workspace, not an atomic filesystem snapshot or protection from concurrent hostile replacement.
+
+The earliest bootstrap evidence has no driver hash: UNRECORDED is reported, never inferred.
+Generated headers, preprocessed output, stream/vector bytes and removed binaries are NOT_REBUILT;
+current fixture execution is NOT_EXECUTED. Their historical digests/results are not revalidated
+by this audit. No historical test was repeated merely to obtain a current green label.

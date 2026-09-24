@@ -333,3 +333,9 @@ is deterministic correlation evidence, not live process-generation or caller aut
 The filtered private transport now encodes Version from its decoded synthetic owner and
 issued pending serial. Variable owner length does not widen syscall authority or method scope.
 The fixture still cannot authenticate a live system manager or establish controller isolation.
+
+## M48: static evidence consistency has an explicit coverage manifest
+
+The source auditor has fixed expected binding sets and reports unrecorded/unrebuilt evidence.
+It cannot claim current execution or authenticate data by comparing co-replaceable hashes.
+This makes checkpoint inspection repeatable without rerunning historical process fixtures.
