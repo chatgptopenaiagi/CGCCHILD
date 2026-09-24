@@ -11,7 +11,8 @@
 No privileged read/mutation, secret collection, automatic orphan cleanup or external repository
 mutation is authorized by these blocker records. Acceptance remains blocked even if interfaces advance.
 
-B06: Full V3 handoff/receipt projection is not implemented by the model-only V4 profile.
+B06 PARTIALLY_RESOLVED: Lossless V3 continuity projection now exists separately. Existing
+model-only capsule/service/Node adapters do not yet accept it; explicit profile integration remains.
 B07: Published protocol compatibility requires independent client interoperability acceptance;
 unit/owned-subprocess transport tests cannot establish ecosystem compatibility.
 

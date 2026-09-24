@@ -80,3 +80,12 @@ recreate grants. The caller/clock are trusted and same-process hostile Python co
 scope. No MCP grant endpoint, live/remote authorization or execution adapter exists. Bounded
 hash-chain events are consistency evidence only, not authenticated durable audit. Next work
 returns to the missing real V3 continuity projection rather than adding a network listener.
+
+## M9 — retain V3 source state rather than flattening it
+
+A separate continuity0.1 envelope uses the original pure handoff validator and retains its
+entire canonical source state/digest. Current resume remains UNKNOWN and mutation false.
+Latest failure, last-known-good and previous-known-good stay distinct. The original project
+path is historical data, never a target selector. Model-only transports are not silently
+widened; future profile dispatch must be a closed reviewed set. Initial invalid test fixture
+and error normalization defects were fixed without changing original source validators.

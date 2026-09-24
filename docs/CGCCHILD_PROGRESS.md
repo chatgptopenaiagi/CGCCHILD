@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M8: bounded in-process read-capability and event laboratory; no live/remote grants.
+M9: lossless historical V3 handoff projection using unchanged original validation.
 
 ## CURRENT HEAD
 
-HEAD (M8 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M9 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -26,6 +26,7 @@ M5 MCP2025-11-25 subset: initialize/tools/ping; seven owned-process/bounds test 
 M6 plugin manifest/skill static validation; no hooks, auto-launch config or marketplace.
 M7 Node model codec:692 checks, Python/Node acceptance/bytes/digest/human parity corpus.
 M8 opaque read handles, expiry/revocation/generation refusal,64-event bounded hash chain.
+M9 full original V3 continuity envelope; separate historical summary; no path rebinding.
 
 ## PARTIAL
 
@@ -66,6 +67,9 @@ No Python runtime change in this milestone; full inherited suite not repeated.
 M8 focused38 Windows and full427 Linux tests passed (109.466s).
 Static keypoint check initially counted a later25-item list; section-bound correction
 confirmed exactly100 keypoints. Mission/license Git content unchanged.
+M9 Windows focused5 and child43 passed after fixture/effect-free error normalization fixes.
+Initial5 setup errors and then2 error-type failures are documented and resolved.
+Full Linux regression432 passed in109.676s.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -75,11 +79,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M7 b13155dcf7879a3d0513b3ff3c7676c2736ba124 verified local/tracking/live and clean.
-Current M8 self-reference HEAD; published hash follows next checkpoint.
+M8 2edcd5eb5434c46e36138bc1bc796db350a99bd8 verified local/tracking/live and clean.
+Current M9 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M9: implement a lossless historical projection of validated V3 continuity records; preserve
-latest failure/last-known-good distinctions and outer UNKNOWN without invoking filesystem actions.
+M10: design/test explicit closed profile dispatch for historical model and V3 continuity
+views before extending capsules/transports. Never accept an arbitrary imported schema or callback.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
