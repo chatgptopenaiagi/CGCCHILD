@@ -179,3 +179,10 @@ See [native D-Bus mechanics](CGCCHILD_NATIVE_DBUS.md).
 The11 retained outgoing frames now have independent native encoding with exhaustive short-buffer
 refusal checks. All target values remain compiled dummy data. Runtime manifest binding and
 live manager authorization are separate obligations; emitted bytes cannot exercise authority.
+
+## M23: scalar filters do not validate ancillary memory
+
+Owned sender composition passes live/dead classification under narrowed filters. Review found
+that the earlier disposer assumes descriptor slots absent in this layout. No rights-transfer
+acceptance is claimed; the next fixture must close actual kernel-returned rights without touching
+protected live descriptors. Fixed poll memory is a trusted-code obligation, not scalar proof.
