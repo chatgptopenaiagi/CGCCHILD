@@ -160,3 +160,44 @@ Remaining gaps are full repository-touching proof, protected quiescence/authorit
 production mutation/recovery adapter and platform acceptance. The next independent step is
 a bounded inert session-report codec that cannot serialize the private capture binding,
 so consumers can retain review outcomes without importing current authority.
+
+
+## M81 dependency audit and preservation boundary
+
+Audit baseline M80 670e7070f8dca41a6df6099a0d0c12520a5694dc:81 child commits including
+Genesis; local/tracking/live match, tree clean and target PRIVATE. Original source remains
+d7cb43de3ac001bf28470d6d2f561ed70f106e6a. All80 protected raw hashes, including the owner's
+untracked source-plan file, match the initial observation. Original tracked content, local
+and tracking refs and live main are unchanged. No push targeted upstream or the original.
+
+The six-item experimental dependency queue now has tested minimum foundations. This is not
+completion of the master plan or acceptance of its production dependencies:
+
+| Queue / master area | Completed experimental boundary | Remaining meaningful gate |
+|---|---|---|
+| Native bootstrap/operations |30 owned nonroot native fixtures; atomic launch pidfds, scalar filters, actual channel/FD binding, inert CREATE/ATTACH, negative/death/failure cases | Root-to-C/W credential transition, protected image/manifest, controller-UID exclusivity, effective policy, actual cgroup lifecycle/admission |
+| Quiescence/filesystem | Finite obligation/channel models; explicit UNKNOWN; owned Windows sharing/mapping/metadata and Fedora interoperability witnesses | Complete recursive writer admission, metadata/aliases/deputies/queued I/O, cross-OS domain closure; no accepted live producer |
+| Mutation/recovery/resume | Refusal orchestration, original verifier binding, explicit one-shot read-only capture/review, historical report validation/status | Fresh current authority plus use-time preconditions; no accepted mutation/recovery adapter or repository-touching YES |
+| Protocol/capsule | Strict model and historical continuity profiles, original nested receipt parity, deterministic inert capsules/chunks and negative corpora | Stable production release contract, authenticity and current provenance; imports intentionally remain historical |
+| Service/plugin/SDK/surface | Bounded read-only stdio/MCP; independent Python/Node codecs; fixed paired clients; uninstalled thin plugin; text/offline HTML | Installed host/general SDK interoperability, authenticated service, desktop/mobile integration; unavailable dependencies not installed |
+| Capability/event/router | Opaque scoped local grants, expiry/revocation, inert hash journals, bounded in-process route dispatch | External principal/clock authentication, accepted distributed policy; no gateway, tunnels, AI execution or remote authority |
+
+The optional remote gateway is explicitly downstream of accepted local security/capability
+models in the source plan. No server, authentication scheme, secret or remote executor is
+invented to fill that gap. The existing local policy/route/event interfaces define only the
+non-network foundation. Additional languages, presentation variants and GUI polish remain
+NOT_STARTED optional breadth; they do not resolve the selected proof/acceptance frontier.
+
+STOP_AND_PRESERVE decision: no further useful milestone remains in this selected dependency-safe
+minimum-foundation queue under the present authority. Further proof progress requires the
+separately scoped RO facts/protected profile and a defensible filesystem exclusion design.
+This is an engineering priority decision, not a universal claim that no more code could be
+written, not a usage-limit claim, and not completion of V3/V4 or the whole master plan.
+The unresolved inherited B11 intermittent pack test remains visible despite later green runs.
+
+Next exact action: owner review of the unchanged [privileged read-only package](V3_QUIESCENCE.md#privileged-read-only-approval-request)
+and its candidate-identity parameter prerequisites. No item has been executed. After explicit
+scoped approval, reconcile current child/source evidence and execute only the approved bounded
+reads; use them to revise M1/M2/M3/M5 and the protected native acceptance plan. R6, provisioning,
+production producer and filesystem proof require their own unmet gates. If approval is declined,
+retain UNKNOWN and do not convert inert fixtures into production-positive evidence.

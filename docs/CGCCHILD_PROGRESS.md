@@ -2,16 +2,17 @@
 
 ## OVERALL STATUS
 
-Experimental child active; inherited V3 PARTIAL. V1/V2 accepted source behavior retained.
+STOP_AND_PRESERVE: experimental foundations checkpointed; full master plan remains PARTIAL.
+Inherited V3 PARTIAL; V1/V2 accepted source behavior retained.
 Child milestone labels M1/M2/etc are local work units, not acceptance of canonical proof gates M1-M5.
 
 ## CURRENT MILESTONE
 
-M80: uninstalled thin plugin reconciled with historical continuity and bounded reads.
+M81: dependency/evidence/source audit and resumable stop-and-preserve checkpoint.
 
 ## CURRENT HEAD
 
-HEAD (M80 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M81 stop-and-preserve checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -149,6 +150,8 @@ M79 host guard/Fedora writer denial and Linux flock/Windows writer admission obs
 
 M80 plugin skill supports both historical profiles with explicit response/receiver limits.
 
+M81 retained native audit30/92 and all80 original protected hashes match; private child confirmed.
+
 ## PARTIAL
 
 Inherited V3/M1-M5; native role bootstrap; containment; complete master-plan implementation.
@@ -169,6 +172,13 @@ V4.2 read-only private transport and V4.5 text/offline HTML surfaces EXPERIMENTA
 V4.0/V4.1 EXPERIMENTAL/PARTIAL for model and lossless historical V3 profiles; no full mission acceptance.
 
 ## TEST RESULTS
+
+M81 source/evidence/static audit:146 Python ASTs,47 JSON files,35 JavaScript syntax checks;
+173 local Markdown links/8 anchors and fences pass. Thirty native fixtures/92 source files
+audit consistently;100 section-bounded V3 keypoints, missions/license/plan bytes preserved.
+Initial keypoint count included a separate later25-item list; bounded audit corrected.
+No runtime change or ceremonial full regression rerun.
+Latest full Fedora592 pass; Windows child203:173 pass/30 POSIX skips. Historical B11 remains open.
 
 M80 installed plugin-creator and skill-creator static validators passed. No runtime change.
 
@@ -317,12 +327,36 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M79 a31ab74a60bfb075035e63692023f1ff036c65ac verified local/tracking/live and clean.
-Current M80 self-reference HEAD; published hash follows next checkpoint.
+M80 670e7070f8dca41a6df6099a0d0c12520a5694dc verified local/tracking/live and clean.
+Current M81 self-reference HEAD; resolve it with git rev-parse HEAD after publication.
+Source protection and original live main independently rechecked; no original push.
 
 ## NEXT_EXACT_ACTION
 
-M81: audit the complete child dependency queue, retained native/portable/filesystem evidence,
-source protection and remaining acceptance blockers. Select only meaningful unblocked work;
-do not add surface breadth merely to defer privileged/effective-policy proof requirements.
-No RO/R6/host installation is authorized. Trusted usage remaining UNKNOWN.
+Owner review of the unchanged narrowed RO-1..RO-5 package in
+[V3 quiescence](V3_QUIESCENCE.md#privileged-read-only-approval-request), including exact
+candidate-identity prerequisites. Execute no reads until separately scoped approval.
+Then reconcile current evidence and perform only approved bounded observations to refine
+the protected native profile. Provisioning/R6/production execution remain separate gates.
+
+Stop reason: no further useful milestone selected in the completed dependency-safe minimum
+foundation queue; substantive proof acceptance is blocked. Optional UI/language breadth is
+deferred, not declared complete. Trusted usage remaining UNKNOWN; no quota threshold claimed.
+Machine-readable session inventory: [session report](CGCCHILD_SESSION_REPORT.json).
+
+Resume directory: C:\Codex-Projects\CGCCHILD.
+
+```powershell
+Set-Location -LiteralPath 'C:\Codex-Projects\CGCCHILD'
+Get-Location
+git status --short --branch
+git remote -v
+git rev-parse HEAD
+git rev-parse origin/main
+git ls-remote origin refs/heads/main
+Get-Content docs/CGCCHILD_PROGRESS.md
+```
+
+RO-1..RO-5 = NOT_EXECUTED. R6 = NOT_EXECUTED.
+PRODUCTION QUIESCENCE PRODUCER = NOT_STARTED. Real-project P3 = UNKNOWN.
+V4 runtime in CGCCHILD = EXPERIMENTAL / PARTIAL; original source remains unchanged.

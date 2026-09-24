@@ -629,3 +629,13 @@ plugin-creator/skill validators pass; live Codex interoperability remains NOT_EX
 The reinstall workflow is inapplicable because there is no marketplace-backed installed
 plugin here. The next milestone is a complete dependency/source/evidence audit before
 selecting any further work; optional surface breadth must not hide proof blockers.
+
+
+## M81: stop and preserve the bounded experimental foundation
+
+The selected dependency-safe queue has reached its minimum tested foundations. Stop new work
+at the protected identity/effective-policy/filesystem acceptance boundary. More presentation or
+language breadth would not close this frontier. Preserve all partial and unexecuted states,
+including B11, rather than promoting fixture count to proof. No usage percentage is available
+and no threshold crossing is claimed. Next is owner review of the already narrowed RO package,
+not automatic privileged execution or an R6 request. Full plan completion remains false.

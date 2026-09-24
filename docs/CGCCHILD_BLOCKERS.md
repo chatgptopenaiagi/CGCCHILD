@@ -74,3 +74,17 @@ unproven; production filesystem exclusivity/P3 remain UNKNOWN.
 B06 M80: the repository-local thin skill now describes both historical profiles and
 bounded chunk/status behavior. No launcher or host setup is claimed. B08/B09 ecosystem
 and actual Codex integration gates remain; installed skill shape validation is not acceptance.
+
+
+## M81 stop-and-preserve dependency state
+
+B01/B02/B04/B12 still block protected native acceptance. B03 now includes negative directory,
+metadata and cross-OS lock witnesses; the tested per-file guard is insufficient for repository
+closure. B08/B09 still block live host/general SDK acceptance. B11 remains an intermittent
+UNKNOWN, not a reproduced current failure. All current tests pass without weakening it.
+B05 remains UNKNOWN telemetry, not the reason for stopping. No secrets, privileged reads,
+R6, persistent identities/services or policy changes were performed.
+
+Remaining production work cannot consume synthetic/historical interfaces as a live authority
+substitute. The next owner decision is scoped RO-package review with candidate identity
+parameters where required. Approval of reads would not authorize provisioning, R6 or mutation.
