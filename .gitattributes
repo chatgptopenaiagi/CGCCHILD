@@ -81,3 +81,6 @@ docs/lab/child_dual_launch_validate.py text eol=lf
 
 docs/lab/child_channel_effect.c text eol=lf
 docs/lab/child_channel_effect_validate.py text eol=lf
+
+docs/lab/child_channel_rejection.c text eol=lf
+docs/lab/child_channel_rejection_validate.py text eol=lf

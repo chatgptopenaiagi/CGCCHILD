@@ -394,3 +394,30 @@ channel/effect composition, proving no subsequent effect or admission reopening.
 Static audit initially refused the expanded pretty-printed filter evidence above its
 262144-byte bound. Canonical compact instruction rows reduced evidence size without
 removing any instruction or increasing the validator bound. Both audit suites rerun.
+
+## M55: negative packets through the actual bound channel/effect composition
+
+OBSERVED_FACT: seventeen fixed bad packets now run through the M54 C/B socket,
+per-message credentials and live-pidfd checks. Eight precede CREATE; nine follow
+its one successful ACK. Cases: truncation, wrong generation, sequence, epoch,
+phase, duplicate key, extra path, trailing byte, plus stale ATTACH sequence after
+CREATE. C queues a correct next packet after each bad one; B receives and refuses
+it with the same INVALIDATED state and no later effect. C observes channel EOF.
+No negative branch launches W. Before-CREATE cases create no domain; after-CREATE
+cases check the owned membership file still has zero length, remove owned objects
+without claiming a REMOVE acknowledgement, close gate/root/channel FDs and reap C.
+Earlier CREATE evidence/count remains; attaches/removes remain zero.
+
+[Source](lab/child_channel_rejection.c), [driver](lab/child_channel_rejection_validate.py),
+[evidence](lab/child_channel_rejection_evidence.json). The closed selector0..17
+chooses17 fixed negatives or the unchanged positive dialogue; no arbitrary packet,
+path, method, executable or PID input exists. Two final builds/evidence match;
+18 native invocations per run pass, temporary files removed, no deadline fired.
+The filter rules and syscall surface are unchanged from M54. Negative raw bytes
+are retained as hex, not merely mutation descriptions. Source audit now covers28
+fixtures/86 files. Production authority, real P3 and cgroup admission remain absent.
+
+Next address owned controller death at deterministic request boundaries without
+signals or privileged R6: distinguish a queued dead-sender packet from a live
+request, and invalidate before the next effect. This cannot prove continuous
+liveness between arbitrary observations; that gap must remain explicit.

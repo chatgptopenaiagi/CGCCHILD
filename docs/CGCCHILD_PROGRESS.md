@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M54: live owned C channel composed with inert CREATE/ATTACH effects.
+M55: negative packets through the actual bound channel/effect composition.
 
 ## CURRENT HEAD
 
-HEAD (M54 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M55 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -114,6 +114,8 @@ M52 scalar clone/pidfd launch passes under207/85/141-instruction bootstrap/child
 M53 two-child launch/reap passes both release orders; sibling pidfd is closed before release.
 
 M54 three-process filtered channel/effect dialogue passes; five effect-ordered acknowledgements.
+
+M55 seventeen actual-channel negatives/reopen attempts refuse; positive effect dialogue still passes.
 
 ## PARTIAL
 
@@ -240,11 +242,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M53 b8583867a1770bfb43f684f72a0771e895dad026 verified local/tracking/live and clean.
-Current M54 self-reference HEAD; published hash follows next checkpoint.
+M54 6a274401615fc7f87b32611b21a4c5fd646f4e88 verified local/tracking/live and clean.
+Current M55 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M55: challenge actual channel/effect composition with fixed bad packets before/after
-CREATE; prove no later effect or admission reopening, with attributable cleanup.
+M56: test deterministic owned controller exit before receipt and before the next
+inert effect; preserve invalidation, earlier evidence and explicit liveness race limits.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

@@ -381,3 +381,10 @@ Compose launch-bound handles, per-message credentials, FD identity and candidate
 state only in the disposable image. Acknowledge after effect/readback; reap W before
 REMOVE. Same-UID fixture branches and synthetic continuity do not become protected
 production identities. Next test negative channel/effect composition, not R6.
+
+## M55: malformed live-channel input cannot reopen the inert effect state
+
+Negative packet/model evidence now composes with actual per-message credentials,
+FD binding, and file effects. INVALIDATED preserves earlier CREATE but refuses
+the queued correct request; cleanup is not an acknowledged successful operation.
+Next test deterministic owned controller exit boundaries, retaining race limits.
