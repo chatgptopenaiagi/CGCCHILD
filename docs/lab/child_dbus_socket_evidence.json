@@ -1,0 +1,67 @@
+{
+  "argv": [
+    "gcc",
+    "-std=c11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-fno-stack-protector",
+    "-fno-pie",
+    "-mno-red-zone",
+    "-nostdlib",
+    "-static",
+    "-no-pie",
+    "-Wl,--build-id=none",
+    "-Wl,-z,noexecstack",
+    "fixture.c",
+    "-o",
+    "fixture"
+  ],
+  "compiler": "16.2.1",
+  "driver_sha256": "407060d5003ae9d9e134b242fc41467f844d013981c3f17c54b755498a514822",
+  "empty_read_eagain": true,
+  "fd_inventory_empty_after_each": true,
+  "fragment_sizes": [
+    1,
+    17
+  ],
+  "generated_header_sha256": "a2ddea2bda043f55c6b688544d0b95a405a891a9db3574ffff03374c867a668b",
+  "image_sha256": "c83d99517f5b6ce06a1f51dc6d8ed4e1e6bf1821580fcc3a25b2a984f6794732",
+  "kernel": "6.18.33.2-microsoft-standard-WSL2",
+  "no_child_process": true,
+  "nonblocking": true,
+  "prefixes_sha256": {
+    "auth.h": "ce1502e74774ba69ad81536f732e6d69b6ec338cbcc3a996b4fbc46d6d0e9ff3",
+    "connection.h": "3d81da2c2b3e5cbdfeb1d562aaa320a678099881fa78aab093ae5654d7cb0e73",
+    "decoder.h": "c3c8c0190d675d73a35333837aeacb6c14e02833be6df88015dba3ca18fba28a",
+    "owner.h": "8d0c8451296c52eedb5727277237e3932441cc33df460d00d489e33b13b7f62a"
+  },
+  "returncode": 0,
+  "scenario_runs": 14,
+  "scenarios": [
+    "valid",
+    "wrong_owner",
+    "changed_owner",
+    "duplicate",
+    "partial_eof",
+    "complete_then_eof",
+    "wrong_serial"
+  ],
+  "scope": "private same-process dummy transport; no live D-Bus or authenticated manager/UID separation",
+  "source_sha256": "bc84674ab3455967c0111b9be37ed7329d6ccbd87237a260edae9a47d28c44a6",
+  "syscall_contract": {
+    "0": "owned endpoint read",
+    "102": "refuse root via getuid",
+    "3": "close owned endpoints",
+    "436": "fixture prelude close inherited FDs3+",
+    "44": "sendto MSG_NOSIGNAL with no address",
+    "53": "AF_UNIX STREAM NONBLOCK CLOEXEC socketpair",
+    "60": "exit",
+    "72": "FD/access flags and empty inventory"
+  },
+  "syscall_sites": 1,
+  "temporary_directory_removed": true
+}

@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M35: native inert authentication/framing/request-owner composition.
+M36: private nonblocking socketpair transport for the composed native model.
 
 ## CURRENT HEAD
 
-HEAD (M35 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M36 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -76,6 +76,8 @@ M33 bounded snapshot line bootstrap and unchanged MCP phase; actual Windows larg
 M34 bounded capsule import renders the same offline HTML; hostile archive rejection before output.
 
 M35 composed native byte-model passes22 scenarios at3 fragment sizes; terminal invalidation across layers.
+
+M36 actual owned socketpair bytes/short I/O/EOF:14 runs pass; no bus or credential boundary.
 
 ## PARTIAL
 
@@ -161,6 +163,8 @@ M34 Windows94 child tests:84 passed,10 POSIX skips; Fedora94 child tests passed 
 Initial test import duplicated six inherited cases; module import corrected before final counts.
 M35 two static native builds/runs pass66 scenarios/471 scripted steps; byte-identical images.
 No Python runtime changes; M34 focused94 and M33 full479 remain the latest regression evidence.
+M36 two native runs passed; final14 scenarios include EAGAIN and EOF; owned FD/build cleanup passed.
+Original80 byte hashes and local/live source HEAD unchanged; owner plan untouched.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -170,11 +174,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M34 9c699729739b80abdb57c3ca6ad647c8ebb511b5 verified local/tracking/live and clean.
-Current M35 self-reference HEAD; published hash follows next checkpoint.
+M35 ebd52d828671f61d1b05c0763b710648ee5b81a0 verified local/tracking/live and clean.
+Current M36 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M36: exercise the composed native byte boundaries over a private owned socketpair with a fixed
-dummy responder; bounded I/O/EOF cleanup, no live bus or authenticated manager claim.
+M37: generate and validate a fixture-only post-setup scalar I/O filter for the private socketpair;
+exercise exact FD/flag predicates and denial probes without claiming a protected controller.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

@@ -259,3 +259,9 @@ keeps paths, persistence and browser launch outside the renderer. Proof limits r
 Authentication completion enables only explicit request issuance; coalesced frames cannot invent
 requests. Framing or owner failure invalidates every composed state. The compiled fixture's
 synthetic generation and ENCODED states remain visibly distinct from a live authenticated bus.
+
+## M36: private transport proves bytes, not bus authority
+
+A same-process nonblocking socketpair exercises actual short I/O and EOF with the composed
+model. It introduces no live system bus, independent principal or installed authorization claim.
+Errors refuse rather than add unbounded waiting; fixed request bytes remain dummy laboratory data.

@@ -200,3 +200,31 @@ contract evidence. Both produced the same image SHA256. Temporary build director
 No production module, filter policy, bus socket, installed authorization or R6 test was exercised.
 M1-M5 remain PARTIAL. Next: exercise these byte boundaries on a private owned socketpair with a
 fixed dummy responder, preserving the distinction between transport and authenticated authority.
+
+## M36: private owned socketpair composition
+
+[Source](lab/child_dbus_socket.c), [driver](lab/child_dbus_socket_validate.py) and
+[evidence](lab/child_dbus_socket_evidence.json) deliver AUTH/BEGIN and fixed Hello/owner/Version
+request/reply bytes through a same-process AF_UNIX STREAM socketpair. It is deliberately not
+an independent server, system bus, credential boundary or installed authorization experiment.
+Requests are immutable generated frames; this does not validate a runtime manifest encoder.
+
+Both endpoints are NONBLOCK/CLOEXEC with flags checked. Empty reads report EAGAIN. The fixture
+writes bounded1/17-byte pieces and reads actual available bytes through the composed M35 parser.
+Short positive writes/reads are handled within the fixed piece; errors/zero writes refuse.
+No polling wait or retry on EAGAIN is used. Each transfer is at most4096 bytes and each scenario
+has an8192-I/O-call ceiling; the process also has a5-second harness timeout. MSG_NOSIGNAL avoids
+SIGPIPE. Auth, binary and request state remain explicit; a real EOF invalidates partial or
+completed-but-not-finished state. Model finish remains unrelated to process quiescence.
+
+Seven scenarios at two fragment sizes pass14 runs: valid, wrong owner, changed owner, duplicate,
+partial EOF, completed reply then EOF and wrong serial. Endpoints are closed, and FD3..63 are
+empty after every run. The prelude closes inherited descriptors3+ before allocation. No fork,
+child cleanup, pathname lookup, connect, live manager call, filter installation or privilege occurs.
+The only raw syscall site serves the exact recorded read/close/sendto/socketpair/exit/fcntl/
+getuid/close_range inventory. Static ELF/import checks and Linux-native build cleanup pass.
+
+The first run passed; a second added the explicit empty-read EAGAIN assertion and passed again.
+All80 protected original source byte hashes remain unchanged, including the owner's untracked
+plan. Original local/live main remains d7cb43d. Next: specialize and install a fixture-only
+post-setup I/O filter; its acceptance must remain separate from protected controller proof.
