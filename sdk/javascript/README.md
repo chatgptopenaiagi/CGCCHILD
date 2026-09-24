@@ -173,3 +173,22 @@ of arbitrary parsed receipts or an implementation of the full continuity profile
 node sdk/javascript/test_integer_json.mjs
 python -B -m unittest discover -s tests -p test_child_javascript_integer_json.py -v
 ```
+
+## Historical continuity receipts (M63-M67)
+
+The separate preservation.mjs, inspection.mjs, handoff.mjs and continuity.mjs modules
+validate the original historical record hierarchy without inspecting any project.
+integer_json.mjs preserves filesystem integers beyond Number's exact range as BigInt;
+unsafe Number inputs are refused. Canonical ASCII bytes, nested SHA256 receipts, project
+bindings and timestamps are compared independently with the Python validators.
+
+continuity.mjs exports projectContinuity, validateContinuity, encodeContinuity,
+decodeContinuity and summaryContinuity. It preserves the full source envelope, including
+failed latest attempts and both known-good slots. Current safety remains UNKNOWN and
+mutation authorization false. A historical YES inside an original record is data only.
+No receipt is authenticated. Object and byte return values are detached.
+
+This completes a separate Node continuity codec, not capsule0.2 integration: capsule.mjs
+still supports only the original model profile. No path is resolved, no store opened,
+and no network or subprocess API is present in these modules. The *_conformance.mjs
+programs are bounded offline test adapters, not product transports.

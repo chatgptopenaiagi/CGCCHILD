@@ -12,7 +12,8 @@ No privileged read/mutation, secret collection, automatic orphan cleanup or exte
 mutation is authorized by these blocker records. Acceptance remains blocked even if interfaces advance.
 
 B06 PARTIALLY_RESOLVED: Lossless V3 continuity projection now exists separately. Existing
-capsule/core/MCP now integrate it explicitly; Node state/capsule and skill remain model-only by design.
+capsule/core/MCP now integrate it explicitly. M67 adds independent Node continuity receipt
+validation; Node capsule0.2 integration and launcher/skill support remain pending.
 B10 PARTIALLY_RESOLVED: Fixed32KiB chunks reconstruct large capsules within96KiB responses.
 M13 adds bounded digest-bound POSIX inherited-FD startup. M33 adds explicit digest-bound stdin
 startup on Windows/Linux, avoiding payload argv limits. POSIX descriptor mode remains unavailable

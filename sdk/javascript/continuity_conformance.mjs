@@ -1,0 +1,4 @@
+import {decodeContinuity,encodeContinuity,projectContinuity,summaryContinuity} from './continuity.mjs';
+let chunks=[],size=0;for await(const x of process.stdin){size+=x.length;if(size>12*1024*1024)process.exit(2);chunks.push(x);}
+try{const rows=JSON.parse(Buffer.concat(chunks).toString('ascii'));if(!Array.isArray(rows)||rows.length>512)process.exit(2);
+process.stdout.write(JSON.stringify(rows.map(hex=>{try{if(typeof hex!=='string'||hex.length%2||!/^[0-9a-f]*$/.test(hex))throw Error();const bytes=Buffer.from(hex,'hex'),v=decodeContinuity(bytes),p=projectContinuity(v.source_state,v.portable_project_id);if(!encodeContinuity(p).equals(bytes))throw Error();return {accepted:true,hex:encodeContinuity(v).toString('hex'),summary:summaryContinuity(v)};}catch{return {accepted:false};}}))+'\n');}catch{process.exit(2);}

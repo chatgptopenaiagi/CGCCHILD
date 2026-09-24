@@ -480,3 +480,16 @@ current proof is opened. Four parity families pass on both hosts. Initial test-h
 errors came from catching ValueError instead of the inherited HandoffError; corrected
 without changing source validation or weakening expected rejection. Continuity profile
 integration is the next independent step; protected Linux proof remains blocked.
+
+## M67: independent historical continuity profile
+
+The Node continuity projection composes the three independent receipt validators and
+lossless integer serialization. Exact canonical bytes and summaries match Python for
+empty/good/previous slots, large filesystem identities, and a curated record over96KiB.
+Negative cases cover every outer field, identifiers, truncation, corruption, duplicate
+keys and promotion attempts. No filesystem, network or subprocess API exists in the
+codec. The bounded conformance process is offline test tooling only.
+
+B06 advances to independent Node continuity validation; capsule0.2 and launcher integration
+remain pending. Current UNKNOWN and false authority are preserved even when historical
+records report success. Source80 hashes including owner plan and live main remain unchanged.

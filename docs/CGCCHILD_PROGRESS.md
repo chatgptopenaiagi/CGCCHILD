@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M66: independent Node handoff envelope and nested receipt bindings.
+M67: independent lossless Node continuity profile and Python parity.
 
 ## CURRENT HEAD
 
-HEAD (M66 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M67 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -154,6 +154,9 @@ V4.0/V4.1 EXPERIMENTAL/PARTIAL for model and lossless historical V3 profiles; no
 
 ## TEST RESULTS
 
+M67 focused continuity parity4 passed Windows0.969s. Windows child166:147 passed/19 skips27.726s.
+Full Fedora555 tests passed149.318s. All80 original protected hashes and source live HEAD remain unchanged.
+
 M66 four handoff parity families pass Windows0.809s/Fedora2.262s.
 
 M65 four receipt parity families passed Windows0.977s/Fedora2.384s; no live inspection.
@@ -266,11 +269,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M65 5594c597e0764f6b1b69e6a8cc79c64486d87772 verified local/tracking/live and clean.
-Current M66 self-reference HEAD; published hash follows next checkpoint.
+M66 497e36cc1d7bb7c14eece777bd86d1f7323660fa verified local/tracking/live and clean.
+Current M67 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M67: integrate the independently validated handoff into the Node continuity profile,
-with Python byte/digest/summary parity and explicit historical UNKNOWN.
+M68: add a separately versioned Node continuity capsule codec with exact Python archive
+parity, hostile archive rejection and no extraction; keep existing model bytes unchanged.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
