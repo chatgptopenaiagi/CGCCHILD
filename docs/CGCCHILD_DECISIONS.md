@@ -283,3 +283,9 @@ grant material and cannot recreate a live handle; clocks stay historical and non
 Node validates and reconstructs the Python-pinned bytes without calling Python. BigInt clocks,
 fixed fields and explicit expected anchors retain UNKNOWN/historical semantics. Cross-language
 parity establishes representation compatibility, not trust in the event producer or completeness.
+
+## M40: paired transcript conformance is narrower than ecosystem compatibility
+
+The independent Node codec computes expected historical results and accepts exact replies from
+the fixed Python adapter. No generic manager, tool or execution interface is exposed. The
+separate owned-process harness proves this limited wire path, not source identity or live policy.

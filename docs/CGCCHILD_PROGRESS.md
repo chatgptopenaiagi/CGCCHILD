@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M39: independent Node/Python inert event-journal interoperability.
+M40: independent fixed Node/Python paired MCP conformance.
 
 ## CURRENT HEAD
 
-HEAD (M39 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M40 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -84,6 +84,8 @@ M37 213-instruction I/O filter:14 kernel installs,18 denials each,6 invalid sele
 M38 inert journal codec/schema/pinned vector; seven focused families pass on Windows/Fedora.
 
 M39 independent Node journal bytes/acceptance parity,73 positives and3940 mutations,14 ownership checks.
+
+M40 paired MCP sessions pass Windows/Fedora;45 transcript cases and19 Node lifecycle checks.
 
 ## PARTIAL
 
@@ -178,6 +180,8 @@ Final seven journal tests passed Windows/Fedora; Windows101 child tests:91 passe
 Independent JSON Schema validation unavailable; JSON/shape contract checks only, no install.
 M39 Windows105 child tests:95 passed,10 POSIX skips; full Linux494 passed in120.722s.
 Node692 state/3246 capsule/14 journal checks pass; journal parity73 positives/31 refusals/3940 mutations.
+M40 Windows108 child tests:98 passed,10 POSIX skips; Fedora108 child tests passed in14.724s.
+Three paired-client families pass both hosts; no Python runtime changed, full494 remains latest.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -187,11 +191,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M38 23f1ee46c5196b266f8abbb9b50112f745a4ba74 verified local/tracking/live and clean.
-Current M39 self-reference HEAD; published hash follows next checkpoint.
+M39 44cfba3e2e6081eafb95aa5e447c5d3f95951bd1 verified local/tracking/live and clean.
+Current M40 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M40: build a fixed read-only Node MCP client codec and owned-process interoperability harness
-against the Python adapter; preserve explicit snapshot bootstrap, bounded responses and no generic calls.
+M41: validate paired transport refusal/owned-process cleanup under fixed malformed, oversized and
+silent responder fixtures; no generic executable selector, host registration or live authority.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

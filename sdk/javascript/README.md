@@ -98,3 +98,10 @@ large clocks),31 semantic/wire/anchor refusals,3940 truncations/high-bit mutatio
 Node ownership/pinned checks. The1970-byte vector remains byte-identical to Python. The codec
 imports only Node crypto. journal_conformance.mjs is an8MiB/2000-case offline stdin test adapter,
 not a product transport, listener, credential reader or authority endpoint. No package installed.
+
+## Fixed paired MCP conformance client (M40)
+
+mcp_conformance_client.mjs checks a finite read-only transcript against the child Python adapter.
+It has no transport or generic tool/method interface. See the exact [paired boundary](../../docs/CGCCHILD_MCP.md#m40-independent-paired-adapter-node-conformance-client).
+This is interoperability evidence for those two implementations, not a general-purpose MCP SDK.
+mcp_owned_process.mjs and mcp_client_vectors.mjs are bounded owner-controlled test harnesses.

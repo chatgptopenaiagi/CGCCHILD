@@ -8,7 +8,7 @@ No new tool or authority is introduced; large responses still refuse.
 
 [Adapter](../src/cgc/experimental/mcp_stdio.py), [core](../src/cgc/experimental/readonly_service.py)
 and [owned-process tests](../tests/test_child_mcp.py). V4.2 remains EXPERIMENTAL/PARTIAL.
-Independent SDK/client interoperability is NOT_EXECUTED: neither Windows nor Fedora has the
+Independent SDK interoperability is NOT_EXECUTED: neither Windows nor Fedora has the
 Python MCP package installed. No package was installed to remove that limitation.
 
 ## Reviewed protocol boundary
@@ -110,3 +110,39 @@ Six new tests cover bounds, malformed/digest/read refusals, retained following b
 lookup, quiet subprocess refusal and rebind rejection. A110813-byte historical envelope starts
 in an actual owned Windows subprocess and round-trips through capsule chunks with authority NONE.
 Linux regression and Windows suite results are recorded in child progress.
+
+## M40: independent paired-adapter Node conformance client
+
+[Codec](../sdk/javascript/mcp_conformance_client.mjs),
+[owned-process harness](../sdk/javascript/mcp_owned_process.mjs),
+[tests](../tests/test_child_mcp_client.py).
+The fixed client follows the pinned MCP lifecycle already linked above: initialize/version
+agreement, initialized notification, then four owner-selected read-only tools. The official
+2025-11-25 lifecycle/tools/stdio specifications were reviewed again for this milestone.
+
+This is a paired conformance client, deliberately narrower than a general MCP SDK. It already
+has a validated inert model-state snapshot and independently derives the exact expected core
+results using the Node state/capsule codecs. It emits only initialize, initialized, capabilities,
+state, status and capsule requests, with fixed sequential IDs and bound digest. There is no
+arbitrary method/tool/path/params API. It has one pending reply and accepts only the exact
+canonical ASCII frame expected from this adapter, including matching text/structured results.
+Errors, extra fields, notifications, reordered IDs, altered content, version changes, duplicates,
+truncation and responses over96KiB permanently invalidate. This stricter format is not imposed
+on arbitrary MCP servers. Successful comparison means PAIRED_TRANSCRIPT_MATCH, authority NONE.
+
+The codec opens no process, pipe, path or network connection. Encoded requests do not assert
+that bytes were sent. next()/accept()/finish()/invalidate() manage only its finite transcript;
+returned request/snapshot bytes are detached. It supports model-state0.1 only, not the larger
+historical continuity profile, discovery, arbitrary extensions or remote transport.
+
+The separate test harness is owner-controlled and receives the test's existing Python executable.
+It launches only the fixed child module/argv with shell disabled and Windows window hidden,
+provides the digest-bound private startup line, then exchanges six requests/five replies.
+Response bytes are bounded per frame and cumulatively; the total5-second timer only terminates
+that owned subprocess. Normal shutdown closes stdin and verifies exit0. No credentials or
+existing external application are read. Valid-session cleanup was observed; arbitrary OS kill/
+pipe failure behavior is not thereby universally accepted.
+
+Three test families pass Windows/Fedora: two actual model sessions,45 transcript cases (one
+positive/44 negative) and19 Node lifecycle/bound/ownership checks. No package installed or
+service registered. SDK ecosystem, plugin and live authentication acceptance remain blocked.

@@ -17,8 +17,9 @@ B10 PARTIALLY_RESOLVED: Fixed32KiB chunks reconstruct large capsules within96KiB
 M13 adds bounded digest-bound POSIX inherited-FD startup. M33 adds explicit digest-bound stdin
 startup on Windows/Linux, avoiding payload argv limits. POSIX descriptor mode remains unavailable
 on Windows; independent SDK/launcher integration remains unaccepted.
-B07: Published protocol compatibility requires independent client interoperability acceptance;
-unit/owned-subprocess transport tests cannot establish ecosystem compatibility.
+B07 PARTIALLY_RESOLVED M40: independent fixed Node client matches the paired Python adapter
+on Windows/Fedora. It is not a general MCP SDK and cannot establish ecosystem compatibility;
+external SDK/client/plugin integration remains unaccepted.
 
 B08: Python MCP SDK unavailable on Windows/Fedora. No install attempted. Native stdio tests
 can establish local framing only; external client acceptance remains NOT_EXECUTED.
