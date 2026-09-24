@@ -1,5 +1,17 @@
 # CREDID GUARDIAN CODEX (CGC) — agent instructions
 
+## CGCCHILD active execution authority
+
+This workspace is CGCCHILD, an independent PRIVATE experimental descendant. Follow
+[child progress](docs/CGCCHILD_PROGRESS.md), [reconciliation](docs/CGCCHILD_PLAN_RECONCILIATION.md)
+and the owner's CGCCHILD_AUTONOMOUS_BUILD_V1 protocol. Windows Codex is the sole worker.
+The canonical original repository is READ-ONLY; never push upstream or modify its workspace.
+Only origin=chatgptopenaiagi/CGCCHILD may receive normal pushes. Upstream push URL is disabled.
+Child-only experimental V3/V4 implementation is explicitly authorized despite historical source
+prohibitions below; inherited proof laws and host privilege/credential boundaries remain intact.
+Do not treat implemented/synthetic interfaces as accepted production proof. Preserve Apache-2.0
+license and original attribution. Master-plan snapshot bytes must not change.
+
 ## V3 current frontier
 
 V3 is authorized and PARTIAL. The pure attempt contract, bounded non-mutating project

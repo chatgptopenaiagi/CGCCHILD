@@ -1,5 +1,11 @@
 # CREDID GUARDIAN CODEX (CGC)
 
+> **CGCCHILD is an experimental descendant/fork of CREDID GUARDIAN CODEX.**
+> Canonical original: [chatgptopenaiagi/CREDID-GUARDIAN-CODEX](https://github.com/chatgptopenaiagi/CREDID-GUARDIAN-CODEX).
+> CGCCHILD may contain speculative, partial or unverified implementations.
+> Current child state: [CGCCHILD progress](docs/CGCCHILD_PROGRESS.md).
+> The inherited status sections below describe canonical source history, not child acceptance.
+
 ## V3 current frontier
 
 V3 is authorized and PARTIAL. The pure attempt contract, bounded non-mutating project
