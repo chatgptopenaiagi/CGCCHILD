@@ -1,0 +1,20 @@
+{
+  "name": "cgcchild-readonly",
+  "version": "0.1.0",
+  "description": "Experimental read-only historical CGCCHILD snapshot consumer",
+  "author": {
+    "name": "Mihai-Bogdan Simion"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "CGCCHILD Read-only",
+    "shortDescription": "Inspect historical CGCCHILD model snapshots.",
+    "longDescription": "Experimental thin integration. No live proof, mutation authority or automatic service launch.",
+    "developerName": "Mihai-Bogdan Simion",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Show the uncertainty and omissions in my CGCCHILD snapshot."
+  },
+  "license": "Apache-2.0",
+  "repository": "https://github.com/chatgptopenaiagi/CGCCHILD"
+}

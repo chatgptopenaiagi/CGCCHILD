@@ -55,3 +55,11 @@ filesystem path, shell, network or live observer is added. Startup receives only
 model snapshot bytes as hex; those bytes must contain no secrets. No SDK dependency was
 installed: owned-subprocess tests are local evidence, not ecosystem acceptance. Plugin work
 will remain repository-local and uninstalled, under the owner's host-safety boundary.
+
+## M6 — thin plugin package without host installation
+
+Used the installed plugin-creator scaffold and validators with an explicit child-local path.
+Only manifest/skill/README are retained. No marketplace was requested or written. No hooks,
+auto-launch MCP configuration or scripts exist. The skill consumes the core and reports
+CORE_UNAVAILABLE when unconnected; it never invents an alternate policy or shell deputy.
+Static package validity is not Codex installation or live interoperability acceptance.

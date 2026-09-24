@@ -17,3 +17,6 @@ unit/owned-subprocess transport tests cannot establish ecosystem compatibility.
 
 B08: Python MCP SDK unavailable on Windows/Fedora. No install attempted. Native stdio tests
 can establish local framing only; external client acceptance remains NOT_EXECUTED.
+
+B09: Codex plugin installation/registration and live integration NOT_EXECUTED. Package is
+child-local only; no host configuration change is authorized merely by creating it.

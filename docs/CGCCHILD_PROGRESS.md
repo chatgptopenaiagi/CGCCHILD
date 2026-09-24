@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M5: experimental version-pinned read-only MCP stdio adapter.
+M6: repository-local thin plugin/skill package; statically validated, not installed.
 
 ## CURRENT HEAD
 
-HEAD (M5 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M6 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -23,6 +23,7 @@ M3 strict bounded ASCII state codec/schema; historical import; deterministic uns
 negative archive corpus, pinned bytes/digests and no-extraction integration.
 M4 four read-only core projections, digest-bound requests,32-request stdio limit and text surface.
 M5 MCP2025-11-25 subset: initialize/tools/ping; seven owned-process/bounds test families.
+M6 plugin manifest/skill static validation; no hooks, auto-launch config or marketplace.
 
 ## PARTIAL
 
@@ -35,7 +36,8 @@ real P3; production mutation/recovery acceptance. See CGCCHILD_BLOCKERS.md.
 
 ## NOT_STARTED
 
-Production quiescence; full safe resume; plugin/portable SDK/gateway; agent fabric.
+Production quiescence; full safe resume; portable SDK/gateway; agent fabric.
+V4.3 plugin foundation EXPERIMENTAL/PARTIAL; installation and Codex interoperability NOT_EXECUTED.
 MCP adapter EXPERIMENTAL/PARTIAL; independent SDK interoperability unavailable.
 V4.2 read-only private transport and V4.5 text surface EXPERIMENTAL/PARTIAL.
 V4.0/V4.1 now EXPERIMENTAL/PARTIAL for model-only scope, not full mission acceptance.
@@ -54,6 +56,7 @@ M4 Windows focused24 passed; full Linux regression413 passed in107.594s.
 Native child source/driver now have explicit LF attributes for reproducible source digests.
 M5 full Linux regression419 passed in107.181s; focused31 passed after added bounds test.
 MCP SDK absent on both hosts.
+M6 installed plugin/skill static validators passed. No runtime changes; full suite not repeated.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -63,11 +66,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M4 21ade83436e8e2580251031bbc8628598a432c02 verified local/tracking/live and clean.
-Current M5 self-reference HEAD; published hash follows next checkpoint.
+M5 3feffe75476c2ea41dd06650a17a2c1cb5f15a98 verified local/tracking/live and clean.
+Current M6 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M6: package a repository-local thin experimental Codex skill/plugin without installing or
-registering it; then independently validate the model snapshot format in existing Node.
+M7: implement an independent bounded JavaScript codec for the model snapshot profile,
+using existing Node and pinned Python vectors to test cross-language parity.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
