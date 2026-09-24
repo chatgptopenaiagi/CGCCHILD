@@ -437,3 +437,10 @@ Cross-language assembly, semantic import and historical journal consistency all
 must satisfy their own contracts. None promotes another failed layer. Continue the
 portable SDK dependency by auditing/porting the pure preservation-record validator
 before attempting a full Node continuity codec; do not accept opaque nested records.
+
+## M63: independently validate nested records before claiming continuity portability
+
+Port the pure record contract with Python parity, not a permissive envelope parser.
+Preserve historical YES/NO/PARTIAL fields as data while current view authority stays NONE.
+Next establish lossless bounded integer JSON mechanics for inspection device/inode values;
+ordinary JSON.parse Number rounding must not silently change content identity.

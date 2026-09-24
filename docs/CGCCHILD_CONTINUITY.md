@@ -49,3 +49,13 @@ suite passed. These failed approaches are retained as engineering evidence.
 Next integration gate is an explicit closed registry of historical profiles with tested
 size/semantic dispatch. Do not make the existing model-only transport silently accept
 arbitrary payloads or imported schemas to accommodate this new envelope.
+
+## M63: independent preservation-record dependency
+
+The [Node SDK](../sdk/javascript/README.md#historical-preservation-record-consistency-m63)
+now validates the pure nested preservation-record contract independently. It preserves
+reported historical conclusions while its wrapper explicitly withholds current authority.
+Full Node continuity remains PARTIAL: inspection receipts and handoff bindings still need
+independent validation. In particular repository identity integers can exceed JavaScript's
+safe Number range; a lossless bounded integer JSON codec is the next prerequisite.
+Do not accept rounded device/inode values or opaque unvalidated nested records.

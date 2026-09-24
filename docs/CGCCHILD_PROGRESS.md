@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M62: granted transfer, independent assembly, semantic import and historical journal composition.
+M63: independent preservation-record validation and historical wrapper parity.
 
 ## CURRENT HEAD
 
-HEAD (M62 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M63 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -128,6 +128,8 @@ M60 independent Node chunk assembly passes both profiles, five parity families a
 M61 explicit chunk scope, per-call revocation/expiry/snapshot checks and64-event refusal remain enforced.
 
 M62 four granted-transfer/journal composition families pass both hosts; incomplete or mismatched layers refuse.
+
+M63 Node preservation-record contract passes four Python parity families including79 lifecycle/receipt combinations.
 
 ## PARTIAL
 
@@ -258,11 +260,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M61 87de18bc6575ecbd8420c36404517a4fcb5abdb3 verified local/tracking/live and clean.
-Current M62 self-reference HEAD; published hash follows next checkpoint.
+M62 385c466d90a50b149ce6b3772ad35d22fdabb029 verified local/tracking/live and clean.
+Current M63 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M63: audit and port the pure preservation-record validation subset into the independent
-Node SDK with semantic parity/refusal tests, as a dependency for full continuity support.
+M64: implement bounded canonical integer JSON mechanics with lossless large integers
+for Node inspection/handoff validation; preserve duplicate, depth, size and wire refusals.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

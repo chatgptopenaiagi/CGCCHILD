@@ -117,3 +117,32 @@ Use the core capsule validator separately before treating the bytes as historica
 node sdk/javascript/test_capsule_chunks.mjs
 python -B -m unittest discover -s tests -p test_child_javascript_chunks.py -v
 ```
+
+## Historical preservation record consistency (M63)
+
+preservation.mjs implements the original pure cgc-preservation-v3.0-provisional
+record validator, not an action adapter. It replays phase transitions, checks notes,
+reported tests/evidence relations and recomputes derived outcomes. Python's default
+ASCII sorted render_json bytes plus one LF are the exact standalone record wire;
+encodeRecord/decodeRecord reject duplicate/noncanonical fields. MAX_BYTES262144 is
+the original default-spaced JSON record limit (wire may add its one LF).
+
+Unicode text counts code points, ASCII serialization escapes UTF-16 surrogate units,
+and canonical UTC timestamps preserve six-digit nonzero microseconds and ordering.
+The Python whitespace distinction is explicit (for example U+0085 versus U+FEFF).
+No filesystem, network, current observation, command or execution API exists.
+validateRecord returns a detached historical record; historicalRecord returns a frozen
+view with detached record()/bytes(), authority NONE, current_safe_to_resume UNKNOWN,
+mutation_authorized false and receipts_authenticated false. A stored record's reported
+safe_to_resume YES is preserved as historical content, never promoted to current proof.
+
+Four cross-language test families compare79 valid lifecycle/receipt combinations,
+Unicode/date/size boundaries, all-field substitutions and canonical corruption cases
+against the unchanged Python validator. Every accepted corpus entry checks view/input
+ownership. The bounded offline preservation_conformance.mjs is a test adapter only.
+This is one dependency for full continuity SDK support; it does not yet validate
+inspection receipts or full handoff envelopes. No new package or host change.
+
+```text
+python -B -m unittest discover -s tests -p test_child_javascript_preservation.py -v
+```
