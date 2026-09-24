@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M48: reproducible retained-native-source evidence audit.
+M49: fixed native lifecycle packets joined to inert owned CREATE/ATTACH effects.
 
 ## CURRENT HEAD
 
-HEAD (M48 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M49 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -102,6 +102,8 @@ M46 native model-derived queries:24 positives,6048 capacity refusals,18 invalid-
 M47 model-bound private transport:56 filtered scenarios,30968 capacity refusals and endpoint cleanup.
 
 M48 fixed21-fixture/65-file source audit; omitted bindings refuse and unrebuilt artifacts stay explicit.
+
+M49 effect-before-model-ack ordering, gated child/readback, collision/attachment failure and owned cleanup.
 
 ## PARTIAL
 
@@ -211,6 +213,8 @@ No Python runtime/schema change; M43 child122 and M42 full505 remain latest regr
 M46 final native builds/runs byte-identical; only getuid/exit, no live bus. All owned builds removed.
 M47 two native builds/runs passed with identical image hashes; unchanged filter and syscall surface.
 M48 five static-auditor families pass Windows/Fedora; no fixture executed, source hashes match.
+M49 two final native runs/builds pass; poll-error distinction corrected and checked.
+Expanded22-fixture/68-file static auditor passes five families on Windows/Fedora.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -220,11 +224,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M47 2f1b22e73b5be5c04bb89fe7cca1126d6057d73a verified local/tracking/live and clean.
-Current M48 self-reference HEAD; published hash follows next checkpoint.
+M48 b9195821c7d25ddf73b7078bbb53c6759123b91b verified local/tracking/live and clean.
+Current M49 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M49: inspect and compose the native admission session with fixed owned inert CREATE/ATTACH effects;
-retain gated-child identity and refuse arbitrary PID/path inputs, without real cgroup provisioning.
+M50: challenge the composed packet/effect boundary with malformed, stale and wrong-phase requests;
+verify refusal before owned filesystem effects and preserve successful prior state without promotion.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

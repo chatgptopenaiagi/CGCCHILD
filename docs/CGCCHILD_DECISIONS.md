@@ -339,3 +339,10 @@ The fixture still cannot authenticate a live system manager or establish control
 The source auditor has fixed expected binding sets and reports unrecorded/unrebuilt evidence.
 It cannot claim current execution or authenticate data by comparing co-replaceable hashes.
 This makes checkpoint inspection repeatable without rerunning historical process fixtures.
+
+## M49: candidate state is committed only after its inert effect is verified
+
+The fixed packet model can prepare an acknowledgement before an effect, but cannot publish
+that as success. The owned-file fixture commits only after kernel return/readback checks;
+collision and attachment failure preserve earlier evidence and invalidate the attempted step.
+Protocol authentication stays synthetic and cleanup authority is fixture-local, never production.

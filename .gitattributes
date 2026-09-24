@@ -64,3 +64,6 @@ docs/lab/child_dbus_query_binding_validate.py text eol=lf
 
 docs/lab/child_dbus_bound_socket.c text eol=lf
 docs/lab/child_dbus_bound_socket_validate.py text eol=lf
+
+docs/lab/child_effect_session.c text eol=lf
+docs/lab/child_effect_session_validate.py text eol=lf

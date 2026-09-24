@@ -158,3 +158,45 @@ The earliest bootstrap evidence has no driver hash: UNRECORDED is reported, neve
 Generated headers, preprocessed output, stream/vector bytes and removed binaries are NOT_REBUILT;
 current fixture execution is NOT_EXECUTED. Their historical digests/results are not revalidated
 by this audit. No historical test was repeated merely to obtain a current green label.
+
+## M49 inert kernel effects before model acknowledgement
+
+[Fixture](lab/child_effect_session.c), [driver](lab/child_effect_session_validate.py),
+[evidence](lab/child_effect_session_evidence.json).
+This twenty-second native fixture composes fixed lifecycle packets with owned Linux-native
+regular-file effects. CREATE first derives a candidate state, then exclusively creates its
+private domain/membership file, then commits the state and canonical model acknowledgement.
+ATTACH launches one gated child, binds its retained pidfd while unreaped, waits for readiness,
+writes its decimal PID to the owned regular file and reads it back before committing the
+candidate. PID text is inert test data, never a write to cgroup.procs or an arbitrary PID input.
+
+SEAL closes the writable membership FD and installs a narrower filter before acknowledgement.
+QUERY observes the still-gated child's pidfd as not ready. The fixture releases and reaps only
+that child, verifies pidfd readiness, removes its own file/directory, and only then commits
+REMOVE. Candidate dispatch counters are not published as completed effects before success.
+These acknowledgements are local model commits; no C-to-B authenticated IPC is claimed here.
+The protocol authenticated/continuity inputs remain synthetic. No filesystem exclusivity follows.
+
+Three cases pass: five successful model acknowledgements after effects; CREATE collision with
+zero acknowledgements and untouched pre-existing fixture material; injected closed membership
+FD during ATTACH with only the earlier CREATE acknowledged and no attach counter committed.
+The failure case invalidates proof, releases/reaps its owned child and removes only its own
+objects as fixture cleanup. It does not reopen admission or claim successful ATTACH/REMOVE.
+Two exact children are reaped per run. Worker gate polls are bounded to2000ms. The driver gives
+its owned session10s; timeout cleanup targets only that fixture's process group. No timeout
+was observed. Normal filesystem cleanup is independently checked by the driver.
+
+Review corrected a boolean poll helper that conflated errors with not-ready. The final helper
+returns separate error/not-ready/ready values, and an invalid FD must produce error. Two final
+builds/runs have identical static image SHA256:
+78ede121cea879719aa1622538c0db7db581b91a7749f836314f4b16b4a91625.
+The three generated role policies retain exact owned-child PID comparisons; b_boot to b_sealed
+is a strict rule-set narrowing. Actual post-seal write/open/filter-regain denials are checked.
+
+Pathname and poll-buffer contents are trusted native literals/memory, not enforced by scalar
+seccomp. mkdir/open occur in the disposable trusted prelude; teardown allows unlinkat on the
+owned directory FD and rmdir of the fixed relative domain path. This is not a sandbox against
+compromised native code or same-UID peers. Worker/control credentials are not separated.
+No real broker, cgroup, RO/R6, privileged action or production runtime was implemented.
+The static evidence auditor now explicitly covers22 fixtures/68 files; five audit tests pass
+on Windows/Fedora. Build directories and owned test objects were removed.

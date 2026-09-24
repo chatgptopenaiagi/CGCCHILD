@@ -5,7 +5,7 @@ from pathlib import Path
 NAMES=tuple(sorted(('bootstrap','protocol','ancillary','sender','lifecycle','dbus','dbus_encode',
  'filtered_sender','rights_sender','fd_identity','session','bound_session','dbus_auth','dbus_stream',
  'dbus_owner','dbus_connection','dbus_socket','dbus_filtered_socket','dbus_encoded_socket',
- 'dbus_query_binding','dbus_bound_socket')))
+ 'dbus_query_binding','dbus_bound_socket','effect_session')))
 MAX_BYTES=262144
 EXPECTED_BINDINGS={
     'ancillary':('driver_sha256', 'payload_prefix_sha256', 'source_sha256'),
@@ -22,6 +22,7 @@ EXPECTED_BINDINGS={
     'dbus_query_binding':('driver_sha256', 'prefixes_sha256', 'sources_sha256'),
     'dbus_socket':('driver_sha256', 'prefixes_sha256', 'source_sha256'),
     'dbus_stream':('decoder_prefix_sha256', 'driver_sha256', 'source_sha256'),
+    'effect_session':('driver_sha256', 'lifecycle_prefix_sha256', 'payload_prefix_sha256', 'source_sha256'),
     'fd_identity':('driver_sha256', 'payload_prefix_sha256', 'receive_prefix_sha256', 'source_sha256'),
     'filtered_sender':('driver_sha256', 'payload_prefix_sha256', 'receive_prefix_sha256', 'source_sha256'),
     'lifecycle':('driver_sha256', 'payload_prefix_sha256', 'source_sha256'),
