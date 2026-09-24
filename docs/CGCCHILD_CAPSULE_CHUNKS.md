@@ -44,3 +44,10 @@ The present chunk function deterministically regenerates archive bytes for each 
 This is bounded but not yet optimized or benchmark-accepted. Startup hex CLI remains subject
 to host command-line limits; chunking solves response size, not large-input launch transport.
 Independent MCP SDK compatibility and production V3 proof remain separate blockers.
+
+## Current implementation clarification (M45 audit)
+
+The paragraph above describes M11's original state. M12 caches one immutable archive per core;
+only the standalone stateless chunk helper regenerates it. M33 provides bounded digest-bound
+stdin startup for large snapshots on Windows/Linux. Neither update removes the96KiB response
+limit, changes chunk grammar, authenticates a caller, or accepts a general MCP SDK.

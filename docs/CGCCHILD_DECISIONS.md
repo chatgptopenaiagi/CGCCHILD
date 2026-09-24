@@ -315,3 +315,9 @@ all execution remains unavailable regardless of supplied or derived verdict.
 The socket fixture now transmits bytes emitted by the native encoder under its existing
 scalar filter. Exactly three dummy queries are callable; expected canonical frames remain
 independent fixtures. No new syscall, bus connection or runtime target authority is introduced.
+
+## M45: component counts do not discharge protected-profile dependencies
+
+The dependency audit retains all real proof gates and separates historical documentation
+from later implemented fixes. Next work binds native query generation to validated model
+owner/serial state; broader UI/SDK expansion is lower priority than this finite authority-path gap.

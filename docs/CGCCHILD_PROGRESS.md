@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M44: native fixed encoding composed with filtered private socket transport.
+M45: master-plan dependency and proof-boundary audit.
 
 ## CURRENT HEAD
 
-HEAD (M44 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M45 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -94,6 +94,8 @@ M42 pure recovery assessment: seven fixed issue categories; imported evidence ca
 M43 nine action/level pairs and cross-action substitution refusal; no executor or proof promotion.
 
 M44 native query generation under existing filter;14 scenarios and489 capacity refusals per run.
+
+M45 current implementation/proof matrix reconciled; original inherited modifications remain only child banners.
 
 ## PARTIAL
 
@@ -209,11 +211,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M43 c7b85f2cb8eb97a54ca74c5e0bc8561df52b5b8d verified local/tracking/live and clean.
-Current M44 self-reference HEAD; published hash follows next checkpoint.
+M44 ada8b802ccc6d353f2e58e800e97ec2e65f0072b verified local/tracking/live and clean.
+Current M45 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M45: audit child implementation against the master-plan dependency queue and current proof gates;
-identify the next useful bounded milestone without promoting component fixtures to live acceptance.
+M46: bind native Version query destination and serial to validated model owner/pending state;
+test varied synthetic owners and phase/generation refusal without any live bus connection.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

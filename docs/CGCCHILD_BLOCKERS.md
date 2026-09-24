@@ -49,3 +49,8 @@ not automatically implement or authorize that image. Continue independent inert 
 
 B10 M33: the explicit stdin route is implemented and tested; it is private launcher framing,
 not an assertion that ordinary MCP clients automatically supply this bootstrap.
+
+B12 M45 update:19 native component fixtures now include real generated query bytes under the
+private socket transport filter. Query destination/serial are still dummy constants; binding
+those to validated model state is the next unprivileged gap. This does not remove real
+credential, protected image, policy or manager-continuity obligations.

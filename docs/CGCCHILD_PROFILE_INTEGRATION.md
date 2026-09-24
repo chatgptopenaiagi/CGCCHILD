@@ -45,3 +45,11 @@ and a valid >96KiB V3 record: capsule succeeds losslessly, transport refuses exp
 All49 Windows child tests and692 Node checks pass. Full Linux results are in progress.
 The original validators and missions remain unchanged. This extends experimental historical
 interoperability only; current P3, production quiescence and mutation acceptance do not change.
+
+## Current implementation clarification (M45 audit)
+
+The M10 validation above is historical. M11 added the fifth, fixed capsule.chunk method for
+large records; M12 cached its archive; M33 added bounded digest-bound stdin startup; M40/M41
+validated a fixed paired Node client and owned transport refusal. Large state.get/export
+responses still refuse above96KiB; explicit chunk reconstruction is the supported alternative.
+The Node/skill profile limit and absence of general ecosystem acceptance remain unchanged.
