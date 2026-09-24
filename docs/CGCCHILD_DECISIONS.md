@@ -228,3 +228,9 @@ be modeled separately; framing success cannot create a trusted current manager g
 Native pending-request and owner checks reject stale/duplicate/rebound messages. Generation and
 restart events remain synthetic. Explicit field initialization replaces an unexpected compiler
 memset dependency; freestanding import checks stay mandatory. Privileged evidence remains blocked.
+
+## M31: component validation does not complete the privileged image
+
+The native evidence matrix preserves M1-M5 PARTIAL and records final-image/manifest/live-policy
+gaps separately from passed mechanics. Independent model-capsule Node interoperability is the
+next stable-interface milestone; it requires no privileged evidence or authority promotion.

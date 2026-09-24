@@ -5,7 +5,7 @@
 | B01 | Privilege | RO-1–RO-5 pending separate approval; no sudo/root route tried | Inert bootstrap/filter/codec work |
 | B02 | Privilege | R6 and real credential/control-plane separation not authorized or accepted | Native owned-process analogues and refusal interfaces |
 | B03 | Evidence | Windows/WSL/filesystem writer exclusivity UNKNOWN; process containment cannot substitute | Action-scoped evidence model and conservative orchestration |
-| B04 | Design | Trusted staged prelude validated inertly; real credential/C-peer specialization still unproved | Child native fixture complete; privileged anti-injection acceptance still blocked |
+| B04 | Design | Trusted staged prelude validated inertly; real credential/C-peer specialization still unproved | Owned native components validated; final protected image/anti-injection acceptance still blocked |
 | B05 | Telemetry | Trusted remaining usage percentage unavailable | Frequent checkpoints; never estimate percentage |
 
 No privileged read/mutation, secret collection, automatic orphan cleanup or external repository
@@ -39,3 +39,8 @@ Automatic Git maintenance was considered because object-directory metadata appea
 shrink, but no causal event was captured; that remains HYPOTHESIS, not a finding. The
 [Git documentation](https://www.kernel.org/pub/software/scm/git/docs/git-config.html) describes
 automatic maintenance but does not establish what happened in these failed fixtures.
+
+B12 M31 native composition boundary:15 child fixtures validate selected components, not one
+protected privileged image. Runtime manifest binding, real credentials, live manager adapter
+and full role integration remain unimplemented/unaccepted. RO approval would supply facts,
+not automatically implement or authorize that image. Continue independent inert portability.

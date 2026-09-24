@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M30: finite native request-correlation and manager-owner MODEL.
+M31: native conformance audit and dependency-safe portability handoff.
 
 ## CURRENT HEAD
 
-HEAD (M30 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M31 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -67,6 +67,8 @@ M29 native framing:1026 split runs,1025 incomplete prefixes and247 negative fram
 
 M30 owner/request model:21 scenarios/107 steps, terminal stale/owner-change/disconnect refusal.
 
+M31 native component/proof matrix reconciled;15 source evidence hashes match; private/source isolation verified.
+
 ## PARTIAL
 
 Inherited V3/M1-M5; native role bootstrap; containment; complete master-plan implementation.
@@ -83,8 +85,8 @@ Fabric/read-policy foundations EXPERIMENTAL/PARTIAL, in-process laboratory only.
 V4.4 Node codec EXPERIMENTAL/PARTIAL; other languages/browser/full V3 projection absent.
 V4.3 plugin foundation EXPERIMENTAL/PARTIAL; installation and Codex interoperability NOT_EXECUTED.
 MCP adapter EXPERIMENTAL/PARTIAL; independent SDK interoperability unavailable.
-V4.2 read-only private transport and V4.5 text surface EXPERIMENTAL/PARTIAL.
-V4.0/V4.1 now EXPERIMENTAL/PARTIAL for model-only scope, not full mission acceptance.
+V4.2 read-only private transport and V4.5 text/offline HTML surfaces EXPERIMENTAL/PARTIAL.
+V4.0/V4.1 EXPERIMENTAL/PARTIAL for model and lossless historical V3 profiles; no full mission acceptance.
 
 ## TEST RESULTS
 
@@ -142,6 +144,7 @@ M27 bound session passed with role-specialized FD reads and monotonic seal; no p
 M28 static native auth codec passed; no connection, authentication or manager operation occurred.
 M29 bounded fragmented/coalesced stream passed; typed results exact, terminal invalidation checked.
 M30 initial compiler memset import refused; explicit field initialization fixed it; final21/107 pass.
+M31 static92 AST/24 JSON/15 native-source hashes/88 child relative links pass; inherited canonical scope preserved.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -151,11 +154,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M29 31b55417d3fe7891c1748b18b983b606f39daffa verified local/tracking/live and clean.
-Current M30 self-reference HEAD; published hash follows next checkpoint.
+M30 1df1907e1723092b83f17aa1ab819ce71d7fa93f verified local/tracking/live and clean.
+Current M31 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M31: consolidate native mechanical conformance and exact remaining M1-M5/production gates;
-select the next independent master-plan milestone without upgrading synthetic evidence.
+M32: implement independent inert capsule0.1 export/import in the existing Node model-only SDK;
+require exact Python bytes and hostile-archive refusal, no extraction or full-continuity claim.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

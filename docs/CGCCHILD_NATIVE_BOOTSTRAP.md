@@ -74,3 +74,52 @@ full native broker conformance or continuously closed admission is claimed. RO/R
 NOT_EXECUTED. Filesystem exclusivity and real-project P3 remain UNKNOWN. Production producer
 remains NOT_STARTED. This milestone isolates the native setup mechanics so independent
 refusal interfaces can advance without granting authority to synthetic records.
+
+## M31: child conformance reconciliation
+
+This section supersedes only current child status, not historical source acceptance.
+The15 retained child native source/evidence pairs match their recorded SHA256 at this audit.
+Drivers with recorded digests also match. Native execution is evidence of the named fixture,
+not proof that every component has been composed into a future privileged image.
+
+| Component | Child evidence | Actual execution | Remaining boundary |
+|---|---|---|---|
+| Trusted prelude/inert membership | M1 | Owned nonroot file, gates, child and filters | Protected bootstrap, real cgroup and credentials absent |
+| Payload/canonical replies | M17/M20 | Native finite parsing and negative corpus | Fixed model generations, no authenticated issuance |
+| Ancillary/received rights | M18/M24 | Kernel socket credentials, truncation,48 closures in composed layout | Only specified kernel-origin buffers and inventories |
+| Launch instance | M19/M23 | Retained pidfd, live/dead queued message, filtered syscalls | Point-in-time observation; same-UID injection not excluded |
+| FD identity | M25/M27 | Creation-bound type/access/stat checks and substitutions | Not OFD identity or filesystem exclusivity |
+| Admission session | M26/M27 | Six requests/five replies, monotonic filters | Effects counters; continuity/empty synthetic |
+| Incoming D-Bus | M21/M29 | Typed decoder and bounded fragmented/coalesced frames | No bus connection or live request scheduler |
+| Outgoing D-Bus | M22 |11 exact native frames,3862 short-buffer refusals | Dummy targets; runtime manifest/launch adapter absent |
+| EXTERNAL transcript | M28 |85 lines,2489 split runs | Encoded is not sent; no authenticated connection |
+| Owner/request correlation | M30 |21 scenarios/107 steps | Synthetic generation/disconnect/reexec events |
+| Original16 profile candidates | Inherited d7cb evidence | Not rerun without cause | Not accepted final privileged role policy |
+
+Wrong-architecture/x32 checks in the child generators are interpreter/model checks.
+Named child role filters were actually installed in their owned kernel fixtures, with
+specified syscall-denial probes. Neither class implies privileged or production acceptance.
+All production-accepted cells remain false. The original M4 generic/native branch gaps are
+reduced by these fixtures, not declared universally resolved.
+
+Canonical proof gates remain:
+- M1 PARTIAL: identity allocation and authorized privileged launch not executed.
+- M2 PARTIAL: installed effective manager/deputy policy still needs scoped RO approval.
+- M3 PARTIAL: real root-to-C/W transition and uninterrupted anti-injection proof absent.
+- M4 PARTIAL: tested native components; final protected image/runtime manifest and actual
+  credential/owned-object policy specialization not implemented or accepted.
+- M5 PARTIAL: live system-manager continuity/reexec and system-unit survivor proof absent.
+- RO-1..5 and R6 NOT_EXECUTED; filesystem exclusivity/P3 UNKNOWN; production producer NOT_STARTED.
+
+The next dependency-safe master-plan work is portable inert capsule interoperability in the
+existing Node SDK. The model-state0.1 codec and capsule0.1 bytes already have stable pinned
+Python evidence. A Node capsule implementation can be independently tested without privileged
+proof, network/host configuration or broadening the model-only SDK into full V3 acceptance.
+Full continuity0.2 remains explicitly unsupported by that SDK until its own validator exists.
+
+Audit checks:92 tracked Python ASTs,24 JSON files,15 native source hashes and88 relative links
+in child documents pass. Canonical inherited modifications are only authorized child banners
+in README/AGENTS; original runtime/tests/missions/license remain unchanged. Original live
+main is still d7cb43de3ac001bf28470d6d2f561ed70f106e6a, and its sole untracked owner plan remains.
+Child repository remains private. No original push, privileged read or host configuration
+change occurred. Full Linux468 tests remain the latest runtime regression; B11 remains UNKNOWN.
