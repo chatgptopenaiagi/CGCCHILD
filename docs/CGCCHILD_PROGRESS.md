@@ -6,20 +6,21 @@ Experimental child initialized; inherited V3 PARTIAL. V1/V2 accepted source beha
 
 ## CURRENT MILESTONE
 
-G0: protected private fork, immutable master plan and source reconciliation.
+M1: staged native inert bootstrap and runtime PID-specialized filters validated.
 
 ## CURRENT HEAD
 
-HEAD (this genesis checkpoint); parent d7cb43de3ac001bf28470d6d2f561ed70f106e6a.
+HEAD (M1 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
 Full source-history clone; source/tracking/live verification; private target creation and query;
 origin/upstream isolation; byte-exact plan snapshot and SHA256; dependency work queue.
+M1 nonroot native CREATE/ATTACH analogue, gated child, exact PID predicates and narrowing.
 
 ## PARTIAL
 
-Inherited V3/M1–M5; native role bootstrap; containment; complete master-plan implementation.
+Inherited V3/M1â€“M5; native role bootstrap; containment; complete master-plan implementation.
 
 ## BLOCKED
 
@@ -28,11 +29,13 @@ real P3; production mutation/recovery acceptance. See CGCCHILD_BLOCKERS.md.
 
 ## NOT_STARTED
 
-Child runtime milestones; production quiescence; full safe resume; V4 runtime; agent fabric.
+Production quiescence; full safe resume; V4 runtime; agent fabric.
 
 ## TEST RESULTS
 
-Genesis documentation/static checks only. No inherited runtime regression rerun yet.
+Genesis AST/JSON/plan-byte checks passed. Native inert fixture compiled/executed twice,
+second run adding FD inventory and scalar specialization model checks. Both exited zero.
+No inherited runtime regression rerun: production Python is unchanged.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -42,11 +45,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-Source d7cb43de3ac001bf28470d6d2f561ed70f106e6a; initial child refs matched before genesis.
-Genesis self-reference HEAD; resolved SHA follows publication.
+Genesis 81dc2c0950f3e022e724244b8093d5e96bee0075 verified local/tracking/live and clean.
+Current M1 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M1: resolve bootstrap/live-identity installation with a fixed inert broker sequence and owned
-nonprivileged fixtures. Validate, checkpoint and continue the dependency queue autonomously.
+M2: implement a strict experimental evidence envelope and refusal-first orchestration boundary;
+keep serialized/synthetic evidence incapable of authorizing production mutation. Then protocol/capsule.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
