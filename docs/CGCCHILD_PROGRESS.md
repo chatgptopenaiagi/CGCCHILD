@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M56: deterministic controller exit invalidates before the next inert effect.
+M57: actual CREATE/ATTACH failures withhold channel success.
 
 ## CURRENT HEAD
 
-HEAD (M56 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M57 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -118,6 +118,8 @@ M54 three-process filtered channel/effect dialogue passes; five effect-ordered a
 M55 seventeen actual-channel negatives/reopen attempts refuse; positive effect dialogue still passes.
 
 M56 three controller-exit boundaries and positive dialogue pass without signals or timing sleeps.
+
+M57 CREATE collision/ATTACH EBADF and positive channel dialogue pass with owned cleanup.
 
 ## PARTIAL
 
@@ -244,11 +246,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M55 da17289235f3de76bbfc1d8966824afe7e438f2d verified local/tracking/live and clean.
-Current M56 self-reference HEAD; published hash follows next checkpoint.
+M56 5eed4dff52d9a6ee7e325063670b4bf6f152ff07 verified local/tracking/live and clean.
+Current M57 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M57: compose actual owned CREATE collision/ATTACH failure with the channel;
-verify no success acknowledgement, preserved prior evidence and conservative cleanup.
+M58: reconcile completed nonprivileged native composition with remaining proof gates
+and select the next dependency-safe independent master-plan implementation.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

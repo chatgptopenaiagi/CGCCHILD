@@ -5,9 +5,10 @@ from pathlib import Path
 NAMES=tuple(sorted(('bootstrap','protocol','ancillary','sender','lifecycle','dbus','dbus_encode',
  'filtered_sender','rights_sender','fd_identity','session','bound_session','dbus_auth','dbus_stream',
  'dbus_owner','dbus_connection','dbus_socket','dbus_filtered_socket','dbus_encoded_socket',
- 'dbus_query_binding','dbus_bound_socket','effect_session','effect_rejection','atomic_launch','scalar_launch','dual_launch','channel_effect','channel_rejection','channel_death')))
+ 'dbus_query_binding','dbus_bound_socket','effect_session','effect_rejection','atomic_launch','scalar_launch','dual_launch','channel_effect','channel_rejection','channel_death','channel_failure')))
 MAX_BYTES=262144
 EXPECTED_BINDINGS={
+    'channel_failure':('driver_sha256', 'filter_evidence', 'lifecycle_prefix_sha256', 'payload_prefix_sha256', 'socket_types_sha256', 'source_sha256'),
     'channel_death':('driver_sha256', 'filter_evidence', 'lifecycle_prefix_sha256', 'payload_prefix_sha256', 'socket_types_sha256', 'source_sha256'),
     'channel_rejection':('driver_sha256', 'filter_evidence', 'lifecycle_prefix_sha256', 'payload_prefix_sha256', 'socket_types_sha256', 'source_sha256'),
     'channel_effect':('driver_sha256', 'filter_evidence', 'lifecycle_prefix_sha256', 'payload_prefix_sha256', 'socket_types_sha256', 'source_sha256'),

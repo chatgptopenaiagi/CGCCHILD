@@ -450,3 +450,28 @@ identity acceptance or filesystem/P3 promotion follows. Unexpected exit outside
 these fixed fixture modes refuses the run rather than being reported as test success.
 Next compose actual CREATE collision/ATTACH failure with channel acknowledgements
 and owned cleanup, without accepting a success response for a failed kernel effect.
+
+## M57: real kernel-effect failures do not become channel success
+
+OBSERVED_FACT: two fixed failure modes and the positive M54 dialogue pass in one
+native image. CREATE encounters an owned pre-existing domain (EEXIST); B invalidates
+without opening/modifying it, C observes EOF without a success response, and the
+driver verifies the original marker bytes and directory inventory unchanged.
+ATTACH launches an owned gated W after one CREATE ACK, then deliberately closes
+the empty membership descriptor before write. The actual write returns EBADF;
+B preserves count/creates=1 and attaches/removes=0, invalidates, releases/reaps only
+its own W for fixture cleanup, removes its own domain and ends C's channel without
+an ATTACH success reply. C is also reaped. Cleanup is not a successful REMOVE action.
+
+[Source](lab/child_channel_failure.c), [driver](lab/child_channel_failure_validate.py),
+[evidence](lab/child_channel_failure_evidence.json). Two final builds/evidence match,
+three fixed native runs each pass. No timeout, signals, cgroup, privileged read,
+account or service. All owned temporary build directories removed; filter rules
+and syscall inventory remain M54. Static retained audit covers30 fixtures/92 files.
+Failure injection is fixture-local and does not promise general orphan recovery.
+The same-UID trusted image, synthetic continuity and check-to-use race limits remain.
+
+Next reconcile this completed nonprivileged composition tranche against the master
+plan/proof gates. Separate demonstrated launch/channel/effect behavior from remaining
+protected-identity, manager-policy, cgroup and filesystem acceptance, then select
+useful independent implementation without requesting or performing privileged work.

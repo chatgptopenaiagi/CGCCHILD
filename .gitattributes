@@ -87,3 +87,6 @@ docs/lab/child_channel_rejection_validate.py text eol=lf
 
 docs/lab/child_channel_death.c text eol=lf
 docs/lab/child_channel_death_validate.py text eol=lf
+
+docs/lab/child_channel_failure.c text eol=lf
+docs/lab/child_channel_failure_validate.py text eol=lf

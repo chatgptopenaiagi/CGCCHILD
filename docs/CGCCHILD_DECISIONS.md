@@ -395,3 +395,10 @@ Use launch pidfd identity/readiness at receipt and immediately before effect.
 Deterministic normal-exit handshakes test those boundaries without root or signals.
 Do not describe the remaining check-to-use window as continuous liveness proof.
 Historical CREATE remains evidence; cleanup is not successful operation promotion.
+
+## M57: actual effect failure withholds channel success
+
+Owned collision and EBADF attachment tests now compose with the real controller
+channel. Previous CREATE remains historical fact; no ATTACH/REMOVE success is
+invented. Cleanup releases/reaps only fixture-created children and removes owned
+objects. Reconcile remaining proof dependencies before expanding runtime scope.
