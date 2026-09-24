@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M21: finite native incoming D-Bus decoder against immutable inert frames.
+M22: fixed native outgoing D-Bus encoding and exhaustive output-capacity checks.
 
 ## CURRENT HEAD
 
-HEAD (M21 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M22 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -48,6 +48,8 @@ M19 gated child/pidfd binding, connection-vs-message identity, dead queued messa
 M20 native lifecycle model:15 scenarios/49 transitions and636 reply cases; no broker effects.
 
 M21 native incoming decoder:259 cases,12 typed positives and247 negatives; no bus connection.
+
+M22 fixed outgoing encoder:11 canonical frames,3862 capacity refusals and3 unknown selectors.
 
 ## PARTIAL
 
@@ -115,6 +117,7 @@ M19 final native sender fixture passed; child reaped, descriptors/build director
 Poll-error handling tightened and closed-pidfd negative case added during review.
 M20 static native lifecycle/reply fixture passed first compile/run; no runtime module change.
 M21 static native decoder passed259 cases;215 deterministic mutations. No Python runtime change.
+M22 native encoder passed3876 cases; no transport or runtime manifest adapter.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -124,11 +127,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M20 ac4a848c94fd5030dd9c1bd041d7a8d569460b28 verified local/tracking/live and clean.
-Current M21 self-reference HEAD; published hash follows next checkpoint.
+M21 089d668c558007499751e805b579aa675b108750 verified local/tracking/live and clean.
+Current M22 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M22: implement fixed native outgoing D-Bus encoding against retained canonical frames;
-no bus connection, manager call or privileged read. Then review remaining native composition gaps.
+M23: compose the owned sender/ancillary/pidfd fixture with exact per-role seccomp restrictions;
+validate only owned nonroot processes, no manager calls, privileged reads or R6.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

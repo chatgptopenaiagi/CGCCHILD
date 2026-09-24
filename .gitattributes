@@ -17,3 +17,6 @@ docs/lab/child_lifecycle_validate.py text eol=lf
 
 docs/lab/child_dbus.c text eol=lf
 docs/lab/child_dbus_validate.py text eol=lf
+
+docs/lab/child_dbus_encode.c text eol=lf
+docs/lab/child_dbus_encode_validate.py text eol=lf

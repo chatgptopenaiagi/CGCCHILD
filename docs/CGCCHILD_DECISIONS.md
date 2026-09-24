@@ -173,3 +173,9 @@ The static parser compares259 inert cases with the inherited analogue, including
 Per-kind header masks deliberately narrow the child profile. Native outgoing encoding and
 composed bootstrap/filter acceptance remain separate; a parser pass cannot establish policy.
 See [native D-Bus mechanics](CGCCHILD_NATIVE_DBUS.md).
+
+## M22: native encoding exposes only fixed dummy selectors
+
+The11 retained outgoing frames now have independent native encoding with exhaustive short-buffer
+refusal checks. All target values remain compiled dummy data. Runtime manifest binding and
+live manager authorization are separate obligations; emitted bytes cannot exercise authority.

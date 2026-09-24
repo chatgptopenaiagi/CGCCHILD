@@ -64,3 +64,28 @@ unchanged.
 Next: fixed native outgoing encoding and exact comparison with retained canonical frames,
 then composition with the separate payload/ancillary/lifecycle/filter fixtures. Privileged
 RO requests remain pending; approving them would not close these native implementation gaps.
+
+## M22: fixed native outgoing encoding
+
+[Encoder source](lab/child_dbus_encode.c), [driver](lab/child_dbus_encode_validate.py)
+and [execution](lab/child_dbus_encode_evidence.json) implement exactly11 closed dummy selectors.
+No caller supplies method, interface, property, path, PID, executable, unit, serial or manifest.
+The canonical dummy values are compiled into fixed branch logic; a runtime manifest adapter
+and live-instance substitution remain unimplemented. Internal string writers are not an
+external API. There is no transport or command-line selector.
+
+All V-D01..11 frames match byte-for-byte, including the22 launch properties, nested ExecStart,
+empty auxiliary unit array, peer attachment and unauthorized peer-unit/property probes.
+The native code independently writes aligned fields and patches array lengths; expected
+frames come from the retained specification, not from this encoder. The Python finite decoder
+also recovers the retained logical structures. This is native-encode/Python-decode parity,
+not a native outgoing decoder or live systemd property acceptance.
+
+11 exact-size successful writes,3862 insufficient-capacity refusals and3 unknown-selector
+refusals passed. Every short-capacity case checks the entire4098-byte output region remains
+unchanged; successful cases check both guard bytes. The output is copied only after bounded
+internal encoding completes. Static ELF/import/syscall checks passed; no temporary artifact
+remains. No assertion or wire contract changed.
+
+Next composition target: combine the owned live sender/ancillary parser with exact per-role
+seccomp restrictions, preserving inherited-filter monotonicity and no protected-UID claim.

@@ -1,0 +1,94 @@
+{
+  "argv": [
+    "gcc",
+    "-std=c11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-fno-stack-protector",
+    "-fno-pie",
+    "-mno-red-zone",
+    "-nostdlib",
+    "-static",
+    "-no-pie",
+    "-Wl,--build-id=none",
+    "-Wl,-z,noexecstack",
+    "fixture.c",
+    "-o",
+    "fixture"
+  ],
+  "capacity_refusals": 3862,
+  "compiler": "16.2.1",
+  "driver_sha256": "81174f125f63efdeabc50dfd9decb0218628ccb4796c83683fa67887e66c223c",
+  "generated_header_sha256": "e452cb72efb4c087d1c42438545383b5530bd192a6efcb49a3f56314f7d32f1f",
+  "image_sha256": "b31b5b05e33f4bb65f1fb0c1f7265cd714a3ad43fbd22027365b8b421837a845",
+  "kernel": "6.18.33.2-microsoft-standard-WSL2",
+  "output_untouched_on_refusal": true,
+  "positive": 11,
+  "returncode": 0,
+  "scope": "fixed dummy outgoing encoding; exact retained frame match; no runtime manifest, transport, manager operation or authorization",
+  "source_sha256": "ca5ec572abb714e0166b9f7acab8423e3d57cc2e09441232952892e8a276d295",
+  "syscall_sites": 1,
+  "temporary_directory_removed": true,
+  "unknown_selector_refusals": 3,
+  "vectors": [
+    {
+      "bytes": 128,
+      "id": "V-D01",
+      "sha256": "6b2da75d92bb8d5a1c81fbac9c899a3f661ccdb7a541fe77c3257d8322c5ba04"
+    },
+    {
+      "bytes": 173,
+      "id": "V-D02",
+      "sha256": "875a106e6d6f341cd53f96dff76d081d6cefdbbf81a07c7d868e79f7141b391c"
+    },
+    {
+      "bytes": 218,
+      "id": "V-D03",
+      "sha256": "2327c73e60575ca45d0aba918d4819fa5aabd5b4da917bbedc86acb466d2638e"
+    },
+    {
+      "bytes": 269,
+      "id": "V-D04",
+      "sha256": "2206d9c2f410e7da725c7d5f92eec2e7dc577e5ca87ce9034892aad8496e5a36"
+    },
+    {
+      "bytes": 1200,
+      "id": "V-D05",
+      "sha256": "059c48b5a9ce033d26d5c3f453e28af385247904af812a6b00acc9caad041e77"
+    },
+    {
+      "bytes": 264,
+      "id": "V-D06",
+      "sha256": "3935a08426854dfacdabc9897699eb13ed6752ac8c1076df651d4beab5685668"
+    },
+    {
+      "bytes": 307,
+      "id": "V-D07",
+      "sha256": "ced8664f6dd971bb5963274f04f90a7e917786e61ddcbcd84613b347fac1f896"
+    },
+    {
+      "bytes": 260,
+      "id": "V-D08",
+      "sha256": "a98365d50c60b9ab46c53630d9fb07a10b724639cb407c0eb7f8834a43678418"
+    },
+    {
+      "bytes": 283,
+      "id": "V-D09",
+      "sha256": "8054486de8e35f63c3f8c920bd92e31c2d989232167b7ee201b00cda741d395b"
+    },
+    {
+      "bytes": 168,
+      "id": "V-D10",
+      "sha256": "e4cd30fca734a59652a3c1b8e0e0812b8eec787c895ffbeb1ffcb09695a2e191"
+    },
+    {
+      "bytes": 592,
+      "id": "V-D11",
+      "sha256": "b1ae656717b311f73f1e0b728078458823d284b5a10546d80cbb4282c8850fa4"
+    }
+  ]
+}
