@@ -41,3 +41,6 @@ docs/lab/child_dbus_auth_validate.py text eol=lf
 
 docs/lab/child_dbus_stream.c text eol=lf
 docs/lab/child_dbus_stream_validate.py text eol=lf
+
+docs/lab/child_dbus_owner.c text eol=lf
+docs/lab/child_dbus_owner_validate.py text eol=lf

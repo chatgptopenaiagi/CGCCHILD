@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M29: bounded native incoming D-Bus stream/decoder composition.
+M30: finite native request-correlation and manager-owner MODEL.
 
 ## CURRENT HEAD
 
-HEAD (M29 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M30 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -64,6 +64,8 @@ M27 FD identity checks composed into both socket directions; duplication/CLOEXEC
 M28 inert authentication transcript:85 vectors,2489 split runs,106 UID capacity cases.
 
 M29 native framing:1026 split runs,1025 incomplete prefixes and247 negative frames pass.
+
+M30 owner/request model:21 scenarios/107 steps, terminal stale/owner-change/disconnect refusal.
 
 ## PARTIAL
 
@@ -139,6 +141,7 @@ M26 static native bidirectional session passed; exact child reaped, FD inventory
 M27 bound session passed with role-specialized FD reads and monotonic seal; no production change.
 M28 static native auth codec passed; no connection, authentication or manager operation occurred.
 M29 bounded fragmented/coalesced stream passed; typed results exact, terminal invalidation checked.
+M30 initial compiler memset import refused; explicit field initialization fixed it; final21/107 pass.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -148,11 +151,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M28 6b3ea163dc119274a7940a397c73ae9c72420e8d verified local/tracking/live and clean.
-Current M29 self-reference HEAD; published hash follows next checkpoint.
+M29 31b55417d3fe7891c1748b18b983b606f39daffa verified local/tracking/live and clean.
+Current M30 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M30: implement finite request-correlation/manager-owner binding MODEL with stale reply,
-disconnect and owner-change refusal; inert decoded bytes only, no live manager generation claim.
+M31: consolidate native mechanical conformance and exact remaining M1-M5/production gates;
+select the next independent master-plan milestone without upgrading synthetic evidence.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

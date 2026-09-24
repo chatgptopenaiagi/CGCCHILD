@@ -140,3 +140,33 @@ cleanup are recorded. Parsing/framing success remains distinct from authenticate
 Next: a finite request-correlation/manager-owner binding MODEL over these decoded values,
 with disconnect/owner-change/stale-reply terminal invalidation. No live manager generation
 or systemd reexec acceptance can be inferred from that model.
+
+## M30: finite request/owner binding model
+
+[Source](lab/child_dbus_owner.c), [driver](lab/child_dbus_owner_validate.py) and
+[evidence](lab/child_dbus_owner_evidence.json) model Hello -> GetNameOwner -> Version requests.
+Only one request may be pending, at most8 may be issued, and serial exhaustion refuses before
+wrap. Reply sender/signature/serial are derived from pending state, not supplied by the frame.
+The synthetic generation argument must match the model's generation.
+
+Hello and manager-owner replies must contain the finite profile's colon-prefixed numeric
+dotted names, bounded to255 bytes. Client and owner are copied into owned arrays, never kept
+as pointers into a frame. This is deliberately narrower than a general D-Bus name parser.
+The owner must differ from the client. Version replies must come from that exact owner.
+An unchanged NameOwnerChanged signal must also name that bound owner, including while a
+request is pending. Changed owner, unrelated owner, duplicate/stale reply, wrong order,
+disconnect and suspected reexec invalidate permanently. There is no automatic rebind.
+
+21 scenarios/107 steps pass. Scratch frame buffers are overwritten through volatile stores
+after each decode, testing retained-value independence. The initial static link failed with
+an unexpected memset import generated for the large aggregate state initializer. Explicit
+field initialization removed that dependency; no no-import check or assertion was weakened.
+Final ELF/import/syscall checks pass and temporary builds are removed.
+
+Disconnect/reexec are injected MODEL events, not observed manager behavior. The generation is
+synthetic, not an authenticated boot/manager epoch. No bus connects, request sends, privileged
+policy reads or manager mutations occur. SAME_MANAGER_PID != SAME_MANAGER_GENERATION remains
+unresolved for live acceptance. M4 is not accepted merely because these models pass.
+
+Next: consolidate child mechanical evidence against the current M1-M5/production blockers and
+reconcile the next independent master-plan milestone. Do not turn missing live proof into YES.

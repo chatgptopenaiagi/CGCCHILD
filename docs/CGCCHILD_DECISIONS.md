@@ -222,3 +222,9 @@ policy, successful writes or transport timeout/continuity behavior.
 The native decoder now consumes fragmented/coalesced inert frames with exact byte/frame limits.
 Context ordering remains compiled fixture input. Stale request and manager-owner binding must
 be modeled separately; framing success cannot create a trusted current manager generation.
+
+## M30: a correlated owner model is not live manager continuity
+
+Native pending-request and owner checks reject stale/duplicate/rebound messages. Generation and
+restart events remain synthetic. Explicit field initialization replaces an unexpected compiler
+memset dependency; freestanding import checks stay mandatory. Privileged evidence remains blocked.
