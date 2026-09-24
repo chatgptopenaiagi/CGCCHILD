@@ -14,3 +14,6 @@ docs/lab/child_sender_validate.py text eol=lf
 
 docs/lab/child_lifecycle.c text eol=lf
 docs/lab/child_lifecycle_validate.py text eol=lf
+
+docs/lab/child_dbus.c text eol=lf
+docs/lab/child_dbus_validate.py text eol=lf

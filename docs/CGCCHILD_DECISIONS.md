@@ -166,3 +166,10 @@ refuse explicitly. This is not atomic authorization or same-UID control-plane pr
 Native fixed operation ordering, canonical replies and terminal invalidation are now executable
 against in-memory counters. Synthetic authentication/continuity/empty inputs cannot become
 production evidence. Native fixtures remain separately validated, not a composed sandbox.
+
+## M21: finite native incoming frames without transport authority
+
+The static parser compares259 inert cases with the inherited analogue, including typed results.
+Per-kind header masks deliberately narrow the child profile. Native outgoing encoding and
+composed bootstrap/filter acceptance remain separate; a parser pass cannot establish policy.
+See [native D-Bus mechanics](CGCCHILD_NATIVE_DBUS.md).

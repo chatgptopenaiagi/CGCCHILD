@@ -1,0 +1,618 @@
+{
+  "argv": [
+    "gcc",
+    "-std=c11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-fno-stack-protector",
+    "-fno-pie",
+    "-mno-red-zone",
+    "-nostdlib",
+    "-static",
+    "-no-pie",
+    "-Wl,--build-id=none",
+    "-Wl,-z,noexecstack",
+    "fixture.c",
+    "-o",
+    "fixture"
+  ],
+  "cases": 259,
+  "compiler": "16.2.1",
+  "driver_sha256": "d91e86f5e0cda72b21f9ba88671b590db12ae1c9b47af206a793d9e0567ab785",
+  "generated_header_sha256": "f5347fdc821863b2b3f518752d758b5757df36e0ce76a7262b9194e311326215",
+  "image_sha256": "8e45a263a4a209bb993ed94b8017f26923fb566979caf77257c4074a8f975595",
+  "kernel": "6.18.33.2-microsoft-standard-WSL2",
+  "mutations": 215,
+  "negative": 247,
+  "positive": 12,
+  "returncode": 0,
+  "scope": "native finite incoming parser against inert bytes; no bus, encoder, syscall filter or authority",
+  "source_sha256": "e15fd73e49b52a2359d74ebdb7d52a4788a0681bca7edafb12501edf2dccbc87",
+  "syscall_sites": 1,
+  "temporary_directory_removed": true,
+  "vectors": [
+    {
+      "bytes": "6c020001000000000100000016000000050175000100000007017300050000003a312e3432000000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": {
+        "body": [],
+        "signature": ""
+      },
+      "id": "return_empty"
+    },
+    {
+      "bytes": "6c0200010a000000010000001f000000050175000100000007017300050000003a312e34320000000801670001730000050000003a312e343200",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "s",
+        "test": "T7"
+      },
+      "expected": {
+        "body": [
+          ":1.42"
+        ],
+        "signature": "s"
+      },
+      "id": "return_s"
+    },
+    {
+      "bytes": "6c0200011e000000010000001f000000050175000100000007017300050000003a312e343200000008016700016f0000190000002f6f72672f667265656465736b746f702f73797374656d643100",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "o",
+        "test": "T7"
+      },
+      "expected": {
+        "body": [
+          "/org/freedesktop/systemd1"
+        ],
+        "signature": "o"
+      },
+      "id": "return_o"
+    },
+    {
+      "bytes": "6c02000126000000010000001f000000050175000100000007017300050000003a312e34320000000801670001760000017300001d0000002f73797374656d2e736c6963652f6367632d6c61622e7365727669636500",
+      "context": {
+        "property": "ControlGroup",
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "v",
+        "test": "T7"
+      },
+      "expected": {
+        "body": [
+          [
+            "s",
+            "/system.slice/cgc-lab.service"
+          ]
+        ],
+        "signature": "v"
+      },
+      "id": "property_ControlGroup"
+    },
+    {
+      "bytes": "6c02000118000000010000001f000000050175000100000007017300050000003a312e343200000008016700017600000261790010000000000102030405060708090a0b0c0d0e0f",
+      "context": {
+        "property": "InvocationID",
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "v",
+        "test": "T7"
+      },
+      "expected": {
+        "body": [
+          [
+            "ay",
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          ]
+        ],
+        "signature": "v"
+      },
+      "id": "property_InvocationID"
+    },
+    {
+      "bytes": "6c02000108000000010000001f000000050175000100000007017300050000003a312e343200000008016700017600000175000092100000",
+      "context": {
+        "property": "MainPID",
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "v",
+        "test": "T7"
+      },
+      "expected": {
+        "body": [
+          [
+            "u",
+            4242
+          ]
+        ],
+        "signature": "v"
+      },
+      "id": "property_MainPID"
+    },
+    {
+      "bytes": "6c0200010c000000010000001f000000050175000100000007017300050000003a312e34320000000801670001760000017300000300000032353900",
+      "context": {
+        "property": "Version",
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "v",
+        "test": "T7"
+      },
+      "expected": {
+        "body": [
+          [
+            "s",
+            "259"
+          ]
+        ],
+        "signature": "v"
+      },
+      "id": "property_Version"
+    },
+    {
+      "bytes": "6c0200010d000000010000001f000000050175000100000007017300050000003a312e3432000000080167000176000001730000040000002b50414d00",
+      "context": {
+        "property": "Features",
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "v",
+        "test": "T7"
+      },
+      "expected": {
+        "body": [
+          [
+            "s",
+            "+PAM"
+          ]
+        ],
+        "signature": "v"
+      },
+      "id": "property_Features"
+    },
+    {
+      "bytes": "6c03000116000000010000004f000000050175000100000007017300050000003a312e343200000004017300270000006f72672e667265656465736b746f702e444275732e4572726f722e41636365737344656e69656400080167000173000011000000646973636172642074686973207465787400",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": {
+        "error": "org.freedesktop.DBus.Error.AccessDenied",
+        "outcome": "DENIED"
+      },
+      "id": "error_AccessDenied"
+    },
+    {
+      "bytes": "6c030001160000000100000067000000050175000100000007017300050000003a312e3432000000040173003b0000006f72672e667265656465736b746f702e444275732e4572726f722e496e746572616374697665417574686f72697a6174696f6e52657175697265640000000000080167000173000011000000646973636172642074686973207465787400",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T8"
+      },
+      "expected": {
+        "error": "org.freedesktop.DBus.Error.InteractiveAuthorizationRequired",
+        "outcome": "DENIED"
+      },
+      "id": "error_InteractiveAuthorizationRequired"
+    },
+    {
+      "bytes": "6c04000136000000010000008900000001016f00150000002f6f72672f667265656465736b746f702f4442757300000002017300140000006f72672e667265656465736b746f702e444275730000000003017300100000004e616d654f776e65724368616e676564000000000000000007017300140000006f72672e667265656465736b746f702e444275730000000008016700037373730000000000000000180000006f72672e667265656465736b746f702e73797374656d643100000000050000003a312e3432000000050000003a312e343200",
+      "context": {
+        "reply_serial": 1,
+        "sender": "org.freedesktop.DBus",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": {
+        "body": [
+          "org.freedesktop.systemd1",
+          ":1.42",
+          ":1.42"
+        ],
+        "signature": "sss"
+      },
+      "id": "owner_unchanged"
+    },
+    {
+      "bytes": "6c02000100000000010000001800000007017300050000003a312e34320000000501750001000000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": {
+        "body": [],
+        "signature": ""
+      },
+      "id": "reordered_headers"
+    },
+    {
+      "bytes": "42020001000000000100000016000000050175000100000007017300050000003a312e3432000000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "endian"
+    },
+    {
+      "bytes": "6c010001000000000100000016000000050175000100000007017300050000003a312e3432000000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "kind"
+    },
+    {
+      "bytes": "6c020002000000000100000016000000050175000100000007017300050000003a312e3432000000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "version"
+    },
+    {
+      "bytes": "6c028001000000000100000016000000050175000100000007017300050000003a312e3432000000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "flags"
+    },
+    {
+      "bytes": "6c020001000000000000000016000000050175000100000007017300050000003a312e3432000000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "serial_zero"
+    },
+    {
+      "bytes": "6c020001ffffffff0100000016000000050175000100000007017300050000003a312e3432000000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "body_overflow"
+    },
+    {
+      "bytes": "6c0200010000000001000000ffffffff050175000100000007017300050000003a312e3432000000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "header_overflow"
+    },
+    {
+      "bytes": "6c020001000000000100000016000000050175000100000007017300050000003a312e3432000100",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "padding"
+    },
+    {
+      "bytes": "6c020001000000000100000020000000050175000100000007017300050000003a312e34320000000501750001000000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "duplicate"
+    },
+    {
+      "bytes": "6c020001000000000100000020000000050175000100000007017300050000003a312e34320000000901750000000000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "rights"
+    },
+    {
+      "bytes": "6c020001000000000100000020000000050175000100000007017300050000003a312e34320000000a01750000000000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "unknown_header"
+    },
+    {
+      "bytes": "6c020001000000000100000021000000050175000100000007017300050000003a312e343200000008017300000000000000000000000000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "wrong_header_variant"
+    },
+    {
+      "bytes": "6c020001000000000100000016000000050175000200000007017300050000003a312e3432000000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "wrong_reply"
+    },
+    {
+      "bytes": "6c020001000000000100000016000000050175000100000007017300050000003a312e3433000000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "wrong_sender"
+    },
+    {
+      "bytes": "6c02000106000000010000001f000000050175000100000007017300050000003a312e34320000000801670001730000010000007800",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "wrong_signature"
+    },
+    {
+      "bytes": "6c0200010f000000010000001f000000050175000100000007017300050000003a312e343200000008016700016f00000a0000002f6261642f2f7061746800",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "o",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "invalid_path"
+    },
+    {
+      "bytes": "6c04000136000000010000008900000001016f00150000002f6f72672f667265656465736b746f702f4442757300000002017300140000006f72672e667265656465736b746f702e444275730000000003017300100000004e616d654f776e65724368616e676564000000000000000007017300140000006f72672e667265656465736b746f702e444275730000000008016700037373730000000000000000180000006f72672e667265656465736b746f702e73797374656d643100000000050000003a312e3432000000050000003a312e343300",
+      "context": {
+        "reply_serial": 1,
+        "sender": "org.freedesktop.DBus",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "owner_changed"
+    },
+    {
+      "bytes": "6c04000136000000010000007900000001016f00150000002f6f72672f667265656465736b746f702f4442757300000002017300140000006f72672e667265656465736b746f702e44427573000000000301730007000000556e6b6e6f776e0007017300140000006f72672e667265656465736b746f702e444275730000000008016700037373730000000000000000180000006f72672e667265656465736b746f702e73797374656d643100000000050000003a312e3432000000050000003a312e343200",
+      "context": {
+        "reply_serial": 1,
+        "sender": "org.freedesktop.DBus",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "unknown_signal"
+    },
+    {
+      "bytes": "6c04000104000000010000008700000001016f00190000002f6f72672f667265656465736b746f702f73797374656d64310000000000000002017300200000006f72672e667265656465736b746f702e73797374656d64312e4d616e616765720000000000000000030173000900000052656c6f6164696e670000000000000007017300050000003a312e3432000000080167000162000001000000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "reloading"
+    },
+    {
+      "bytes": "6c03000111000000010000004f000000050175000100000007017300050000003a312e343200000004017300210000006f72672e667265656465736b746f702e444275732e4572726f722e4661696c65640000000000000008016700017300000c00000070726976617465207465787400",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "generic_error"
+    },
+    {
+      "bytes": "6c03000116000000010000004f000000050175000100000007017300050000003a312e343200000004017300270000006f72672e667265656465736b746f702e444275732e4572726f722e41636365737344656e69656400080167000173000011000000646973636172642074686973207465787400",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T6"
+      },
+      "expected": null,
+      "id": "denial_wrong_test"
+    },
+    {
+      "bytes": "6c0200010a000000010000001f000000050175000100000007017300050000003a312e3432000000080167000176000001730000010000007800",
+      "context": {
+        "property": "InvocationID",
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "v",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "wrong_variant"
+    },
+    {
+      "bytes": "6c02000117000000010000001f000000050175000100000007017300050000003a312e34320000000801670001760000026179000f000000000102030405060708090a0b0c0d0e",
+      "context": {
+        "property": "InvocationID",
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "v",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "short_invocation"
+    },
+    {
+      "bytes": "6c0200010e000000010000001f000000050175000100000007017300050000003a312e343200000008016700017600000176000173000000010000007800",
+      "context": {
+        "property": "InvocationID",
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "v",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "nested_variant"
+    },
+    {
+      "bytes": "6c02000118000000010000001f000000050175000100000007017300050000003a312e3432000000080167000176000002617900ffffffff000102030405060708090a0b0c0d0e0f",
+      "context": {
+        "property": "InvocationID",
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "v",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "array_overflow"
+    },
+    {
+      "bytes": "6c0200010a000000010000001f000000050175000100000007017300050000003a312e34320000000801670001730000ffffffff3a312e343200",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "s",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "string_overflow"
+    },
+    {
+      "bytes": "6c020001000000000100000016000000050175000100000007017300050000003a312e343200000000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "trailing"
+    },
+    {
+      "bytes": "6c020001000000000100000016000000050175000100000007017300050000003a312e34320000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "truncated"
+    },
+    {
+      "bytes": "6c020001000000000100000016000000050175000200000007017300050000003a312e3432000000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "retained_V-D30"
+    },
+    {
+      "bytes": "6c020001000000000100000016000000050175000100000007017300050000003a312e3433000000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "retained_V-D31"
+    },
+    {
+      "bytes": "6c04000136000000010000008900000001016f00150000002f6f72672f667265656465736b746f702f4442757300000002017300140000006f72672e667265656465736b746f702e444275730000000003017300100000004e616d654f776e65724368616e676564000000000000000007017300140000006f72672e667265656465736b746f702e444275730000000008016700037373730000000000000000180000006f72672e667265656465736b746f702e73797374656d643100000000050000003a312e3432000000050000003a312e343300",
+      "context": {
+        "reply_serial": 1,
+        "sender": "org.freedesktop.DBus",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "retained_V-D32"
+    },
+    {
+      "bytes": "6c03000105000000010000004f00000004017300210000006f72672e667265656465736b746f702e444275732e4572726f722e4661696c656400000000000000050175000100000007017300050000003a312e343200000008016700017300000000000000",
+      "context": {
+        "reply_serial": 1,
+        "sender": ":1.42",
+        "signature": "",
+        "test": "T7"
+      },
+      "expected": null,
+      "id": "retained_V-D35"
+    }
+  ]
+}
