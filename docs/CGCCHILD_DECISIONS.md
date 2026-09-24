@@ -247,3 +247,9 @@ refuses explicitly; no new live compatibility or source authenticity is claimed.
 An explicit digest-bound canonical stdin line supplies either historical snapshot profile before
 MCP initialization. It does not add an MCP tool or permit rebinding. Caller-owned stream lifetime
 and private launcher framing remain explicit; platform tests do not establish SDK interoperability.
+
+## M34: imported capsules produce the same inert historical view
+
+The offline surface uses the canonical importer before producing any HTML. It never extracts
+members or treats archive text as markup. Explicit capsule input avoids format guessing and
+keeps paths, persistence and browser launch outside the renderer. Proof limits remain unchanged.

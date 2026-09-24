@@ -3,7 +3,7 @@ import base64
 import hashlib
 from html import escape
 import sys
-from . import snapshot_profiles as profiles
+from . import snapshot_profiles as profiles, capsule
 
 MAX_HTML=32768
 STYLE="""body{margin:0;background:#f5f3ee;color:#202a33;font:16px/1.6 system-ui,sans-serif}
@@ -45,11 +45,24 @@ def render_html(snapshot_bytes):
     return out
 
 
+def render_capsule(raw):
+    """Validate inert capsule bytes in memory before rendering the saved snapshot.
+
+    No member is extracted or trusted as markup. The existing canonical importer
+    checks archive/member integrity; the surface retains UNKNOWN/NONE semantics.
+    """
+    view=capsule.import_capsule(raw)
+    return render_html(view.state_bytes)
+
+
 def main():
-    if len(sys.argv)!=1:return 2
+    if sys.argv[1:] not in ([],['--capsule-stdin']):return 2
     try:
-        raw=sys.stdin.buffer.read(profiles.MAX_BYTES+1)
-        sys.stdout.buffer.write(render_html(raw))
+        is_capsule=bool(sys.argv[1:])
+        limit=capsule.MAX_BYTES if is_capsule else profiles.MAX_BYTES
+        raw=sys.stdin.buffer.read(limit+1)
+        output=render_capsule(raw) if is_capsule else render_html(raw)
+        sys.stdout.buffer.write(output)
         return 0
     except (ValueError,OSError):return 2
 

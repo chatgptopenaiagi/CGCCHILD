@@ -30,3 +30,25 @@ CSP, escaping, size refusal, malformed/forged inputs and actual subprocess rende
 disposable Windows Edge headless profile rendered the example at1280x1100; visual inspection
 confirmed readable cards and the preserved FAILED/last-known-good distinction. Browser profile
 and screenshot were removed. No browser credentials or existing profile were accessed.
+
+## Inert capsule input (M34)
+
+The same foreground renderer can explicitly accept capsule bytes instead of snapshot JSON:
+
+```text
+python -B -m cgc.experimental.offline_surface --capsule-stdin
+```
+
+Input is binary stdin until EOF, bounded at the capsule maximum plus one byte. The existing
+canonical in-memory importer must accept the entire archive before rendering starts. Both
+model0.1 and historical continuity0.2 are supported. No member is extracted; archived human
+text is checked by the importer, and HTML is regenerated from the validated state. There is no
+format sniffing, filename option, automatic browser launch or archive instruction execution.
+Invalid input exits2 quietly with no partial HTML. Caller-owned timeout and output persistence
+remain unchanged. Integrity is unsigned consistency, never current safety or source identity.
+
+Four new test families exercise both profiles in actual subprocesses, byte-identical snapshot
+versus capsule views, no extraction/path/process effects, hostile paths/symlinks/compression,
+substituted HTML, trailing/truncated data, exact input bound and strict option selection.
+Windows child94 tests:84 passed/10 POSIX skips; Fedora child94 passed. The last full inherited
+regression remains M33's479 pass; this small importer/renderer composition did not change it.

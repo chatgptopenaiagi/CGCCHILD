@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M33: explicit digest-bound stdin startup for large Windows/Linux MCP snapshots.
+M34: inert capsule-to-offline-status composition for both historical profiles.
 
 ## CURRENT HEAD
 
-HEAD (M33 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M34 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -72,6 +72,8 @@ M31 native component/proof matrix reconciled;15 source evidence hashes match; pr
 M32 Node inert capsule codec:exact Python archive bytes,3246 Node checks and5 parity families.
 
 M33 bounded snapshot line bootstrap and unchanged MCP phase; actual Windows large-snapshot round trip.
+
+M34 bounded capsule import renders the same offline HTML; hostile archive rejection before output.
 
 ## PARTIAL
 
@@ -153,6 +155,8 @@ M32 Windows84 child tests:74 passed,10 POSIX skips; Node692 state/3246 capsule c
 Full Linux473 tests passed in112.022s. B11 remains unresolved; no assertion weakened.
 M33 Windows90 child tests:80 passed,10 POSIX skips; full Linux479 passed in114.289s.
 Static AST/JSON/links/fences/plan/mission/license/100-keypoint checks passed.
+M34 Windows94 child tests:84 passed,10 POSIX skips; Fedora94 child tests passed in11.575s.
+Initial test import duplicated six inherited cases; module import corrected before final counts.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -162,11 +166,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M32 3ef967089c99e1ae285bb87e23a5b1b705223e7c verified local/tracking/live and clean.
-Current M33 self-reference HEAD; published hash follows next checkpoint.
+M33 b77ec2b2bc2c7676134eebc5ab56fc5a1e04e93e verified local/tracking/live and clean.
+Current M34 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M34: connect bounded inert capsule import to the existing offline status surface; validate both
-historical profiles and hostile archive refusal without extraction, path access or authority gain.
+M35: compose native inert authentication, framing and owner/request correlation with fragmented
+input and terminal failure tests; no live bus, privileged launch or production acceptance.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
