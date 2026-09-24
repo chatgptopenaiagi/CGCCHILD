@@ -200,3 +200,35 @@ compromised native code or same-UID peers. Worker/control credentials are not se
 No real broker, cgroup, RO/R6, privileged action or production runtime was implemented.
 The static evidence auditor now explicitly covers22 fixtures/68 files; five audit tests pass
 on Windows/Fedora. Build directories and owned test objects were removed.
+
+## M50 malformed/stale requests refuse before the next inert effect
+
+[Fixture](lab/child_effect_rejection.c), [driver](lab/child_effect_rejection_validate.py),
+[evidence](lab/child_effect_rejection_evidence.json).
+The twenty-third fixture extends M49's owned effect path with17 fixed negative packets before
+CREATE or after one successful CREATE: truncation, wrong generation, future/stale sequence,
+wrong epoch, wrong operation phase, duplicate key, extra pathname field and trailing data.
+The exact parser/dispatcher runs before the next effect. Refusal invalidates the active model
+without copying candidate success counters; a subsequent correct packet also refuses.
+
+All17 negative cases pass with zero worker launches. Before CREATE, no domain is created;
+after CREATE, one acknowledgement remains, attachment count stays zero and the membership
+file remains empty before fixture-owned cleanup. The earlier positive, collision and injected
+ATTACH failure cases run in the same image and pass. The driver verifies expected remaining
+objects in each owned directory. Authentication/continuity inputs remain synthetic; these are
+not hostile live controller requests and are not R6 tests.
+
+Two final builds/runs are byte-identical with image SHA256:
+77546888edf8f53e4cb3820b63f7a0a2d16ed56e1efd232a88bfe35f73bedfe5.
+No new syscall/filter allowance is added; bad-packet branches stop before worker/bootstrap
+filter setup. Owned children from the two earlier effect cases are reaped and temporary
+builds removed. The static auditor explicitly includes23 fixtures/71 files. Unknown malformed
+cases outside this finite corpus are not claimed tested; syscall pointer and same-UID trust
+limitations from M49 remain.
+
+Next composition issue: a live C channel and a subsequently created W need separate retained
+launch handles. The current fork-then-pidfd pattern specializes predicates after birth, which
+complicates an already-filtered B setup. Before broadening PID lookup, evaluate whether the
+installed kernel's unprivileged clone3/CLONE_PIDFD can return an owned-child handle atomically
+in a bounded disposable fixture. Existing final-role clone3 denial must remain unchanged.
+An unavailable capability must refuse; this is not permission for privileged launch or R6.

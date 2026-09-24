@@ -346,3 +346,10 @@ The fixed packet model can prepare an acknowledgement before an effect, but cann
 that as success. The owned-file fixture commits only after kernel return/readback checks;
 collision and attachment failure preserve earlier evidence and invalidate the attempted step.
 Protocol authentication stays synthetic and cleanup authority is fixture-local, never production.
+
+## M50: rejected requests do not commit candidate effects or reopen admission
+
+Fixed malformed/stale inputs are tested on both sides of CREATE. Prior success counters are
+retained, the active model invalidates, and later valid packets cannot reset that decision.
+Next, investigate an owned-child atomic pidfd launch before expanding already-filtered broker
+PID lookup. Final worker/controller filters and privilege boundaries remain unchanged.

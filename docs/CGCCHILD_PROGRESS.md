@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M49: fixed native lifecycle packets joined to inert owned CREATE/ATTACH effects.
+M50: malformed/stale packet refusal before the next inert effect.
 
 ## CURRENT HEAD
 
-HEAD (M49 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M50 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -104,6 +104,8 @@ M47 model-bound private transport:56 filtered scenarios,30968 capacity refusals 
 M48 fixed21-fixture/65-file source audit; omitted bindings refuse and unrebuilt artifacts stay explicit.
 
 M49 effect-before-model-ack ordering, gated child/readback, collision/attachment failure and owned cleanup.
+
+M50 seventeen negative packets and seventeen reopen attempts refuse; earlier effect cases still pass.
 
 ## PARTIAL
 
@@ -215,6 +217,9 @@ M47 two native builds/runs passed with identical image hashes; unchanged filter 
 M48 five static-auditor families pass Windows/Fedora; no fixture executed, source hashes match.
 M49 two final native runs/builds pass; poll-error distinction corrected and checked.
 Expanded22-fixture/68-file static auditor passes five families on Windows/Fedora.
+M50 final native builds/runs byte-identical;23-fixture/71-file source audit passes.
+Windows127 child tests:108 passed,19 POSIX skips; Fedora127 passed in22.390s.
+Original80 raw source hashes remain unchanged, including owner plan material.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -224,11 +229,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M48 b9195821c7d25ddf73b7078bbb53c6759123b91b verified local/tracking/live and clean.
-Current M49 self-reference HEAD; published hash follows next checkpoint.
+M49 c6282ba2d1f4fb42606942eb9114590cf09a239e verified local/tracking/live and clean.
+Current M50 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M50: challenge the composed packet/effect boundary with malformed, stale and wrong-phase requests;
-verify refusal before owned filesystem effects and preserve successful prior state without promotion.
+M51: evaluate bounded unprivileged clone3/CLONE_PIDFD owned-child launch feasibility;
+seek atomic launch handles without widening existing final-role PID or namespace authority.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
