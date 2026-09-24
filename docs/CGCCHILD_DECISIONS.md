@@ -617,3 +617,15 @@ not deny the Windows write. No global writer closure follows. Preserve mapping/m
 witnesses alongside these results; do not select a production adapter from one positive route.
 Next reconcile the uninstalled thin plugin's stale model-only description with implemented
 historical continuity/chunk/status interfaces; live host integration remains a separate gate.
+
+
+## M80: thin skill follows the implemented historical core
+
+Update uninstalled plugin0.2.0 to recognize model and historical continuity profiles.
+Bind one advertised digest, prefer compact status, preserve response limits, require an
+existing validated chunk receiver, and never convert incomplete transport into success.
+No launcher, marketplace, hooks, host registration or new tool was added. The installed
+plugin-creator/skill validators pass; live Codex interoperability remains NOT_EXECUTED.
+The reinstall workflow is inapplicable because there is no marketplace-backed installed
+plugin here. The next milestone is a complete dependency/source/evidence audit before
+selecting any further work; optional surface breadth must not hide proof blockers.

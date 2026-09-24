@@ -1,6 +1,6 @@
 {
   "name": "cgcchild-readonly",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Experimental read-only historical CGCCHILD snapshot consumer",
   "author": {
     "name": "Mihai-Bogdan Simion"
@@ -8,7 +8,7 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "CGCCHILD Read-only",
-    "shortDescription": "Inspect historical CGCCHILD model snapshots.",
+    "shortDescription": "Inspect historical CGCCHILD snapshots.",
     "longDescription": "Experimental thin integration. No live proof, mutation authority or automatic service launch.",
     "developerName": "Mihai-Bogdan Simion",
     "category": "Productivity",

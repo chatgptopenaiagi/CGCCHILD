@@ -69,3 +69,8 @@ B03 M77: owned Windows/NTFS sharing checks demonstrate per-file write-open refus
 verified hard-link refusal, but directory guards permit child writes and new-file admission.
 No recursive exclusion follows. Mapping, metadata, pending-I/O and cross-OS routes remain
 unproven; production filesystem exclusivity/P3 remain UNKNOWN.
+
+
+B06 M80: the repository-local thin skill now describes both historical profiles and
+bounded chunk/status behavior. No launcher or host setup is claimed. B08/B09 ecosystem
+and actual Codex integration gates remain; installed skill shape validation is not acceptance.

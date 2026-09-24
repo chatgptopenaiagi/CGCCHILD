@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M79: bounded Windows/Fedora sharing and advisory-lock interoperability.
+M80: uninstalled thin plugin reconciled with historical continuity and bounded reads.
 
 ## CURRENT HEAD
 
-HEAD (M79 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M80 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -147,6 +147,8 @@ M78 retained view prevents guard; metadata writer succeeds during guard.
 
 M79 host guard/Fedora writer denial and Linux flock/Windows writer admission observed.
 
+M80 plugin skill supports both historical profiles with explicit response/receiver limits.
+
 ## PARTIAL
 
 Inherited V3/M1-M5; native role bootstrap; containment; complete master-plan implementation.
@@ -167,6 +169,8 @@ V4.2 read-only private transport and V4.5 text/offline HTML surfaces EXPERIMENTA
 V4.0/V4.1 EXPERIMENTAL/PARTIAL for model and lossless historical V3 profiles; no full mission acceptance.
 
 ## TEST RESULTS
+
+M80 installed plugin-creator and skill-creator static validators passed. No runtime change.
 
 M79 final fixture twice passed; same-writer positive control and release acknowledgment verified.
 Initial path-translation failure corrected before tests; owned processes/handles/temp cleaned.
@@ -313,12 +317,12 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M78 b89b4ee2538cc220cdf9cbb9166c613b72c69af0 verified local/tracking/live and clean.
-Current M79 self-reference HEAD; published hash follows next checkpoint.
+M79 a31ab74a60bfb075035e63692023f1ff036c65ac verified local/tracking/live and clean.
+Current M80 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M80: reconcile the repository-local uninstalled plugin skill with historical continuity,
-large snapshots and bounded status/chunk behavior. Validate its fixed read-only instructions;
-no plugin installation, connection setup, host configuration or current-proof promotion.
-Trusted usage remaining UNKNOWN. RO/R6 still NOT_EXECUTED; production producer NOT_STARTED.
+M81: audit the complete child dependency queue, retained native/portable/filesystem evidence,
+source protection and remaining acceptance blockers. Select only meaningful unblocked work;
+do not add surface breadth merely to defer privileged/effective-policy proof requirements.
+No RO/R6/host installation is authorized. Trusted usage remaining UNKNOWN.
