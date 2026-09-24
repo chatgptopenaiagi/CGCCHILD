@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M61: explicit local chunk grants rechecked for every bounded read.
+M62: granted transfer, independent assembly, semantic import and historical journal composition.
 
 ## CURRENT HEAD
 
-HEAD (M61 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M62 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -126,6 +126,8 @@ M59 both historical capsule profiles export/import/inspect through bounded pipes
 M60 independent Node chunk assembly passes both profiles, five parity families and17 native cases.
 
 M61 explicit chunk scope, per-call revocation/expiry/snapshot checks and64-event refusal remain enforced.
+
+M62 four granted-transfer/journal composition families pass both hosts; incomplete or mismatched layers refuse.
 
 ## PARTIAL
 
@@ -256,11 +258,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M60 0a276e3f11d6628787f077e885ccab451a5bb2ad verified local/tracking/live and clean.
-Current M61 self-reference HEAD; published hash follows next checkpoint.
+M61 87de18bc6575ecbd8420c36404517a4fcb5abdb3 verified local/tracking/live and clean.
+Current M62 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M62: compose locally granted chunks, independent Node assembly, Python semantic import
-and historical journal verification; negative partial transfers must never yield an accepted view.
+M63: audit and port the pure preservation-record validation subset into the independent
+Node SDK with semantic parity/refusal tests, as a dependency for full continuity support.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

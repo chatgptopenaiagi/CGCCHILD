@@ -430,3 +430,10 @@ Expose only a fixed scalar offset for capsule.chunk. Existing capsule.export sco
 never silently expands. Keep64-event bounded audit semantics, even when that refuses
 a maximum-size transfer. Every chunk needs the current local grant/clock/snapshot;
 partial bytes do not become a completed historical view or mutation authority.
+
+## M62: data and journal verification remain independent in composed transfer
+
+Cross-language assembly, semantic import and historical journal consistency all
+must satisfy their own contracts. None promotes another failed layer. Continue the
+portable SDK dependency by auditing/porting the pure preservation-record validator
+before attempting a full Node continuity codec; do not accept opaque nested records.

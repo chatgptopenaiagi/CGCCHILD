@@ -80,3 +80,19 @@ replay/order/terminal state and anchor refusal. The offline conformance adapter 
 bounded12MiB/128-case stdin test helper, not a product listener or generic transport.
 No dependency installed. Full continuity validation still belongs to the Python core;
 this does not resolve B06's independent full-continuity SDK validator gap.
+
+## M62: composed granted transfer and independent historical journal
+
+[Integration tests](../tests/test_child_granted_transfer.py) connect the actual
+local opaque chunk grant to the independent Node byte assembler and then explicitly
+to Python capsule import. Both profiles round-trip unchanged. The owner test derives
+expected archive anchors independently from its validated snapshot; chunks do not
+self-authenticate. The grant is invalidated at the end and its exact historical
+journal prefix round-trips through Python and Node with authority NONE.
+
+Expiry after the first large-continuity piece yields READ_DENIED and incomplete
+assembly, not an imported view. A consistent journal cannot override altered data
+or a wrong archive anchor. Complete data cannot override a wrong journal tip.
+These are four bounded offline composition families on Windows/Fedora, using owned
+Node test processes only. No transport authentication, unseen-tail completeness,
+current P3, mutation permission or accepted production fabric follows.
