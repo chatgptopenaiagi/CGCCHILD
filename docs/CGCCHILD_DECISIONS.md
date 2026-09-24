@@ -451,3 +451,21 @@ Use a bounded integer-only canonical parser for future inspection/handoff codecs
 Retain large values as BigInt, preserve exact ASCII digest bytes and reject unsafe
 Number inputs. Parsing remains separate from schema/receipt validation and authority.
 All original protected file hashes and live source main remain unchanged at this gate.
+
+## M65: pure Node inspection receipt validation
+
+The independent Node validator accepts the inherited inspection envelope and recomputes
+its snapshot SHA256 over Python-compatible spaced ASCII JSON without a trailing newline.
+Large integer filesystem identities retain exact bytes through the M64 integer codec.
+Canonical wire transport adds one LF and is bounded to263168bytes; the inherited snapshot
+limit remains262144bytes. No repository, path, process, Git or clock is consulted.
+Historical views are detached and frozen, with current UNKNOWN, authority NONE and no
+receipt authentication. Integrity is not provenance or permission.
+
+Four Python-oracle families passed on Windows and Fedora: refused codes, large identities,
+all-field type substitutions, path/date constraints, digest mismatch, corruption and
+truncation. A tool-policy rejection prevented the initial larger test-file command from
+executing; the executed corpus omits credential-shaped test strings. The implementation
+retains the source metadata screen, including Python whitespace semantics; that screen
+is reviewed but not exhaustively exercised by this milestone. Full Node handoff support
+remains pending. No inherited runtime, schema or test was changed.

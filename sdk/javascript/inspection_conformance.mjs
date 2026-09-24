@@ -1,0 +1,4 @@
+import {decodeInspection,encodeInspection,historicalInspection} from './inspection.mjs';
+let chunks=[],size=0;for await(const x of process.stdin){size+=x.length;if(size>8*1024*1024)process.exit(2);chunks.push(x);}
+try{const rows=JSON.parse(Buffer.concat(chunks).toString('ascii'));if(!Array.isArray(rows)||rows.length>1024)process.exit(2);
+process.stdout.write(JSON.stringify(rows.map(hex=>{try{if(typeof hex!=='string'||hex.length%2||!/^[0-9a-f]*$/.test(hex))throw Error();const r=decodeInspection(Buffer.from(hex,'hex')),h=historicalInspection(r);const a=h.record();a.status='changed';const b=h.bytes();b.fill(0);if(h.record().status==='changed'||h.bytes()[0]===0||!Object.isFrozen(h)||h.authority!=='NONE'||h.current_safe_to_resume!=='UNKNOWN')throw Error();return {accepted:true,hex:encodeInspection(r).toString('hex')};}catch{return {accepted:false};}}))+'\n');}catch{process.exit(2);}

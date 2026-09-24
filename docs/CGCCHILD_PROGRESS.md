@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M64: lossless bounded canonical integer JSON for future receipt validation.
+M65: independent pure Node inspection receipt validation with exact integer digests.
 
 ## CURRENT HEAD
 
-HEAD (M64 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M65 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -154,6 +154,8 @@ V4.0/V4.1 EXPERIMENTAL/PARTIAL for model and lossless historical V3 profiles; no
 
 ## TEST RESULTS
 
+M65 four receipt parity families passed Windows0.977s/Fedora2.384s; no live inspection.
+
 Genesis AST/JSON/plan-byte checks passed. Native inert fixture compiled/executed twice,
 second run adding FD inventory and scalar specialization model checks. Both exited zero.
 Six child unit tests passed, including 729 compositions and 12 prior-attempt/action pairs.
@@ -262,11 +264,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M63 eccb4bfb369fe137626783e9fe619c407df02c0d verified local/tracking/live and clean.
-Current M64 self-reference HEAD; published hash follows next checkpoint.
+M64 7a0461a009b9a2e20d30a0160861de540fd1279f verified local/tracking/live and clean.
+Current M65 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M65: port the pure inspection envelope/receipt validator into Node using lossless
-integer serialization and Python parity; no filesystem observation or current-proof promotion.
+M66: port the pure handoff envelope validator into Node, composing preservation and
+inspection validation with exact canonical digest parity; imported history remains UNKNOWN.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
