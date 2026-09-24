@@ -1,0 +1,166 @@
+{
+  "$comment": "Experimental shape only. Normative codec also enforces real UTC dates, ns<=2^63-1, observed<=expires, ttl<=60000000000, canonical ASCII JSON, duplicate-key refusal, max16384 bytes. No network schema loading.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "captured_at": {
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$",
+      "type": "string"
+    },
+    "clock": {
+      "const": "SOURCE_MONOTONIC_NOT_PORTABLE",
+      "type": "string"
+    },
+    "model": {
+      "additionalProperties": false,
+      "properties": {
+        "claims": {
+          "additionalProperties": false,
+          "properties": {
+            "closed_admission": {
+              "enum": [
+                "YES",
+                "NO",
+                "UNKNOWN"
+              ],
+              "type": "string"
+            },
+            "controller_continuity": {
+              "enum": [
+                "YES",
+                "NO",
+                "UNKNOWN"
+              ],
+              "type": "string"
+            },
+            "domain_empty": {
+              "enum": [
+                "YES",
+                "NO",
+                "UNKNOWN"
+              ],
+              "type": "string"
+            },
+            "epoch_current": {
+              "enum": [
+                "YES",
+                "NO",
+                "UNKNOWN"
+              ],
+              "type": "string"
+            },
+            "filesystem_exclusive": {
+              "enum": [
+                "YES",
+                "NO",
+                "UNKNOWN"
+              ],
+              "type": "string"
+            },
+            "launch_identity": {
+              "enum": [
+                "YES",
+                "NO",
+                "UNKNOWN"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "closed_admission",
+            "controller_continuity",
+            "domain_empty",
+            "epoch_current",
+            "filesystem_exclusive",
+            "launch_identity"
+          ],
+          "type": "object"
+        },
+        "expires_ns": {
+          "pattern": "^(0|[1-9][0-9]{0,18})$",
+          "type": "string"
+        },
+        "generation": {
+          "pattern": "^[A-Za-z0-9_.-]{1,128}$",
+          "type": "string"
+        },
+        "observed_ns": {
+          "pattern": "^(0|[1-9][0-9]{0,18})$",
+          "type": "string"
+        },
+        "project": {
+          "pattern": "^[A-Za-z0-9_.-]{1,128}$",
+          "type": "string"
+        },
+        "provenance": {
+          "enum": [
+            "SYNTHETIC",
+            "IMPORTED"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "claims",
+        "expires_ns",
+        "generation",
+        "observed_ns",
+        "project",
+        "provenance"
+      ],
+      "type": "object"
+    },
+    "mutation_authorized": {
+      "const": false,
+      "type": "boolean"
+    },
+    "omissions": {
+      "const": [
+        "SOURCE_CONTENT",
+        "GIT_OBJECTS",
+        "V3_RECEIPTS",
+        "LIVE_AUTHORITY",
+        "FILESYSTEM_PROOF"
+      ],
+      "type": "array"
+    },
+    "production_p3": {
+      "const": "UNKNOWN",
+      "type": "string"
+    },
+    "profile": {
+      "const": "QUIESCENCE_MODEL_ONLY",
+      "type": "string"
+    },
+    "safe_to_resume": {
+      "const": "UNKNOWN",
+      "type": "string"
+    },
+    "snapshot_id": {
+      "pattern": "^[A-Za-z0-9_.-]{1,128}$",
+      "type": "string"
+    },
+    "source_instance": {
+      "pattern": "^[A-Za-z0-9_.-]{1,128}$",
+      "type": "string"
+    },
+    "version": {
+      "const": "cgcchild-state-0.1-experimental",
+      "type": "string"
+    }
+  },
+  "required": [
+    "captured_at",
+    "clock",
+    "model",
+    "mutation_authorized",
+    "omissions",
+    "production_p3",
+    "profile",
+    "safe_to_resume",
+    "snapshot_id",
+    "source_instance",
+    "version"
+  ],
+  "type": "object"
+}

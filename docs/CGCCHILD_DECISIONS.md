@@ -29,3 +29,12 @@ execute refuses even forged plans. This is an implemented refusal/interface foun
 mutation or recovery engine. Existing CGC APIs are unchanged. V4 can consume this inert boundary
 without claiming V3 acceptance. A future live producer needs separately reviewed provenance,
 writer exclusivity, continuity and at-use authority contracts; it cannot enable a boolean flag.
+
+## M3 — explicitly incomplete portable profile
+
+V4.0/V4.1 begin experimentally after the M2 refusal boundary. The only supported snapshot
+contains the six-obligation synthetic model. Missing original V3 receipts are declared omissions,
+not flattened into fake status. Clocks use decimal strings to avoid language precision loss.
+The deterministic unsigned capsule has three fixed members, no extraction and exact re-export
+validation. Historical interpretation never refreshes model clocks or creates authority. This is
+not yet a full V3 continuity exporter, source backup, accepted portable protocol or production V4.

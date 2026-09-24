@@ -6,11 +6,11 @@ Experimental child initialized; inherited V3 PARTIAL. V1/V2 accepted source beha
 
 ## CURRENT MILESTONE
 
-M2: experimental quiescence assessment and refusal-first preservation/recovery interfaces.
+M3: experimental state protocol and deterministic inert capsule, model-only profile.
 
 ## CURRENT HEAD
 
-HEAD (M2 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M3 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -18,6 +18,8 @@ Full source-history clone; source/tracking/live verification; private target cre
 origin/upstream isolation; byte-exact plan snapshot and SHA256; dependency work queue.
 M1 nonroot native CREATE/ATTACH analogue, gated child, exact PID predicates and narrowing.
 M2 strict immutable model, freshness/scope/epoch checks, all 729 truth combinations, refusal planner.
+M3 strict bounded ASCII state codec/schema; historical import; deterministic unsigned capsule;
+negative archive corpus, pinned bytes/digests and no-extraction integration.
 
 ## PARTIAL
 
@@ -30,7 +32,8 @@ real P3; production mutation/recovery acceptance. See CGCCHILD_BLOCKERS.md.
 
 ## NOT_STARTED
 
-Production quiescence; full safe resume; V4 runtime; agent fabric.
+Production quiescence; full safe resume; V4 service/MCP/plugin/SDK/gateway; agent fabric.
+V4.0/V4.1 now EXPERIMENTAL/PARTIAL for model-only scope, not full mission acceptance.
 
 ## TEST RESULTS
 
@@ -39,6 +42,9 @@ second run adding FD inventory and scalar specialization model checks. Both exit
 Six child unit tests passed, including 729 compositions and 12 prior-attempt/action pairs.
 Full inherited+child Linux regression: 395 tests passed in109.829s; zero failures.
 Windows focused child suite:6 passed. Tests use Linux-native /tmp for owned fixtures.
+M3 focused19 tests pass on Windows;18-test preceding version also passed Fedora.
+Full Linux regression passed407 tests in108.814s. Added pinned-vector test passed in
+focused19-test suite after that run. No test or runtime assertion weakened.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -48,11 +54,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M1 c614e736103586483121a9b190600964b00192c1 verified local/tracking/live and clean.
-Current M2 self-reference HEAD; published hash follows next checkpoint.
+M2 21f7de9cc6b14134537cc0a8043bbea1e6e2af4c verified local/tracking/live and clean.
+Current M3 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M3: implement V4.0 experimental bounded language-neutral state protocol, then an inert
-archive capsule. V3 real proof and execution remain blocked; transport must not promote authority.
+M4: add a bounded read-only local core dispatcher and stdio reference surface for the
+validated experimental snapshot format; no authority transfer, network listener or hidden mutation.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

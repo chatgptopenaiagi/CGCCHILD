@@ -1,0 +1,7 @@
+{
+  "capsule_bytes": 1613,
+  "capsule_sha256": "27d2004d96d7c31ba7eb030ab1b70d71d51ea32ad483dffe8cb04f228e6ed2ed",
+  "profile": "EXPERIMENTAL_MODEL_ONLY",
+  "state_ascii": "{\"captured_at\":\"2026-09-24T12:00:00Z\",\"clock\":\"SOURCE_MONOTONIC_NOT_PORTABLE\",\"model\":{\"claims\":{\"closed_admission\":\"YES\",\"controller_continuity\":\"YES\",\"domain_empty\":\"YES\",\"epoch_current\":\"YES\",\"filesystem_exclusive\":\"YES\",\"launch_identity\":\"YES\"},\"expires_ns\":\"20\",\"generation\":\"g1\",\"observed_ns\":\"10\",\"project\":\"fixture\",\"provenance\":\"SYNTHETIC\"},\"mutation_authorized\":false,\"omissions\":[\"SOURCE_CONTENT\",\"GIT_OBJECTS\",\"V3_RECEIPTS\",\"LIVE_AUTHORITY\",\"FILESYSTEM_PROOF\"],\"production_p3\":\"UNKNOWN\",\"profile\":\"QUIESCENCE_MODEL_ONLY\",\"safe_to_resume\":\"UNKNOWN\",\"snapshot_id\":\"snapshot-1\",\"source_instance\":\"producer-1\",\"version\":\"cgcchild-state-0.1-experimental\"}\n",
+  "state_sha256": "1515b2ab5440121f86fc7eaf06e20cdf25fe17756aaf27934be9cb1596316bb2"
+}
