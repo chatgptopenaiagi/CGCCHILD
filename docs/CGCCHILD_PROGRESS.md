@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M41: paired transport failure and owned-process cleanup validation.
+M42: evidence-bound recovery review with unconditional execution refusal.
 
 ## CURRENT HEAD
 
-HEAD (M41 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M42 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -88,6 +88,8 @@ M39 independent Node journal bytes/acceptance parity,73 positives and3940 mutati
 M40 paired MCP sessions pass Windows/Fedora;45 transcript cases and19 Node lifecycle checks.
 
 M41 seven fixed faulty responders refuse with observed owned-process closure on Windows/Fedora.
+
+M42 pure recovery assessment: seven fixed issue categories; imported evidence cannot authorize repair.
 
 ## PARTIAL
 
@@ -186,6 +188,9 @@ M40 Windows108 child tests:98 passed,10 POSIX skips; Fedora108 child tests passe
 Three paired-client families pass both hosts; no Python runtime changed, full494 remains latest.
 M41 four focused client families pass Windows6.409s/Fedora7.922s, including deadline and closure.
 Only test harness/helper changes; prior child108/full494 regressions remain recorded evidence.
+M42 Windows116 child tests:101 passed,15 POSIX skips; full Fedora505 tests passed in127.992s.
+Seven focused recovery cases passed; initial fixture lookup errors corrected without weakened checks.
+Static105 AST/29 JSON/plan/mission/license/keypoint checks passed. B11 remains unresolved.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -195,11 +200,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M40 f53f667b6ec9a50b9f45c7f60eb9ad404b246443 verified local/tracking/live and clean.
-Current M41 self-reference HEAD; published hash follows next checkpoint.
+M41 9c47737f42e5f06dd117461ad0cd117e740cb7b7 verified local/tracking/live and clean.
+Current M42 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M42: derive bounded refusal-first recovery assessments from validated reconciliation evidence;
-preserve historical intent/current evidence separation and require fresh review without executing repair.
+M43: compose action-bound recovery and verifier review with explicit request matching;
+reject analysis-only proof substitution and preserve imported-report demotion without an executor.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

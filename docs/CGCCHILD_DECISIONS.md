@@ -295,3 +295,10 @@ separate owned-process harness proves this limited wire path, not source identit
 A malformed or silent peer cannot yield transcript success. The test harness preserves a finite
 first-cause code and awaits closure of its own process before reporting refusal. EOF/stderr
 ordering is not promoted to a universal causal ordering or descendant-cleanup guarantee.
+
+## M42: recovery instructions remain historical review, never repair authority
+
+A validated reconciliation projection can select fixed review steps for a requested action.
+It cannot establish current filesystem safety, confer authority, replay historical commands,
+or dispatch an executor. Caller-supplied project/digest binding is explicitly distinguished
+from a live identity proof. No-issue evidence retains the same refusal ceiling.

@@ -40,3 +40,31 @@ a root cause or erase the failure; B11 preserves it. The child review tests pass
 
 The second full regression passed458 tests in109.659s. B11 remains open because a passing
 rerun does not identify the prior failure cause. No inherited test or runtime was modified.
+
+## Recovery assessment without execution (M42)
+
+[Recovery derivation](../src/cgc/experimental/recovery_review.py) and
+[tests](../tests/test_child_recovery_review.py) add a pure review step for CHECKPOINT,
+PUBLISH and REPAIR intentions. The caller supplies an original reconciliation result,
+expected project string and SHA256 of the entire canonical result (ASCII, sorted keys,
+compact separators, no trailing LF). The unchanged reconciler reclassifies and validates
+that result before the child derives any steps. This is imported historical evidence;
+matching caller expectations is neither live path identity nor sender authentication.
+
+Seven closed action categories map to fixed review instructions, in inherited issue priority
+order. Historical free-text next actions and issue subjects are never replayed. A project or
+digest mismatch produces REFUSED_EVIDENCE_BINDING with no derived issue instructions. Even
+an empty issue set produces REVIEW_REQUIRED_NO_EXECUTOR, UNKNOWN current safety/P3 and false
+mutation authority. The output is bounded to16KiB canonical ASCII and copied on access.
+
+The report retains historical phase, generations, attempt status and test result separately
+from current proof requirements. It always requires fresh scoped evidence, action proof,
+authority and a use-time precondition check. execute unconditionally refuses even a forged
+review. There is no repair callback, collector, Git operation, lock deletion, process control,
+or new authority grant. Windows explicitly refuses the inherited POSIX-only dependency.
+
+Seven tests cover owned disposable Git capture, unchanged fixture contents/metadata, all
+three intentions, all seven categories through explicitly synthetic reclassification, no-I/O
+assessment, detached output, forged classification, malformed binding and empty-issue refusal.
+The initial test helper incorrectly read project at the result root; correcting it to the
+validated evidence field resolved five test errors. No product check was weakened.
