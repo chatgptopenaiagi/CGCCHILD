@@ -41,3 +41,37 @@ wsl.exe -d FedoraLinux-44 -- python3 -B /mnt/c/Codex-Projects/CGCCHILD/docs/lab/
 
 Production source and inherited lab sources remain unchanged. No RO/R6, account, unit,
 manager operation, cgroup, credential transition or production producer was executed.
+
+## M20 native admission lifecycle and replies
+
+[Model source](lab/child_lifecycle.c), [driver](lab/child_lifecycle_validate.py),
+[evidence](lab/child_lifecycle_evidence.json).
+
+This extends native mechanics after the M17 payload milestone. M18 separately exercised
+actual ancillary receipt/disposal and M19 exercised an owned gated sender/pidfd. These are
+separate fixtures, not one accepted broker image or composed security boundary.
+
+The pure native lifecycle is NEW -> CREATED -> ATTACHED -> SEALED -> CLOSED, with terminal
+INVALIDATED on malformed/unauthenticated/stale/out-of-order/uncovered requests. QUERY is
+allowed only after creation; REMOVE requires SEALED and explicit modeled EMPTY, never UNKNOWN
+or POPULATED. Neither CLOSED nor INVALIDATED reopens. At most8 accepted operations; sequence
+wrap refuses before a modeled effect. Post-seal requests must carry the fixed fixture epoch.
+All failures retire the modeled channel without a reply; authenticated INVALIDATED replies
+are optional in the inherited contract and are tested as codec values only.
+
+Effects are in-memory create/attach/remove counters. Authentication, controller/manager
+continuity and domain emptiness are supplied synthetic booleans/enums. The seal epoch is a
+fixed test constant, not a live generated nonce. There is no syscall dispatch, callback,
+filesystem/cgroup/manager action or production result.
+
+Native reply encoding inserts only RESULT=OK/INVALIDATED in canonical position; reply parsing
+removes that exact finite field, applies the request grammar and requires byte-exact re-encoding.
+No free text, arbitrary operation or general JSON decoder is introduced. Positive SEAL replies
+contain the modeled new epoch. Negative cases cover unknown/duplicate RESULT, trailing bytes,
+every high-bit mutation and bounded truncations.
+
+The static nonroot fixture passed15 scenarios/49 transitions and636 reply cases
+(2 positive/634 negative), with exact expected reply bytes generated independently in Python.
+Source/driver/payload/generated-header/image identities are retained. No interpreter/import,
+one syscall site, temporary directory removed. Full native D-Bus codec and composed filtered
+B/C/W effects remain gaps; M4 stays PARTIAL, RO/R6 NOT_EXECUTED and real P3 UNKNOWN.

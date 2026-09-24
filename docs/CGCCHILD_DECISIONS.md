@@ -160,3 +160,9 @@ before normalized payload-model checks. Full live-instance binding remains a sep
 The fixed nonroot sender fixture witnesses connection identity differing from actual sender,
 accepts one gated live instance and refuses queued data after exact child death. Poll errors
 refuse explicitly. This is not atomic authorization or same-UID control-plane protection.
+
+## M20: model admission effects without implementing a broker
+
+Native fixed operation ordering, canonical replies and terminal invalidation are now executable
+against in-memory counters. Synthetic authentication/continuity/empty inputs cannot become
+production evidence. Native fixtures remain separately validated, not a composed sandbox.
