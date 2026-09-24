@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M6: repository-local thin plugin/skill package; statically validated, not installed.
+M7: independent Node codec, canonical cross-language corpus and precise UNKNOWN preservation.
 
 ## CURRENT HEAD
 
-HEAD (M6 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M7 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -24,6 +24,7 @@ negative archive corpus, pinned bytes/digests and no-extraction integration.
 M4 four read-only core projections, digest-bound requests,32-request stdio limit and text surface.
 M5 MCP2025-11-25 subset: initialize/tools/ping; seven owned-process/bounds test families.
 M6 plugin manifest/skill static validation; no hooks, auto-launch config or marketplace.
+M7 Node model codec:692 checks, Python/Node acceptance/bytes/digest/human parity corpus.
 
 ## PARTIAL
 
@@ -36,7 +37,8 @@ real P3; production mutation/recovery acceptance. See CGCCHILD_BLOCKERS.md.
 
 ## NOT_STARTED
 
-Production quiescence; full safe resume; portable SDK/gateway; agent fabric.
+Production quiescence; full safe resume; remote gateway; agent fabric.
+V4.4 Node codec EXPERIMENTAL/PARTIAL; other languages/browser/full V3 projection absent.
 V4.3 plugin foundation EXPERIMENTAL/PARTIAL; installation and Codex interoperability NOT_EXECUTED.
 MCP adapter EXPERIMENTAL/PARTIAL; independent SDK interoperability unavailable.
 V4.2 read-only private transport and V4.5 text surface EXPERIMENTAL/PARTIAL.
@@ -57,6 +59,8 @@ Native child source/driver now have explicit LF attributes for reproducible sour
 M5 full Linux regression419 passed in107.181s; focused31 passed after added bounds test.
 MCP SDK absent on both hosts.
 M6 installed plugin/skill static validators passed. No runtime changes; full suite not repeated.
+M7 Node692 checks, Windows32 child tests and Fedora32 child tests pass (no skips).
+No Python runtime change in this milestone; full inherited suite not repeated.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -66,11 +70,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M5 3feffe75476c2ea41dd06650a17a2c1cb5f15a98 verified local/tracking/live and clean.
-Current M6 self-reference HEAD; published hash follows next checkpoint.
+M6 661c2d18016f4bb8836780f5326464bef3dc2a3a verified local/tracking/live and clean.
+Current M7 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M7: implement an independent bounded JavaScript codec for the model snapshot profile,
-using existing Node and pinned Python vectors to test cross-language parity.
+M8: define and test capability-scoped in-memory routing/event boundaries for inert snapshot
+consumers; no remote transport, live grant or model-output execution.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

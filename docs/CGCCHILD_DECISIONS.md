@@ -63,3 +63,11 @@ Only manifest/skill/README are retained. No marketplace was requested or written
 auto-launch MCP configuration or scripts exist. The skill consumes the core and reports
 CORE_UNAVAILABLE when unconnected; it never invents an alternate policy or shell deputy.
 Static package validity is not Codex installation or live interoperability acceptance.
+
+## M7 — independent Node codec, not another authority
+
+The JavaScript codec implements the fixed model-only schema independently. Decimal clock
+strings avoid precision loss. Exact canonical re-encoding detects duplicate keys before any
+value escapes decode. Python/Node compare acceptance, exact bytes, digest and human rendering.
+Review found trailing-newline dollar-anchor ambiguity; full-string matching and regression
+cases resolve it. No browser/full V3 parity is claimed; no new dependency was installed.
