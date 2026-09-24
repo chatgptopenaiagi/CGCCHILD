@@ -1,0 +1,64 @@
+{
+  "argv": [
+    "gcc",
+    "-std=c11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-fno-stack-protector",
+    "-fno-pie",
+    "-mno-red-zone",
+    "-nostdlib",
+    "-static",
+    "-no-pie",
+    "-Wl,--build-id=none",
+    "-Wl,-z,noexecstack",
+    "child_dbus_query_binding.c",
+    "child_dbus_model_queries.c",
+    "-o",
+    "fixture"
+  ],
+  "capacity_refusals": 6048,
+  "compiler": "16.2.1",
+  "driver_sha256": "f0699ca5343ead95a8c0868071657e4ddcc9eef576626ef5fdbdd6e10df61b20",
+  "generated_header_sha256": "0d8f44ac1884719dcaf97b0fa7d01828b522f862a5a257cfa5da28b8000e20c6",
+  "image_sha256": "e26e48670c6abefa4c8349c29cdbfb86fc18508924e2bf1029d7e1a252c1379c",
+  "invalid_model_cases": 18,
+  "kernel": "6.18.33.2-microsoft-standard-WSL2",
+  "owners": [
+    ":1.42",
+    ":1.777",
+    ":123.456",
+    ":1.777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777"
+  ],
+  "positive_queries": 24,
+  "prefixes_sha256": {
+    "decoder.h": "c3c8c0190d675d73a35333837aeacb6c14e02833be6df88015dba3ca18fba28a",
+    "encoder.h": "365c2b499f27acedce17d8fd4b27f5426e991355865047874eba3d023b66bdf5",
+    "owner.h": "8d0c8451296c52eedb5727277237e3932441cc33df460d00d489e33b13b7f62a"
+  },
+  "query_serials": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "request_limit_refusals": 4,
+  "returncode": 0,
+  "scope": "inert native model owner/serial binding; no socket, live manager, caller authentication or production acceptance",
+  "sources_sha256": {
+    "child_dbus_model_queries.c": "564ba122d2710865b884660d23ed71a87b8e393e84cee186a993ae50e8ad8169",
+    "child_dbus_query_binding.c": "2730e3b828595d22fa2989559bfe38e723569cd1598e73a824739a61e9aca0c7"
+  },
+  "syscall_contract": {
+    "102": "refuse root",
+    "60": "exit"
+  },
+  "syscall_sites": 1,
+  "temporary_directory_removed": true
+}

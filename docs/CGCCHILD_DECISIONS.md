@@ -321,3 +321,9 @@ independent fixtures. No new syscall, bus connection or runtime target authority
 The dependency audit retains all real proof gates and separates historical documentation
 from later implemented fixes. Next work binds native query generation to validated model
 owner/serial state; broader UI/SDK expansion is lower priority than this finite authority-path gap.
+
+## M46: query bytes derive from one checked pending model request
+
+The native Version writer receives destination/serial from validated owner/pending model state.
+Output-capacity refusal preserves that pending request; invalid state closes the model. This
+is deterministic correlation evidence, not live process-generation or caller authentication.

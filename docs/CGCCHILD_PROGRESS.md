@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M45: master-plan dependency and proof-boundary audit.
+M46: finite native owner/serial query binding.
 
 ## CURRENT HEAD
 
-HEAD (M45 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M46 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -96,6 +96,8 @@ M43 nine action/level pairs and cross-action substitution refusal; no executor o
 M44 native query generation under existing filter;14 scenarios and489 capacity refusals per run.
 
 M45 current implementation/proof matrix reconciled; original inherited modifications remain only child banners.
+
+M46 native model-derived queries:24 positives,6048 capacity refusals,18 invalid-state cases.
 
 ## PARTIAL
 
@@ -202,6 +204,7 @@ Six new binding tests pass; inherited unsupported-repair UNKNOWN behavior preser
 Latest full505 regression is M42; focused complete child integration covers this small composition change.
 M44 two static native builds/runs passed with identical image hashes and observed temporary cleanup.
 No Python runtime/schema change; M43 child122 and M42 full505 remain latest regression evidence.
+M46 final native builds/runs byte-identical; only getuid/exit, no live bus. All owned builds removed.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -211,11 +214,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M44 ada8b802ccc6d353f2e58e800e97ec2e65f0072b verified local/tracking/live and clean.
-Current M45 self-reference HEAD; published hash follows next checkpoint.
+M45 9751ec254d49810d06f3cef7f1486d9cd94a32b9 verified local/tracking/live and clean.
+Current M46 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M46: bind native Version query destination and serial to validated model owner/pending state;
-test varied synthetic owners and phase/generation refusal without any live bus connection.
+M47: compose model-bound query generation with the filtered private-socket transport;
+exercise varied synthetic owners and existing refusal cases without connecting to a manager.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

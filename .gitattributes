@@ -57,3 +57,7 @@ docs/lab/child_dbus_filtered_socket_validate.py text eol=lf
 docs/lab/child_dbus_encoded_socket.c text eol=lf
 docs/lab/child_dbus_fixed_queries.c text eol=lf
 docs/lab/child_dbus_encoded_socket_validate.py text eol=lf
+
+docs/lab/child_dbus_query_binding.c text eol=lf
+docs/lab/child_dbus_model_queries.c text eol=lf
+docs/lab/child_dbus_query_binding_validate.py text eol=lf
