@@ -103,3 +103,33 @@ network, archive extraction, automatic write or execution authority, and preserv
 core byte validation. Owned process tests must cover both profiles, hostile inputs,
 size bounds, no partial success on validation failure and read-only inspection labels.
 It does not port the entire continuity validator into Node or claim general MCP compatibility.
+
+## M70 portable-consumer reconciliation
+
+M59-M69 extend the already inert interfaces: bounded capsule pipe operations, independent
+Node chunk assembly, explicit chunk grants, journal composition, lossless integer JSON,
+original record/inspection/handoff parity, continuity profile and capsule0.2 semantics.
+M67 full Fedora555 tests passed; original80 protected hashes including owner material
+and canonical source main were unchanged. Native proof obligations from M58 still apply.
+
+The new paired continuity MCP client validates the supplied immutable snapshot independently
+and derives a closed transcript: initialize, initialized notification, capabilities, then
+fixed32KiB capsule offsets. It compares exact expected replies, not arbitrary method output.
+Large state.get/export responses are avoided; the existing model client stays unchanged.
+At most65 chunks,67 responses and68 requests fit the adapter's128-message limit; each reply
+stays within96KiB. The owned test harness has a15-second deadline and closes only its child.
+No root broker, manager connection, general MCP SDK, authenticated service or production
+proof is implied. Supplied Python executable is a test-owner input, not a remote API.
+
+| Area | Current tested scope | Remaining dependency |
+|---|---|---|
+| V3 quiescence |30 nonroot native component fixtures, finite models/refusal orchestration | Protected identity/policy/credentials/manager continuity and filesystem writer closure |
+| V4 protocol/capsule | Python and independent Node model/continuity bytes, nested receipt validation, fixed inert archives | Stable release contract, authenticity and other consumers |
+| Read-only transport | Paired Node/Python model and continuity conformance, large chunks, owned fault cleanup | General ecosystem interoperability, live authenticated service |
+| Capability/event | In-process scoped chunk reads, independent journal/byte/semantic layers | Trusted external principal/clock binding, no imported authority |
+| Plugin/surfaces | Uninstalled thin plugin, CLI and offline HTML | No installed desktop/mobile or Codex host acceptance |
+
+Next useful work is a bounded consumer-level status presentation over independently validated
+continuity capsules, retaining explicit historical labels and excluding project paths/notes
+from the compact summary. This advances the existing V4 surface foundation without requiring
+privilege, service installation, model inference or a mutation executor.

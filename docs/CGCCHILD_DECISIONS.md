@@ -511,3 +511,12 @@ four integration families on Windows/Fedora. Partial/corrupt transport refuses e
 a consistent journal; correctly hashed arbitrary bytes still fail capsule validation;
 valid capsule semantics do not override an incorrect journal anchor. Every successful
 layer remains historical/NONE and unsigned. No product runtime changed in this milestone.
+
+## M70: paired continuity MCP conformance
+
+Keep a separate fixed continuity client. Derive every expected chunk byte and digest from
+independently validated immutable source; match exact paired-adapter framing and reply IDs.
+No generic method, path, unit, PID or shell interface is exposed. The owned harness reuses
+bounded process cleanup, enlarged only for the documented continuity input/response count
+and15-second deadline. Model client behavior is unchanged. This is executable conformance
+with the repository adapter, not proof of ecosystem or authenticated transport acceptance.

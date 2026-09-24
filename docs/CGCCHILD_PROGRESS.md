@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M69: scoped transfer composed with independent Node semantics and journal checks.
+M70: fixed paired continuity MCP transcript and portable-consumer reconciliation.
 
 ## CURRENT HEAD
 
-HEAD (M69 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M70 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -154,6 +154,8 @@ V4.0/V4.1 EXPERIMENTAL/PARTIAL for model and lossless historical V3 profiles; no
 
 ## TEST RESULTS
 
+M70 four paired continuity-client families passed Windows16.997s/Fedora18.656s, including timeout cleanup.
+
 M69 four end-to-end transfer families passed Windows2.042s/Fedora2.969s.
 
 M68 four capsule families passed Windows1.327s/Fedora3.146s; Node interoperability39 passed8.949s.
@@ -273,11 +275,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M68 fbae0a731b826888b8526a34361a1d5a797c9678 verified local/tracking/live and clean.
-Current M69 self-reference HEAD; published hash follows next checkpoint.
+M69 f3d526dae7fbe787dc4cb54fb0bc510439c237c0 verified local/tracking/live and clean.
+Current M70 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M70: reconcile the portable consumer frontier and extend the fixed paired MCP client
-to bounded continuity snapshots without generalizing its method or execution surface.
+M71: add a bounded independent Node continuity-capsule status pipe consumer using the
+validated compact summary; historical labels, no path/notes disclosure, no extraction or writes.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

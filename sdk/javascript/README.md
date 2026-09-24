@@ -207,3 +207,14 @@ structural truncations, high-bit mutations and CRC-consistent content tampering.
 buffer/returned-object mutation cannot alter the frozen historical view. Imports preserve
 NONE authority and HISTORICAL_UNVERIFIED freshness. Digest consistency is not authenticity.
 The bounded conformance adapter is offline test tooling, not a remote or generic ZIP API.
+
+## Paired continuity MCP test client (M70)
+
+mcp_continuity_client.mjs provides the same finite next/accept/finish lifecycle as the model
+conformance client, but validates continuity input and requests capabilities plus fixed
+capsule chunks. It has no generic method callback. Every reply must match the independently
+computed canonical expected frame. Its owned-process harness is test-only: the test owner
+supplies Python, the module/arguments are fixed, shell=false, and failures close that child.
+Input is bounded to2101248bytes, replies96KiB, total68 reply-budgets, deadline15seconds.
+Small/large sessions and seven fixed fault modes are tested; general MCP interoperability
+and live authorization remain unaccepted. No package or service was installed.
