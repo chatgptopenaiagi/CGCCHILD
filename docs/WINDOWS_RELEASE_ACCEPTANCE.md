@@ -1,9 +1,10 @@
 # Windows 0.4.0 Live Continuity release acceptance
 
-Current status: **WINDOWS SOFTWARE AND FINAL PACKAGE TESTS PASSED; PRIVATE RELEASE
-PUBLICATION PENDING**. The target is private prerelease `v0.4.0-experimental`.
-Release-source commit, published tag and uploaded asset receipts are pending; this document
-does not assert publication. The earlier 0.3.0 acceptance record is preserved below.
+Current status: **PUBLISHED PRIVATE EXPERIMENTAL RELEASE; WINDOWS SOFTWARE ACCEPTED
+WITH EXPLICIT PRODUCTION/DEPLOYMENT DEBT**. [v0.4.0-experimental](https://github.com/chatgptopenaiagi/CGCCHILD/releases/tag/v0.4.0-experimental).
+Release source/tag: `cfe922820e67afc8b315139a5c1b311aae2d693d`. All 11 uploaded sizes/SHA256 digests and independently
+downloaded bytes match local assets. [Receipt](WINDOWS_RELEASE_ASSETS.json).
+Later documentation commits do not change this artifact provenance.
 
 | Feature / tier | Classification | Verified scope or remaining final gate |
 |---|---|---|
@@ -26,8 +27,8 @@ does not assert publication. The earlier 0.3.0 acceptance record is preserved be
 | Q7 wheel | VERIFIED_CURRENT_HOST | Final wheel fresh-venv install/import/live tests/recovery/preserve/reopen/uninstall passed |
 | Q7 CGC.exe / CGC-console.exe / portable ZIP | VERIFIED_CURRENT_HOST | Final relocated payload, no Python/Git on PATH, UNKNOWN Git fallback, live recovery/capsule and native GUI passed; archive integrity checked at release |
 | Q7 installer | VERIFIED_QA_APPID / SHIPPING_ID_PARTIAL | QA-only AppId variants use the same installer script and old/new payloads for real 0.3-to-0.4 upgrade; shipping-AppId lifecycle NOT_EXECUTED because an existing owner installation is preserved |
-| Q8 source/plugin/Node/preview/manifest/checksums | FINAL ACCEPTANCE PENDING | Inventory, archive validation and hashes must bind the final reviewed release source |
-| Q8 private GitHub prerelease | NOT YET VERIFIED | Publish only child origin; compare every uploaded asset size/digest against local bytes |
+| Q8 source/plugin/Node/preview/manifest/checksums | VERIFIED | Final source-bound inventory, archive validation, checksums and downloaded bytes passed |
+| Q8 private GitHub prerelease | PUBLISHED / VERIFIED | All 11 asset sizes/digests/downloaded bytes match; live tag points to release source |
 | Clean independent Windows 10 x64 VM | NOT_EXECUTED | Current-host relocation/reduced PATH is not pristine-machine acceptance |
 | Trusted signing | NOT_EXECUTED | Experimental binaries and capsules remain unsigned |
 | Production mutation / filesystem closure | DISABLED / UNKNOWN | No production repository executor or acceptance promotion; inherited proof debt remains |
@@ -47,12 +48,11 @@ ordinary GUI startup does not read that variable or open its path.
 
 No live quota, WSL/Linux/Bash, privileged proof collection, authentication change or host
 security bypass is part of this mission. RO-1..RO-5/R6 remain NOT_EXECUTED. Original-source
-and immutable-plan verification must be repeated for the final receipt. Software completion
+and immutable-plan verification passed again for the final receipt. Software completion
 does not close protected identity/effective policy, hostile same-user isolation or current P3.
 
-NEXT_EXACT_ACTION: complete the final Windows rebuild/package checks, commit reviewed source,
-publish the child-only private experimental release and verify asset digests and Git refs.
-Record release-source SHA/tag separately from any later documentation receipt HEAD.
+NEXT_EXACT_ACTION: independent clean Windows 10 x64 deployment acceptance and explicit
+installed Codex MCP interoperability. Keep production mutation disabled.
 
 ## Historical Windows 0.3.0 release acceptance
 

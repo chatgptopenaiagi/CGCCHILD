@@ -1,6 +1,6 @@
 {
   "version": "0.4.0",
-  "release_phase": "FINAL_WINDOWS_PACKAGE_PASSED_GITHUB_PENDING",
+  "release_phase": "PUBLISHED_AND_VERIFIED",
   "tier_a_product": {
     "run": 14,
     "passed": 14,
@@ -100,7 +100,15 @@
     "qa_installation_registration": "REMOVED_BY_UNINSTALLER",
     "finished_at": "2026-09-24T13:31:03.815855+00:00"
   },
-  "q8": "PENDING_FINAL_ARCHIVES_AND_GITHUB_ASSET_VERIFICATION",
+  "q8": {
+    "state": "PASSED",
+    "release_source_commit": "cfe922820e67afc8b315139a5c1b311aae2d693d",
+    "assets": 11,
+    "github_sizes_and_sha256": "ALL_MATCH",
+    "downloaded_bytes": "ALL_MATCH",
+    "tag_source": "MATCH",
+    "downloaded_source_plan_and_license": "MATCH"
+  },
   "clean_windows_vm": "NOT_EXECUTED",
   "signing": "NOT_EXECUTED",
   "shipping_appid_lifecycle": "NOT_EXECUTED_EXISTING_OWNER_INSTALLATION",
@@ -127,5 +135,6 @@
     "reason": "Existing user CGCCHILD0.3 installer registration found",
     "action": "Preserved owner installation; QA AppId variants used"
   },
-  "frozen_credential_argument_redaction": "PASSED_PRESERVE_FRESH_PROCESS_REOPEN"
+  "frozen_credential_argument_redaction": "PASSED_PRESERVE_FRESH_PROCESS_REOPEN",
+  "real_engineering_session": "PRESERVED_885_EVENTS_FRESH_FROZEN_PROCESS_REOPEN_PASSED"
 }

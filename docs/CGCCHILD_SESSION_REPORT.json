@@ -6,11 +6,12 @@
   },
   "02_starting_HEAD": "63dd46037b9c62574058c0546cdac5c9caa3215f",
   "03_final_HEAD": "HEAD (this receipt commit; resolved hash supplied after normal publication)",
-  "04_release_source_commit": "HEAD (release-source checkpoint; resolve after commit)",
+  "04_release_source_commit": "cfe922820e67afc8b315139a5c1b311aae2d693d",
   "05_release_tag": "v0.4.0-experimental",
   "06_commits_created": [
     "0587f01df1812cdfa26b5ce85c9da5a1a725ed48",
     "0bdb29fc392dcbb374c4994a9970604fc2b11f0a",
+    "cfe922820e67afc8b315139a5c1b311aae2d693d",
     "HEAD (this receipt checkpoint)"
   ],
   "07_files_created": [
@@ -19,6 +20,7 @@
     "docs/LIVE_EVENT_PROTOCOL.md",
     "docs/LIVE_OBSERVERS.md",
     "docs/child-schemas/live-event-0.1.schema.json",
+    "docs/sessions/WINDOWS_0_3_RELEASE_ASSETS.json",
     "docs/sessions/WINDOWS_0_3_SESSION_REPORT.json",
     "docs/sessions/WINDOWS_0_3_TEST_RESULTS.json",
     "packaging/live_preview.py",
@@ -62,6 +64,7 @@
     "docs/SECURITY_ACCEPTANCE_DEBT.md",
     "docs/WINDOWS_PREVIEW.png",
     "docs/WINDOWS_RELEASE_ACCEPTANCE.md",
+    "docs/WINDOWS_RELEASE_ASSETS.json",
     "docs/WINDOWS_TEST_RESULTS.json",
     "packaging/installer.iss",
     "packaging/release.py",
@@ -114,11 +117,12 @@
       "CLOSED_WITH_UNKNOWN"
     ],
     "real_engineering_session": "CGC-de884796441c443e9cd52e20e772a1af",
-    "current_state": "RUNNING",
+    "current_state": "PRESERVED",
     "storage": "C:\\Users\\Administrator\\AppData\\Local\\CGCCHILD\\sessions\\CGC-de884796441c443e9cd52e20e772a1af",
     "generation": 1,
-    "events": 447,
-    "capsule": "C:\\Users\\Administrator\\AppData\\Local\\CGCCHILD\\sessions\\CGC-de884796441c443e9cd52e20e772a1af\\capsules\\final.cgcpack"
+    "events": 885,
+    "capsule": "C:\\Users\\Administrator\\AppData\\Local\\CGCCHILD\\sessions\\CGC-de884796441c443e9cd52e20e772a1af\\capsules\\final.cgcpack",
+    "capsule_sha256": "184266924f51728e32102147d88d46aa3fe46d471fd517b893b7ea80095a019c"
   },
   "11_event_protocol_version": "cgc-live-event-0.1",
   "12_event_types_implemented": {
@@ -191,7 +195,12 @@
       "INVALIDATED"
     ],
     "reported_direct_promotion": false,
-    "historical_current_authority": "UNKNOWN"
+    "historical_current_authority": "UNKNOWN",
+    "success_semantics": {
+      "REPORTED_SUCCESS": "Agent success declaration only; reconciliation can contradict it",
+      "OBSERVED_SUCCESS": "Observed successful process/operation; claim-specific verification can remain UNKNOWN",
+      "VERIFIED_SUCCESS": "Independent scoped object/ref/test corroboration; never global or production authority"
+    }
   },
   "23_checkpoint_engine_state": "IMPLEMENTED_WINDOWS_VERIFIED: evidence-only atomic/fsynced external checkpoints; GUI periodic and finite foreground CLI; no source backup, staging, commit or push",
   "24_crash_recovery_state": "IMPLEMENTED_WINDOWS_VERIFIED: actual killed owned observer/lock release, fresh process replay, torn suffix preservation, incomplete checkpoints, changed Git, corrupt/missing capsule, new generation; real power-loss/reboot and arbitrary worker containment not guaranteed",
@@ -245,7 +254,7 @@
   "30_Node_SDK_changes": "Bounded explicit Windows subprocess live client and report builder; historical independent codecs retained; offline tarball verified",
   "31_tests_executed": {
     "version": "0.4.0",
-    "release_phase": "FINAL_WINDOWS_PACKAGE_PASSED_GITHUB_PENDING",
+    "release_phase": "PUBLISHED_AND_VERIFIED",
     "tier_a_product": {
       "run": 14,
       "passed": 14,
@@ -345,7 +354,15 @@
       "qa_installation_registration": "REMOVED_BY_UNINSTALLER",
       "finished_at": "2026-09-24T13:31:03.815855+00:00"
     },
-    "q8": "PENDING_FINAL_ARCHIVES_AND_GITHUB_ASSET_VERIFICATION",
+    "q8": {
+      "state": "PASSED",
+      "release_source_commit": "cfe922820e67afc8b315139a5c1b311aae2d693d",
+      "assets": 11,
+      "github_sizes_and_sha256": "ALL_MATCH",
+      "downloaded_bytes": "ALL_MATCH",
+      "tag_source": "MATCH",
+      "downloaded_source_plan_and_license": "MATCH"
+    },
     "clean_windows_vm": "NOT_EXECUTED",
     "signing": "NOT_EXECUTED",
     "shipping_appid_lifecycle": "NOT_EXECUTED_EXISTING_OWNER_INSTALLATION",
@@ -372,7 +389,8 @@
       "reason": "Existing user CGCCHILD0.3 installer registration found",
       "action": "Preserved owner installation; QA AppId variants used"
     },
-    "frozen_credential_argument_redaction": "PASSED_PRESERVE_FRESH_PROCESS_REOPEN"
+    "frozen_credential_argument_redaction": "PASSED_PRESERVE_FRESH_PROCESS_REOPEN",
+    "real_engineering_session": "PRESERVED_885_EVENTS_FRESH_FROZEN_PROCESS_REOPEN_PASSED"
   },
   "32_tests_passed": {
     "python": 248,
@@ -394,7 +412,9 @@
       "Separate credential-bearing argv values and generic token/credential assignments now centrally redacted; source and frozen persistence regressions pass"
     ],
     "retained_timeout": "Earlier 60-second suite attempt UNKNOWN; later bounded run VERIFIED_PASS; original evidence retained",
-    "installer_guard": "Existing owner installation preserved; same-script QA AppId used"
+    "installer_guard": "Existing owner installation preserved; same-script QA AppId used",
+    "publication_retry": "GitHub rejected one normal push with HTTP500; live ref checked, normal retry succeeded; no force push",
+    "draft_metadata": "REST tag lookup unavailable before draft tag publication; supported gh release view used instead"
   },
   "34_skips": {
     "POSIX_tests": 30,
@@ -625,9 +645,107 @@
     "url": "https://github.com/chatgptopenaiagi/CGCCHILD/releases/tag/v0.4.0-experimental",
     "private_repository": true,
     "prerelease": true,
-    "published": false
+    "published": true
   },
-  "49_uploaded_asset_verification": "PENDING_UPLOAD_AND_INDEPENDENT_DIGEST_COMPARISON",
+  "49_uploaded_asset_verification": {
+    "tag": "v0.4.0-experimental",
+    "release_source_commit": "cfe922820e67afc8b315139a5c1b311aae2d693d",
+    "url": "https://github.com/chatgptopenaiagi/CGCCHILD/releases/tag/v0.4.0-experimental",
+    "draft": false,
+    "prerelease": true,
+    "published_at": "2026-09-24T13:36:23Z",
+    "verified_asset_count": 11,
+    "assets": [
+      {
+        "name": "cgcchild-0.4.0-py3-none-any.whl",
+        "size": 155460,
+        "sha256": "3056d8316164347ce51a97cb76110fc520baeb98d5782e4846374462db60bdda",
+        "github_size_equal": true,
+        "github_digest_equal": true,
+        "downloaded_bytes_equal": true
+      },
+      {
+        "name": "CGCCHILD-0.4.0-source.zip",
+        "size": 1221470,
+        "sha256": "0e31db442327bd82fdd44de3bc07304f479fe0e90c292b24f76af1cc51b511ac",
+        "github_size_equal": true,
+        "github_digest_equal": true,
+        "downloaded_bytes_equal": true
+      },
+      {
+        "name": "cgcchild-live-0.4.0.zip",
+        "size": 8465,
+        "sha256": "09232ff72cdeea7aefbc1a3e2e936d803c5e756d2a310dcb846803e97aac2e1f",
+        "github_size_equal": true,
+        "github_digest_equal": true,
+        "downloaded_bytes_equal": true
+      },
+      {
+        "name": "cgcchild-readonly-0.4.0.zip",
+        "size": 8535,
+        "sha256": "395e881f0ad01f72659ecc8f4750721cd346a10cba765cbffffdd50e58006f83",
+        "github_size_equal": true,
+        "github_digest_equal": true,
+        "downloaded_bytes_equal": true
+      },
+      {
+        "name": "cgcchild-sdk-0.4.0.tgz",
+        "size": 35449,
+        "sha256": "b91d22df4bc97f812cec8eefe553baa717433e617cd9dc8da9f067ced2ad2d90",
+        "github_size_equal": true,
+        "github_digest_equal": true,
+        "downloaded_bytes_equal": true
+      },
+      {
+        "name": "CGCCHILD-Setup-0.4.0.exe",
+        "size": 35304134,
+        "sha256": "ea06e9e724a7a22f0b02b1487c585e918c11a1ce4e82640c9ad564f6b7a2682a",
+        "github_size_equal": true,
+        "github_digest_equal": true,
+        "downloaded_bytes_equal": true
+      },
+      {
+        "name": "CGCCHILD-Windows-Portable-0.4.0.zip",
+        "size": 54928074,
+        "sha256": "45ceeea7fb2311857cc4ca0866d20a435a9b31a7b543ca5ee1371be73df0f2f4",
+        "github_size_equal": true,
+        "github_digest_equal": true,
+        "downloaded_bytes_equal": true
+      },
+      {
+        "name": "CGCCHILD-Windows-Preview.png",
+        "size": 73527,
+        "sha256": "220fc5920af8818875a74d50135945850d348c39def2b1b20bcee6277ad2e99d",
+        "github_size_equal": true,
+        "github_digest_equal": true,
+        "downloaded_bytes_equal": true
+      },
+      {
+        "name": "release-manifest.json",
+        "size": 10947,
+        "sha256": "47b44de65cf6b4cf5fe79656bb4664b00f55439fa007eba1cd5dda3b3725388c",
+        "github_size_equal": true,
+        "github_digest_equal": true,
+        "downloaded_bytes_equal": true
+      },
+      {
+        "name": "RELEASE_NOTES.md",
+        "size": 2433,
+        "sha256": "1d8fd30d130ca593c87a0084821d08f72a9ccef125a6338dbd6ea9dea1901824",
+        "github_size_equal": true,
+        "github_digest_equal": true,
+        "downloaded_bytes_equal": true
+      },
+      {
+        "name": "SHA256SUMS.txt",
+        "size": 1098,
+        "sha256": "7e530a0d91b722e1cdf83120796a0e7e8d473b790a39f12add48edd31dbdc5f5",
+        "github_size_equal": true,
+        "github_digest_equal": true,
+        "downloaded_bytes_equal": true
+      }
+    ]
+  },
   "50_original_CGC_source_verification": {
     "head": "d7cb43de3ac001bf28470d6d2f561ed70f106e6a",
     "tracked_source_unchanged": true,

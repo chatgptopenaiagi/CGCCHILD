@@ -1,7 +1,7 @@
 # Release process
 
 Current target: Windows `0.4.0`, private GitHub prerelease `v0.4.0-experimental`.
-The M85/M86 implementation is staged; the release is not considered published or verified
+A release is not considered published or verified
 until the final receipts in WINDOWS_RELEASE_ACCEPTANCE.md and WINDOWS_TEST_RESULTS.json
 say so. Run all orchestration from C:\Codex-Projects\CGCCHILD using native PowerShell.
 

@@ -1,9 +1,9 @@
-> Current child frontier: **Windows 0.4.0 Live Continuity IMPLEMENTED; release verification pending**.
+> Current child frontier: **Windows 0.4.0 Live Continuity PUBLISHED AND VERIFIED**.
 > The owner's CGCCHILD_VNEXT_AUTONOMOUS_LIVE_CONTINUITY_MASTER_PROMPT authorizes M85/M86.
 > [Current release acceptance](WINDOWS_RELEASE_ACCEPTANCE.md) supersedes historical stop frontiers.
 > Production repository mutation remains disabled; filesystem closure/current P3 remain UNKNOWN.
-> NEXT_EXACT_ACTION: finish final Windows package acceptance, bind artifacts to reviewed source,
-> publish the private experimental prerelease and verify every uploaded asset digest.
+> NEXT_EXACT_ACTION: independent clean Windows 10 x64 deployment and explicit installed Codex
+> MCP acceptance; production mutation remains disabled.
 
 # CGCCHILD progress
 
@@ -494,3 +494,27 @@ A direct frozen event/preserve/fresh-open secret-redaction regression also passe
 The earlier draft assets remain unpublished until replaced and digest-verified.
 No source/tag history is rewritten. Exact final artifact receipts are in
 WINDOWS_TEST_RESULTS.json. NEXT_EXACT_ACTION: verify and publish the updated draft.
+
+## M87 published Live Continuity release — 2026-09-24
+
+Private [v0.4.0-experimental](https://github.com/chatgptopenaiagi/CGCCHILD/releases/tag/v0.4.0-experimental) is published from
+`cfe922820e67afc8b315139a5c1b311aae2d693d`. Eleven assets passed GitHub size/SHA256 comparison and independent
+downloaded-byte comparison. Local/tracking/live source and live tag equality passed.
+The final source suite passed61 live and14 product tests; child173 passed with30
+POSIX skips. Node66 contract checks and both plugin/skill packages passed. Final
+wheel/frozen/QA installer/live/capsule/GUI package checks passed; exact receipts are
+in WINDOWS_TEST_RESULTS.json and WINDOWS_RELEASE_ASSETS.json.
+
+A real engineering session for CGCCHILD retained885 bounded events, checkpoints,
+independent test attempts (including the earlier UNKNOWN timeout), verified Git
+publication, declarations and next action. Its final capsule was reopened by a
+fresh frozen CGC process as HISTORICAL_ONLY. Receipt-only main commits after the
+release source are not rebuilt assets or new runtime authority.
+
+Clean-VM, signing, exact shipping-AppId lifecycle and actual installed Codex lifecycle
+acceptance remain unexecuted. Existing owner0.3 installation is unchanged; QA-only
+registration was removed. AF_PIPE is deferred; tested foreground MCP stdio works.
+Filesystem closure/current P3/authority remain UNKNOWN; production mutation disabled.
+Original source, Apache-2.0 attribution and master-plan bytes are unchanged.
+NEXT_EXACT_ACTION: independent clean Windows deployment and explicit Codex MCP host
+acceptance; no automatic project mutation, privileged proof or security changes.

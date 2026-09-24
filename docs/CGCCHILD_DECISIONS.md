@@ -747,3 +747,27 @@ unchanged; shipping-AppId lifecycle and pristine VM remain unexecuted. See final
 WINDOWS_TEST_RESULTS.json. No production authority/security proof is promoted.
 NEXT_EXACT_ACTION: bind archives and digests to clean release source, publish
 private experimental release and verify uploaded bytes before final receipt.
+
+## M87 published Live Continuity release — 2026-09-24
+
+Private [v0.4.0-experimental](https://github.com/chatgptopenaiagi/CGCCHILD/releases/tag/v0.4.0-experimental) is published from
+`cfe922820e67afc8b315139a5c1b311aae2d693d`. Eleven assets passed GitHub size/SHA256 comparison and independent
+downloaded-byte comparison. Local/tracking/live source and live tag equality passed.
+The final source suite passed61 live and14 product tests; child173 passed with30
+POSIX skips. Node66 contract checks and both plugin/skill packages passed. Final
+wheel/frozen/QA installer/live/capsule/GUI package checks passed; exact receipts are
+in WINDOWS_TEST_RESULTS.json and WINDOWS_RELEASE_ASSETS.json.
+
+A real engineering session for CGCCHILD retained885 bounded events, checkpoints,
+independent test attempts (including the earlier UNKNOWN timeout), verified Git
+publication, declarations and next action. Its final capsule was reopened by a
+fresh frozen CGC process as HISTORICAL_ONLY. Receipt-only main commits after the
+release source are not rebuilt assets or new runtime authority.
+
+Clean-VM, signing, exact shipping-AppId lifecycle and actual installed Codex lifecycle
+acceptance remain unexecuted. Existing owner0.3 installation is unchanged; QA-only
+registration was removed. AF_PIPE is deferred; tested foreground MCP stdio works.
+Filesystem closure/current P3/authority remain UNKNOWN; production mutation disabled.
+Original source, Apache-2.0 attribution and master-plan bytes are unchanged.
+NEXT_EXACT_ACTION: independent clean Windows deployment and explicit Codex MCP host
+acceptance; no automatic project mutation, privileged proof or security changes.

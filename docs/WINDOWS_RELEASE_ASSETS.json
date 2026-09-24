@@ -1,1 +1,99 @@
-{"assets":[{"digest":"sha256:568b172eae26e7073897468e4672a7b40f1c6e7742eda9ee5fe5825434efc72c","name":"cgcchild-0.3.0-py3-none-any.whl","size":119101,"state":"uploaded"},{"digest":"sha256:e558d32236d118f4311eccfb34840335983a3e7d8dce212cdac9882ae373e716","name":"CGCCHILD-0.3.0-source.zip","size":1062984,"state":"uploaded"},{"digest":"sha256:395e881f0ad01f72659ecc8f4750721cd346a10cba765cbffffdd50e58006f83","name":"cgcchild-readonly-0.3.0.zip","size":8535,"state":"uploaded"},{"digest":"sha256:65dfcdc4197da8ec7a10d0426a367642aed890218c9b993ea94189118d7dea24","name":"cgcchild-sdk-0.3.0.tgz","size":32603,"state":"uploaded"},{"digest":"sha256:a3c760b5a9963a67e3818b89990596891cb9b350f3f886ecfbf8fe5a8ac13e27","name":"CGCCHILD-Setup-0.3.0.exe","size":35213739,"state":"uploaded"},{"digest":"sha256:c66e066d1e314fd69b28e544a21b3f210afa96ed04f35edc0101dc8469a10254","name":"CGCCHILD-Windows-Portable-0.3.0.zip","size":54730363,"state":"uploaded"},{"digest":"sha256:51f102159172e1303d14b3aa30fbf4ca7ab7a1b20bdbf2392a16b05db079951f","name":"CGCCHILD-Windows-Preview.png","size":28631,"state":"uploaded"},{"digest":"sha256:11534e125e393fa3566f28bf12a3e7572ae2030e4b6726396f561e60a7b14047","name":"release-manifest.json","size":3610,"state":"uploaded"},{"digest":"sha256:4c9fa6bb02778e0a3c2f214cf469b364c143dc9c98e730e12c987d0c7ad243b7","name":"RELEASE_NOTES.md","size":1268,"state":"uploaded"},{"digest":"sha256:a8d506f1e355ff9e44b417689d6dd4b651d64a47bd8a73288ad91c05af7cb968","name":"SHA256SUMS.txt","size":920,"state":"uploaded"}],"draft":false,"id":395643008,"prerelease":true,"tag":"v0.3.0-experimental","target":"9ab0435f60e1bdf6dd9f5c051d4dd7b5f57cc16b","url":"https://github.com/chatgptopenaiagi/CGCCHILD/releases/tag/v0.3.0-experimental"}
+{
+  "tag": "v0.4.0-experimental",
+  "release_source_commit": "cfe922820e67afc8b315139a5c1b311aae2d693d",
+  "url": "https://github.com/chatgptopenaiagi/CGCCHILD/releases/tag/v0.4.0-experimental",
+  "draft": false,
+  "prerelease": true,
+  "published_at": "2026-09-24T13:36:23Z",
+  "verified_asset_count": 11,
+  "assets": [
+    {
+      "name": "cgcchild-0.4.0-py3-none-any.whl",
+      "size": 155460,
+      "sha256": "3056d8316164347ce51a97cb76110fc520baeb98d5782e4846374462db60bdda",
+      "github_size_equal": true,
+      "github_digest_equal": true,
+      "downloaded_bytes_equal": true
+    },
+    {
+      "name": "CGCCHILD-0.4.0-source.zip",
+      "size": 1221470,
+      "sha256": "0e31db442327bd82fdd44de3bc07304f479fe0e90c292b24f76af1cc51b511ac",
+      "github_size_equal": true,
+      "github_digest_equal": true,
+      "downloaded_bytes_equal": true
+    },
+    {
+      "name": "cgcchild-live-0.4.0.zip",
+      "size": 8465,
+      "sha256": "09232ff72cdeea7aefbc1a3e2e936d803c5e756d2a310dcb846803e97aac2e1f",
+      "github_size_equal": true,
+      "github_digest_equal": true,
+      "downloaded_bytes_equal": true
+    },
+    {
+      "name": "cgcchild-readonly-0.4.0.zip",
+      "size": 8535,
+      "sha256": "395e881f0ad01f72659ecc8f4750721cd346a10cba765cbffffdd50e58006f83",
+      "github_size_equal": true,
+      "github_digest_equal": true,
+      "downloaded_bytes_equal": true
+    },
+    {
+      "name": "cgcchild-sdk-0.4.0.tgz",
+      "size": 35449,
+      "sha256": "b91d22df4bc97f812cec8eefe553baa717433e617cd9dc8da9f067ced2ad2d90",
+      "github_size_equal": true,
+      "github_digest_equal": true,
+      "downloaded_bytes_equal": true
+    },
+    {
+      "name": "CGCCHILD-Setup-0.4.0.exe",
+      "size": 35304134,
+      "sha256": "ea06e9e724a7a22f0b02b1487c585e918c11a1ce4e82640c9ad564f6b7a2682a",
+      "github_size_equal": true,
+      "github_digest_equal": true,
+      "downloaded_bytes_equal": true
+    },
+    {
+      "name": "CGCCHILD-Windows-Portable-0.4.0.zip",
+      "size": 54928074,
+      "sha256": "45ceeea7fb2311857cc4ca0866d20a435a9b31a7b543ca5ee1371be73df0f2f4",
+      "github_size_equal": true,
+      "github_digest_equal": true,
+      "downloaded_bytes_equal": true
+    },
+    {
+      "name": "CGCCHILD-Windows-Preview.png",
+      "size": 73527,
+      "sha256": "220fc5920af8818875a74d50135945850d348c39def2b1b20bcee6277ad2e99d",
+      "github_size_equal": true,
+      "github_digest_equal": true,
+      "downloaded_bytes_equal": true
+    },
+    {
+      "name": "release-manifest.json",
+      "size": 10947,
+      "sha256": "47b44de65cf6b4cf5fe79656bb4664b00f55439fa007eba1cd5dda3b3725388c",
+      "github_size_equal": true,
+      "github_digest_equal": true,
+      "downloaded_bytes_equal": true
+    },
+    {
+      "name": "RELEASE_NOTES.md",
+      "size": 2433,
+      "sha256": "1d8fd30d130ca593c87a0084821d08f72a9ccef125a6338dbd6ea9dea1901824",
+      "github_size_equal": true,
+      "github_digest_equal": true,
+      "downloaded_bytes_equal": true
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 1098,
+      "sha256": "7e530a0d91b722e1cdf83120796a0e7e8d473b790a39f12add48edd31dbdc5f5",
+      "github_size_equal": true,
+      "github_digest_equal": true,
+      "downloaded_bytes_equal": true
+    }
+  ]
+}
