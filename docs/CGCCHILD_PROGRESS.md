@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M60: independent Node bounded chunk consistency with separate core acceptance.
+M61: explicit local chunk grants rechecked for every bounded read.
 
 ## CURRENT HEAD
 
-HEAD (M60 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M61 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -124,6 +124,8 @@ M57 CREATE collision/ATTACH EBADF and positive channel dialogue pass with owned 
 M59 both historical capsule profiles export/import/inspect through bounded pipes on Windows/Fedora.
 
 M60 independent Node chunk assembly passes both profiles, five parity families and17 native cases.
+
+M61 explicit chunk scope, per-call revocation/expiry/snapshot checks and64-event refusal remain enforced.
 
 ## PARTIAL
 
@@ -243,6 +245,8 @@ M54 child127: Windows108 passed/19 POSIX skips15.197s; Fedora127 passed22.326s.
 Source80 hashes and source live HEAD unchanged; static27-fixture/83-file audit passes.
 M59 five capsule pipe families pass both hosts; Windows132 child tests113 passed/19 skips.
 Full Fedora521 tests passed138.149s; no inherited assertions changed.
+M61 final child142: Windows123 passed/19 POSIX skips22.432s; Fedora142 passed31.712s.
+One stale child-only unsupported-chunk expectation updated to explicit scope/offset refusals.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -252,11 +256,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M59 76b95081e500a88dc26d69aaec92fa778449d5dc verified local/tracking/live and clean.
-Current M60 self-reference HEAD; published hash follows next checkpoint.
+M60 0a276e3f11d6628787f077e885ccab451a5bb2ad verified local/tracking/live and clean.
+Current M61 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M61: add explicit offset-bounded chunk reads to local opaque read grants; recheck
-expiry/revocation/snapshot on every chunk and retain the finite event budget/refusal semantics.
+M62: compose locally granted chunks, independent Node assembly, Python semantic import
+and historical journal verification; negative partial transfers must never yield an accepted view.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

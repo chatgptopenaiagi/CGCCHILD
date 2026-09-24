@@ -72,3 +72,34 @@ installed, and none was installed. Schema shape alone cannot enforce relational/
 M39 adds independent [Node journal interoperability](../sdk/javascript/README.md#inert-read-event-journal01-m39).
 It preserves the same prefix-only/unsigned/historical interpretation. No journal service method,
 remote route or grant import is introduced by that SDK.
+
+## M61: explicit chunk-scoped reads
+
+The local laboratory now supports the fifth fixed read method, capsule.chunk.
+An owner must explicitly include it in the issued opaque grant; capsule.export does
+not imply chunk authority. read_chunk(handle, principal, offset, now_ns=...,
+snapshot_digest=...) accepts only an integer aligned32768-byte offset below the
+capsule hard maximum. The generic read method accepts no offset and refuses a
+capsule.chunk call without one. No arbitrary params, callbacks, paths or destinations.
+
+Every chunk rechecks the existing live local handle, exact principal label, method,
+expiry, monotonic clock, snapshot digest and64-event budget before core dispatch.
+The core validates actual archive range and returns bounded immutable-snapshot data.
+Out-of-archive offsets produce CORE_REFUSED, not partial success. Revocation/expiry
+mid-transfer withholds the next piece; an incomplete receiver cannot finish.
+The local caller/clock remain trusted; principal labels are not authenticated here.
+No serialized grants, service/MCP grant issuance or remote authorization is added.
+
+Each read consumes one existing journal event. The64-event ceiling is unchanged:
+a newly issued grant has at most63 reads, fewer after denials/other operations.
+Therefore some maximum-size65-piece capsules cannot complete under one unchanged
+laboratory event budget. This is an explicit refusal limit, not permission to reset
+or bypass the journal. Existing event schemas and journal bytes remain unchanged.
+Five new tests cover large continuity reconstruction/core acceptance, scope separation,
+invalid offsets/methods, expiry/revocation/principal/snapshot changes and budget refusal.
+
+The first broad child run found the historical child-only assertion that all chunk
+grants were unsupported. This assertion was updated for the explicit new feature:
+existing state-only scope still denies chunks, and a new chunk grant still denies
+the generic read without an offset. The CORE_REFUSED assertion remains unchanged.
+No inherited canonical-CGC test or safety condition was removed.

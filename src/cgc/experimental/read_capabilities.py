@@ -11,11 +11,13 @@ import json
 import re
 from .readonly_service import ReadOnlyCore,METHODS
 from . import snapshot_profiles as sp
+from .capsule_chunks import CHUNK_BYTES
+from .capsule import MAX_BYTES as MAX_CAPSULE_BYTES
 
 MAX_GRANTS=16
 MAX_EVENTS=64
 MAX_TTL_NS=60_000_000_000
-READ_METHODS=tuple(x for x in METHODS if x!='capsule.chunk')
+READ_METHODS=tuple(METHODS)
 
 
 class ReadDenied(RuntimeError):
@@ -78,14 +80,24 @@ class ReadCapabilityLab:
         return handle
 
     def read(self,handle,principal,method,*,now_ns,snapshot_digest):
+        return self._read(handle,principal,method,now_ns=now_ns,snapshot_digest=snapshot_digest,offset=None)
+
+    def read_chunk(self,handle,principal,offset,*,now_ns,snapshot_digest):
+        """One explicit bounded offset; each call consumes the existing event budget."""
+        return self._read(handle,principal,'capsule.chunk',now_ns=now_ns,snapshot_digest=snapshot_digest,offset=offset)
+
+    def _read(self,handle,principal,method,*,now_ns,snapshot_digest,offset):
         self._at(now_ns)
         grant=self._grants.get(handle) if type(handle) is GrantHandle else None
         if (grant is None or type(principal) is not str or type(method) is not str
                 or type(snapshot_digest) is not str or principal!=grant.principal or method not in grant.methods
                 or not grant.issued_ns<=now_ns<grant.expires_ns or snapshot_digest!=self._digest):
             self._event('READ_DENIED',now_ns);raise ReadDenied()
-        # No caller-controlled id/path/params/callback or external destination.
+        # Only the fixed chunk operation accepts one bounded scalar offset.
+        if method=='capsule.chunk' and (type(offset) is not int or not 0<=offset<MAX_CAPSULE_BYTES or offset%CHUNK_BYTES):
+            self._event('READ_DENIED',now_ns);raise ReadDenied()
         request=dict(id='capability',method=method,snapshot_digest=self._digest)
+        if method=='capsule.chunk':request['offset']=offset
         response=self._core.dispatch((json.dumps(request,separators=(',',':'))+'\n').encode('ascii'))
         self._event('CORE_REFUSED' if 'error' in json.loads(response) else 'READ_COMPLETE',now_ns)
         return response

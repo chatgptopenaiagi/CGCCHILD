@@ -81,7 +81,11 @@ class ChildChunkTests(unittest.TestCase):
         out=json.loads(lab.read(handle,'p','state.get',now_ns=11,snapshot_digest=profiles.digest(value)))
         self.assertEqual(out['error'],'RESPONSE_LIMIT')
         self.assertEqual(lab.events()[-1]['kind'],'CORE_REFUSED')
-        with self.assertRaises(grants.ReadDenied):lab.issue('p',('capsule.chunk',),now_ns=12,expires_ns=20)
+        # Chunk access now exists only under a separate explicit grant/offset API.
+        with self.assertRaises(grants.ReadDenied):lab.read_chunk(handle,'p',0,now_ns=12,snapshot_digest=profiles.digest(value))
+        chunk_handle=lab.issue('p',('capsule.chunk',),now_ns=13,expires_ns=20)
+        with self.assertRaises(grants.ReadDenied):lab.read(chunk_handle,'p','capsule.chunk',now_ns=14,snapshot_digest=profiles.digest(value))
+        self.assertEqual(lab.events()[-1]['kind'],'READ_DENIED')
 
     def test_one_archive_generation_per_immutable_core(self):
         value=large_state();core=svc.ReadOnlyCore(profiles.encode(value));digest=profiles.digest(value)

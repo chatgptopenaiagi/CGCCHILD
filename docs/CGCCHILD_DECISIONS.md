@@ -423,3 +423,10 @@ Node can assemble bounded chunks for either profile without pretending to implem
 the complete V3 continuity validator. The output explicitly requires separate capsule
 validation, which cross-language tests perform through the Python core. Keep authority
 NONE even for exact caller-pinned bytes. No generic transport or new dependency.
+
+## M61: chunk access is separately granted and rechecked per call
+
+Expose only a fixed scalar offset for capsule.chunk. Existing capsule.export scope
+never silently expands. Keep64-event bounded audit semantics, even when that refuses
+a maximum-size transfer. Every chunk needs the current local grant/clock/snapshot;
+partial bytes do not become a completed historical view or mutation authority.
