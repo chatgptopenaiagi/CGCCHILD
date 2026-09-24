@@ -1,5 +1,15 @@
 # CREDID GUARDIAN CODEX (CGC) — agent instructions
 
+## Windows product mission authority — 2026-09-24
+
+CGCCHILD_AUTONOMOUS_COMPLETION supersedes the historical stop frontier below.
+Windows-native PowerShell only for this mission: no WSL, Fedora, Linux or Bash.
+Build/package/test/release ordinary child engineering is authorized. Separate
+software completion from production acceptance. Default READ_ONLY_SAFE; production
+mutation remains disabled. Follow docs/PRODUCT_GUIDE.md and current child progress.
+Do not modify master-plan snapshot bytes or the original repository. No privileged
+proof collection or host security changes are authorized by this product mission.
+
 ## CGCCHILD active execution authority
 
 This workspace is CGCCHILD, an independent PRIVATE experimental descendant. Follow

@@ -1,0 +1,14 @@
+{
+  "version": "0.3.0",
+  "default_mode": "READ_ONLY_SAFE",
+  "automatic_install": false,
+  "automatic_launch": false,
+  "network_listener": false,
+  "mutation": false,
+  "capabilities": [
+    "historical_status",
+    "validated_capsule_export",
+    "bounded_stdio_mcp"
+  ],
+  "host_acceptance": "NOT_EXECUTED"
+}

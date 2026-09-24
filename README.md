@@ -1,5 +1,15 @@
 # CREDID GUARDIAN CODEX (CGC)
 
+## CGCCHILD Windows experimental product — 0.3.0
+
+The current child product provides a Windows desktop historical-evidence workbench,
+CLI, Python/Node SDKs, bounded MCP stdio, capsules, reports, explicit modes and
+security-debt reporting. Start with [Windows product guide](docs/PRODUCT_GUIDE.md),
+[build](docs/WINDOWS_BUILD.md) and [release notes](docs/RELEASE_NOTES.md).
+READ_ONLY_SAFE is the default. Production mutation remains disabled.
+The inherited sections below preserve historical source status and are not the
+current child feature inventory. See [child progress](docs/CGCCHILD_PROGRESS.md).
+
 > **CGCCHILD is an experimental descendant/fork of CREDID GUARDIAN CODEX.**
 > Canonical original: [chatgptopenaiagi/CREDID-GUARDIAN-CODEX](https://github.com/chatgptopenaiagi/CREDID-GUARDIAN-CODEX).
 > CGCCHILD may contain speculative, partial or unverified implementations.

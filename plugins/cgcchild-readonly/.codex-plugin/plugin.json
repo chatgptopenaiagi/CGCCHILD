@@ -1,6 +1,6 @@
 {
   "name": "cgcchild-readonly",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Experimental read-only historical CGCCHILD snapshot consumer",
   "author": {
     "name": "Mihai-Bogdan Simion"

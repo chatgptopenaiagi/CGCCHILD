@@ -229,3 +229,10 @@ saved state, current UNKNOWN, no mutation authority and unobserved current files
 Project paths and curated notes are omitted. Invalid arguments/data exit2 with a fixed
 stderr diagnostic and no success output. Require exit0; an output I/O error may leave a
 partial stream. The consumer creates no files and launches no processes or services.
+# Packaged SDK 0.3.0
+
+The stable entry exports negotiate, API_VERSION, decode, encode, capsuleImport and
+capsuleExport from cgcchild-sdk. Call negotiate(API_VERSION) before use; bytes are
+Node Buffers. Model and historical continuity profiles retain existing wire versions.
+Errors are INVALID_SNAPSHOT, INVALID_CAPSULE and UNSUPPORTED_SDK_VERSION.
+Build a tarball with npm pack. No network or installation hook is part of the SDK.

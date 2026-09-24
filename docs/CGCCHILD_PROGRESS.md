@@ -360,3 +360,21 @@ Get-Content docs/CGCCHILD_PROGRESS.md
 RO-1..RO-5 = NOT_EXECUTED. R6 = NOT_EXECUTED.
 PRODUCTION QUIESCENCE PRODUCER = NOT_STARTED. Real-project P3 = UNKNOWN.
 V4 runtime in CGCCHILD = EXPERIMENTAL / PARTIAL; original source remains unchanged.
+
+## M82 Windows product construction — 2026-09-24
+
+New owner authority CGCCHILD_AUTONOMOUS_COMPLETION supersedes M81 queue exhaustion.
+Windows 10/PowerShell only; source isolation and inherited proof laws remain intact.
+Product work proceeds around acceptance debt with production execution disabled.
+Added shared Workbench, five modes, closed executor plans/refusals/simulation, Windows
+evidence contracts, bounded SDK facade, CLI/MCP launcher and 13-page PySide6 GUI.
+Added wheel/frozen/installer/release build scripts, debt register and acceptance docs.
+Tests: 13 product/GUI passed; 203 Windows child ran, 173 passed and 30 POSIX skips;
+5 Node facade checks and offline plugin validation passed. Build/package tiers pending.
+Dependencies installed only in .venv; existing per-user Inno compiler discovered.
+No Linux, quota, privileged observation or source mutation. Immutable plan hash matches.
+Original HEAD and live main remain d7cb43de3ac001bf28470d6d2f561ed70f106e6a.
+
+NEXT_EXACT_ACTION: finish frozen Windows build; test isolated wheel, relocated bundle,
+GUI, installer lifecycle; prepare checksums/source/plugin/SDK archives and child release.
+Security acceptance debt remains separate and nonblocking for read-only product build.
