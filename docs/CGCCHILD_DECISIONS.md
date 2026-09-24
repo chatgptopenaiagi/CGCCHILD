@@ -129,3 +129,9 @@ The child delegates assessment to the unchanged verifier with explicit caller re
 capture. Portable reports are recomputed without capture, preserving historical evidence while
 withholding current proof. The execution entrypoint always refuses. The inherited POSIX import
 dependency is handled with explicit Windows refusal, not a fake fcntl implementation.
+
+## M15: keep filesystem closure distinct and action-specific
+
+A finite pure domain/channel model makes missing writer-route coverage explicit. Model YES
+cannot satisfy production filesystem or P3 proof. Imported/freshness/scope errors degrade the
+model, repair stays unsupported, and no live adapter or implicit discovery is introduced.

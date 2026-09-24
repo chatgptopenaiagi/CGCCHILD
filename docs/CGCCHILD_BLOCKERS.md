@@ -30,3 +30,12 @@ at its source-tree equality assertion during paused transfer. Isolated rerun and
 repetitions passed unchanged. Root cause UNKNOWN; no assertion or inherited code weakened.
 The original failed fixture was automatically cleaned by its existing test cleanup. A future
 recurrence needs bounded changed-path/metadata evidence before selecting a correction.
+
+B11 update M15: a second normal full run failed the same tree comparison in the SIGTERM
+pack case (464 tests,one failure). Twelve traced isolated repetitions and a diagnostic full
+464-test run passed; trace files were temporary and cleaned. Diagnostics added only owned
+fixture setup Git tracing and bounded difference reporting, with no assertion weakening.
+Automatic Git maintenance was considered because object-directory metadata appeared to
+shrink, but no causal event was captured; that remains HYPOTHESIS, not a finding. The
+[Git documentation](https://www.kernel.org/pub/software/scm/git/docs/git-config.html) describes
+automatic maintenance but does not establish what happened in these failed fixtures.

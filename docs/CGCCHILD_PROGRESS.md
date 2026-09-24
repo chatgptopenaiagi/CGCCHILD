@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M14: scoped captured/imported resume review with unconditional execution refusal.
+M15: action-specific filesystem writer-closure model; recurring inherited fixture failure retained.
 
 ## CURRENT HEAD
 
-HEAD (M14 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M15 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -34,6 +34,8 @@ M12 measured model/continuity costs; cached immutable archive; unchanged wire an
 M13 digest-bound read-only owned descriptor startup; large Linux subprocess and refusal checks.
 
 M14 unchanged verifier integration, explicit request binding, imported report demotion and POSIX limit.
+
+M15 finite action/domain/channel model, per-cell omission/contradiction tests, no live proof.
 
 ## PARTIAL
 
@@ -87,6 +89,9 @@ M13 Windows62 tests:57 passed,5 explicit POSIX skips. Linux focused6 and full451
 M14 Windows69 tests:59 passed,10 platform skips. First full458 run:one inherited pack-tree
 failure; isolated1 and repeated10 passed unchanged. Second full458 passed in109.659s.
 B11 retains UNKNOWN root cause. Initial Windows import error fixed by explicit platform refusal.
+M15 Windows75 tests:65 passed,10 skips. Normal full464 run failed the same inherited
+pack-tree assertion in SIGTERM case. Traced12 repetitions passed; diagnostic full464 passed
+in112.241s with setup-only Git tracing and bounded assertion diagnostics. B11 remains open.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -96,11 +101,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M13 28020ea053444b25124008ee4a40a17260552312 verified local/tracking/live and clean.
-Current M14 self-reference HEAD; published hash follows next checkpoint.
+M14 66aaf3b8b083c589b4a956ed508f2649f398b84c verified local/tracking/live and clean.
+Current M15 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M15: make action-specific filesystem writer-closure obligations executable as a bounded pure
-model; retain real filesystem/P3 UNKNOWN and test omissions, contradictions and epoch mismatch.
+M16: add an inert offline HTML status projection from the closed historical profiles;
+no script, network, refresh, authority or executable controls. Keep B11 unresolved.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.
