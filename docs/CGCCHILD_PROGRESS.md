@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M67: independent lossless Node continuity profile and Python parity.
+M68: independent inert Node continuity capsule0.2 parity and hostile-input checks.
 
 ## CURRENT HEAD
 
-HEAD (M67 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M68 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -154,6 +154,8 @@ V4.0/V4.1 EXPERIMENTAL/PARTIAL for model and lossless historical V3 profiles; no
 
 ## TEST RESULTS
 
+M68 four capsule families passed Windows1.327s/Fedora3.146s; Node interoperability39 passed8.949s.
+
 M67 focused continuity parity4 passed Windows0.969s. Windows child166:147 passed/19 skips27.726s.
 Full Fedora555 tests passed149.318s. All80 original protected hashes and source live HEAD remain unchanged.
 
@@ -269,11 +271,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M66 497e36cc1d7bb7c14eece777bd86d1f7323660fa verified local/tracking/live and clean.
-Current M67 self-reference HEAD; published hash follows next checkpoint.
+M67 6789b661050a175ed0afe142bd68f5f3bed7784d verified local/tracking/live and clean.
+Current M68 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M68: add a separately versioned Node continuity capsule codec with exact Python archive
-parity, hostile archive rejection and no extraction; keep existing model bytes unchanged.
+M69: compose scoped chunk transfer with independent Node continuity capsule validation
+and journal verification; distinguish partial transport, byte integrity and semantic acceptance.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

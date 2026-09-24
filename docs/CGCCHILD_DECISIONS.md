@@ -493,3 +493,12 @@ codec. The bounded conformance process is offline test tooling only.
 B06 advances to independent Node continuity validation; capsule0.2 and launcher integration
 remain pending. Current UNKNOWN and false authority are preserved even when historical
 records report success. Source80 hashes including owner plan and live main remain unchanged.
+
+## M68: separate finite continuity capsule codec
+
+Add a dedicated Node capsule0.2 module rather than broadening the accepted model0.1 API.
+The canonical ZIP layout and fixed three names are independently reconstructed and compared
+byte-for-byte. Full continuity receipt validation precedes return; CRC or manifest integrity
+alone is insufficient. Model capsules remain explicitly outside this module's profile.
+Four families pass Windows/Fedora; all39 Node interoperability families pass Windows.
+No package, external service, privileged operation or production proof was introduced.

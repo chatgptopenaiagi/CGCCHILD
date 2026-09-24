@@ -192,3 +192,18 @@ This completes a separate Node continuity codec, not capsule0.2 integration: cap
 still supports only the original model profile. No path is resolved, no store opened,
 and no network or subprocess API is present in these modules. The *_conformance.mjs
 programs are bounded offline test adapters, not product transports.
+
+## Inert continuity capsule0.2 (M68)
+
+continuity_capsule.mjs separately exports importCapsule/exportCapsule/CapsuleError and
+supports only V3_CONTINUITY_HISTORICAL. The original model capsule module remains unchanged.
+Three fixed stored ZIP members, metadata and exact reconstruction follow the same narrow
+archive contract. The global bound is2117632bytes, each member at most2101248bytes.
+Manifest0.2 binds the explicit profile and state/human digests. Nested continuity validation
+preserves exact integer identity bytes. No archive member is extracted or path resolved.
+
+Python parity covers positive/large snapshots, hostile metadata, path substitutions,
+structural truncations, high-bit mutations and CRC-consistent content tampering. Input
+buffer/returned-object mutation cannot alter the frozen historical view. Imports preserve
+NONE authority and HISTORICAL_UNVERIFIED freshness. Digest consistency is not authenticity.
+The bounded conformance adapter is offline test tooling, not a remote or generic ZIP API.
