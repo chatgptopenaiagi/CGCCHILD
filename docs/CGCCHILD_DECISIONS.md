@@ -234,3 +234,10 @@ memset dependency; freestanding import checks stay mandatory. Privileged evidenc
 The native evidence matrix preserves M1-M5 PARTIAL and records final-image/manifest/live-policy
 gaps separately from passed mechanics. Independent model-capsule Node interoperability is the
 next stable-interface milestone; it requires no privileged evidence or authority promotion.
+
+## M32: independent capsule interoperability without extraction
+
+The Node model-only SDK now implements the fixed capsule0.1 bytes independently. Local header
+bounds/CRC plus whole-archive canonical reconstruction reject ambiguity without a general ZIP
+parser. Imported views remain unsigned historical data with authority NONE. Full continuity0.2
+refuses explicitly; no new live compatibility or source authenticity is claimed.

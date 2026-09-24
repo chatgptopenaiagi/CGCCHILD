@@ -7,11 +7,11 @@ Child milestone labels M1/M2/etc are local work units, not acceptance of canonic
 
 ## CURRENT MILESTONE
 
-M31: native conformance audit and dependency-safe portability handoff.
+M32: independent Node model-capsule0.1 import/export parity.
 
 ## CURRENT HEAD
 
-HEAD (M31 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
+HEAD (M32 checkpoint). Genesis: 81dc2c0950f3e022e724244b8093d5e96bee0075.
 
 ## COMPLETE
 
@@ -69,6 +69,8 @@ M30 owner/request model:21 scenarios/107 steps, terminal stale/owner-change/disc
 
 M31 native component/proof matrix reconciled;15 source evidence hashes match; private/source isolation verified.
 
+M32 Node inert capsule codec:exact Python archive bytes,3246 Node checks and5 parity families.
+
 ## PARTIAL
 
 Inherited V3/M1-M5; native role bootstrap; containment; complete master-plan implementation.
@@ -82,7 +84,7 @@ real P3; production mutation/recovery acceptance. See CGCCHILD_BLOCKERS.md.
 
 Production quiescence; full safe resume; remote gateway and production agent fabric.
 Fabric/read-policy foundations EXPERIMENTAL/PARTIAL, in-process laboratory only.
-V4.4 Node codec EXPERIMENTAL/PARTIAL; other languages/browser/full V3 projection absent.
+V4.4 Node state/capsule codec EXPERIMENTAL/PARTIAL; other languages/browser/full V3 projection absent.
 V4.3 plugin foundation EXPERIMENTAL/PARTIAL; installation and Codex interoperability NOT_EXECUTED.
 MCP adapter EXPERIMENTAL/PARTIAL; independent SDK interoperability unavailable.
 V4.2 read-only private transport and V4.5 text/offline HTML surfaces EXPERIMENTAL/PARTIAL.
@@ -145,6 +147,8 @@ M28 static native auth codec passed; no connection, authentication or manager op
 M29 bounded fragmented/coalesced stream passed; typed results exact, terminal invalidation checked.
 M30 initial compiler memset import refused; explicit field initialization fixed it; final21/107 pass.
 M31 static92 AST/24 JSON/15 native-source hashes/88 child relative links pass; inherited canonical scope preserved.
+M32 Windows84 child tests:74 passed,10 POSIX skips; Node692 state/3246 capsule checks pass.
+Full Linux473 tests passed in112.022s. B11 remains unresolved; no assertion weakened.
 Inherited M4 acceptance numbers are source evidence, not fresh child execution.
 
 ## ENVIRONMENT CHANGES
@@ -154,11 +158,11 @@ No source modification, package installation, privileged action or authenticatio
 
 ## LAST SAFE CHECKPOINT
 
-M30 1df1907e1723092b83f17aa1ab819ce71d7fa93f verified local/tracking/live and clean.
-Current M31 self-reference HEAD; published hash follows next checkpoint.
+M31 0f9f2dd6ce87de682deb609e38af01938fe1d4a6 verified local/tracking/live and clean.
+Current M32 self-reference HEAD; published hash follows next checkpoint.
 
 ## NEXT_EXACT_ACTION
 
-M32: implement independent inert capsule0.1 export/import in the existing Node model-only SDK;
-require exact Python bytes and hostile-archive refusal, no extraction or full-continuity claim.
+M33: add explicit digest-bound stdin snapshot bootstrap to the experimental MCP entrypoint;
+validate large historical snapshots on Windows without argv limits or filesystem path access.
 Usage remaining UNKNOWN; no trusted percentage is exposed. No live quota read authorized by guessing.

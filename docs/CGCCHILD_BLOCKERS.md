@@ -12,7 +12,7 @@ No privileged read/mutation, secret collection, automatic orphan cleanup or exte
 mutation is authorized by these blocker records. Acceptance remains blocked even if interfaces advance.
 
 B06 PARTIALLY_RESOLVED: Lossless V3 continuity projection now exists separately. Existing
-capsule/core/MCP now integrate it explicitly; Node/skill remain model-only by design.
+capsule/core/MCP now integrate it explicitly; Node state/capsule and skill remain model-only by design.
 B10 PARTIALLY_RESOLVED: Fixed32KiB chunks reconstruct large capsules within96KiB responses.
 M13 adds bounded digest-bound POSIX inherited-FD startup. Windows large startup remains
 unsupported; small hex still faces host argv limits. No platform parity claim.
@@ -44,3 +44,6 @@ B12 M31 native composition boundary:15 child fixtures validate selected componen
 protected privileged image. Runtime manifest binding, real credentials, live manager adapter
 and full role integration remain unimplemented/unaccepted. RO approval would supply facts,
 not automatically implement or authorize that image. Continue independent inert portability.
+
+B10 next unprivileged route: explicit stdin snapshot bootstrap can avoid Windows argv size
+without adopting a path or requiring inherited POSIX FD semantics. It is not implemented at M32.
