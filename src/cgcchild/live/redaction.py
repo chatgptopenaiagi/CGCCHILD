@@ -1,12 +1,12 @@
 """Central bounded data minimization. Patterns are defense in depth, not proof."""
 import re
 
-_KEY = re.compile(r"(?i)(password|passwd|secret|token|api.?key|authorization|cookie|private.?key|chain.?of.?thought|hidden.?reason|reasoning|environment|transcript)")
+_KEY = re.compile(r"(?i)(password|passwd|secret|token|credential|api.?key|authorization|cookie|private.?key|chain.?of.?thought|hidden.?reason|reasoning|environment|transcript)")
 _PATTERNS = (
     re.compile(r"-----BEGIN [^-]*PRIVATE KEY-----.*?(?:-----END [^-]*PRIVATE KEY-----|$)", re.S),
     re.compile(r"(?i)\b(?:sk-(?:proj-)?|gh[pousr]_|github_pat_)[A-Za-z0-9_-]{6,}"),
     re.compile(r"(?i)\b(?:Bearer|Basic)\s+[A-Za-z0-9+/_.=-]+"),
-    re.compile(r"(?i)(?:password|passwd|api[_-]?key|access[_-]?token|secret|authorization|cookie)\s*[=:]\s*(?:\"[^\"]*\"|'[^']*'|[^\s,;]+)"),
+    re.compile(r"(?i)(?:password|passwd|api[_-]?key|(?:access[_-]?)?token|credentials?|secret|authorization|cookie)\s*[=:]\s*(?:\"[^\"]*\"|'[^']*'|[^\s,;]+)"),
     re.compile(r"(?i)https?://[^\s/@]+:[^\s/@]+@"),
     re.compile(r"\beyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\b"),
 )
@@ -36,7 +36,14 @@ def redact(value, _depth=0):
     if isinstance(value, list):
         if len(value) > 256:
             raise ValueError("PAYLOAD_LIST_LIMIT")
-        return [redact(v, _depth + 1) for v in value]
+        result, secret_argument = [], False
+        for item in value:
+            # Argument arrays need context: a separate value after --password or
+            # --api-key may have no recognizable token shape of its own.
+            result.append("[REDACTED]" if secret_argument else redact(item, _depth + 1))
+            flag = re.fullmatch(r"(?:--?|/)([\w-]+)", item) if isinstance(item, str) else None
+            secret_argument = bool(flag and _KEY.search(flag.group(1)))
+        return result
     if value is None or type(value) in (bool, int, float):
         return value
     raise ValueError("JSON_VALUE_REQUIRED")

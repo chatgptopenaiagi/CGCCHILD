@@ -52,6 +52,11 @@ class ProtocolTests(unittest.TestCase):
             self.assertNotIn(secret.encode(), encoded)
         event = self.event(correlation_id=dummy)
         self.assertNotIn(dummy, event["correlation_id"])
+        command = redact({"command": ["tool.exe", "--password", "plain_value_without_token_shape",
+                                     "--api-key", "another_plain_value", "--token=fictional_value"]})
+        for value in ("plain_value_without_token_shape", "another_plain_value", "fictional_value"):
+            self.assertNotIn(value.encode(), canonical(command))
+        self.assertEqual(command["command"][:2], ["tool.exe", "--password"])
 
 
 @unittest.skipUnless(os.name == "nt", "Windows mission")

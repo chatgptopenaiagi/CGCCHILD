@@ -10,6 +10,7 @@
   "05_release_tag": "v0.4.0-experimental",
   "06_commits_created": [
     "0587f01df1812cdfa26b5ce85c9da5a1a725ed48",
+    "0bdb29fc392dcbb374c4994a9970604fc2b11f0a",
     "HEAD (this receipt checkpoint)"
   ],
   "07_files_created": [
@@ -116,7 +117,7 @@
     "current_state": "RUNNING",
     "storage": "C:\\Users\\Administrator\\AppData\\Local\\CGCCHILD\\sessions\\CGC-de884796441c443e9cd52e20e772a1af",
     "generation": 1,
-    "events": 442,
+    "events": 447,
     "capsule": "C:\\Users\\Administrator\\AppData\\Local\\CGCCHILD\\sessions\\CGC-de884796441c443e9cd52e20e772a1af\\capsules\\final.cgcpack"
   },
   "11_event_protocol_version": "cgc-live-event-0.1",
@@ -261,9 +262,9 @@
       "passed": 61,
       "failed": 0,
       "skipped": 0,
-      "duration_seconds": 61.947335,
+      "duration_seconds": 59.443192,
       "verification_state": "VERIFIED_PASS",
-      "stderr_sha256": "1b6539176f0d17cac812fde0c1187a17ce42351b30df115d1654b5740e058c4c"
+      "stderr_sha256": "fc29530b73cfb6e59dd14b5dffe77918f338a307e22ca5c11d1d879f56b08b61"
     },
     "unique_python_totals": {
       "run": 278,
@@ -283,23 +284,23 @@
     "q7": {
       "state": "PASSED",
       "version": "0.4.0",
-      "run_id": "20260924T131924Z-bb3496bf",
-      "started_at": "2026-09-24T13:19:24.381409+00:00",
-      "retained_evidence": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf",
+      "run_id": "20260924T132935Z-abe41985",
+      "started_at": "2026-09-24T13:29:35.123872+00:00",
+      "retained_evidence": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T132935Z-abe41985",
       "clean_vm": "NOT_EXECUTED",
       "security_acceptance": "UNCHANGED",
       "input_sha256": {
-        "dist\\cgcchild-0.4.0-py3-none-any.whl": "dd3302cdd53b63defc0ed18da45b80bb1ac544f9efbe0dc88f566219ebb7eea6",
-        "dist\\CGCCHILD-Setup-0.4.0.exe": "aff88e4cc477326253b44323bf29daf44ae89a38d4c59aeda4a251dab0e46477",
-        "dist\\CGC\\CGC.exe": "d0bddf7e395eeca8d724bd469fe5b69a7e3791a01ffad7e93c5654d3e8f20811",
-        "dist\\CGC\\CGC-console.exe": "e29585e48b83c94e042f41f7c707fc234bd2785d8258115d69a650f628673e08",
+        "dist\\cgcchild-0.4.0-py3-none-any.whl": "3056d8316164347ce51a97cb76110fc520baeb98d5782e4846374462db60bdda",
+        "dist\\CGCCHILD-Setup-0.4.0.exe": "ea06e9e724a7a22f0b02b1487c585e918c11a1ce4e82640c9ad564f6b7a2682a",
+        "dist\\CGC\\CGC.exe": "059d317207eb99aba5ed696c6aa5b3899db01c69bfd72ec7c1b8fa06c87044d6",
+        "dist\\CGC\\CGC-console.exe": "4e2cd6f6a64af1aab45cc491bd7f0ddbeb67cd55b16f91ce9154965d57fe603a",
         "packaging\\installer.iss": "8b71921378ec66eb57b8544a07fd4e445982d36d3b0e39404bf5f08fdc55a4be"
       },
       "fresh_wheel_live": {
         "state": "PASSED",
-        "session": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\wheel\\localappdata\\CGCCHILD\\sessions\\CGC-3453ccbb43384657a66d2395454024d9",
-        "capsule": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\wheel\\localappdata\\CGCCHILD\\sessions\\CGC-3453ccbb43384657a66d2395454024d9\\capsules\\final.cgcpack",
-        "capsule_sha256": "eb5d1c2ed1224d495c41c21fc7e3c73709a212ba77a1a0fe5a1c76af34799ed7",
+        "session": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T132935Z-abe41985\\wheel\\localappdata\\CGCCHILD\\sessions\\CGC-a99590c385a14d278add6eb0c5293f86",
+        "capsule": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T132935Z-abe41985\\wheel\\localappdata\\CGCCHILD\\sessions\\CGC-a99590c385a14d278add6eb0c5293f86\\capsules\\final.cgcpack",
+        "capsule_sha256": "d87a545cdeaf9ec941aed8de301f0156dea2640b61886a435fc95db00079d2a8",
         "event_count": 37,
         "generation": 2,
         "git_state": "DIRTY",
@@ -308,26 +309,26 @@
       "fresh_wheel": "INSTALL_IMPORT_HISTORICAL_LIVE_RECOVER_PRESERVE_REOPEN_UNINSTALL_PASSED",
       "relocated_live": {
         "state": "PASSED",
-        "session": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\portable\\localappdata\\CGCCHILD\\sessions\\CGC-438b6aaa7412485c9a8b9239447f5f39",
-        "capsule": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\portable\\localappdata\\CGCCHILD\\sessions\\CGC-438b6aaa7412485c9a8b9239447f5f39\\capsules\\final.cgcpack",
-        "capsule_sha256": "6eb0b0958dccd327ecde520b946b56c2a3792a024b8c812b1c72fff03d31ce9f",
+        "session": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T132935Z-abe41985\\portable\\localappdata\\CGCCHILD\\sessions\\CGC-d4a0f022dcf54d6e9b28870b8bea5ae7",
+        "capsule": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T132935Z-abe41985\\portable\\localappdata\\CGCCHILD\\sessions\\CGC-d4a0f022dcf54d6e9b28870b8bea5ae7\\capsules\\final.cgcpack",
+        "capsule_sha256": "9468406b75000861990a120bccc529e474b89a1d10c25e5c4266fe47ed1b6bd2",
         "event_count": 31,
         "generation": 2,
         "git_state": "UNKNOWN",
         "authority": "HISTORICAL_ONLY"
       },
       "relocated_frozen": "NO_PYTHON_OR_GIT_ON_PATH_HISTORICAL_LIVE_RECOVER_CAPSULE_GUI_PASSED",
-      "screenshot": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\frozen-gui.png",
+      "screenshot": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T132935Z-abe41985\\frozen-gui.png",
       "installer_profile": "REGISTRATION_ISOLATED_SAME_SCRIPT_AND_PRODUCT_PAYLOAD",
-      "qa_installer_app_id": "{{3A3C7D2D-589C-5641-962F-05FBCD089CFF}",
+      "qa_installer_app_id": "{{933F9F87-3BAD-521A-9A61-0AB035A9A8E7}",
       "shipping_installer_lifecycle": "NOT_EXECUTED_EXISTING_OWNER_INSTALLATION",
-      "shipping_installer_sha256": "aff88e4cc477326253b44323bf29daf44ae89a38d4c59aeda4a251dab0e46477",
+      "shipping_installer_sha256": "ea06e9e724a7a22f0b02b1487c585e918c11a1ce4e82640c9ad564f6b7a2682a",
       "installer_previous_version": "0.3.0_INSTALLED",
       "installer_live": {
         "state": "PASSED",
-        "session": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\installer\\localappdata\\CGCCHILD\\sessions\\CGC-859db0bc120c4fc59d80343f9f1fe76c",
-        "capsule": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\installer\\localappdata\\CGCCHILD\\sessions\\CGC-859db0bc120c4fc59d80343f9f1fe76c\\capsules\\final.cgcpack",
-        "capsule_sha256": "3be49525c71754fc0b0b633f1308cc512eca838e3826d20101f12739930c8dc3",
+        "session": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T132935Z-abe41985\\installer\\localappdata\\CGCCHILD\\sessions\\CGC-02390da62c004d8ebacf8f9ce915d839",
+        "capsule": "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T132935Z-abe41985\\installer\\localappdata\\CGCCHILD\\sessions\\CGC-02390da62c004d8ebacf8f9ce915d839\\capsules\\final.cgcpack",
+        "capsule_sha256": "45386875c5829aa1771cf87756a5a3475bb2f75a47c1f08972fb1e28cb570bb6",
         "event_count": 31,
         "generation": 2,
         "git_state": "UNKNOWN",
@@ -335,14 +336,14 @@
       },
       "installer": "PER_USER_INSTALL_UPGRADE_REINSTALL_UNINSTALL_HISTORICAL_AND_LIVE_RETENTION_PASSED",
       "retained_after_uninstall": {
-        "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\installer\\retained-export.json": "0be03cd60aae6c89d4e587487e0936cf6c4370207887a2d60942ea916840b38b",
-        "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\installer\\localappdata\\CGCCHILD\\sessions\\CGC-859db0bc120c4fc59d80343f9f1fe76c\\capsules\\final.cgcpack": "3be49525c71754fc0b0b633f1308cc512eca838e3826d20101f12739930c8dc3",
-        "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\installer\\localappdata\\CGCCHILD\\sessions\\CGC-859db0bc120c4fc59d80343f9f1fe76c\\manifest.json": "c059dcaab660e9c65c0c3f7b145c4d95b9dd6c7faf36808838d0e9a72f5caf0a",
-        "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T131924Z-bb3496bf\\installer\\localappdata\\CGCCHILD\\sessions\\CGC-859db0bc120c4fc59d80343f9f1fe76c\\events-0001.jsonl": "32d863ac7595de11438cc04fc500f9eb0923fcbf4f5479f4f9c33b0b73b098eb"
+        "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T132935Z-abe41985\\installer\\retained-export.json": "0be03cd60aae6c89d4e587487e0936cf6c4370207887a2d60942ea916840b38b",
+        "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T132935Z-abe41985\\installer\\localappdata\\CGCCHILD\\sessions\\CGC-02390da62c004d8ebacf8f9ce915d839\\capsules\\final.cgcpack": "45386875c5829aa1771cf87756a5a3475bb2f75a47c1f08972fb1e28cb570bb6",
+        "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T132935Z-abe41985\\installer\\localappdata\\CGCCHILD\\sessions\\CGC-02390da62c004d8ebacf8f9ce915d839\\manifest.json": "73220fd5d68963b0cb63eb007af4a6b1d7e15d876ce689bac449f1937c0bd771",
+        "C:\\Codex-Projects\\CGCCHILD\\build\\qa\\retained\\20260924T132935Z-abe41985\\installer\\localappdata\\CGCCHILD\\sessions\\CGC-02390da62c004d8ebacf8f9ce915d839\\events-0001.jsonl": "ca35d28808f1732d3336a0b58f6a3a18b2e785f1375906f5e009e8034052bdf4"
       },
       "owner_installation_registration": "UNCHANGED",
       "qa_installation_registration": "REMOVED_BY_UNINSTALLER",
-      "finished_at": "2026-09-24T13:20:54.002221+00:00"
+      "finished_at": "2026-09-24T13:31:03.815855+00:00"
     },
     "q8": "PENDING_FINAL_ARCHIVES_AND_GITHUB_ASSET_VERIFICATION",
     "clean_windows_vm": "NOT_EXECUTED",
@@ -359,7 +360,8 @@
       "Windows directory-entry inode zero corrected for sampled rename identity",
       "GUI owned thread teardown corrected",
       "Project/current-directory executable lookup excluded",
-      "Live test CLI exit status and finite timeout made explicit"
+      "Live test CLI exit status and finite timeout made explicit",
+      "Separate credential-bearing argv values and generic token/credential assignments now centrally redacted; source and frozen persistence regressions pass"
     ],
     "retained_unknown_test_attempt": {
       "reason": "Initial 60-second limit reached before expanded live suite finished",
@@ -369,7 +371,8 @@
     "package_guard": {
       "reason": "Existing user CGCCHILD0.3 installer registration found",
       "action": "Preserved owner installation; QA AppId variants used"
-    }
+    },
+    "frozen_credential_argument_redaction": "PASSED_PRESERVE_FRESH_PROCESS_REOPEN"
   },
   "32_tests_passed": {
     "python": 248,
@@ -387,7 +390,8 @@
       "Windows directory-entry inode zero corrected for sampled rename identity",
       "GUI owned thread teardown corrected",
       "Project/current-directory executable lookup excluded",
-      "Live test CLI exit status and finite timeout made explicit"
+      "Live test CLI exit status and finite timeout made explicit",
+      "Separate credential-bearing argv values and generic token/credential assignments now centrally redacted; source and frozen persistence regressions pass"
     ],
     "retained_timeout": "Earlier 60-second suite attempt UNKNOWN; later bounded run VERIFIED_PASS; original evidence retained",
     "installer_guard": "Existing owner installation preserved; same-script QA AppId used"

@@ -36,7 +36,7 @@ Current regression evidence: 14 product tests passed; 203 child tests ran, 173 p
 30 POSIX-only tests skipped without executing Linux. The final Live Continuity suite passed 61/61 tests. Total Python results are 248 passed
 and 30 explicit POSIX skips. [Windows test results](WINDOWS_TEST_RESULTS.json) contain
 the final package input digests and retained evidence. Node offline checks total 66.
-The final package run finished 2026-09-24T13:20:54Z; original owner registration was
+The final package run finished 2026-09-24T13:31:03Z; original owner registration was
 unchanged and the isolated QA registration was removed by its uninstaller.
 
 The reviewed running-session preview uses a real temporary Windows Git project, two actual

@@ -484,3 +484,13 @@ unchanged; shipping-AppId lifecycle and pristine VM remain unexecuted. See final
 WINDOWS_TEST_RESULTS.json. No production authority/security proof is promoted.
 NEXT_EXACT_ACTION: bind archives and digests to clean release source, publish
 private experimental release and verify uploaded bytes before final receipt.
+
+## M86 prepublication redaction review
+
+Separate credential-bearing argv values and token/credential assignments are now
+redacted centrally. The unchanged 61-test live suite passes with the added
+regression assertion; rebuilt wheel/frozen/installer Q7 passed at13:31:03Z.
+A direct frozen event/preserve/fresh-open secret-redaction regression also passed.
+The earlier draft assets remain unpublished until replaced and digest-verified.
+No source/tag history is rewritten. Exact final artifact receipts are in
+WINDOWS_TEST_RESULTS.json. NEXT_EXACT_ACTION: verify and publish the updated draft.
