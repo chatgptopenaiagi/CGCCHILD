@@ -46,3 +46,12 @@ binds a request to stored bytes, not current evidence or authorization. The boun
 stdio reference surface has no sockets, file paths or command arguments. Its caller owns read
 timeouts. MCP naming is withheld until lifecycle/tool framing is separately implemented and
 validated against published protocol. The model-only snapshot remains explicitly incomplete.
+
+## M5 — version-pinned MCP subset
+
+The MCP adapter pins published2025-11-25 behavior. It does not claim latest-version or
+third-party interoperability. It delegates four tools to the existing immutable core. No
+filesystem path, shell, network or live observer is added. Startup receives only explicit
+model snapshot bytes as hex; those bytes must contain no secrets. No SDK dependency was
+installed: owned-subprocess tests are local evidence, not ecosystem acceptance. Plugin work
+will remain repository-local and uninstalled, under the owner's host-safety boundary.

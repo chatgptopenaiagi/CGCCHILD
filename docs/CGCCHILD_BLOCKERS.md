@@ -14,3 +14,6 @@ mutation is authorized by these blocker records. Acceptance remains blocked even
 B06: Full V3 handoff/receipt projection is not implemented by the model-only V4 profile.
 B07: Published protocol compatibility requires independent client interoperability acceptance;
 unit/owned-subprocess transport tests cannot establish ecosystem compatibility.
+
+B08: Python MCP SDK unavailable on Windows/Fedora. No install attempted. Native stdio tests
+can establish local framing only; external client acceptance remains NOT_EXECUTED.
