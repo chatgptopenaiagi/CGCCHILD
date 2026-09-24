@@ -2,6 +2,7 @@
 import importlib.metadata
 from pathlib import Path
 import shutil
+import sys
 
 root = Path(__file__).resolve().parents[1]
 dest = root/'dist/CGC'
@@ -26,3 +27,7 @@ for name in ('PySide6','PySide6_Essentials','PySide6_Addons','shiboken6','pyinst
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(dist.locate_file(file),target)
 print('Staged documentation, plugin, SDK, schemas and dependency licenses')
+python_license = Path(sys.base_prefix)/'LICENSE.txt'
+if python_license.is_file():
+    (dest/'licenses/CPython').mkdir(parents=True, exist_ok=True)
+    shutil.copy2(python_license, dest/'licenses/CPython/LICENSE.txt')

@@ -4,7 +4,7 @@
   "description": "CREDID GUARDIAN CODEX bounded historical state SDK",
   "type": "module",
   "exports": "./index.mjs",
-  "files": ["*.mjs", "README.md", "LICENSE"],
+  "files": ["*.mjs", "example.json", "README.md", "LICENSE"],
   "license": "Apache-2.0",
   "engines": {"node": ">=20"},
   "scripts": {"test": "node test_sdk.mjs"}

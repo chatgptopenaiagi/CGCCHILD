@@ -114,5 +114,17 @@ class ProductTests(unittest.TestCase):
             self.assertEqual(json.loads(result.stdout)['id'], 1)
             self.assertIn('result', json.loads(result.stdout))
 
+    def test_continuity_facade_parity_and_recovery(self):
+        from test_child_continuity import source_state
+        from cgc.experimental.continuity import project
+        value = project(source_state(), portable_project_id='sdk-continuity')
+        app = Workbench()
+        app.load(value)
+        self.assertEqual(app.review()['continuity']['latest_attempt'], 'FAILED')
+        code = "import fs from 'node:fs'; import * as m from './sdk/javascript/index.mjs'; const raw=fs.readFileSync(0); const v=m.decode(raw); const cap=m.capsuleExport(v); if(!m.encode(m.capsuleImport(cap)).equals(raw)) process.exit(2); process.stdout.write(cap);"
+        result = subprocess.run(['node','--input-type=module','-e',code],input=sdk.encode(value),capture_output=True,timeout=10,check=True)
+        self.assertEqual(result.stdout, sdk.export_capsule(value))
+        self.assertEqual(sdk.import_capsule(result.stdout), value)
+
 
 if __name__ == '__main__': unittest.main()

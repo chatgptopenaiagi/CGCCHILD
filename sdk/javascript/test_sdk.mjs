@@ -5,6 +5,6 @@ assert.equal(sdk.negotiate(sdk.API_VERSION).mutation_authorized,false);
 assert.throws(()=>sdk.negotiate('future'),/^Error: UNSUPPORTED_SDK_VERSION$/);
 assert.throws(()=>sdk.decode(Buffer.from('{}')),/^Error: INVALID_SNAPSHOT$/);
 assert.throws(()=>sdk.capsuleImport(Buffer.from('bad')),/^Error: INVALID_CAPSULE$/);
-const state=sdk.decode(fs.readFileSync(new URL('../../src/cgcchild/resources/example.json',import.meta.url)));
+const state=sdk.decode(fs.readFileSync(new URL('./example.json',import.meta.url)));
 assert.deepEqual(sdk.capsuleImport(sdk.capsuleExport(state)),state);
 console.log('SDK: 5 contract checks passed');

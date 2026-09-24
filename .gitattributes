@@ -93,3 +93,4 @@ docs/lab/child_channel_failure_validate.py text eol=lf
 
 # Canonical protocol example bytes must survive Windows checkout unchanged.
 src/cgcchild/resources/*.json text eol=lf
+sdk/javascript/example.json text eol=lf

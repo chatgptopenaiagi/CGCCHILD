@@ -657,3 +657,19 @@ Original HEAD and live main remain d7cb43de3ac001bf28470d6d2f561ed70f106e6a.
 NEXT_EXACT_ACTION: finish frozen Windows build; test isolated wheel, relocated bundle,
 GUI, installer lifecycle; prepare checksums/source/plugin/SDK archives and child release.
 Security acceptance debt remains separate and nonblocking for read-only product build.
+
+## M83 Windows package validation — 2026-09-24
+
+Wheel, frozen GUI/console, installer and Node tarball built natively on Windows.
+14 product tests pass (including both Python/Node capsule profiles); child regression
+173 passed / 30 POSIX skips. Offline plugin and skill validation pass.
+Fresh wheel venv install/import/CLI/read/uninstall passed. Relocated onedir under
+reduced PATH passed self-test, capsule roundtrip, HTML export, resources and real GUI
+all-page render. Frozen screenshot visually reviewed. Owned per-user installer
+install/upgrade/start/uninstall passed; exported file outside install survived.
+Node tarball installed offline and passed its 5 facade contract checks.
+Clean Windows VM remains NOT_EXECUTED; binaries unsigned; production mutation disabled.
+No live quota, Linux or privileged proof collection; master-plan bytes unchanged.
+
+NEXT_EXACT_ACTION: finalize archives/checksums/manifest at clean source HEAD and
+publish the child-only experimental release; verify Git refs and asset digests.
