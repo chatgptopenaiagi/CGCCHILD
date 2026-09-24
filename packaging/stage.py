@@ -9,10 +9,11 @@ dest = root/'dist/CGC'
 for name in ('LICENSE', 'README.md', 'THIRD_PARTY_NOTICES.md'):
     shutil.copy2(root/name, dest/name)
 for name in ('WINDOWS_BUILD.md','PRODUCT_GUIDE.md','PRODUCT_MODES.md','EXECUTOR_MODEL.md',
-             'SECURITY_ACCEPTANCE_DEBT.md','RELEASE_PROCESS.md','INSTALLER.md','RELEASE_NOTES.md'):
+             'SECURITY_ACCEPTANCE_DEBT.md','RELEASE_PROCESS.md','INSTALLER.md','RELEASE_NOTES.md',
+             'LIVE_CONTINUITY_ARCHITECTURE.md','LIVE_CODEX_INTEGRATION.md','LIVE_OBSERVERS.md','LIVE_EVENT_PROTOCOL.md'):
     (dest/'docs').mkdir(exist_ok=True)
     shutil.copy2(root/'docs'/name, dest/'docs'/name)
-for source, target in [('plugins/cgcchild-readonly','plugin'),('sdk/javascript','sdk/javascript'),
+for source, target in [('plugins/cgcchild-readonly','plugin'),('plugins/cgcchild-live','live-plugin'),('sdk/javascript','sdk/javascript'),
                        ('docs/child-schemas','schemas')]:
     shutil.copytree(root/source, dest/target, dirs_exist_ok=True,
                     ignore=shutil.ignore_patterns('__pycache__','*.tgz','node_modules'))

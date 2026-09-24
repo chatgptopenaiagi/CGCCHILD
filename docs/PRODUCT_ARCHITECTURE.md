@@ -1,5 +1,16 @@
 # Windows product architecture
 
+## 0.4 Live Continuity extension
+
+The historical components below remain intact. `cgcchild.live` adds the Windows
+session controller, bounded versioned events, central redaction, segmented durable
+journal, observers, reconciliation, recovery and live capsule codecs. The desktop
+now has 18 pages. See [component map and boundaries](LIVE_CONTINUITY_ARCHITECTURE.md),
+[observers](LIVE_OBSERVERS.md) and [Codex/CLI/SDK integration](LIVE_CODEX_INTEGRATION.md).
+No live event or imported capsule enables the production repository executor.
+
+## Retained historical workbench
+
 GUI and CLI share Workbench, the versioned SDK facade and existing historical codecs.
 The bounded MCP adapter and scoped local ReadRouter are reused. Product code lives
 in src/cgcchild; inherited src/cgc semantics remain unchanged. Startup has no snapshot

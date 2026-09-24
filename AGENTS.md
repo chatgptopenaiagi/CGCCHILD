@@ -1,5 +1,15 @@
 # CREDID GUARDIAN CODEX (CGC) — agent instructions
 
+## Live Continuity product mission — 2026-09-24
+
+CGCCHILD_VNEXT_AUTONOMOUS_LIVE_CONTINUITY_MASTER_PROMPT authorizes Windows-native
+0.4 experimental live sessions, observers, journals, recovery, adapters, GUI, SDKs,
+build/test/package and private child release. Follow docs/LIVE_CONTINUITY_ARCHITECTURE.md
+and current child progress. Historical stop statements below do not stop this product
+mission. Evidence checkpoints never imply source/Git preservation authority. Agent
+reports remain distinct from observation and verification. Production mutation stays
+disabled; original repository and master-plan snapshot remain unchanged.
+
 ## Windows product mission authority — 2026-09-24
 
 CGCCHILD_AUTONOMOUS_COMPLETION supersedes the historical stop frontier below.

@@ -40,3 +40,27 @@ def export_capsule(value):
 
 def report(value):
     return offline_surface.render_html(encode(value))
+
+
+def live_start(project, *, store=None, worker_type="Codex", worker_version=None):
+    """Start a user-selected project session; storage is external by default."""
+    from .live import Session
+    return Session.start(project, store=store, worker_type=worker_type, worker_version=worker_version)
+
+
+def live_open(session_directory):
+    """Replay one explicit session; replay grants no mutation authority."""
+    from .live import Session
+    return Session.open(session_directory)
+
+
+def live_capsule_open(path):
+    """Read and validate a live session capsule as historical evidence."""
+    from .live import open_capsule
+    return open_capsule(path)
+
+
+def live_sessions(store=None):
+    """Discover bounded session summaries only in CGC's own store."""
+    from .live import discover_sessions
+    return discover_sessions(store)

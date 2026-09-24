@@ -1,5 +1,28 @@
 # CGCCHILD blockers
 
+## Current 0.4.0 Live Continuity frontier — M85/M86
+
+Live Continuity is implemented and Windows fixture-tested. Final package rebuild, upgrade
+smoke and private-release asset verification are pending engineering steps, not production
+proof. Earlier stop instructions below are historical. Continue safe product work under the
+current owner mission; the following specific gaps do not block observer-only operation.
+
+| Current gap | State and consequence | Available software route |
+|---|---|---|
+| Filesystem writer exclusivity/current P3 | UNKNOWN; polling can miss transient edits and grants no exclusion | Scoped metadata evidence, explicit coverage, production repository mutation disabled |
+| Protected identity/effective policy | RO-1..RO-5/R6 NOT_EXECUTED; no hostile same-user authority claim | Unprivileged observation, historical import and refusal gates |
+| Actual Codex host lifecycle/plugin installation | NOT_EXECUTED; no full automatic lifecycle claim | Contract-tested native executable launcher, structured MCP reporting and observer-only sessions |
+| Optional Windows named-pipe transport | DEFERRED; no AF_PIPE service claimed | Tested bounded foreground MCP stdio, no network listener |
+| Unknown/unavailable remote ref | UNKNOWN for that observation; no publication success inferred | Continue local Git/file/test evidence and evidence checkpoints |
+| Pristine Windows 10 x64 VM | NOT_EXECUTED | Current-host fresh venv, relocation, reduced PATH and owned installer lifecycle |
+| Trusted release signing/authenticity | NOT_EXECUTED; experimental binaries and capsules unsigned | Canonical validation, independent SHA256 checks and explicit authenticity limit |
+| Power loss/descendant containment | NOT_GUARANTEED; controlled crash/torn-tail tests have bounded scope | Durable journal recovery, retained uncertainty, no automatic project repair |
+
+Exact final Windows test and package results are recorded in WINDOWS_TEST_RESULTS.json.
+The retained B11 historical intermittent fixture finding is not erased by current green runs.
+
+## Historical blocker record
+
 | ID | Class | Dependency / exact limitation | Independent work |
 |---|---|---|---|
 | B01 | Privilege | RO-1–RO-5 pending separate approval; no sudo/root route tried | Inert bootstrap/filter/codec work |

@@ -1,7 +1,7 @@
 {
   "name": "cgcchild-sdk",
-  "version": "0.3.0",
-  "description": "CREDID GUARDIAN CODEX bounded historical state SDK",
+  "version": "0.4.0",
+  "description": "CREDID GUARDIAN CODEX historical state and Windows live continuity SDK",
   "type": "module",
   "exports": "./index.mjs",
   "files": ["*.mjs", "example.json", "README.md", "LICENSE"],

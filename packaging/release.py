@@ -27,6 +27,8 @@ archive(dist/f'CGCCHILD-{__version__}-source.zip',[root/p for p in tracked if p]
 archive(dist/f'CGCCHILD-Windows-Portable-{__version__}.zip',[p for p in (dist/'CGC').rglob('*') if p.is_file()],dist)
 plugin = root/'plugins/cgcchild-readonly'
 archive(dist/f'cgcchild-readonly-{__version__}.zip',[p for p in plugin.rglob('*') if p.is_file()],plugin.parent)
+plugin = root/'plugins/cgcchild-live'
+archive(dist/f'cgcchild-live-{__version__}.zip',[p for p in plugin.rglob('*') if p.is_file()],plugin.parent)
 (dist/'RELEASE_NOTES.md').write_bytes((root/'docs/RELEASE_NOTES.md').read_bytes())
 artifacts=[]
 for p in sorted(dist.iterdir()):
@@ -37,6 +39,9 @@ for p in sorted(dist.iterdir()):
                               sha256=digest))
 exe=dist/'CGC/CGC.exe'
 artifacts.append(dict(artifact_name='CGC/CGC.exe',artifact_type='exe-directory-entry',size=exe.stat().st_size,
+                      sha256=hashlib.sha256(exe.read_bytes()).hexdigest()))
+exe=dist/'CGC/CGC-console.exe'
+artifacts.append(dict(artifact_name='CGC/CGC-console.exe',artifact_type='exe-directory-entry',size=exe.stat().st_size,
                       sha256=hashlib.sha256(exe.read_bytes()).hexdigest()))
 for p in dist.glob('*.zip'):
     with zipfile.ZipFile(p) as z:
@@ -54,6 +59,8 @@ manifest=dict(project='CGCCHILD',version=__version__,commit=head,
     python_version=platform.python_version(),artifacts=artifacts,
     tests=tests,
     known_blockers=['Clean Windows VM acceptance deferred','Unsigned binaries','Plugin host acceptance deferred',
+                    'Named-pipe transport deferred; bounded local MCP stdio implemented',
+                    'Polling may miss transient changes; same-user isolation and containment unproved',
                     'RO-1..RO-5 and R6 not executed','Filesystem closure and real P3 UNKNOWN'],
     security_acceptance_state='EXPERIMENTAL; PRODUCTION_MUTATION_DISABLED',supported_modes=[m.value for m in Mode])
 mp=dist/'release-manifest.json'

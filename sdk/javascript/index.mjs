@@ -3,10 +3,11 @@ import {decodeState, encodeState} from './state.mjs';
 import {decodeContinuity, encodeContinuity} from './continuity.mjs';
 import {importCapsule, exportCapsule} from './capsule.mjs';
 import {importCapsule as importContinuityCapsule, exportCapsule as exportContinuityCapsule} from './continuity_capsule.mjs';
+export {LIVE_EVENT_VERSION, LIVE_REPORT_TYPES, buildLiveReport, LiveClient} from './live.mjs';
 export const API_VERSION = 'cgcchild-sdk-1';
 export function negotiate(version) {
   if (version !== API_VERSION) throw new Error('UNSUPPORTED_SDK_VERSION');
-  return {api_version:API_VERSION, package_version:'0.3.0', profiles:['QUIESCENCE_MODEL_ONLY','V3_CONTINUITY_HISTORICAL'],mutation_authorized:false};
+  return {api_version:API_VERSION, package_version:'0.4.0', profiles:['QUIESCENCE_MODEL_ONLY','V3_CONTINUITY_HISTORICAL'],mutation_authorized:false};
 }
 export function decode(raw) {
   if (!Buffer.isBuffer(raw)) throw new Error('INVALID_SNAPSHOT');

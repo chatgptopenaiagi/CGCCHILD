@@ -1,13 +1,18 @@
 # CREDID GUARDIAN CODEX — Windows preview
 
-CGCCHILD 0.3.0 is an experimental historical-evidence workbench for saved continuity,
-capsules, recovery planning and inert reports. It never automatically checkpoints,
-pushes, repairs or runs project commands. READ_ONLY_SAFE names a product mode;
+CGCCHILD 0.4.0 adds Live Continuity to the historical-evidence workbench. Select
+Live Session, choose an explicit project and external session store, and start a
+guarded session. CGC observes metadata/Git state every five seconds while the window
+is open and writes an evidence checkpoint every twelve polls. Start Codex separately
+or use the optional native launcher. End & preserve creates a durable session capsule.
+No automatic Git commit, push, source backup or project repair occurs.
+READ_ONLY_SAFE names a product mode;
 it does not claim hostile-file isolation or production security acceptance.
 
 Start CGC.exe in the portable CGC directory or use the installed Start Menu shortcut.
 Open a reviewed canonical CGC JSON snapshot or .cgcpack. Load synthetic example gives
-an offline tour. All 13 pages share one validated snapshot. Imported safe-resume is
+an offline tour. The 13 historical pages and five live pages retain explicit truth
+levels and uncertainty. Imported safe-resume is
 UNKNOWN. Exports require new filenames. Keep the portable directory together.
 
 ```powershell
@@ -33,7 +38,14 @@ safe-resume provide historical offline review, not the inherited POSIX current-c
 reconciler. That collector remains deferred. Invalid input exits 2, executor refusal
 exits 1, successful analysis exits 0. Rejected document contents are not echoed.
 
-The desktop stores no user data automatically. Reports/capsules go to explicit
-export paths. Review private continuity notes before sharing. Exports are unsigned,
+Live sessions store bounded sanitized metadata in the exact displayed external path,
+by default `%LOCALAPPDATA%/CGCCHILD/sessions/<id>`. Source contents, Git objects,
+credentials, complete transcripts and hidden AI reasoning are excluded. Explicit
+test wrappers execute selected tests; execution alone does not prove a passing result.
+On startup the GUI lists unclosed sessions only from CGC's store; recovery is explicit
+because another foreground owner may still be active. Resume creates a new generation
+for observation and grants no project mutation authority. Reopening a session capsule
+is historical review. See [live CLI/SDK/MCP guide](LIVE_CODEX_INTEGRATION.md) and
+[observer limitations](LIVE_OBSERVERS.md). Review private notes before sharing. Exports are unsigned,
 and consistency is not authenticity. Concurrent file races on untrusted storage are
 not excluded; hostile same-user isolation and filesystem closure are not claimed.

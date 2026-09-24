@@ -1,5 +1,30 @@
 # CGCCHILD plan reconciliation
 
+## Current Windows Live Continuity mission — M85/M86
+
+The owner's CGCCHILD_VNEXT_AUTONOMOUS_LIVE_CONTINUITY_MASTER_PROMPT authorizes the next
+minor experimental Windows product generation. It supersedes historical queue exhaustion
+and presentation-only boundaries while preserving the master-plan snapshot bytes and the
+original repository as read-only. Version 0.4.0 builds on 0.3.0; it does not roll back the
+verified product or claim completion of inherited production proof gates.
+
+| Mission area | Current software scope | Remaining acceptance boundary |
+|---|---|---|
+| Observe and record | Explicit Windows project, bounded metadata/Git/test evidence, redaction, hash-chained segmented journal | Polling is sampled; source contents, credentials and hidden reasoning are excluded; filesystem closure UNKNOWN |
+| Corroborate and reconcile | Separate truth grades and reconciliation states; retained contradictions; local Git/remote-ref comparison | Reports never directly establish verification; network absence stays UNKNOWN |
+| Preserve and recover | External evidence checkpoints, crash/torn-tail recovery assessment, new observation generations, session capsules | No source backup, automatic Git mutation, project repair or imported execution authority |
+| Codex integration | Structured bounded foreground MCP stdio, live plugin, native executable launcher contract | Actual host lifecycle/install acceptance NOT_EXECUTED; optional AF_PIPE deferred |
+| Product surfaces | Existing workbench plus five live pages, CLI, Python/Node SDKs, historical capsule reopen | Pristine VM and signing unverified; final packaged binaries/upgrade/publication still under acceptance |
+| Release | 0.4.0 source implementation and Windows tests, artifact/release workflow staged | Release-source commit/tag and uploaded asset receipts pending final verification |
+
+Blocked security proof is not blocked product engineering. READ_ONLY_SAFE remains the
+default, current P3 and filesystem exclusivity remain UNKNOWN, and production repository
+mutation remains disabled. The final release gate is package/source/asset evidence recorded
+in WINDOWS_TEST_RESULTS.json and WINDOWS_RELEASE_ACCEPTANCE.md. Historical reconciliations
+below explain earlier scopes; their NEXT labels do not replace this mission's current frontier.
+
+## Historical reconciliation record
+
 Plan snapshot: ce41ad2020ddfcaa7a2a3687ade86c6eb8358ea4 (2026-09-24).
 Actual source used: d7cb43de3ac001bf28470d6d2f561ed70f106e6a.
 The newer 9816a4b and d7cb43d checkpoints supersede the plan's M4 NEXT labels:
@@ -250,3 +275,17 @@ classifications. Security debt is not promoted: production mutation stays disabl
 NEXT_EXACT_ACTION: separate clean Windows 10 x64 acceptance of the published portable
 and installer when available; no privileged proof or source-repository action.
 Stop policy A satisfied: experimental Windows release built, published, checkpointed.
+
+## M85/M86 implementation-to-release reconciliation — 2026-09-24
+
+Live Continuity closes the gap between the earlier historical workbench and a user-started
+Windows observation session. Its evidence is fresh only at the stated observation time and
+scope. A canonical journal establishes relationships and integrity, not authenticity or
+current authorization. Test summaries, local commits and remote refs retain independent
+evidence requirements. The full inherited preservation/quiescence mission remains PARTIAL.
+
+Windows tests establish the new implementation's stated fixture scope. Final source rebuild,
+actual previous-version upgrade, frozen live capsule rendering and published asset digest
+verification remain staged acceptance work. Retain 0.3.0 receipts as history; do not reuse
+them as proof for 0.4.0 assets. Complete the current owner-authorized release workflow, then
+record source/tag/final HEAD separately without rewriting history or master-plan bytes.

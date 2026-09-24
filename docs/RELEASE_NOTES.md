@@ -1,22 +1,37 @@
-# CGCCHILD Experimental Windows Release — 0.3.0
+# CGCCHILD 0.4.0 experimental — Live Continuity
 
-CREDID GUARDIAN CODEX ships a Windows historical-evidence desktop, CLI, wheel,
-portable bundle, installer, plugin package and Python/Node SDKs.
+CREDID GUARDIAN CODEX now observes explicit Windows engineering sessions and
+preserves their evidence outside the project. The existing historical workbench
+remains available alongside five new desktop pages: Live Session, Timeline, Git,
+Tests and Errors.
 
-Works: 13 desktop pages; canonical snapshot/capsule loading; continuity review;
-inert HTML reports; deterministic capsules; security-debt reporting; plans/dry-runs/
-simulation; bounded local MCP stdio; scoped in-process router. READ_ONLY_SAFE is
-default. Runtime opens no account, generic shell or network listener.
+New: cgc-live-event-0.1 bounded hash-chained journals; REPORTED/OBSERVED/VERIFIED
+truth levels; separate reconciliation and retained contradictions; metadata-only
+Windows project polling; read-only Git/object/remote verification; explicit bounded
+unittest/pytest/npm test wrappers; errors, decisions, unfinished work and proposed
+next actions; evidence checkpoints; interrupted-generation recovery; validated
+cgc-live-capsule-0.1 exports and fresh-process historical reopening.
 
-Experimental: V3 offline review/planning, V4 protocol/capsules/MCP, SDKs and local Fabric.
-GUI is complete for the historical-workbench scope. Production mutation is BLOCKED.
-Filesystem closure and real P3 remain UNKNOWN. RO-1..RO-5 and R6 are NOT_EXECUTED.
-Inherited POSIX current capture is not ported. Windows imported safe-resume never
-grants repository-touching YES.
+The CLI, Python and Node SDKs expose the same core. A separate live Codex plugin
+reports structured facts through bounded foreground MCP stdio. An optional native
+Codex launcher passes ephemeral session metadata. Observer-only sessions work
+without Codex or network access. There are no installed hooks, hidden services,
+network listeners, source backups or automatic project Git mutations.
 
-Disabled: autonomous checkpoint/push/repair, privileged executor, remote execution,
-gateway, live quota polling and automatic plugin installation.
+Windows artifacts: wheel, GUI/console, portable ZIP, per-user installer, source ZIP,
+historical and live plugin ZIPs, Node tarball, preview, manifest and SHA256 checksums.
+Validation includes real Windows Git/test/session fixtures, crash/torn-tail recovery,
+MCP/SDK processes, GUI, fresh wheel, reduced-PATH relocation and installer lifecycle.
+Exact counts and results are in WINDOWS_TEST_RESULTS.json and the release manifest.
 
-Later review: clean Windows VM, signing, installed Codex plugin interoperability,
-platform capture/proof and inherited B11 intermittent POSIX fixture. Historical
-evidence, Apache-2.0 license and original attribution remain preserved.
+Experimental limits: polling may miss transient edits; unsupported Git layouts and
+remote access stay UNKNOWN; parsed test summaries are scoped evidence from the
+selected process, not proof of honest test logic. Host plugin lifecycle acceptance,
+independent clean Windows VM and trusted signing remain unverified. Optional named
+pipes are deferred in favor of the tested local stdio route. Filesystem closure,
+current P3 and current mutation authority remain UNKNOWN. Production repository
+mutation, privileged execution, remote execution and live quota polling stay disabled.
+
+AI_PROPOSED_NEXT_ACTION is an unexecuted declaration, never permission. Capsules
+remain historical after import. Integrity does not establish authenticity. Apache-2.0,
+original attribution, inherited research and master-plan bytes are preserved.

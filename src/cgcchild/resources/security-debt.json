@@ -142,5 +142,53 @@
       "product_build": "NONBLOCKING",
       "production_acceptance": "BLOCKING"
     }
+  },
+  {
+    "debt_id": "LIVE_OBSERVER_COVERAGE",
+    "claim": "Complete engineering event capture",
+    "current_status": "PARTIAL",
+    "missing_evidence": "Polling misses transient changes; reparse and credential boundaries are excluded; unsupported Git layouts remain unknown",
+    "affected_features": [
+      "Live Continuity completeness"
+    ],
+    "runtime_consequence": "ACCEPTANCE_NOT_CLAIMED",
+    "safe_fallback": "Bounded metadata observations with explicit coverage and independent reports",
+    "future_acceptance_test": "Independent Windows and supported Codex host acceptance for the specific claim",
+    "blocking_or_nonblocking": {
+      "product_build": "NONBLOCKING",
+      "production_acceptance": "BLOCKING"
+    }
+  },
+  {
+    "debt_id": "LIVE_CRASH_DURABILITY",
+    "claim": "All-crash and power-loss durability",
+    "current_status": "PARTIAL",
+    "missing_evidence": "Fsync and tested process death/torn-tail recovery do not prove power-loss durability, host restart behavior or descendant containment",
+    "affected_features": [
+      "Live Continuity completeness"
+    ],
+    "runtime_consequence": "ACCEPTANCE_NOT_CLAIMED",
+    "safe_fallback": "Retain intact journal prefix; refuse corruption; explicit recovery as new generation",
+    "future_acceptance_test": "Independent Windows and supported Codex host acceptance for the specific claim",
+    "blocking_or_nonblocking": {
+      "product_build": "NONBLOCKING",
+      "production_acceptance": "BLOCKING"
+    }
+  },
+  {
+    "debt_id": "LIVE_HOST_LIFECYCLE",
+    "claim": "Automatic complete Codex lifecycle coverage",
+    "current_status": "PARTIAL",
+    "missing_evidence": "Actual installed Codex host lifecycle acceptance not executed; no automatic hooks installed",
+    "affected_features": [
+      "Live Continuity completeness"
+    ],
+    "runtime_consequence": "ACCEPTANCE_NOT_CLAIMED",
+    "safe_fallback": "Structured MCP reports plus independent filesystem/Git/test observations",
+    "future_acceptance_test": "Independent Windows and supported Codex host acceptance for the specific claim",
+    "blocking_or_nonblocking": {
+      "product_build": "NONBLOCKING",
+      "production_acceptance": "BLOCKING"
+    }
   }
 ]

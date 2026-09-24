@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:cgc:live:event:0.1",
+  "title": "cgc-live-event-0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_version",
+    "event_id",
+    "session_id",
+    "sequence",
+    "project_id",
+    "actor",
+    "source",
+    "event_type",
+    "correlation_id",
+    "reported_at",
+    "observed_at",
+    "verified_at",
+    "evidence_grade",
+    "reconciliation_state",
+    "payload",
+    "payload_sha256",
+    "previous_event_sha256",
+    "event_sha256"
+  ],
+  "properties": {
+    "event_version": {
+      "const": "cgc-live-event-0.1"
+    },
+    "event_id": {
+      "type": "string",
+      "maxLength": 128
+    },
+    "session_id": {
+      "type": "string",
+      "maxLength": 128
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "project_id": {
+      "type": "string",
+      "maxLength": 128
+    },
+    "actor": {
+      "type": "string",
+      "maxLength": 128
+    },
+    "source": {
+      "type": "string",
+      "maxLength": 128
+    },
+    "event_type": {
+      "enum": [
+        "CHECKPOINT_PRESERVED",
+        "CHECKPOINT_STARTED",
+        "COMMAND_FINISHED",
+        "COMMAND_REPORTED",
+        "COMMAND_STARTED",
+        "COMMIT_OBSERVED",
+        "COMMIT_REPORTED",
+        "COMMIT_VERIFIED",
+        "CONTRADICTION_DETECTED",
+        "DECISION_DECLARED",
+        "ERROR_OBSERVED",
+        "ERROR_REOPENED",
+        "ERROR_RESOLVED",
+        "EVIDENCE_INVALIDATED",
+        "EVIDENCE_RECONCILED",
+        "FILESYSTEM_BASELINE_OBSERVED",
+        "FILESYSTEM_CHANGE_OBSERVED",
+        "FILESYSTEM_CHANGE_VERIFIED",
+        "FILE_EDIT_REPORTED",
+        "GIT_STATE_OBSERVED",
+        "NEXT_ACTION_DECLARED",
+        "OBSERVER_COVERAGE",
+        "PUSH_CONTRADICTION",
+        "PUSH_OBSERVED",
+        "PUSH_REPORTED",
+        "PUSH_VERIFIED",
+        "RECONCILIATION_COMPLETED",
+        "RECOVERY_ASSESSED",
+        "SESSION_CLOSED_WITH_UNKNOWN",
+        "SESSION_ENDING",
+        "SESSION_INTERRUPTED",
+        "SESSION_PREPARING",
+        "SESSION_PRESERVED",
+        "SESSION_RECOVERABLE",
+        "SESSION_RECOVERING",
+        "SESSION_RESUMED",
+        "SESSION_STARTED",
+        "TEST_FINISHED",
+        "TEST_RESULT_VERIFIED",
+        "TEST_STARTED",
+        "UNFINISHED_WORK_DECLARED",
+        "WORKER_LAUNCHED"
+      ]
+    },
+    "correlation_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 128
+    },
+    "reported_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 128
+    },
+    "observed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 128
+    },
+    "verified_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 128
+    },
+    "evidence_grade": {
+      "enum": [
+        "OBSERVED",
+        "REPORTED",
+        "VERIFIED"
+      ]
+    },
+    "reconciliation_state": {
+      "enum": [
+        "CONTRADICTED",
+        "INVALIDATED",
+        "STALE",
+        "SUPPORTED",
+        "UNKNOWN"
+      ]
+    },
+    "payload": {
+      "type": "object"
+    },
+    "payload_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "previous_event_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "event_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "description": "Runtime additionally validates canonical bytes, bounds, hash chain, sequence/session/project binding, timestamps and provenance. Integrity is not truth or authority."
+}

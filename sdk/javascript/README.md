@@ -1,5 +1,41 @@
 # CGCCHILD experimental Node snapshot codec
 
+## Windows Live Continuity in 0.4.0
+
+`index.mjs` additionally exports `LiveClient`, `buildLiveReport`, `LIVE_REPORT_TYPES`
+and `LIVE_EVENT_VERSION`. Historical codecs below retain their own schemas.
+The live facade starts only explicit finite CLI operations using a configured
+CGC executable, without a shell. It has a timeout and 2 MiB response limit;
+larger replies refuse rather than become silently truncated evidence.
+
+```javascript
+import {LiveClient, buildLiveReport} from 'cgcchild-sdk';
+const cgc = new LiveClient({executable: 'C:\\CGC\\CGC-console.exe'});
+const session = cgc.start('C:\\MyProject');
+cgc.report(session.storage_location, 'decision_declared', {text: 'Keep the public API stable'});
+cgc.observe(session.storage_location);
+cgc.checkpoint(session.storage_location);
+const {capsule} = cgc.preserve(session.storage_location);
+const historical = cgc.openCapsule(capsule);
+// historical.authority === 'HISTORICAL_ONLY'
+// A reporting-only MCP tool call (does not send anything):
+const report = buildLiveReport('next_action_declared', {text: 'Review remaining tests'});
+```
+
+`status`, `list`, `recover` and `resume` are also available. A wheel environment
+may use `{executable: 'C:\\venv\\Scripts\\python.exe', prefix: ['-m','cgcchild']}`.
+The client is Windows only, dependency free, and does not launch Codex or execute
+project commands. The configured CGC binary remains responsible for validation,
+redaction, journal integrity and truth levels. Client-built reports cannot select
+OBSERVED or VERIFIED. File/remote observation requires a selected session; remote
+verification is opt-in through `observe(path, {verifyRemote:true})`.
+None of these operations grants production mutation or executes a proposed action.
+
+`npm test` runs the historical facade and bounded live-report/client checks.
+The Python interface suite separately runs the real Node facade against the CGC CLI
+with temporary Windows Git repositories. These checks do not establish installed
+Codex plugin interoperability or clean-machine release acceptance.
+
 Independent JavaScript implementation of the [model-only state0.1 contract](../../docs/CGCCHILD_STATE_PROTOCOL.md).
 No dependencies; uses installed Node built-ins. Not a browser, TypeScript or live
 CGC SDK. The inert model capsule extension is described below. Original [Apache-2.0 license](../../LICENSE) and attribution apply.

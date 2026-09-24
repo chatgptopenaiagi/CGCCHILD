@@ -1,4 +1,59 @@
-# Windows 0.3.0 release acceptance
+# Windows 0.4.0 Live Continuity release acceptance
+
+Current status: **IMPLEMENTED / WINDOWS FIXTURE-TESTED; FINAL PACKAGE AND RELEASE
+VERIFICATION PENDING**. The target is private prerelease `v0.4.0-experimental`.
+Release-source commit, published tag and uploaded asset receipts are pending; this document
+does not assert publication. The earlier 0.3.0 acceptance record is preserved below.
+
+| Feature / tier | Classification | Verified scope or remaining final gate |
+|---|---|---|
+| Q1 event/schema/truth/redaction | VERIFIED ON WINDOWS | Bounded cgc-live-event-0.1, hash chain, central redaction, distinct grade/reconciliation state and controller transitions |
+| Q2 Windows filesystem observer | VERIFIED / EXPERIMENTAL | Explicit-root metadata polling and reparse boundaries; transient edits may be missed; no exclusivity claim |
+| Q2 Git observer | VERIFIED / EXPERIMENTAL | Read-only local refs/object checks and explicit remote-ref comparison; unavailable/unsupported evidence remains UNKNOWN |
+| Q2 test observer | VERIFIED / EXPERIMENTAL | Explicit unittest/pytest/npm parsing, process metadata/digests and unknown-count fallback; no proof of honest test code or containment |
+| Q2 errors/decisions/reconciliation | VERIFIED / EXPERIMENTAL | Durable reports, resolutions/reopening, evidence links and retained contradictions; no report-to-verified shortcut |
+| Q3 structured Codex adapter | VERIFIED IN OWNED PROCESSES | Foreground bounded MCP stdio, reporting plugin and SDK calls; real installed host lifecycle NOT_EXECUTED |
+| Optional Windows AF_PIPE | DEFERRED | No named-pipe listener/service claimed; tested local stdio remains available |
+| Managed native Codex executable launcher | CONTRACT-TESTED | Explicit native executable/cwd/ephemeral metadata; actual Codex host lifecycle NOT_EXECUTED; observer-only fallback |
+| Q4 live Windows session | VERIFIED IN TEMPORARY PROJECTS | Start, real file/Git changes, parsed tests, reports, checkpoints, capsule preserve/reopen and remote fixture verification |
+| Q5 interruption/recovery | VERIFIED WITH BOUNDED FIXTURES | Process interruption, replay, torn-tail retention, recovery assessment and generation linkage; power-loss guarantees and automatic source repair excluded |
+| Q6 desktop GUI | VERIFIED ON WINDOWS | 18 pages; live controls, timeline/Git/tests/errors, background I/O, interruption on close, historical capsule reopen and source preview |
+| Fresh-process live capsule GUI | VERIFIED FROM SOURCE | Explicit smoke capsule selection and historical rendering; final frozen reduced-PATH render pending package receipt |
+| Historical workbench | VERIFIED REGRESSION | Existing snapshots, capsules, modes, reports and safety/refusal boundaries retained |
+| Python SDK | VERIFIED FROM SOURCE | Live controller facade and historical APIs; final fresh-wheel receipt pending |
+| Node SDK | VERIFIED / PACKAGED OFFLINE | 61 live and five historical contract checks pass after offline package installation |
+| Historical/live plugin packages | VALIDATED OFFLINE | Both manifest/skill packages pass; no host installation or automatic lifecycle acceptance inferred |
+| Q7 wheel | FINAL ACCEPTANCE PENDING | Final source rebuild and fresh-venv install/import/live use/uninstall receipt required |
+| Q7 CGC.exe / CGC-console.exe / portable ZIP | FINAL ACCEPTANCE PENDING | Final relocated bundle, Python removed from PATH and frozen live GUI/capsule smoke receipt required |
+| Q7 installer | FINAL ACCEPTANCE PENDING | QA-only AppId variants use the same installer script and old/new payloads for real 0.3-to-0.4 upgrade; shipping-AppId lifecycle NOT_EXECUTED because an existing owner installation is preserved |
+| Q8 source/plugin/Node/preview/manifest/checksums | FINAL ACCEPTANCE PENDING | Inventory, archive validation and hashes must bind the final reviewed release source |
+| Q8 private GitHub prerelease | NOT YET VERIFIED | Publish only child origin; compare every uploaded asset size/digest against local bytes |
+| Clean independent Windows 10 x64 VM | NOT_EXECUTED | Current-host relocation/reduced PATH is not pristine-machine acceptance |
+| Trusted signing | NOT_EXECUTED | Experimental binaries and capsules remain unsigned |
+| Production mutation / filesystem closure | DISABLED / UNKNOWN | No production repository executor or acceptance promotion; inherited proof debt remains |
+
+Current regression evidence: 14 product tests passed; 203 child tests ran, 173 passed and
+30 POSIX-only tests skipped without executing Linux. The live-suite count is intentionally
+not frozen in this staging record; [Windows test results](WINDOWS_TEST_RESULTS.json) and
+the final release manifest will hold the final source/package runs. Earlier 0.3.0 package
+results in that file are historical until replaced by final 0.4.0 receipts.
+
+The reviewed running-session preview uses a real temporary Windows Git project, two actual
+passing unittest tests, an evidence checkpoint and a subsequently preserved/reopened capsule.
+`packaging/live_preview.py` reproduces it using new explicit export filenames. Explicit
+`gui --smoke-output` can load `CGC_SMOKE_LIVE_CAPSULE` for historical live-capsule rendering;
+ordinary GUI startup does not read that variable or open its path.
+
+No live quota, WSL/Linux/Bash, privileged proof collection, authentication change or host
+security bypass is part of this mission. RO-1..RO-5/R6 remain NOT_EXECUTED. Original-source
+and immutable-plan verification must be repeated for the final receipt. Software completion
+does not close protected identity/effective policy, hostile same-user isolation or current P3.
+
+NEXT_EXACT_ACTION: complete the final Windows rebuild/package checks, commit reviewed source,
+publish the child-only private experimental release and verify asset digests and Git refs.
+Record release-source SHA/tag separately from any later documentation receipt HEAD.
+
+## Historical Windows 0.3.0 release acceptance
 
 Published private prerelease: [v0.3.0-experimental](https://github.com/chatgptopenaiagi/CGCCHILD/releases/tag/v0.3.0-experimental).
 Release source/tag: 9ab0435f60e1bdf6dd9f5c051d4dd7b5f57cc16b.

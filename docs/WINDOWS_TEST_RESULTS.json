@@ -1,4 +1,6 @@
 {
+  "version": "0.4.0",
+  "release_phase": "SOURCE_VERIFIED_FINAL_PACKAGE_PENDING",
   "tier_a_product": {
     "run": 14,
     "passed": 14,
@@ -10,20 +12,55 @@
     "skipped_posix": 30,
     "failed": 0
   },
-  "node_sdk_contract_checks": 5,
-  "plugin_offline_validation": "PASSED",
-  "tier_c_windows_package": "PASSED",
-  "tier_d_fresh_install": "PASSED_ON_CURRENT_HOST",
-  "tier_e_release_smoke": "PASSED_ARCHIVES_RESOURCES_CHECKSUMS_AND_10_GITHUB_ASSET_DIGESTS",
+  "q1_q6_live": {
+    "run": 61,
+    "passed": 61,
+    "failed": 0,
+    "skipped": 0,
+    "duration_seconds": 61.947335,
+    "verification_state": "VERIFIED_PASS",
+    "stderr_sha256": "1b6539176f0d17cac812fde0c1187a17ce42351b30df115d1654b5740e058c4c"
+  },
+  "unique_python_totals": {
+    "run": 278,
+    "passed": 248,
+    "skipped": 30,
+    "failed": 0
+  },
+  "gui_tests": 8,
+  "node_live_contract_checks": 61,
+  "node_historical_contract_checks": 5,
+  "node_tarball_offline_install": "PASSED",
+  "plugins": {
+    "cgcchild-readonly": "MANIFEST_AND_SKILL_VALIDATED",
+    "cgcchild-live": "MANIFEST_AND_SKILL_VALIDATED",
+    "actual_host_lifecycle": "NOT_EXECUTED"
+  },
+  "q7": "PRELIMINARY_PASSED_FINAL_PAYLOAD_RERUN_PENDING",
+  "q8": "PENDING",
   "clean_windows_vm": "NOT_EXECUTED",
+  "signing": "NOT_EXECUTED",
+  "shipping_appid_lifecycle": "NOT_EXECUTED_EXISTING_OWNER_INSTALLATION",
+  "installer_scope": "Same script and versioned payloads with isolated QA AppId; original owner registration unchanged",
   "live_quota_reads": 0,
   "privileged_acceptance_reads": 0,
-  "linux_execution": false,
-  "fresh_wheel": "INSTALL_IMPORT_CLI_READ_UNINSTALL_PASSED",
-  "relocated_frozen": "REDUCED_PATH_CLI_CAPSULE_REPORT_RESOURCES_GUI_PASSED",
-  "installer": "PER_USER_INSTALL_UPGRADE_START_UNINSTALL_EXPORT_RETENTION_PASSED",
-  "node_tarball_offline_install": "PASSED",
-  "plugin_skill_validation": "PASSED",
-  "gui_visual_review": "FROZEN_SCREENSHOT_REVIEWED",
-  "frozen_code_filenames": "RELATIVE_PRODUCT_MODULE_PATHS"
+  "linux_invocations": 0,
+  "production_mutation": false,
+  "earlier_failures_resolved": [
+    "Malformed report identities could poison replay; validation now refuses before append",
+    "Malformed capsule projections/enums/ZIP compression now refused",
+    "Windows directory-entry inode zero corrected for sampled rename identity",
+    "GUI owned thread teardown corrected",
+    "Project/current-directory executable lookup excluded",
+    "Live test CLI exit status and finite timeout made explicit"
+  ],
+  "retained_unknown_test_attempt": {
+    "reason": "Initial 60-second limit reached before expanded live suite finished",
+    "verification_state": "UNKNOWN",
+    "followup": "Final 180-second bounded run VERIFIED_PASS; original event retained"
+  },
+  "package_guard": {
+    "reason": "Existing user CGCCHILD0.3 installer registration found",
+    "action": "Preserved owner installation; QA AppId variants used"
+  }
 }

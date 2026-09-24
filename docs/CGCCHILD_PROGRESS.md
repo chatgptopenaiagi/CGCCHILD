@@ -1,9 +1,35 @@
-> Current child frontier: **Windows 0.3.0 experimental release PUBLISHED**.
-> [Release acceptance](WINDOWS_RELEASE_ACCEPTANCE.md) and the final M84 entry supersede
-> earlier stop/next-action entries. Production mutation remains disabled.
-> NEXT_EXACT_ACTION: separate clean Windows 10 x64 package acceptance when available.
+> Current child frontier: **Windows 0.4.0 Live Continuity IMPLEMENTED; release verification pending**.
+> The owner's CGCCHILD_VNEXT_AUTONOMOUS_LIVE_CONTINUITY_MASTER_PROMPT authorizes M85/M86.
+> [Current release acceptance](WINDOWS_RELEASE_ACCEPTANCE.md) supersedes historical stop frontiers.
+> Production repository mutation remains disabled; filesystem closure/current P3 remain UNKNOWN.
+> NEXT_EXACT_ACTION: finish final Windows package acceptance, bind artifacts to reviewed source,
+> publish the private experimental prerelease and verify every uploaded asset digest.
 
 # CGCCHILD progress
+
+## Current M85/M86 frontier — 2026-09-24
+
+Live Continuity adds explicit project sessions, bounded Windows/Git/test observations,
+agent-reported events, reconciliation, evidence checkpoints, interrupted-generation recovery
+and historical session capsules to the existing workbench. Eighteen GUI pages, CLI commands,
+Python/Node SDKs and a separate live reporting plugin share the new subsystem. The tested
+foreground MCP stdio route is available; optional AF_PIPE transport is deferred.
+
+Windows unit/integration/GUI/crash fixtures pass. Product regression: 14 passed. Child
+regression: 203 run, 173 passed, 30 explicit POSIX skips. Packaged Node validation passes
+61 live and five historical checks; both plugin packages pass offline validation. The final
+live-suite count and package receipts belong in [Windows test results](WINDOWS_TEST_RESULTS.json)
+after the final run; no provisional count is promoted here. Final package rebuild, exact
+0.3.0-to-0.4.0 installer upgrade acceptance and GitHub publication receipts are pending.
+
+The native executable launcher is contract-tested. Real Codex host lifecycle/plugin acceptance,
+pristine Windows VM acceptance and signing remain NOT_EXECUTED. Observer-only operation is
+available without those dependencies. Original-source and immutable-plan protection continue.
+
+## Historical progress through M84
+
+The following earlier status and NEXT_EXACT_ACTION entries are retained as historical evidence;
+the current M85/M86 frontier above governs the Windows product mission.
 
 ## OVERALL STATUS
 
@@ -414,3 +440,35 @@ classifications. Security debt is not promoted: production mutation stays disabl
 NEXT_EXACT_ACTION: separate clean Windows 10 x64 acceptance of the published portable
 and installer when available; no privileged proof or source-repository action.
 Stop policy A satisfied: experimental Windows release built, published, checkpointed.
+
+## M85 Live Continuity implementation — 2026-09-24
+
+Implemented cgc-live-event-0.1 with finite payloads, central redaction, canonical segmented
+hash chains and independent evidence grade/reconciliation state. External session storage,
+journaled controller transitions, sampled Windows metadata observation, read-only Git and
+explicit remote-ref verification support reconciliation without acquiring source-mutation
+authority. Test wrappers distinguish process completion, parsed results and unknown counts.
+Errors, decisions, unfinished work and AI_PROPOSED_NEXT_ACTION remain durable evidence.
+
+Checkpoints preserve evidence; they do not commit source or push. Recovery retains torn-tail
+evidence and appends a reviewed new observation generation. cgc-live-capsule-0.1 validates
+timeline integrity and rebuilds derived projections on import; imported authority is UNKNOWN.
+The historical workbench remains intact alongside Live Session, Timeline, Git, Tests and Errors.
+GUI operations run outside the desktop event loop, and closing an active session records
+interruption. Structured Codex reporting uses explicit foreground MCP calls and never captures
+private reasoning or installs lifecycle hooks. Python and Node interfaces share these boundaries.
+
+## M86 Windows acceptance and release staging — 2026-09-24
+
+Source unit/integration/GUI and process-recovery fixtures are verified on Windows. The real
+temporary-project preview runs two unittest tests, records their parsed result, checkpoints,
+preserves and reopens a capsule. Fresh-process desktop capsule rendering also passes.
+Current suite receipts and final package counts are recorded in WINDOWS_TEST_RESULTS.json;
+previous 0.3.0 package receipts remain historical, not proof of the new binaries.
+
+The final wheel/frozen/portable/installer/source/plugin/Node artifacts, actual 0.3.0-to-0.4.0
+upgrade, reduced-PATH live capsule GUI, installer uninstall/export retention, manifest,
+checksums and private GitHub prerelease are staged for final verification. Release source
+commit/tag and asset-digest receipts are not yet asserted. No production acceptance gate is
+promoted by this staging. Continue with final package/release verification under the existing
+mission authority; no ordinary engineering confirmation is required.

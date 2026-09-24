@@ -1,0 +1,21 @@
+{
+  "name": "cgcchild-live",
+  "version": "0.4.0",
+  "description": "CREDID GUARDIAN CODEX explicit live engineering reports",
+  "author": {
+    "name": "Mihai-Bogdan Simion"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "CGC Live Continuity",
+    "shortDescription": "Record bounded engineering facts in CGC.",
+    "longDescription": "Explicit reports to a selected local CGC session. Agent reports remain REPORTED; no private reasoning, credentials, project executor or automatic lifecycle claims.",
+    "developerName": "Mihai-Bogdan Simion",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Record my observable engineering progress in the selected CGC live session."
+  },
+  "mcpServers": "./.mcp.json",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/chatgptopenaiagi/CGCCHILD"
+}

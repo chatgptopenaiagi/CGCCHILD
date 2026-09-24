@@ -1,5 +1,9 @@
 # CGCCHILD decisions
 
+Current decision frontier: M85/M86 implements the owner's Windows Live Continuity mission
+for 0.4.0. The experimental release is staged; final package/publication receipts are pending.
+Earlier stop boundaries below remain historical. Production repository mutation stays disabled.
+
 ## G0 — independent experimental descendant
 
 The owner authorizes child-only autonomous milestones under CGCCHILD_AUTONOMOUS_BUILD_V1.
@@ -688,3 +692,46 @@ classifications. Security debt is not promoted: production mutation stays disabl
 NEXT_EXACT_ACTION: separate clean Windows 10 x64 acceptance of the published portable
 and installer when available; no privileged proof or source-repository action.
 Stop policy A satisfied: experimental Windows release built, published, checkpointed.
+
+## M85 — live facts and historical workbench share no implicit authority
+
+The owner's CGCCHILD_VNEXT_AUTONOMOUS_LIVE_CONTINUITY_MASTER_PROMPT supersedes the prior
+product stop frontier. Build on the verified 0.3.0 product, preserving its historical codecs
+and surfaces. Place the new subsystem in cgcchild.live with explicit project selection and
+session storage outside that project. The event journal owns history structure, not truth.
+REPORTED, OBSERVED and VERIFIED remain distinct from SUPPORTED, CONTRADICTED, UNKNOWN,
+STALE and INVALIDATED. Reconciliation appends evidence relationships; later success never
+rewrites a contradiction. AI_PROPOSED_NEXT_ACTION is an unexecuted declaration.
+
+Use bounded Windows-native metadata polling with explicit skipped/reparse boundaries and
+transient-change limits. Read-only Git corroborates local objects/refs; remote publication
+requires an independently observed live remote ref. A successful test command without a
+recognized bounded summary retains unknown test counts. Explicit test execution can execute
+project code; it is not a sandbox or an automatic consequence of an agent event.
+
+Use tested foreground MCP stdio for structured Codex reports. Optional Windows AF_PIPE is
+deferred rather than introducing an unverified listener. The native executable launcher
+passes ephemeral session metadata only; real host hooks/lifecycle remain NOT_EXECUTED.
+Observer-only sessions remain useful without Codex, installed plugins or remote access.
+
+Recovery replays the owned journal, retains torn-tail evidence, assesses current selected
+project state and resumes observation as a new generation. Startup discovery only reads
+CGC's selected store and warns that another foreground owner may be active; explicit recovery
+does not silently complete or repair a project. Capsules rebuild derived views from the
+canonical timeline, remain unsigned and import as historical evidence with current authority
+UNKNOWN. Eighteen GUI pages render imported content as plain text.
+
+## M86 — experimental packaging is separate from production acceptance
+
+Keep 0.4.0 release claims pending until final package smoke and publication verification
+complete. Record actual test counts in WINDOWS_TEST_RESULTS.json, bind the manifest to the
+reviewed release-source commit and record later publication receipts separately. Exercise
+the real 0.3.0-to-0.4.0 installer upgrade in an owned directory, plus fresh wheel, relocation,
+reduced PATH, all-page GUI, live capsule reopen, uninstall and export-retention checks.
+Publish only a private child prerelease after asset integrity checks; no force tags/history.
+
+Pristine Windows VM, trusted signing, real installed Codex host interoperability, protected
+identity/effective policy and filesystem closure remain separate debt. They do not freeze
+authorized software work or become accepted merely because product tests pass. No privileged
+proof collection, host security change, live quota read or original-repository modification
+is authorized or performed by this Windows product mission.

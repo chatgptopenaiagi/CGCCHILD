@@ -1,10 +1,13 @@
 # CREDID GUARDIAN CODEX (CGC)
 
-## CGCCHILD Windows experimental product — 0.3.0
+## CGCCHILD Windows experimental product — 0.4.0 Live Continuity
 
-The current child product provides a Windows desktop historical-evidence workbench,
-CLI, Python/Node SDKs, bounded MCP stdio, capsules, reports, explicit modes and
-security-debt reporting. Start with [Windows product guide](docs/PRODUCT_GUIDE.md),
+The current child product adds explicit live Windows sessions, metadata/Git/test
+observation, structured Codex reports, hash-chained journals, checkpoints, recovery
+and historical session capsules to the existing workbench. CLI, Python/Node SDKs
+and bounded MCP stdio share the same core. Start with
+[Live Continuity architecture](docs/LIVE_CONTINUITY_ARCHITECTURE.md),
+[Windows product guide](docs/PRODUCT_GUIDE.md),
 [build](docs/WINDOWS_BUILD.md) and [release notes](docs/RELEASE_NOTES.md).
 READ_ONLY_SAFE is the default. Production mutation remains disabled.
 The inherited sections below preserve historical source status and are not the

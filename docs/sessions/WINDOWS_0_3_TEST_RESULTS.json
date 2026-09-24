@@ -1,0 +1,29 @@
+{
+  "tier_a_product": {
+    "run": 14,
+    "passed": 14,
+    "failed": 0
+  },
+  "tier_b_windows_child": {
+    "run": 203,
+    "passed": 173,
+    "skipped_posix": 30,
+    "failed": 0
+  },
+  "node_sdk_contract_checks": 5,
+  "plugin_offline_validation": "PASSED",
+  "tier_c_windows_package": "PASSED",
+  "tier_d_fresh_install": "PASSED_ON_CURRENT_HOST",
+  "tier_e_release_smoke": "PASSED_ARCHIVES_RESOURCES_CHECKSUMS_AND_10_GITHUB_ASSET_DIGESTS",
+  "clean_windows_vm": "NOT_EXECUTED",
+  "live_quota_reads": 0,
+  "privileged_acceptance_reads": 0,
+  "linux_execution": false,
+  "fresh_wheel": "INSTALL_IMPORT_CLI_READ_UNINSTALL_PASSED",
+  "relocated_frozen": "REDUCED_PATH_CLI_CAPSULE_REPORT_RESOURCES_GUI_PASSED",
+  "installer": "PER_USER_INSTALL_UPGRADE_START_UNINSTALL_EXPORT_RETENTION_PASSED",
+  "node_tarball_offline_install": "PASSED",
+  "plugin_skill_validation": "PASSED",
+  "gui_visual_review": "FROZEN_SCREENSHOT_REVIEWED",
+  "frozen_code_filenames": "RELATIVE_PRODUCT_MODULE_PATHS"
+}

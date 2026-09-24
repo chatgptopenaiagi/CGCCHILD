@@ -1,0 +1,15 @@
+{
+  "version": "0.4.0",
+  "event_protocol": "cgc-live-event-0.1",
+  "default_mode": "READ_ONLY_SAFE",
+  "session_selection": "EXPLICIT_CGC_SESSION_DIR_OR_CLI_ARGUMENT",
+  "automatic_install": false,
+  "automatic_session_creation": false,
+  "lifecycle_hooks": "NOT_INSTALLED",
+  "network_listener": false,
+  "project_mutation": false,
+  "writes": "CGC_SESSION_JOURNAL_ONLY",
+  "incoming_evidence_grade": "REPORTED",
+  "host_acceptance": "NOT_EXECUTED",
+  "transport": "FOREGROUND_STDIO"
+}

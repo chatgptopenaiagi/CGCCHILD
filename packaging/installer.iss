@@ -1,6 +1,23 @@
-#define AppVersion "0.3.0"
+#ifndef AppVersion
+  #define AppVersion "0.4.0"
+#endif
+#ifndef AppId
+  #define AppId "{{48A3FA0A-F8D0-436A-91A2-19C1FD5F3382}"
+#endif
+#ifndef SourceDir
+  #define SourceDir "..\dist\CGC"
+#endif
+#ifndef OutputDir
+  #define OutputDir "..\dist"
+#endif
+#ifndef OutputBaseFilename
+  #define OutputBaseFilename "CGCCHILD-Setup-" + AppVersion
+#endif
+#ifndef VersionInfoVersion
+  #define VersionInfoVersion "0.4.0.0"
+#endif
 [Setup]
-AppId={{48A3FA0A-F8D0-436A-91A2-19C1FD5F3382}
+AppId={#AppId}
 AppName=CREDID GUARDIAN CODEX
 AppVersion={#AppVersion}
 AppPublisher=Mihai-Bogdan Simion
@@ -8,8 +25,8 @@ AppPublisherURL=https://github.com/chatgptopenaiagi/CGCCHILD
 DefaultDirName={autopf}\CGCCHILD
 DefaultGroupName=CREDID GUARDIAN CODEX
 UninstallDisplayIcon={app}\CGC.exe
-OutputDir=..\dist
-OutputBaseFilename=CGCCHILD-Setup-{#AppVersion}
+OutputDir={#OutputDir}
+OutputBaseFilename={#OutputBaseFilename}
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
@@ -20,14 +37,14 @@ PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=dialog commandline
 LicenseFile=..\LICENSE
 DisableProgramGroupPage=yes
-VersionInfoVersion=0.3.0.0
+VersionInfoVersion={#VersionInfoVersion}
 VersionInfoDescription=CGCCHILD Experimental Windows Setup
 
 [Tasks]
 Name: "desktopicon"; Description: "Create a Desktop shortcut"; Flags: unchecked
 
 [Files]
-Source: "..\dist\CGC\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#SourceDir}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 Name: "{group}\CREDID GUARDIAN CODEX"; Filename: "{app}\CGC.exe"
