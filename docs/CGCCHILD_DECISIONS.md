@@ -289,3 +289,9 @@ parity establishes representation compatibility, not trust in the event producer
 The independent Node codec computes expected historical results and accepts exact replies from
 the fixed Python adapter. No generic manager, tool or execution interface is exposed. The
 separate owned-process harness proves this limited wire path, not source identity or live policy.
+
+## M41: transport failure reports follow owned-process closure
+
+A malformed or silent peer cannot yield transcript success. The test harness preserves a finite
+first-cause code and awaits closure of its own process before reporting refusal. EOF/stderr
+ordering is not promoted to a universal causal ordering or descendant-cleanup guarantee.

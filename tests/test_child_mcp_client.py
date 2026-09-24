@@ -30,6 +30,24 @@ class ChildMCPClientTests(unittest.TestCase):
         self.assertEqual(run.returncode,0,run.stderr)
         self.assertEqual(json.loads(run.stdout),dict(status='PASS',cases=19))
 
+    def test_fixed_fault_responders_close_owned_process(self):
+        root=Path(__file__).resolve().parents[1]
+        expected={
+            'MALFORMED':{'PROTOCOL'},'OVERSIZE':{'FRAME_LIMIT'},
+            'TRUNCATED':{'EOF','EARLY_CLOSE'},'STDERR':{'STDERR','EOF','EARLY_CLOSE'},
+            'SILENT':{'TIMEOUT'},'EXTRA_FRAME':{'FRAME_EXTRA','PROTOCOL','UNEXPECTED_DATA'},
+            'EARLY_EXIT':{'EOF','EARLY_CLOSE'}}
+        for mode,reasons in expected.items():
+            with self.subTest(mode=mode):
+                run=subprocess.run(['node',str(root/'sdk/javascript/mcp_owned_process.mjs'),sys.executable,mode],
+                    input=sp.encode(state()),capture_output=True,timeout=15)
+                self.assertEqual(run.returncode,2,run.stderr);self.assertEqual(run.stderr,b'')
+                report=json.loads(run.stdout)
+                self.assertEqual(set(report),{'status','reason','mode','owned_process_closed','authority'})
+                self.assertEqual(report['status'],'OWNED_TRANSPORT_REFUSED')
+                self.assertEqual(report['mode'],mode);self.assertIn(report['reason'],reasons)
+                self.assertTrue(report['owned_process_closed']);self.assertEqual(report['authority'],'NONE')
+
     def transcript(self):
         value=state();adapter=mcp.MCPAdapter(sp.encode(value));frames=[adapter.handle(init())]
         adapter.handle(req('notifications/initialized',identifier=None))

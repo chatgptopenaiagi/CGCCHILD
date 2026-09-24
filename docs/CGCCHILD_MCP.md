@@ -146,3 +146,25 @@ pipe failure behavior is not thereby universally accepted.
 Three test families pass Windows/Fedora: two actual model sessions,45 transcript cases (one
 positive/44 negative) and19 Node lifecycle/bound/ownership checks. No package installed or
 service registered. SDK ecosystem, plugin and live authentication acceptance remain blocked.
+
+## M41: owned transport failure and cleanup evidence
+
+The owner-controlled harness now accepts a closed test-mode enum. ADAPTER retains the fixed
+production-facing experimental module; seven fault modes select only the inert
+[owned responder](../tests/helpers/child_mcp_fault_peer.py), never an arbitrary script/path.
+The existing Python executable remains an explicit trusted test-owner input, not a remote API.
+The responder consumes two bounded lines, then emits fixed malformed/oversized/truncated/extra
+bytes, fixed stderr, exits early or waits only on its parent's pipe. It spawns no descendants.
+
+Failure keeps the first bounded reason code, invalidates the conformance client, destroys input
+and terminates only the retained owned ChildProcess. The harness awaits that process's close
+event before reporting OWNED_TRANSPORT_REFUSED/owned_process_closed=true with authority NONE.
+No response content or stderr text is copied into the report. A5-second overall deadline bounds
+the silent case; an outer15-second test timeout provides a second fixture boundary.
+
+Four focused families pass Windows/Fedora, including all seven fault modes, the two valid
+sessions, offline negative transcript corpus and lifecycle checks. Pipe/stderr EOF event order
+can differ by platform; tests allow only the documented terminal refusal reasons for that mode,
+never success. The silent case specifically reports TIMEOUT. This is observed cleanup for
+these owned single-process fixtures, not a guarantee about arbitrary descendants or OS failures.
+No real MCP host, plugin registration, external service, credential or system policy was touched.
